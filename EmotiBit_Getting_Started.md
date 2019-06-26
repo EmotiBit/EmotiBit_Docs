@@ -21,14 +21,15 @@
 - Manually download or clone into Arduino/libraries
   - BMI160-Arduino
     - https://github.com/EmotiBit/BMI160-Arduino
+	- _**Latest Release**_ : https://github.com/EmotiBit/BMI160-Arduino/releases
   - EmotiBit_FW
     - https://github.com/EmotiBit/EmotiBit_FW
+	- _**Latest Release**_ : https://github.com/EmotiBit/EmotiBit_FW/releases
 
 ## Programming the Feather
-- Get the latest release from
-  - https://github.com/EmotiBit/EmotiBit_FW/releases
-- Unzip the folder
-- Double click on the .ino file to open it in Arduino
+- Get the latest release of EmotiBit_FW as described in setup
+- in Arduino/libraries/EmotiBit_FW/examples/Emotibit_Example
+  - Double click on the .ino file to open it in Arduino
 - Choose Tools->Board->“Adafruit Feather M0”
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port should change.
 - Choose Tools>Port>[the correct port for your board]
