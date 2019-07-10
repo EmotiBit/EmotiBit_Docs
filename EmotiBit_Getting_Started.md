@@ -16,19 +16,14 @@
   - SdFat
   - Adafruit SleepyDog
   - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
-  - EmotiBit Si7013
   - SparkFun_MAX3010x_Pulse_and_Proximity_Sensor_Library
-- Manually download or clone into Arduino/libraries
-  - BMI160-Arduino
-    - https://github.com/EmotiBit/BMI160-Arduino
-	- _**Latest Release**_ : https://github.com/EmotiBit/BMI160-Arduino/releases
-  - EmotiBit_FW
-    - https://github.com/EmotiBit/EmotiBit_FW
-	- _**Latest Release**_ : https://github.com/EmotiBit/EmotiBit_FW/releases
-
+  - EmotiBit Si7013
+  - EmotiBit BMI160
+  - EmotiBit FeatherWing
+  
 ## Programming the Feather
 - Get the latest release of EmotiBit_FW as described in setup
-- in Arduino/libraries/EmotiBit_FW/examples/Emotibit_Example
+- in Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example
   - Double click on the .ino file to open it in Arduino
 - Choose Tools->Board->“Adafruit Feather M0”
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port should change.
@@ -45,10 +40,10 @@
 - Android App
   - https://github.com/EmotiBit/EmotiBit_Android_App/
 - Firmware
-  - https://github.com/EmotiBit/EmotiBit_FW
-  - Latest release: https://github.com/EmotiBit/EmotiBit_FW/releases
-- OpenFrameworks
-  - https://github.com/connectedfuturelabs/CFL_SW_BiosensorModule/
-  - Latest release: https://github.com/connectedfuturelabs/CFL_SW_BiosensorModule/releases/
+  - https://github.com/EmotiBit/EmotiBit_FW_FeatherWing
+  - Latest release: https://github.com/EmotiBit/EmotiBit_FW_FeatherWing/releases
+- OpenFrameworks GUI
+  - https://github.com/EmotiBit/ofxEmotiBit
+  - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases
 
 
