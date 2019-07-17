@@ -21,7 +21,7 @@
 - [Developing with Visual Studio + Visual Micro](#developing-with-visual-studio--visual-micro)
 - [Repositories](#repositories)
 
-## Sensor Overview
+## Overview
 
 ![alt text][Hardware]
 
