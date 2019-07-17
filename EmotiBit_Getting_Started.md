@@ -1,8 +1,29 @@
 # Getting Started with EmotiBit
-![alt text][Hardware]
-![alt text][GUI]
 ![alt text][SideView]
+![alt text][GUI]
 
+## Table of Contents
+- [Overview](#overview)
+- [Setup](#setup)
+- [Programming the Feather](#programming-the-feather)
+- [Connecting To WiFi](#connecting-to-wifi)
+- [Adafruit Feather M0 LED Indicators](#adafruit-feather-m0-led-indicators)
+- [Switches](#switches)
+- [Maintenance](#maintenance)
+- [Packet Format](#packet-format)
+  - [TypeTag Character Codes](#typetag-character-codes)
+    - [Biometric TypeTags](#biometric-typetags)
+    - [General TypeTags](#general-typetags)
+    - [Computer to EmotiBit TypeTags](#computer-to-emotibit-typetags)
+- [Data Recording](#data-recording)
+  - [SD Saves](#sd-saves)
+  - [GUI Saves](#gui-saves)
+- [Developing with Visual Studio + Visual Micro](#developing-with-visual-studio--visual-micro)
+- [Repositories](#repositories)
+
+## Sensor Overview
+
+![alt text][Hardware]
 
 ## Setup
 - Download and install the Arduino IDE - https://www.arduino.cc/en/main/software
@@ -26,7 +47,7 @@
   - EmotiBit FeatherWing
 
 ## Programming the Feather
-- Get the latest release of EmotiBit_FW as described in setup
+- Get the latest release of EmotiBit_FW as described in [setup](#setup)
 - in Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example
   - Double click on the .ino file to open it in Arduino
 - Choose Tools->Board->“Adafruit Feather M0”
@@ -60,10 +81,44 @@
 - As the SD card fills up, it can slow down data writing to the SD card. To keep the EmotiBit running at peak performance, it’s a good idea to clear files off the SD card periodically.
 
 ## Packet Format
-
+- TIMESTAMP,PACKET#,#DATAPOINTS,TYPETAG,VERSION,RELIABILITY,PAYLOAD
+  - Timestamp: milliseconds since start of EmotiBit
+  - Packet Number: packet count since start of EmotiBit
+  - Number of Datapoints: Number of data points in the payload
+  - Typetag: type of data being sent
+  - Version: version of packet protocol
+  - Reliability: data reliability score out of 100, currently always 100
+  - Payload: data to send
 - Example Packets:
 
 ![alt text][Pack]
+### TypeTag Character Codes
+
+#### Biometric TypeTags
+|Tag    | Description          |
+|-------|----------------------|
+|EA     |EDA                   |
+|EL     |EDL                   |
+|ER     |EDR                   |
+|PI     |PPG Infrared          |
+|PR     |PPG Red               |
+|PG     |PPG Green             |
+|T0     |Temperature (Si7013)  |
+|TH     |Thermistor            |
+|H1     |Humidity (Si7013)     |
+|AX     |Accelerometer X       |
+|AY     |Accelerometer Y       |
+|AZ     |Accelerometer Z       |
+|GX     |Gyroscope X           |
+|GY     |Gyroscope Y           |
+|GZ     |Gyroscope Z           |
+|MX     |Magnetometer X        |
+|MY     |Magnetometer Y        |
+|MZ     |Magnetometer Z        |
+
+#### General Typetags
+
+#### Computer to EmotiBit TypeTags
 
 ## Data Recording
 Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiBit/releases), which is also the recommended way to view incoming data streams. The EmotiBit must be connected to the same WiFi as your computer for the GUI to work. No internet connection is neccessary.
@@ -83,7 +138,7 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 ```
 
 ##### GUI Saves
-- GUI data can be found in of_v0.9.8_vs_release\apps\ofxEmotiBit\EmotiBitOscilloscope\bin\data
+- GUI data can be found in EmotiBitOscilloscope\bin\data
 - dataLog.txt
   - Contains the experimental data recieved by the GUI
   - Same packet format as the SD save
@@ -91,7 +146,7 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
   - can be used as a psuedo serial monitor during the recording instead of Serial.print()
 
 ## Developing with Visual Studio + Visual Micro
-- Follow instructions in [Setup][1] to get the Arduino IDE and libraries
+- Follow instructions in [Setup](#setup) to get the Arduino IDE and libraries
 - [Install Visual Studio 2017 Community](https://drive.google.com/open?id=1sWMwa3cjDe1rPv4zH8XExWo41-AKcl3G)
 - Install the [Visual Micro extension for Visual Studio](https://www.visualmicro.com/page/Arduino-Visual-Studio-Downloads.aspx)
 - Manually add the link for additional board links given in the Setup
@@ -103,8 +158,6 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
   - Rapid double click reset button on the feather to put it into programming mode
   - Compile and run
   - Open Serial monitor or Oscilloscope to view data stream
-
-[1]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/EmotiBit_Getting_Started.md#setup
 
 ## Repositories
 - Parent Github
