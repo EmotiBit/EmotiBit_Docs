@@ -118,8 +118,8 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
   - https://github.com/EmotiBit/ofxEmotiBit
   - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases
 
-[GUI]: https://github.com/EmotiBit/EmotiBit_Docs/blob/ManualDeprecation/images/ofxEmotiBit.png "ofxEmotiBit GUI"
-[Hardware]: https://github.com/EmotiBit/EmotiBit_Docs/blob/ManualDeprecation/images/hardwarewithback.png "EmotiBit Hardware"
-[SideView]: https://github.com/EmotiBit/EmotiBit_Docs/blob/ManualDeprecation/images/EmotiBitSideView.jpg "EmotiBit Side View"
-[LED]: https://github.com/EmotiBit/EmotiBit_Docs/blob/ManualDeprecation/images/LightIndicators.png "Feather LED's"
-[Pack]: https://github.com/EmotiBit/EmotiBit_Docs/blob/ManualDeprecation/images/PacketExample.png "Example Packets"
+[GUI]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/images/ofxEmotiBit.png "ofxEmotiBit GUI"
+[Hardware]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/images/hardwarewithback.png "EmotiBit Hardware"
+[SideView]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/images/EmotiBitSideView.jpg "EmotiBit Side View"
+[LED]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/images/LightIndicators.png "Feather LED's"
+[Pack]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/images/PacketExample.png "Example Packets"
