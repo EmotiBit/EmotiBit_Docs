@@ -16,6 +16,8 @@
     - [General TypeTags](#general-typetags)
     - [Computer to EmotiBit TypeTags](#computer-to-emotibit-typetags)
   - [A Note on LSL](#a-note-on-lsl)
+    - [Accuracy](#accuracy)
+    - [LSL Packet Examples](#lsl-packet-examples)
 - [Data Recording](#data-recording)
   - [SD Saves](#sd-saves)
   - [GUI Saves](#gui-saves)
@@ -161,7 +163,7 @@
 ```
 [notice ] ofxLSL::update()
 [notice ] ofxLSL::connect()
-[notice] Connecting to CFL at 0 hz 
+[notice ] Connecting to CFL at 0 hz 
 ```
 - Each LSL marker has 3 timestamps associated with it:
   - **timestamp (TS):** _lsl_clock()_ time associated with the tag on the computer that sent the tag
@@ -181,7 +183,13 @@
 - **LC** periodicity is rather unreliable (>300ms)
   - Can be more accurate on same computer
   
-#### Packet Examples
+#### LSL Packet Examples
+
+```
+127214,21942,1,TX,1,100,TL,2019-07-17_14-40-01-804897,LC,189690.2055982
+249054,45373,1,LM,1,100,TSC,264448.0612918,TS,264448.0607235,LC,264448.0676169,LD,Hello
+250555,45660,1,LM,1,100,TSC,264449.5732830,TS,264449.5727040,LC,264449.5778914,LD,World
+```
 
 ## Data Recording
 Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiBit/releases), which is also the recommended way to view incoming data streams. The EmotiBit must be connected to the same WiFi as your computer for the GUI to work. No internet connection is neccessary.
