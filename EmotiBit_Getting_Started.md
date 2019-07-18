@@ -15,6 +15,7 @@
     - [Biometric TypeTags](#biometric-typetags)
     - [General TypeTags](#general-typetags)
     - [Computer to EmotiBit TypeTags](#computer-to-emotibit-typetags)
+  - [A Note on LSL](#a-note-on-lsl)
 - [Data Recording](#data-recording)
   - [SD Saves](#sd-saves)
   - [GUI Saves](#gui-saves)
@@ -81,14 +82,14 @@
 - As the SD card fills up, it can slow down data writing to the SD card. To keep the EmotiBit running at peak performance, it’s a good idea to clear files off the SD card periodically.
 
 ## Packet Format
-- TIMESTAMP,PACKET#,#DATAPOINTS,TYPETAG,VERSION,RELIABILITY,PAYLOAD
-  - Timestamp: milliseconds since start of EmotiBit
-  - Packet Number: packet count since start of EmotiBit
-  - Number of Datapoints: Number of data points in the payload
-  - Typetag: type of data being sent
-  - Version: version of packet protocol
-  - Reliability: data reliability score out of 100, currently always 100
-  - Payload: data to send
+- TIMESTAMP, PACKET#, #DATAPOINTS, TYPETAG, VERSION, RELIABILITY, PAYLOAD
+  - **Timestamp:** milliseconds since start of EmotiBit
+  - **Packet Number:** packet count since start of EmotiBit
+  - **Number of Datapoints:** Number of data points in the payload
+  - **Typetag:** type of data being sent
+  - **Version:** version of packet protocol
+  - **Reliability:** data reliability score out of 100, currently always 100
+  - **Payload:** data to send
 - Example Packets:
 
 ![alt text][Pack]
@@ -96,7 +97,7 @@
 
 #### Biometric TypeTags
 |Tag    | Description          |
-|-------|----------------------|
+|:-----:|----------------------|
 |EA     |EDA                   |
 |EL     |EDL                   |
 |ER     |EDR                   |
@@ -118,7 +119,69 @@
 
 #### General Typetags
 
+|Tag    | Description                       |
+|:-----:|:----------------------------------|
+|EI     |EmotiBit Info Json                 |
+|DC     |Data Clipping, TypeTag in Payload  |
+|DO     |Data Overflow, TypeTag in Payload  |
+|B%     |Battery Percentage Remaining       |
+|BV     |Battery Voltage                    |
+|D%     |SD card percent capacity filled    |
+|RD     |Request Data, TypeTag in Payload   |
+|PI     |Ping                               |
+|PO     |Pong                               |
+|RS     |Reset                              |
+
 #### Computer to EmotiBit TypeTags
+
+|Tag    | Description                       |
+|:-----:|:----------------------------------|
+|GL     |[GPS latitude and Longitude][GPS]  |
+|GS     |[GPS Speed][GPS]                   |
+|GB     |[GPS Bearing][GPS]                 |
+|GA     |[GPS Altitude][GPS]                |
+|TL     |Local Computer Timestamp           |
+|TU     |UTC Timestamp                      |
+|TX     |Crosstime, used for timestamp comparison   |
+|LM     |LSL Marker/message                 |
+|RB     |Record begin (Include timestamp in Data)   |
+|RE     |Record End                         |
+|UN     |User Note                          |
+|MH     |Mode Hibernate                     |
+|HE     |Hello EmotiBit, used to establish communication  |
+
+[GPS]: https://developer.android.com/reference/android/location/Location
+
+### A Note on LSL
+
+- EmotiBit is currently able to recieve a single multichannel LSL stream via communication with [ofxEmotiBit](https://github.com/EmotiBit/ofxEmotiBit/releases)
+- ofxEmotiBit makes use of the openFrameworks addon [ofxLSL](https://github.com/badfishblues/ofxLSL) which has further documentation and examples in its own git repository
+- The resolve stream argument is currently hardcoded in the main of ofxEmotiBit to **"name = 'CFL'"**, which means that the outlet stream that is being sent must have this name, or the GUI will not be able to find it
+- While running ofxEmotiBit, the terminal window will display updates on when a connection to the stream occurred
+```
+[notice ] ofxLSL::update()
+[notice ] ofxLSL::connect()
+[notice] Connecting to CFL at 0 hz 
+```
+- Each LSL marker has 3 timestamps associated with it:
+  - **timestamp (TS):** _lsl_clock()_ time associated with the tag on the computer that sent the tag
+  - **timestampLocal (TSC):** _timestamp + inlet->time_correction(1)_, an estimation of the _lsl_clock()_ time on the recieving computer equivalent to the TS
+  - **localClock (LC):** _lsl_clock()_ after the _pull_sample()_
+- LD is the payload of an LM and can be multiple channels
+- LSL times are not unix times, but rather in seconds since your computer was turned on
+- Crosstimes (TX) for LSL include a TL and an LC at the given instance
+  - LC is an _lsl_clock()_ call at the time of the TX
+  - Note that any conversion from the LSL time system to an external system could seriously hamper the accuracy and effectiveness of LSL
+#### Accuracy
+
+- **TS** is 100% accurate
+- **TSC** periodicity is at worst accurate to 1.8ms
+  - _average:_ 19 microseconds
+  - defined as {TSC(n) - TSC(n-1)} - {TSsender(n) - TSsender(n-1)}
+- **LC** periodicity is rather unreliable (>300ms)
+  - Can be more accurate on same computer
+  
+#### Packet Examples
 
 ## Data Recording
 Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiBit/releases), which is also the recommended way to view incoming data streams. The EmotiBit must be connected to the same WiFi as your computer for the GUI to work. No internet connection is neccessary.
