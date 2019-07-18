@@ -22,6 +22,7 @@
   - [SD Saves](#sd-saves)
   - [GUI Saves](#gui-saves)
 - [Developing with Visual Studio + Visual Micro](#developing-with-visual-studio--visual-micro)
+- [Debugging](#debugging)
 - [Repositories](#repositories)
 
 ## Overview
@@ -63,8 +64,10 @@
 - If this is done after programming, the Feather should be reset by pressing the reset botton. If it is done before programming, it should connect automatically. SD card reading is done in the setup of EmotiBit_Example.ino
 - The contents of the file should be JSON in the following format: 
   - ``{"WifiCredentials": [{"ssid": "SSSS", "password" : "PPPP"}]}``
-  
+
 ## Adafruit Feather M0 LED Indicators
+
+![alt text][LED]
 
 | EmotiBit State| Indicator LED State | Approx. Freq.  |
 | ------------- |:-------------------:| --------------:|
@@ -72,8 +75,6 @@
 | Recording     | Slow Blink          | 5 Hz           |
 | Programing    | Fast Blink          | 15 Hz          |
 | Not Recording | Slow Pulse          | 2 Hz           |
-
-![alt text][LED]
 
 ## Switches
 - EmotiBit Switch/Button: adjacent to the SD card
@@ -229,6 +230,20 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
   - Rapid double click reset button on the feather to put it into programming mode
   - Compile and run
   - Open Serial monitor or Oscilloscope to view data stream
+
+## Debugging
+- [LED's](#adafruit-feather-m0-led-indicators) and the serial monitor can be useful tools for debugging
+- if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
+- if the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit
+- if the red LED goes on after uploading code and remains on indefinitely without the green  _WiFi Connected_ LED, then the code is stuck in setup() before WiFi.begin() is ever called
+  - Serial monitor should show which part of the board is failing to initialize
+  - Differences in where the code gets stuck upon repeated uploads suggests that the boards have faulty connections
+- if the red LED goes on after uploading the code and _**all LEDS**_ are off after 30-60 seconds, it is hibernating because it cannot connect to WiFi
+  - Check the config.txt to make sure that the proper credentials were input
+  - Check that your WiFi does not do MAC address filtering
+  - Check that your feather has the [latest version of the firmware](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/updating-firmware)
+  - Check that your network supports device connections in this manner; many Universities and public work spaces disallow it
+- If the red light significantly deviates from the patterns shown in the [above section](#adafruit-feather-m0-led-indicators), including getting stuck on or off for a large period of time during recording, there is a firmware error that is causing _loop()_ to delay. Check any changes that you made to the release code. Remove any while loops that take more than 15ms.
 
 ## Repositories
 - Parent Github
