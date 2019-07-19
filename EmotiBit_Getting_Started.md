@@ -62,8 +62,15 @@
 ## Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on the SD card.
 - If this is done after programming, the Feather should be reset by pressing the reset botton. If it is done before programming, it should connect automatically. SD card reading is done in the setup of EmotiBit_Example.ino
-- The contents of the file should be JSON in the following format: 
-  - ``{"WifiCredentials": [{"ssid": "SSSS", "password" : "PPPP"}]}``
+- The contents of the file should be in JSON format as shown below:
+    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
+- **Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)**
+  - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
+    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Fnord"}]}``
+  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
+    - Shorten the list
+    - Organize the list in order of priority of connection
+  - If connection is lost to the original network, EmotiBit will continue to try to reconnect for 5 min before attempting another network. This timeout period can be changed by setting WIFI_BEGIN_SWITCH_CRED in EmotiBit_Example.ino
 
 ## Adafruit Feather M0 LED Indicators
 
