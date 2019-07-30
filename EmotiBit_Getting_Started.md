@@ -49,6 +49,7 @@
   - EmotiBit Si7013
   - EmotiBit BMI160
   - EmotiBit FeatherWing
+- _**NOTE**_: Currently, EmotiBit will not take data unless it initially [connects to WiFi](#connecting-to-wifi), due to timestamp reliability
 
 ## Programming the Feather
 - Get the latest release of EmotiBit_FW as described in [setup](#setup)
@@ -60,8 +61,11 @@
 - Click “Upload”
 
 ## Connecting to WiFi
-- To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on the SD card.
-- If this is done after programming, the Feather should be reset by pressing the reset botton. If it is done before programming, it should connect automatically. SD card reading is done in the setup of EmotiBit_Example.ino
+- To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on an SD card.
+- The SD card must be in the FAT32 format, which can be checked by _right click -> properties-> file system_ on Windows
+  - if the card is not in FAT32 format it can be reformatted by _right click-> format -> file system_ on Windows
+  - Other operating systems, or large SD card capacities may require the use of 3rd party partioners such as AOMEI
+- If the card is inserted after programming, the Feather should be reset by pressing the reset botton. If it is done before programming, it should connect automatically. SD card reading is done in the setup of EmotiBit_Example.ino
 - The contents of the file should be in JSON format as shown below:
     - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
 - **Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)**
