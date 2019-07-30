@@ -53,8 +53,8 @@
 
 ## Programming the Feather
 - Get the latest release of EmotiBit_FW as described in [setup](#setup)
-- in Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example
-  - Double click on the .ino file to open it in Arduino
+- In the Arduino program (IDE), open File -> Examples -> EmotiBit FeatherWing -> EmotiBit Example
+  - Alternatively you can double click Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example/EmotiBit_Example.ino
 - Choose Tools->Board->“Adafruit Feather M0”
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port should change.
 - Choose Tools>Port>[the correct port for your board]
