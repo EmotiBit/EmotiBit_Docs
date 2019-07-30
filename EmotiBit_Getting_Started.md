@@ -49,16 +49,17 @@
   - EmotiBit Si7013
   - EmotiBit BMI160
   - EmotiBit FeatherWing
-- _**NOTE**_: Currently, EmotiBit will not take data unless it initially [connects to WiFi](#connecting-to-wifi), due to timestamp reliability
+
 
 ## Programming the Feather
 - Get the latest release of EmotiBit_FW as described in [setup](#setup)
-- In the Arduino program (IDE), open File -> Examples -> EmotiBit FeatherWing -> EmotiBit Example
+- In the Arduino program (IDE), open File -> Examples -> EmotiBit FeatherWing -> EmotiBit_Example
   - Alternatively you can double click Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example/EmotiBit_Example.ino
 - Choose Tools->Board->“Adafruit Feather M0”
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port should change.
 - Choose Tools>Port>[the correct port for your board]
 - Click “Upload”
+- _**NOTE**_: Currently, EmotiBit will not record data to the SD card unless it [connects to WiFi](#connecting-to-wifi), due to timestamp reliability
 
 ## Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on an SD card.
