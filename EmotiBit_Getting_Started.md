@@ -85,8 +85,8 @@
 | ------------- |:-------------------:| --------------:|
 | Hibernating   | Very Slow Blink     | 0.067 Hz       |
 | Recording     | Slow Blink          | 5 Hz           |
-| Programing    | Fast Blink          | 15 Hz          |
-| Not Recording | Slow Pulse          | 2 Hz           |
+| Not Recording | Fast Blink          | 15 Hz          |
+| Programming   | Slow Pulse          | 2 Hz           |
 
 ## Switches
 - EmotiBit Switch/Button: adjacent to the SD card
