@@ -38,7 +38,7 @@
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide
     - Tools>Board: “..”>Boards Manager
       - Install Arduino SAMD Boards
-      - Install Adafruit SAMD
+      - Install Adafruit SAMD _**(use version 1.5.1)**_
 - Follow instructions to set up the Adafruit M0 WiFi Feather https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module
 - Install Libraries via Tools -> Library Manager
   - WiFi101
