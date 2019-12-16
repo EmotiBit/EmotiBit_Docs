@@ -106,6 +106,7 @@
   - GREEN: This is the WiFi indicator. If the EmotiBit is Connected to Wifi, there should be a constant glow.
   - YELLOW: It blinks whenever the EmotiBit receives data from the computer.
 </details>
+
 ## Switches
 - EmotiBit Switch/Button: adjacent to the SD card
   - Long Press (3 sec) to put EmotiBit into hibernate mode
