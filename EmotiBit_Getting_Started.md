@@ -36,20 +36,17 @@
   <details>
   <summary>To summarize the above link</summary>
   <br>
-  
-  - Preferences > Additional Board Manager URLs
-  - Copy-Paste the link: https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
+    - Preferences > Additional Board Manager URLs
+    - Copy-Paste the link: https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
   </details>
   
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide
   <details>
   <summary>To summarize the above link</summary>
   <br>
-  
-  - Tools>Board: “..”>Boards Manager
-    - Install Arduino SAMD Boards
-    - Install Adafruit SAMD _**(use version 1.5.1)**_
-  
+    - Tools>Board: “..”>Boards Manager
+      - Install Arduino SAMD Boards
+      - Install Adafruit SAMD _**(use version 1.5.1)**_
   </details>
 - Follow instructions to set up the Adafruit M0 WiFi Feather
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module
