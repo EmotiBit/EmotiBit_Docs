@@ -33,9 +33,12 @@
 - Download and install the Arduino IDE - https://www.arduino.cc/en/main/software
 - Follow these instructions to install the correct board libraries 
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/setup
-  - The steps below represent the instructions in the link above in short hand
-    - Preferences > Additional Board Manager URLs
-      - https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
+  <details>
+  <summary>To summarize the above link</summary>
+  <br>
+  - Preferences > Additional Board Manager URLs
+    - Copy-Paste the link: https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
+  </details>
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide
   - The steps below represent the instructions in the link above in short hand
     - Tools>Board: “..”>Boards Manager
@@ -87,8 +90,6 @@
 
 ## Adafruit Feather M0 LED Indicators
 
-![alt text][LED]
-
 - **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit has 3 LED's(Users should look at these when Determining the EmotiBit state)
       
 | Event | Indicator LED State | Approx. Freq.  |
@@ -100,6 +101,8 @@
 <summary>LED's on the Adafruit Feather M0 WiFi:</summary>
 <br>
 
+![alt text][LED]
+
 - **LED's on the Adafruit Feather M0 WiFi:** As shown in the Images above, The Feather has 4 LED's(Users should not look into these LED's unless debugging a problem)
   - RED: Is the I2C CLK Line. Under regular Operation, it should be always ON
   - ORANGE: This is the Charging indicator, which glows if a battery is connected to the feather and is being charged by the USB connection
@@ -108,15 +111,16 @@
 </details>
 
 ## Switches
-- EmotiBit Switch/Button: adjacent to the SD card
+- EmotiBit Switch/Button: _adjacent to the SD card_
   - Long Press (3 sec) to put EmotiBit into hibernate mode
+  - Short Press- Switch between WiFi modes. In future will support mapping to different functionality.
 - Reset switch on the feather resets the board and restarts the code
 
 ## Maintenance
 - As the SD card fills up, it can slow down data writing to the SD card. To keep the EmotiBit running at peak performance, it’s a good idea to clear files off the SD card periodically.
 
 ## Packet Format
-- TIMESTAMP, PACKET#, #DATAPOINTS, TYPETAG, VERSION, RELIABILITY, PAYLOAD
+- `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
   - **Timestamp:** milliseconds since start of EmotiBit
   - **Packet Number:** packet count since start of EmotiBit
   - **Number of Datapoints:** Number of data points in the payload
@@ -139,8 +143,8 @@
 |PR     |PPG Red               |
 |PG     |PPG Green             |
 |T0     |Temperature (Si7013)  |
-|TH     |Thermistor            |
-|H1     |Humidity (Si7013)     |
+|TH     |Thermopile(ML90632)            |
+|H0     |Humidity (Si7013)     |
 |AX     |Accelerometer X       |
 |AY     |Accelerometer Y       |
 |AZ     |Accelerometer Z       |
@@ -230,7 +234,7 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 - CSV: Experimental Data
   - All data is saved to the SD card into a .csv file when recording is initiated from the GUI
   - The file is named with the date-time that the recording started
-    -   2019-01-30_11-57-13-492.csv
+    -   An example file name can be `2019-01-30_11-57-13-492.csv`
 - JSON: Configuration Settings
   - Information about the configuration of the hardware and firmware are written to a .json file also on the SD card
   - The file is named with the date-time that the recording started
@@ -242,11 +246,11 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 
 ##### GUI Saves
 - GUI data can be found in EmotiBitOscilloscope\bin\data
-- dataLog.txt
-  - Contains the experimental data recieved by the GUI
-  - Same packet format as the SD save
-- consoleLog.txt
-  - can be used as a psuedo serial monitor during the recording instead of Serial.print()
+  - dataLog.txt
+    - Contains the experimental data recieved by the GUI
+    - Same packet format as the SD save
+  - consoleLog.txt
+    - can be used as a psuedo serial monitor during the recording instead of Serial.print()
 
 ## Developing with Visual Studio + Visual Micro
 - Follow instructions in [Setup](#setup) to get the Arduino IDE and libraries
@@ -266,6 +270,7 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 - [LED's](#adafruit-feather-m0-led-indicators) and the serial monitor can be useful tools for debugging
 - if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
 - if the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit
+- **The following 3 points have to be redefined for Beta boards**
 - if the red LED goes on after uploading code and remains on indefinitely without the green  _WiFi Connected_ LED, then the code is stuck in setup() before WiFi.begin() is ever called
   - Serial monitor should show which part of the board is failing to initialize
   - Differences in where the code gets stuck upon repeated uploads suggests that the boards have faulty connections
