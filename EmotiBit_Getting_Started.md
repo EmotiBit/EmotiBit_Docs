@@ -36,14 +36,21 @@
   <details>
   <summary>To summarize the above link</summary>
   <br>
+  
   - Preferences > Additional Board Manager URLs
-    - Copy-Paste the link: https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
+  - Copy-Paste the link: https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
   </details>
+  
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide
-  - The steps below represent the instructions in the link above in short hand
-    - Tools>Board: “..”>Boards Manager
-      - Install Arduino SAMD Boards
-      - Install Adafruit SAMD _**(use version 1.5.1)**_
+  <details>
+  <summary>To summarize the above link</summary>
+  <br>
+  
+  - Tools>Board: “..”>Boards Manager
+    - Install Arduino SAMD Boards
+    - Install Adafruit SAMD _**(use version 1.5.1)**_
+  
+  </details>
 - Follow instructions to set up the Adafruit M0 WiFi Feather
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module
   - Once you have the latest WiFi Firmware(FW 19.6.1) on the EmotiBit, you are good to proceed further!
