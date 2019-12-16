@@ -33,42 +33,50 @@
 - Download and install the Arduino IDE - https://www.arduino.cc/en/main/software
 - Follow these instructions to install the correct board libraries 
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/setup
-    - Preferences -> Additional Board Manager URLs
-      - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+  - The steps below represent the instructions in the link above in short hand
+    - Preferences > Additional Board Manager URLs
+      - https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
   - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide
+  - The steps below represent the instructions in the link above in short hand
     - Tools>Board: “..”>Boards Manager
       - Install Arduino SAMD Boards
       - Install Adafruit SAMD _**(use version 1.5.1)**_
-- Follow instructions to set up the Adafruit M0 WiFi Feather https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module
-- Install Libraries via Tools -> Library Manager
+- Follow instructions to set up the Adafruit M0 WiFi Feather
+  - https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module
+  - Once you have the latest WiFi Firmware(FW 19.6.1) on the EmotiBit, you are good to proceed further!
+- Install Libraries via Tools > Library Manager
   - WiFi101
   - SdFat
   - Adafruit SleepyDog
   - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
-  - SparkFun_MAX3010x_Pulse_and_Proximity_Sensor_Library
+  - EmotiBit_MAX30101_Library
   - EmotiBit Si7013
   - EmotiBit BMI160
   - EmotiBit FeatherWing
+  - EmotiBit_MLX90632_Digital_Thermopile
+  - EmotiBit_NCP5632_Led_Driver
 
 
 ## Programming the Feather
 - Get the latest release of EmotiBit_FW as described in [setup](#setup)
-- In the Arduino program (IDE), open File -> Examples -> EmotiBit FeatherWing -> EmotiBit_Example
+- In the Arduino program (IDE), open File > Examples > EmotiBit FeatherWing > EmotiBit_Example
   - Alternatively you can double click Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example/EmotiBit_Example.ino
-- Choose Tools->Board->“Adafruit Feather M0”
-- Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port should change.
+- Choose Tools>Board>“Adafruit Feather M0”
+- Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port(in _Tools > Port_) should change.
 - Choose Tools>Port>[the correct port for your board]
 - Click “Upload”
 - _**NOTE**_: Currently, EmotiBit will not record data to the SD card unless it [connects to WiFi](#connecting-to-wifi), due to timestamp reliability
 
 ## Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on an SD card.
-- The SD card must be in the FAT32 format, which can be checked by _right click -> properties-> file system_ on Windows
-  - if the card is not in FAT32 format it can be reformatted by _right click-> format -> file system_ on Windows
-  - Other operating systems, or large SD card capacities may require the use of 3rd party partioners such as AOMEI
-- If the card is inserted after programming, the Feather should be reset by pressing the reset botton. If it is done before programming, it should connect automatically. SD card reading is done in the setup of EmotiBit_Example.ino
-- The contents of the file should be in JSON format as shown below:
+- The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system(_under the **General**_ tab)_ on Windows
+  - if the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
+  - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
+- After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
+  - Create a **config.txt** file on the SD-Card.
+  - The contents of the file should be in JSON format as shown below:
     - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
+    - Copy paste the above line in the **config.txt** file. Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
 - **Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)**
   - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
     - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Fnord"}]}``
@@ -81,13 +89,23 @@
 
 ![alt text][LED]
 
-| EmotiBit State| Indicator LED State | Approx. Freq.  |
+- **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit has 3 LED's(Users should look at these when Determining the EmotiBit state)
+      
+| Event | Indicator LED State | Approx. Freq.  |
 | ------------- |:-------------------:| --------------:|
-| Hibernating   | Very Slow Blink     | 0.067 Hz       |
-| Recording     | Slow Blink          | 5 Hz           |
-| Not Recording | Fast Blink          | 15 Hz          |
-| Programming   | Slow Pulse          | 2 Hz           |
+| Recording     | RED - Slow Blink    | 1 Hz           |
+| Active - Not Recording | BLUE - Steady blink | 15 Hz          |
+| Low Battery   | YELLOW - Blinking   | 2 Hz           |
+<details>
+<summary>LED's on the Adafruit Feather M0 WiFi:</summary>
+<br>
 
+- **LED's on the Adafruit Feather M0 WiFi:** As shown in the Images above, The Feather has 4 LED's(Users should not look into these LED's unless debugging a problem)
+  - RED: Is the I2C CLK Line. Under regular Operation, it should be always ON
+  - ORANGE: This is the Charging indicator, which glows if a battery is connected to the feather and is being charged by the USB connection
+  - GREEN: This is the WiFi indicator. If the EmotiBit is Connected to Wifi, there should be a constant glow.
+  - YELLOW: It blinks whenever the EmotiBit receives data from the computer.
+</details>
 ## Switches
 - EmotiBit Switch/Button: adjacent to the SD card
   - Long Press (3 sec) to put EmotiBit into hibernate mode
