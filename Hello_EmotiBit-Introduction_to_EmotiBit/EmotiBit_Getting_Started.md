@@ -14,7 +14,7 @@
   - [Data Packet Structure](#Data-Packet-Structure)
     - [TypeTag Character Codes](#TypeTag-Character-Codes)
       - [Biometric TypeTags](#Biometric-TypeTags)
-      - [General Typetags and Computer to EmotiBit Typetags](#General Typetags and Computer to EmotiBit Typetags)
+      - [General Typetags and Computer to EmotiBit Typetags](#General-Typetags-and-Computer-to-EmotiBit-Typetags)
   - [Oscilloscope data storage](#Oscilloscope-data-storage)
 - [Trouble Shooting](#Trouble-Shooting)
 - [Repositories](#repositories)
