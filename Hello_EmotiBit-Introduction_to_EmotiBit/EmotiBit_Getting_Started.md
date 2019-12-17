@@ -149,36 +149,40 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 
 ###### General Typetags
 
-|Tag    | Description                       |
-|:-----:|:----------------------------------|
-|EI     |EmotiBit Info Json                 |
-|DC     |Data Clipping, TypeTag in Payload  |
-|DO     |Data Overflow, TypeTag in Payload  |
-|B%     |Battery Percentage Remaining       |
-|BV     |Battery Voltage                    |
-|D%     |SD card percent capacity filled    |
-|RD     |Request Data, TypeTag in Payload   |
-|PI     |Ping                               |
-|PO     |Pong                               |
-|RS     |Reset                              |
+|General Tag    | Description               |Computer to EmotiBit Tag    | Description                |              
+|:-----:|:----------------------------------|:-----:|:------------------------------------------------|
+|EI     |EmotiBit Info Json                 |GL     |[GPS latitude and Longitude][GPS]                |
+|DC     |Data Clipping, TypeTag in Payload  |GS     |[GPS Speed][GPS]                                 |
+|DO     |Data Overflow, TypeTag in Payload  |GB     |[GPS Bearing][GPS]                               |
+|B%     |Battery Percentage Remaining       |GA     |[GPS Altitude][GPS]                              |
+|BV     |Battery Voltage                    |TL     |Local Computer Timestamp                         |
+|D%     |SD card percent capacity filled    |TU     |UTC Timestamp                                    |
+|RD     |Request Data, TypeTag in Payload   |TU     |UTC Timestamp                                    |
+|PI     |Ping                               |TX     |Crosstime, used for timestamp comparison         |
+|PO     |Pong                               |LM     |LSL Marker/message                               |
+|RS     |Reset                              |RB     |Record begin (Include timestamp in Data)         |
+|       |                                   |RE     |Record End                                       |
+|       |                                   |UN     |User Note                                        |
+|       |                                   |MH     |Mode Hibernate                                   |
+|       |                                   |HE     |Hello EmotiBit, used to establish communication  |
 
 ###### Computer to EmotiBit TypeTags
 
-|Tag    | Description                       |
+
 |:-----:|:----------------------------------|
-|GL     |[GPS latitude and Longitude][GPS]  |
-|GS     |[GPS Speed][GPS]                   |
-|GB     |[GPS Bearing][GPS]                 |
-|GA     |[GPS Altitude][GPS]                |
-|TL     |Local Computer Timestamp           |
-|TU     |UTC Timestamp                      |
-|TX     |Crosstime, used for timestamp comparison   |
-|LM     |LSL Marker/message                 |
-|RB     |Record begin (Include timestamp in Data)   |
-|RE     |Record End                         |
-|UN     |User Note                          |
-|MH     |Mode Hibernate                     |
-|HE     |Hello EmotiBit, used to establish communication  |
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Oscilloscope data storage
 - When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope is stored to a system Directory in a structure mentioned below.
