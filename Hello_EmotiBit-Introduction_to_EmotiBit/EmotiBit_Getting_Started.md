@@ -33,7 +33,7 @@
   - Micro SD-Card USB reader
   - 3.7V battery
 ### Get the Software- Download the Oscilloscope!
-- To start using teh EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. Get the [Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases).
+- To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. Get the [Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases).
   - Download the precompiled binaries for the EmotiBit Oscilloscope(`EmotiBitOscilloscope.zip`) and the dataParser(`EmotiBitDataParser.zip`).
   - Extract the .zip files downloaded. You will find a `EmotiBitOscilloscope.exe` in the `bin` folder.
 ### Connecting to WiFi
@@ -198,7 +198,7 @@ The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session h
     - Same packet format as the SD save
   - consoleLog.txt
     - can be used as a psuedo serial monitor during the recording instead of Serial.print()
-- **NOTE: wWe recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `EmotiBitOscilloscope\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
+- **NOTE: We recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `EmotiBitOscilloscope\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
 
 ## Trouble Shooting
 - [LED's](#LED-Indicators) and the serial monitor can be useful tools for debugging
