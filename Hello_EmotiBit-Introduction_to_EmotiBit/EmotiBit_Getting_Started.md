@@ -12,7 +12,6 @@
 - [Data Recording](#data-recording)
   - [SD Saves](#sd-saves)
   - [Data AutoSave](#Data-AutoSave)
-- [Developing with Visual Studio + Visual Micro](#developing-with-visual-studio--visual-micro)
 - [Debugging](#debugging)
 - [Repositories](#repositories)
 
@@ -65,7 +64,7 @@
   - You should see the red and green LED's on the PPG sensor at the bottom light up.
   - The Wifi Shield goes up next, indicated with a green light on the feather
 - **You should see the Data start to stream on the Oscilloscope!!**
-- You do not see anything on the Oscilloscope? Click [here](guide-to-trouble-shooting) to check out our guide for trouble Shooting
+- You do not see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](Link to guide for trouble shooting)
 
 
 
@@ -111,7 +110,7 @@
 ## Data Recording
 Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiBit/releases), which is also the recommended way to view incoming data streams. The EmotiBit must be connected to the same WiFi as your computer for the GUI to work. No internet connection is neccessary.
 
-##### SD Saves
+##### Data Stored on the SD-Card 
 - CSV: Experimental Data
   - All data is saved to the SD card into a .csv file when recording is initiated from the GUI
   - The file is named with the date-time that the recording started
@@ -125,29 +124,17 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 [{"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},{"info":{"name":"Gyroscope","type":"Gyroscope","typeTags":["GX","GY","GZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"degrees/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":1000}}},{"info":{"name":"Magnetometer","type":"Magnetometer","typeTags":["MX","MY","MZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"raw samples","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{}}},{"info":{"name":"ElectrodermalActivity","type":"ElectrodermalActivity","typeTags":["EA"],"channel_count":1,"nominal_srate":15,"channel_format":"float","units":"microsiemens","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"adc_bits":12,"voltage_divider_resistance":5000000,"EDR_amplification":20,"low_pass_filter_frequency":"15.91Hz","samples_averaged":4,"oversampling_rate":60}}},{"info":{"name":"Humidity0","type":"Humidity","typeTags":["H0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"Percent","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Temperature0","type":"Temperature","typeTags":["T0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"degrees celcius","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Thermistor","type":"Thermistor","typeTags":["TH"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"raw adc units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"ADC_speed":"ADC_NORMAL","Vin_buffering":"VIN_UNBUFFERED","VREFP":"VREFP_VDDA","voltage_divider_resistance":10000,"thermistor_resistance":10000,"low_pass_filter_frequency":"0.1591Hz","amplification":10,"samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"PPG","type":"PPG","typeTags":["PI","PR","PG"],"channel_count":3,"nominal_srate":25,"channel_format":"float","units":"raw units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"LED_power_level":47,"samples_averaged":16,"LED_mode":3,"oversampling_rate":400,"pulse_width":215,"ADC_range":4096}}}]
 ```
 
-##### Data AutoSave
-- Even if the EmotiBit is not recording, the data received by the Oscilloscope is saving the data on the system as described below.
-- GUI data can be found in EmotiBitOscilloscope\bin\data
+### Oscilloscope data storage
+- When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope is stored to a system Directory in a structure mentioned below.
+- **Note: The Data stored by the oscilloscope is transmitted over the UDP is not a true record of the Data collected by the EmotiBit. 
+The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session has been initiated.** 
+- Oscilloscope data can be found in EmotiBitOscilloscope\bin\data
   - dataLog.txt
     - Contains the experimental data recieved by the GUI
     - Same packet format as the SD save
   - consoleLog.txt
     - can be used as a psuedo serial monitor during the recording instead of Serial.print()
 - **NOTE: wWe recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `EmotiBitOscilloscope\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
-
-## Developing with Visual Studio + Visual Micro
-- Follow instructions in [Setup](#setup) to get the Arduino IDE and libraries
-- [Install Visual Studio 2017 Community](https://drive.google.com/open?id=1sWMwa3cjDe1rPv4zH8XExWo41-AKcl3G)
-- Install the [Visual Micro extension for Visual Studio](https://www.visualmicro.com/page/Arduino-Visual-Studio-Downloads.aspx)
-- Manually add the link for additional board links given in the Setup
-  - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
-- Manually add the Adafruit SAMD libraries and the Arduino SAMD libraries via:
-  - vMicro->Add Library->Download and Install Arduino Library->Manage Boards
-- Follow instructions in Programming the Feather 
-  - Select proper board and port
-  - Rapid double click reset button on the feather to put it into programming mode
-  - Compile and run
-  - Open Serial monitor or Oscilloscope to view data stream
 
 ## Debugging
 - [LED's](#adafruit-feather-m0-led-indicators) and the serial monitor can be useful tools for debugging
