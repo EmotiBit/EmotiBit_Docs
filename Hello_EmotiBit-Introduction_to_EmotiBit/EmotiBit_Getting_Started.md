@@ -14,8 +14,7 @@
   - [Data Packet Structure](#Data-Packet-Structure)
     - [TypeTag Character Codes](#TypeTag-Character-Codes)
       - [Biometric TypeTags](#Biometric-TypeTags)
-      - [General Typetags](#General-Typetags)
-      - [Computer to EmotiBit TypeTags](#Computer-to-EmotiBit-TypeTags)
+      - [General Typetags and Computer to EmotiBit Typetags](#General Typetags and Computer to EmotiBit Typetags)
   - [Oscilloscope data storage](#Oscilloscope-data-storage)
 - [Trouble Shooting](#Trouble-Shooting)
 - [Repositories](#repositories)
@@ -147,7 +146,7 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 |H0     |Humidity (Si7013)     |MZ     |Magnetometer Z        |
 
 
-###### General Typetags
+###### General Typetags and Computer to EmotiBit Typetags
 
 |General Tag    | Description               |Computer to EmotiBit Tag    | Description                |              
 |:-----:|:----------------------------------|:-----:|:------------------------------------------------|
@@ -165,24 +164,6 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 |       |                                   |UN     |User Note                                        |
 |       |                                   |MH     |Mode Hibernate                                   |
 |       |                                   |HE     |Hello EmotiBit, used to establish communication  |
-
-###### Computer to EmotiBit TypeTags
-
-
-|:-----:|:----------------------------------|
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Oscilloscope data storage
 - When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope is stored to a system Directory in a structure mentioned below.
