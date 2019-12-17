@@ -134,26 +134,18 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 ##### TypeTag Character Codes
 
 ###### Biometric TypeTags
-|Tag    | Description          |
-|:-----:|----------------------|
-|EA     |EDA                   |
-|EL     |EDL                   |
-|ER     |EDR                   |
-|PI     |PPG Infrared          |
-|PR     |PPG Red               |
-|PG     |PPG Green             |
-|T0     |Temperature (Si7013)  |
-|TH     |Thermopile(ML90632)            |
-|H0     |Humidity (Si7013)     |
-|AX     |Accelerometer X       |
-|AY     |Accelerometer Y       |
-|AZ     |Accelerometer Z       |
-|GX     |Gyroscope X           |
-|GY     |Gyroscope Y           |
-|GZ     |Gyroscope Z           |
-|MX     |Magnetometer X        |
-|MY     |Magnetometer Y        |
-|MZ     |Magnetometer Z        |
+|Tag    | Description          |Tag    | Description          |
+|:-----:|----------------------|:-----:|----------------------|
+|EA     |EDA                   |AX     |Accelerometer X       |
+|EL     |EDL                   |AY     |Accelerometer Y       |
+|ER     |EDR                   |AZ     |Accelerometer Z       |
+|PI     |PPG Infrared          |GX     |Gyroscope X           |
+|PR     |PPG Red               |GY     |Gyroscope Y           |
+|PG     |PPG Green             |GZ     |Gyroscope Z           |
+|T0     |Temperature (Si7013)  |MX     |Magnetometer X        |
+|TH     |Thermopile(ML90632)   |MY     |Magnetometer Y        |
+|H0     |Humidity (Si7013)     |MZ     |Magnetometer Z        |
+
 
 ###### General Typetags
 
