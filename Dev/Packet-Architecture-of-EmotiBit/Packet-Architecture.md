@@ -76,4 +76,4 @@ This document shows an in-depth view of the EmotiBit packet Architecture and Dat
 |HE     |Hello EmotiBit, used to establish communication  |
 
 [GPS]: https://developer.android.com/reference/android/location/Location
-[Pack]: https://github.com/EmotiBit/EmotiBit_Docs/blob/master/images/PacketExample.png "Example Packets"
+[Pack]: ./images/PacketExample.png "Example Packets"

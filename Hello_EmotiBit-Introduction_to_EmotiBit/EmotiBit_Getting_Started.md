@@ -10,9 +10,14 @@
 - [Switches](#switches)
 - [Maintenance](#maintenance)
 - [Data Recording](#data-recording)
-  - [SD Saves](#sd-saves)
-  - [Data AutoSave](#Data-AutoSave)
-- [Debugging](#debugging)
+  - [Data Stored on the SD-Card](#Data-Stored-on-the-SD-Card)
+  - [Data Packet Structure](#Data-Packet-Structure)
+    - [TypeTag Character Codes](#TypeTag-Character-Codes)
+      - [Biometric TypeTags](#Biometric-TypeTags)
+      - [General Typetags](#General-Typetags)
+      - [Computer to EmotiBit TypeTags](#Computer-to-EmotiBit-TypeTags)
+  - [Oscilloscope data storage](#Oscilloscope-data-storage)
+- [Trouble Shooting](#Trouble-Shooting)
 - [Repositories](#repositories)
 
 ## Overview
@@ -64,7 +69,7 @@
   - You should see the red and green LED's on the PPG sensor at the bottom light up.
   - The Wifi Shield goes up next, indicated with a green light on the feather
 - **You should see the Data start to stream on the Oscilloscope!!**
-- You do not see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](Link to guide for trouble shooting)
+- You do not see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](#Trouble-Shooting)
 
 
 
@@ -100,17 +105,10 @@
 ## Maintenance
 - As the SD card fills up, it can slow down data writing to the SD card. To keep the EmotiBit running at peak performance, it’s a good idea to clear files off the SD card periodically.
 
-## For Advanced Users(If you want to dive into the inner workings of EmotiBit)
-- We have designed the EmotiBit to be built on an Open Source Architecture. 
-- The Following links will guide you to the internal workings of the EmotiBit
-  - [Packet Architecture](Link to the Documentation of the inner workings)
-  - [Networking Architecture](Link to the Netwroking Architecture) 
-
-
 ## Data Recording
 Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiBit/releases), which is also the recommended way to view incoming data streams. The EmotiBit must be connected to the same WiFi as your computer for the GUI to work. No internet connection is neccessary.
 
-##### Data Stored on the SD-Card 
+#### Data Stored on the SD Card 
 - CSV: Experimental Data
   - All data is saved to the SD card into a .csv file when recording is initiated from the GUI
   - The file is named with the date-time that the recording started
@@ -123,6 +121,72 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 ```
 [{"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},{"info":{"name":"Gyroscope","type":"Gyroscope","typeTags":["GX","GY","GZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"degrees/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":1000}}},{"info":{"name":"Magnetometer","type":"Magnetometer","typeTags":["MX","MY","MZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"raw samples","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{}}},{"info":{"name":"ElectrodermalActivity","type":"ElectrodermalActivity","typeTags":["EA"],"channel_count":1,"nominal_srate":15,"channel_format":"float","units":"microsiemens","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"adc_bits":12,"voltage_divider_resistance":5000000,"EDR_amplification":20,"low_pass_filter_frequency":"15.91Hz","samples_averaged":4,"oversampling_rate":60}}},{"info":{"name":"Humidity0","type":"Humidity","typeTags":["H0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"Percent","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Temperature0","type":"Temperature","typeTags":["T0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"degrees celcius","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Thermistor","type":"Thermistor","typeTags":["TH"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"raw adc units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"ADC_speed":"ADC_NORMAL","Vin_buffering":"VIN_UNBUFFERED","VREFP":"VREFP_VDDA","voltage_divider_resistance":10000,"thermistor_resistance":10000,"low_pass_filter_frequency":"0.1591Hz","amplification":10,"samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"PPG","type":"PPG","typeTags":["PI","PR","PG"],"channel_count":3,"nominal_srate":25,"channel_format":"float","units":"raw units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"LED_power_level":47,"samples_averaged":16,"LED_mode":3,"oversampling_rate":400,"pulse_width":215,"ADC_range":4096}}}]
 ```
+#### Data Packet Structure
+- - `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
+  - **Timestamp:** milliseconds since start of EmotiBit
+  - **Packet Number:** packet count since start of EmotiBit
+  - **Number of Datapoints:** Number of data points in the payload
+  - **Typetag:** type of data being sent
+  - **Version:** version of packet protocol
+  - **Reliability:** data reliability score out of 100, currently always 100
+  - **Payload:** data to send
+
+##### TypeTag Character Codes
+
+###### Biometric TypeTags
+|Tag    | Description          |
+|:-----:|----------------------|
+|EA     |EDA                   |
+|EL     |EDL                   |
+|ER     |EDR                   |
+|PI     |PPG Infrared          |
+|PR     |PPG Red               |
+|PG     |PPG Green             |
+|T0     |Temperature (Si7013)  |
+|TH     |Thermopile(ML90632)            |
+|H0     |Humidity (Si7013)     |
+|AX     |Accelerometer X       |
+|AY     |Accelerometer Y       |
+|AZ     |Accelerometer Z       |
+|GX     |Gyroscope X           |
+|GY     |Gyroscope Y           |
+|GZ     |Gyroscope Z           |
+|MX     |Magnetometer X        |
+|MY     |Magnetometer Y        |
+|MZ     |Magnetometer Z        |
+
+###### General Typetags
+
+|Tag    | Description                       |
+|:-----:|:----------------------------------|
+|EI     |EmotiBit Info Json                 |
+|DC     |Data Clipping, TypeTag in Payload  |
+|DO     |Data Overflow, TypeTag in Payload  |
+|B%     |Battery Percentage Remaining       |
+|BV     |Battery Voltage                    |
+|D%     |SD card percent capacity filled    |
+|RD     |Request Data, TypeTag in Payload   |
+|PI     |Ping                               |
+|PO     |Pong                               |
+|RS     |Reset                              |
+
+###### Computer to EmotiBit TypeTags
+
+|Tag    | Description                       |
+|:-----:|:----------------------------------|
+|GL     |[GPS latitude and Longitude][GPS]  |
+|GS     |[GPS Speed][GPS]                   |
+|GB     |[GPS Bearing][GPS]                 |
+|GA     |[GPS Altitude][GPS]                |
+|TL     |Local Computer Timestamp           |
+|TU     |UTC Timestamp                      |
+|TX     |Crosstime, used for timestamp comparison   |
+|LM     |LSL Marker/message                 |
+|RB     |Record begin (Include timestamp in Data)   |
+|RE     |Record End                         |
+|UN     |User Note                          |
+|MH     |Mode Hibernate                     |
+|HE     |Hello EmotiBit, used to establish communication  |
 
 ### Oscilloscope data storage
 - When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope is stored to a system Directory in a structure mentioned below.
@@ -136,10 +200,21 @@ The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session h
     - can be used as a psuedo serial monitor during the recording instead of Serial.print()
 - **NOTE: wWe recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `EmotiBitOscilloscope\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
 
-## Debugging
-- [LED's](#adafruit-feather-m0-led-indicators) and the serial monitor can be useful tools for debugging
-- if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
-- if the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit
+## Trouble Shooting
+- [LED's](#LED-Indicators) and the serial monitor can be useful tools for debugging
+  - if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
+  - if the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit
+- Things to check for:
+  - Make sure the SD-Card contains the **config.txt** file.
+  - Verify if the **WiFi-Name** and **WiFi-Password** are correctly entered in the config file.
+- If you dont already have the Arduino IDE, download it on Arduino [site](https://www.arduino.cc/en/main/software)
+- Connect the USB cable:
+  - Open the Arduino IDE. 
+  - **RESET** the emotibit by pressing the reset button.
+  - Once you reset, you will notice _Adafruit Feather M0_ appear on a specific Port under `Tools > Port`.
+  - Once Arduino Recognizes the Port, Select that port is not automatically selected.
+  - Start the Serial Monitor(Ctrl+M <or> Cmd+M).
+  - You will see Messages being printed on the console. These are a good source to find out what exactly is going on in the code. 
 - **The following 3 points have to be redefined for Beta boards**
 - if the red LED goes on after uploading code and remains on indefinitely without the green  _WiFi Connected_ LED, then the code is stuck in setup() before WiFi.begin() is ever called
   - Serial monitor should show which part of the board is failing to initialize
@@ -150,6 +225,13 @@ The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session h
   - Check that your feather has the [latest version of the firmware](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/updating-firmware)
   - Check that your network supports device connections in this manner; many Universities and public work spaces disallow it
 - If the red light significantly deviates from the patterns shown in the [above section](#adafruit-feather-m0-led-indicators), including getting stuck on or off for a large period of time during recording, there is a firmware error that is causing _loop()_ to delay. Check any changes that you made to the release code. Remove any while loops that take more than 15ms.
+
+## For Advanced Users(If you want to dive into the inner workings of EmotiBit)
+- We have designed the EmotiBit to be built on an Open Source Architecture. 
+- The Following links will guide you to the internal workings of the EmotiBit
+  - [Packet Architecture](../Dev/Packet-Architecture-of-EmotiBit/Packet-Architecture.md)
+  - [Networking Architecture](../Dev/Networking-Architecture/Networking-Architecture.md) 
+
 
 ## Repositories
 - Parent Github
