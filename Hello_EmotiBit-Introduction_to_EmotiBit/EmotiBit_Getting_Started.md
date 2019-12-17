@@ -21,41 +21,52 @@
 ![alt text][Hardware]
 
 ## If you just received your EmotiBit
+### Unboxing
 - Welcome to the World of EmotiBit. If you just received your EmotiBit, In the box you will find:
   - EmotiBit
   - Adafruit feather M0 WiFi, programmed and ready to use
   - Micro-SD-Card
   - Micro SD-Card USB reader
   - 3.7V battery
-- To get started, follow the instructions below([connecting to WiFi](#connecting-to-wifi)) to set-up your SD-Card, so that the EmotiBit can connect to Wifi
-- After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot. At this Point, your EmotiBit is ready to use!
-- To start using teh EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. Click [here](https://github.com/EmotiBit/ofxEmotiBit/releases) to get the Oscilloscope installed.
+### Get the Software- Download the Oscilloscope!
+- To start using teh EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. Get the [Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases).
   - Download the precompiled binaries for the EmotiBit Oscilloscope(`EmotiBitOscilloscope.zip`) and the dataParser(`EmotiBitDataParser.zip`).
   - Extract the .zip files downloaded. You will find a `EmotiBitOscilloscope.exe` in the `bin` folder.
-  - You are GOOD TO GO!
-- Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.
-- Wait for the EmotiBit to run through the setup.
-- Double click on the `EmotiBitOscilloscope.exe`, downloaded in the previous step.
-- You should see the Data start to stream on the Oscilloscope!
-- You do not see anything on the Oscilloscope? Click [here](guide-to-trouble-shooting) to check out our guide for trouble Shooting
-
 ### Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on an SD card.
 - The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system(_under the **General**_ tab)_ on Windows
-  - if the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
+  - If the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
   - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
 - After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
   - Create a **config.txt** file on the SD-Card.
   - The contents of the file should be in JSON format as shown below:
     - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
     - Copy paste the above line in the **config.txt** file. Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
-- **Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)**
-  - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Fnord"}]}``
-  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
-    - Shorten the list
-    - Organize the list in order of priority of connection
-  - If connection is lost to the original network, EmotiBit will continue to try to reconnect for 5 min before attempting another network. This timeout period can be changed by setting WIFI_BEGIN_SWITCH_CRED in EmotiBit_Example.ino
+- <details>
+<summary>Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)</summary>
+<br>
+ 
+- a JSON list can be used to store up to 12 sets of network credentials in config.txt:
+  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Fnord"}]}``
+- In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
+  - Shorten the list
+  - Organize the list in order of priority of connection
+- If connection is lost to the original network, EmotiBit will continue to try to reconnect for 5 min before attempting another network. This timeout period can be changed by setting WIFI_BEGIN_SWITCH_CRED in EmotiBit_Example.ino
+</details>
+
+- After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
+- **YOU ARE READY TO GO!!!**
+### Powering Up
+
+- Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.
+- Double click on the `EmotiBitOscilloscope.exe`, in the `EmotiBitOscilloscope/bin/EmotiBitOscilloscope.exe` downloaded and extracted in the previous step.
+- Wait for the EmotiBit to run through the setup.
+  - You should see the red and green LED's on the PPG sensor at the bottom light up.
+  - The Wifi Shield goes up next, indicated with a green light on the feather
+- **You should see the Data start to stream on the Oscilloscope!!**
+- You do not see anything on the Oscilloscope? Click [here](guide-to-trouble-shooting) to check out our guide for trouble Shooting
+
+
 
 ## LED Indicators
 
