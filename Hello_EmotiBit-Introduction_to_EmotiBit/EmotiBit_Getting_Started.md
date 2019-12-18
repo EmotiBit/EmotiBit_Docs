@@ -54,7 +54,7 @@
 
 - Create a **config.txt** file on the SD-Card.
 - The contents of the file should be in JSON format as shown below:
-- ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
+  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
 - Copy paste the above line in the **config.txt** file. Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
 
 <details>
