@@ -40,7 +40,7 @@
     - **On Mac:**
 ### Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on the SD-Card provided.
-- The SD-Card provided in the box is in the FAT32 format, which is essential for the EmotiBit to function as designed. 
+- If you got your SD-card with your EmotiBit, it's already in the FAT32 format (this is essential for the EmotiBit to function as designed). 
 - **NOTE:** If using a SD-Card other than the one provided in the box, please make sure it is formatted to be FAT32. You can follow the Instructions below to do so.
 <details>
 <summary>Formatting to FAT32</summary>
