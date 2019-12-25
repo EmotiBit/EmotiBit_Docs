@@ -52,7 +52,7 @@ This guide describes how to update the firmware on the EmotiBit.
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port(in _Tools > Port_) should change.
 - Choose Tools > Port > [the correct port for your board]
 - Click “Upload”
-- _**NOTE**_: Currently, EmotiBit will not record data to the SD card unless it [connects to WiFi](#connecting-to-wifi), due to timestamp reliability
+- _**NOTE**_: You must [connect to WiFi](#connecting-to-wifi) to begin recording data to the SD card. This is required to maintain high timestamp reliability.
 
 ## Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on an SD card.
