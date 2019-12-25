@@ -50,7 +50,7 @@ This guide describes how to update the firmware on the EmotiBit.
   - Alternatively you can double click Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example/EmotiBit_Example.ino
 - Choose Tools > Board > “Adafruit Feather M0”
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port(in _Tools > Port_) should change.
-- Choose Tools>Port>[the correct port for your board]
+- Choose Tools > Port > [the correct port for your board]
 - Click “Upload”
 - _**NOTE**_: Currently, EmotiBit will not record data to the SD card unless it [connects to WiFi](#connecting-to-wifi), due to timestamp reliability
 
