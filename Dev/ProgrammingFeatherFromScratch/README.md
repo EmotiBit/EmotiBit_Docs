@@ -4,7 +4,6 @@ This guide describes how to update the firmware on the EmotiBit.
 ## Table of Contents
 - [Setup](#setup)
 - [Programming the Feather](#programming-the-feather)
-- [Connecting to WiFi](#connecting-to-wifi)
 
 ## Setup
 - Download and install the Arduino IDE - https://www.arduino.cc/en/main/software
