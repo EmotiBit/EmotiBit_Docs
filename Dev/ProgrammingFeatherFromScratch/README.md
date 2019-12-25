@@ -54,21 +54,5 @@ This guide describes how to update the firmware on the EmotiBit.
 - Click “Upload”
 - _**NOTE**_: You must [connect to WiFi](#connecting-to-wifi) to begin recording data to the SD card. This is required to maintain high timestamp reliability.
 
-## Connecting to WiFi
-- To connect to WiFi you can add the WiFi credentials to a file named “config.txt” on an SD card.
-- The SD card must be in the FAT32 format.
-  - If the SD card came with your EmotiBit it is already in FAT32 format. Otherwise it can be checked by _right click > properties > file system (_under the **General**_ tab)_ on Windows.
-  - if the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
-  - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
-- After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
-  - Create a **config.txt** file on the SD-Card.
-  - The contents of the file should be in JSON format as shown below:
-    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
-    - Copy paste the above line in the **config.txt** file. Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
-- **Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)**
-  - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Fnord"}]}``
-  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
-    - Shorten the list
-    - Organize the list in order of priority of connection
-  - If connection is lost to the original network, EmotiBit will continue to try to reconnect for 5 min before attempting another network. This timeout period can be changed by setting WIFI_BEGIN_SWITCH_CRED in EmotiBit_Example.ino
+## Ready to go!
+- See EmotiBit_Getting_Started to start streaming data from your body!
