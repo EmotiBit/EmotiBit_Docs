@@ -1,5 +1,5 @@
 ## Overview
-If you just received your EmotiBit, please checkout our [Hello! EmotiBit](https://github.com/EmotiBit/EmotiBit_Docs/blob/EmotiBit-V2/Hello_EmotiBit-Introduction_to_EmotiBit/EmotiBit_Getting_Started.md) startup-guide.
+If you just received your EmotiBit, please checkout our [EmotiBit Getting Started](https://github.com/EmotiBit/EmotiBit_Docs/blob/EmotiBit-V2/Hello_EmotiBit-Introduction_to_EmotiBit/EmotiBit_Getting_Started.md) startup-guide.
 This Guide is an in-depth step-by-step for users who want to know more about the internal workings of EmotiBit.
 ## Table of Contents
 - [Setup](#setup)
