@@ -56,7 +56,7 @@ This guide describes how to update the firmware on the EmotiBit.
 
 ## Connecting to WiFi
 - To connect to WiFi you can add the WiFi credentials to a file named “config.txt” on an SD card.
-- The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system(_under the **General**_ tab)_ on Windows (if the SD card came with your EmotiBit it is already in FAT32 format).
+- The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system (_under the **General**_ tab)_ on Windows (if the SD card came with your EmotiBit it is already in FAT32 format).
   - if the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
   - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
 - After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
