@@ -55,7 +55,7 @@ This guide describes how to update the firmware on the EmotiBit.
 - _**NOTE**_: You must [connect to WiFi](#connecting-to-wifi) to begin recording data to the SD card. This is required to maintain high timestamp reliability.
 
 ## Connecting to WiFi
-- To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on an SD card.
+- To connect to WiFi you can add the WiFi credentials to a file named “config.txt” on an SD card.
 - The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system(_under the **General**_ tab)_ on Windows
   - if the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
   - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
