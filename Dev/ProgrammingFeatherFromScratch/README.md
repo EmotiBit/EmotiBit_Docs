@@ -29,7 +29,7 @@ This guide describes how to update the firmware on the EmotiBit.
       </details>
 - Check whether you need to update the WINC1500 WiFi module firmware
   - On the Adafruit M0 WiFi Feather the main FW lives on the SAMD21 "brain" that controls the EmotiBit, but there is also FW on the WINC1500 WiFi slave module that handles the WiFi transmissions. Occasionally there are updates to that FW that fixes a bug or or lowers power consumption or something and it requires a special process to update it.
-  - If you got your Feather shipped with your EmotiBit, it has the latest FW (currently (FW 19.6.1) on the WINC1500 WiFi module and doesn't require updating, but if you got your Feather from Adafruit or elsewhere it might require updating to work properly with the high data demands EmotiBit requires.
+  - **If you got your Feather shipped with your EmotiBit, it already has the latest FW (currently (FW 19.6.1) on the WINC1500 WiFi module and doesn't require updating**, but if you got your Feather from Adafruit or elsewhere it might require updating to work properly with the high data demands EmotiBit requires.
   - Here are some handy instructions to identify which WINC1500 FW you have and update it if necessary https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module
 - Install Libraries via Tools > Library Manager
   - WiFi101
