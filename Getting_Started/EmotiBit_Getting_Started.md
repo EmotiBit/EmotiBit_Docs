@@ -234,8 +234,8 @@ The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session h
   - https://github.com/EmotiBit/ofxEmotiBit
   - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases
 
-[GUI]: ./images/ofxEmotiBit.png "ofxEmotiBit GUI"
-[Hardware]: ./images/hardwarewithback.png "EmotiBit Hardware"
-[SideView]: ./images/EmotiBitSideView.jpg "EmotiBit Side View"
-[LED]: ./images/LightIndicators.png "Feather LED's"
+[GUI]: ../assets/ofxEmotiBit.png "ofxEmotiBit GUI"
+[Hardware]: ../assets/hardwarewithback.png "EmotiBit Hardware"
+[SideView]: ../assets/EmotiBitSideView.jpg "EmotiBit Side View"
+[LED]: ../assets/LightIndicators.png "Feather LED's"
 
