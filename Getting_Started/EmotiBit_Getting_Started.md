@@ -218,8 +218,8 @@ The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session h
 ## For Advanced Users(If you want to dive into the inner workings of EmotiBit)
 - We have designed the EmotiBit to be built on an Open Source Architecture. 
 - The Following links will guide you to the internal workings of the EmotiBit
-  - [Packet Architecture](../Dev/Packet-Architecture-of-EmotiBit/Packet-Architecture.md)
-  - [Networking Architecture](../Dev/Networking-Architecture/Networking-Architecture.md) 
+  - [Packet Architecture](../EmotiBit_FeatherWing/Packet_Architecture.md)
+  - [Networking Architecture](../EmotiBit_FeatherWing/Networking_Architecture.md) 
 
 
 ## Repositories

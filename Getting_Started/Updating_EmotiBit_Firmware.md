@@ -1,5 +1,5 @@
 ## Overview
-If you just received your EmotiBit, please checkout our [EmotiBit Getting Started](https://github.com/EmotiBit/EmotiBit_Docs/blob/EmotiBit-V2/Hello_EmotiBit-Introduction_to_EmotiBit/EmotiBit_Getting_Started.md) startup-guide.
+If you just received your EmotiBit, please checkout our [EmotiBit Getting Started](./EmotiBit_Getting_Started.md) startup-guide.
 This guide describes how to update the firmware on the EmotiBit.
 ## Table of Contents
 - [Setup](#setup)
