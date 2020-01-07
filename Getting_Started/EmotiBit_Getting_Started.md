@@ -189,6 +189,10 @@ The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session h
     - can be used as a psuedo serial monitor during the recording instead of Serial.print()
 - **NOTE: We recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `EmotiBitOscilloscope\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
 
+### Data Analysis
+Once you initiate recording, the data is stored on the SD-Card. We provide 2 powerful tools to infer from the data recorded.
+- [**Data Parser**](../Software/EmotiBit_Data_Parser.md)- A parser that reads the recorded data and generates a separate time-stamped  file for each signal recorded.
+- [**Python Viewer**](../Software/EmotiBit_Data_Viewer.md)- A toolkit developed in python for visualizing the recorded data with all the associated tags.
 ## Trouble Shooting
 - [LED's](#LED-Indicators) and the serial monitor can be useful tools for debugging
   - if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
