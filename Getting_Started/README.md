@@ -1,4 +1,4 @@
-## Welcome to the World of EmotiBit
+## Welcome to the World of EmotiBit!
 
 We have Listed a few documentations here which we think might help you navigate your way through your EmotiBit experience.
 - [`EmotiBit Getting Started`](./EmotiBit_Getting_Started.md)

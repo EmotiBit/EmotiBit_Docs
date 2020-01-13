@@ -37,19 +37,21 @@
   - Download the precompiled binaries for the EmotiBit Oscilloscope(`EmotiBitOscilloscope.zip`) and the dataParser(`EmotiBitDataParser.zip`).
   - Extract the .zip files downloaded. You will find a 
     - **On Windows:** `EmotiBitOscilloscope.exe` in the `bin` folder.
-    - **On Mac:**
+    - **On Mac:** `EmotiBitOscilloscope` application in the `bin` folder
 ### Connecting to WiFi
 - To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on the SD-Card provided.
 - If you got your SD-card with your EmotiBit, it's already in the FAT32 format (this is essential for the EmotiBit to function as designed). 
 - **NOTE:** If using a SD-Card other than the one provided in the box, please make sure it is formatted to be FAT32. You can follow the Instructions below to do so.
 <details>
-<summary>Formatting to FAT32</summary>
+<summary>
+Formatting to FAT32</summary>
 <br>
 
 - The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system(_under the **General**_ tab)_ on Windows
   - If the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
   - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
 - After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
+
 </details>
 
 - Create a **config.txt** file on the SD-Card.
