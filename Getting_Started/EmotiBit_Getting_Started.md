@@ -17,7 +17,7 @@
       - [General Typetags and Computer to EmotiBit Typetags](#General-Typetags-and-Computer-to-EmotiBit-Typetags)
   - [Oscilloscope data storage](#Oscilloscope-data-storage)
   - [Data Analysis](#Data-Analysis)
-- [Trouble Shooting](#Trouble-Shooting)
+- [Troubleshooting](#Troubleshooting)
 - [Repositories](#repositories)
 
 ## Overview
