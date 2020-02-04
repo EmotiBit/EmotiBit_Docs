@@ -1,3 +1,5 @@
+![EmotiBit Visualizer](../assets/Visualizer_green_800px.gif)
+
 ## Welcome to the World of EmotiBit!
 
 We have Listed a few documentations here which we think might help you navigate your way through your EmotiBit experience.
