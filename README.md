@@ -1,3 +1,5 @@
+
+![EmotiBit](assets/emotibit_hand_1200x675_nr.png)
 # EmotiBit Documentation
 - [`Getting Started`](./Getting_Started) 
     contains instructions for New Users to get their EmotiBit's up and running! Follow the instructions provided
