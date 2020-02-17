@@ -89,26 +89,20 @@ Formatting to FAT32</summary>
 
 ## LED Indicators
 
-- **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit has 3 LED's(Users should look at these when Determining the EmotiBit state)
-      
-| Event | Indicator LED State | Approx. Freq.  |
-| ------------- |:-------------------:| --------------:|
-| Recording     | RED - Slow Blink    | 1 Hz           |
-| Active - Not Recording | BLUE - Steady blink | 15 Hz          |
-| Low Battery   | YELLOW - Blinking   | 2 Hz           |
-
-<details>
-<summary>LED's on the Adafruit Feather M0 WiFi:</summary>
-<br>
-
 ![alt text][LED]
+- 
+**LED's on the EmotiBit:** As shown in the Images above, The EmotiBit has a number of LEDs to indicate its present status.
+
+3 LED's(Users should look at these when Determining the EmotiBit state)
+  - RED: Blinks at ~1Hz when recording
+  - BLUE: Steady-on when connected to the EmotiBit Oscilloscope
+  - Yellow: Steady-on when the battery level is low
 
 - **LED's on the Adafruit Feather M0 WiFi:** As shown in the Images above, The Feather has 4 LED's(Users should not look into these LED's unless debugging a problem)
-  - RED: Is the I2C CLK Line. Under regular Operation, it should be always ON
+  - RED: Is the I2C SCL Line. Under regular Operation, it should be always ON
   - ORANGE: This is the Charging indicator, which glows if a battery is connected to the feather and is being charged by the USB connection
   - GREEN: This is the WiFi indicator. If the EmotiBit is Connected to Wifi, there should be a constant glow.
-  - YELLOW: It blinks whenever the EmotiBit receives data from the computer.
-</details>
+  - YELLOW: It blinks whenever the EmotiBit receives a message from the computer. This blinks periodically when an EmotiBit Oscilloscope executable is running on the network.
 
 ## Switches
 - EmotiBit Switch/Button: _adjacent to the SD card_
@@ -244,5 +238,5 @@ Once you initiate recording, the data is stored on the SD-Card. We provide 2 pow
 [GUI]: ../assets/ofxEmotiBit.png "ofxEmotiBit GUI"
 [Hardware]: ../assets/hardwarewithback.png "EmotiBit Hardware"
 [SideView]: ../assets/EmotiBitSideView.jpg "EmotiBit Side View"
-[LED]: ../assets/LightIndicators.png "Feather LED's"
+[LED]: ../assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"
 
