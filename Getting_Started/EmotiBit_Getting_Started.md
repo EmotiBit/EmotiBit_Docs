@@ -90,15 +90,12 @@ Formatting to FAT32</summary>
 ## LED Indicators
 
 ![alt text][LED]
-- 
-**LED's on the EmotiBit:** As shown in the Images above, The EmotiBit has a number of LEDs to indicate its present status.
-
-3 LED's(Users should look at these when Determining the EmotiBit state)
+- **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit FeatherWing has 3 LEDs to indicate its present status.
   - RED: Blinks at ~1Hz when recording
   - BLUE: Steady-on when connected to the EmotiBit Oscilloscope
   - Yellow: Steady-on when the battery level is low
 
-- **LED's on the Adafruit Feather M0 WiFi:** As shown in the Images above, The Feather has 4 LED's(Users should not look into these LED's unless debugging a problem)
+- **LED's on the Adafruit Feather M0 WiFi:** In addition to the EmotiBit LEDs, the Feather has 4 indicator LED's 
   - RED: Is the I2C SCL Line. Under regular Operation, it should be always ON
   - ORANGE: This is the Charging indicator, which glows if a battery is connected to the feather and is being charged by the USB connection
   - GREEN: This is the WiFi indicator. If the EmotiBit is Connected to Wifi, there should be a constant glow.
