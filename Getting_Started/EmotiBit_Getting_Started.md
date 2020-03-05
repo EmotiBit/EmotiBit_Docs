@@ -34,7 +34,7 @@
   - Micro SD-Card USB reader
   - 3.7V battery
 ### Get the Software- Download the Oscilloscope!
-- To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. Get the [Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases).
+- To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
   - Download the precompiled binaries for the EmotiBit Oscilloscope(`EmotiBitOscilloscope.zip`) and the dataParser(`EmotiBitDataParser.zip`).
   - Extract the .zip files downloaded. You will find a 
     - **On Windows:** `EmotiBitOscilloscope.exe` in the `bin` folder.
