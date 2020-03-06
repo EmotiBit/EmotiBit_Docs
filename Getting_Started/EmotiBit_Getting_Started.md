@@ -28,60 +28,93 @@
 ### Unboxing
 [comment]: <> ()
 - Welcome to the World of EmotiBit. If you just received your EmotiBit, In the box you will find:
-  - EmotiBit
+  - EmotiBit with straps
   - Adafruit feather M0 WiFi, programmed and ready to use
-  - Micro-SD-Card
+  - Micro-SD-Card with SD-Card adapter
   - Micro SD-Card USB reader
   - 3.7V battery
-### Get the Software- Download the Oscilloscope!
-- To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-  - Download the precompiled binaries for the EmotiBit Oscilloscope(`EmotiBitOscilloscope.zip`) and the dataParser(`EmotiBitDataParser.zip`).
-  - Extract the .zip files downloaded. You will find a 
-    - **On Windows:** `EmotiBitOscilloscope.exe` in the `bin` folder.
-    - **On Mac:** `EmotiBitOscilloscope` application in the `bin` folder
+  - 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
+
 ### Connecting to WiFi
-- To connect to WiFi with an Adafruit Feather M0 Wifi board, you can add the WiFi credentials to a file named “config.txt” on the SD-Card provided.
-- If you got your SD-card with your EmotiBit, it's already in the FAT32 format (this is essential for the EmotiBit to function as designed). 
-- **NOTE:** If using a SD-Card other than the one provided in the box, please make sure it is formatted to be FAT32. You can follow the Instructions below to do so.
+- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name and Password:WiFi Password` to a file named `config.txt` on the SD-Card provided.
+- **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
+- If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
+- If using a SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the Instructions below to Format the SD-Card
 <details>
 <summary>
 Formatting to FAT32</summary>
 <br>
 
-- The SD card must be in the FAT32 format, which can be checked by _right click > properties > file system(_under the **General**_ tab)_ on Windows
-  - If the card is not in FAT32 format it can be reformatted by _right click > format > file system_ on Windows
+  - **For Windows Users:** 
+    - Open a new File Explorer Window.
+    - Choose **This PC** from the menu bar on the left.
+    - On the disk representing the SD-Card:
+        - _right click > format_ 
+        - Choose the Format as FAT32 in the File System drop down.
+        - Click on **Format**
+  - **For macOS users**
+    - **Find**  guy with Windows and do as directed above.
   - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
 - After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
 
 </details>
 
 - Create a **config.txt** file on the SD-Card.
-- The contents of the file should be in JSON format as shown below:
-  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}``
-- Copy paste the above line in the **config.txt** file. Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
+- The contents of the file should be in format as shown below:
+  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+- Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
 
 <details>
 <summary>Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)</summary>
 <br>
  
 - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Fnord"}]}``
+  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+  - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
 - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
   - Shorten the list
   - Organize the list in order of priority of connection
-- If connection is lost to the original network, EmotiBit will continue to try to reconnect for 5 min before attempting another network. This timeout period can be changed by setting WIFI_BEGIN_SWITCH_CRED in EmotiBit_Example.ino
 </details>
 
 - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
 - If you have not already done so, Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
 - **YOU ARE READY TO GO!!!**
+
+### Get the Software - Download the Oscilloscope!
+- To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
+  - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the EmotiBit Oscilloscope(`EmotiBit-Oscilloscope.zip`) and the dataParser(`EmotiBit-DataParser.zip`).
+  - Follow the instructions provided below based on the Operating Syatem(Windows, Mac, Linux) you are currently using:
+    - **For Mac Users:**
+        - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
+            You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`. 
+        - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
+        - You will find the Application(EmotiBit Oscilloscope or EmotiBit DataParser) in the `Bin` folder under the extracted folder just created.[ToDo: Add screenshot of the directory tree]
+            - **Opening in mojave:** 
+                - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+                - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+                - You will see the EmotiBit Oscilloscope Application start.
+            - **Opening in Catalina:** 
+                - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+                - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:[TODo: add screenshot fot this step on catalina]
+                    - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
+                    - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Allow`. 
+                    - This will open the `EmotiBit Oscilloscope` application.
+            
+    - **For Windows Users:** 
+        - **Note:** EmotiBit software is supported only for the Windows 10.
+        - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
+        - Double click on the installer inside the folder just extracted.
+        - ToDo: Add notes for running through the installer.
+        
+
 ### Powering Up
 
 - Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.
-- Double click on the `EmotiBitOscilloscope.exe` in the `EmotiBitOscilloscope/bin/EmotiBitOscilloscope.exe`(for Windows)/ `EmotiBitOscilloscope`(for MacOS), downloaded and extracted in the previous step.
+- If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push button below the USB connector) on the feather.
 - Wait for the EmotiBit to run through the setup.
+  - The EmotiBit will light up RED, YELLOW and then BLUE light in sequence.
   - You should see the red and green LED's on the PPG sensor at the bottom light up.
-  - The Wifi Shield goes up next, indicated with a green light on the feather
+  - The Wifi Shield goes up next, indicated with a green light at the bottom on the feather
 - **You should see the Data start to stream on the Oscilloscope!!**
 - Don't see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](#Trouble-Shooting)
 
@@ -172,21 +205,20 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 |       |                                   |HE     |Hello EmotiBit, used to establish communication  |
 
 ### Oscilloscope data storage
-- When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope is stored to a system Directory in a structure mentioned below.
+- When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope can be stored as a file in the location mentioned below.
 - **Note: The Data stored by the oscilloscope is transmitted over the UDP is not a true record of the Data collected by the EmotiBit. 
 The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session has been initiated.** 
-- Oscilloscope data can be found in EmotiBitOscilloscope\bin\data
+- Oscilloscope data(stored only if `:` is pressed on the oscilloscope) can be found in `bin\data` folder as:
   - dataLog.txt
-    - Contains the experimental data recieved by the GUI
-    - Same packet format as the SD save
   - consoleLog.txt
     - can be used as a psuedo serial monitor during the recording instead of Serial.print()
-- **NOTE: We recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `EmotiBitOscilloscope\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
+- **IMPORTANT NOTE: We recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
 
 ### Data Analysis
 Once you initiate recording, the data is stored on the SD-Card. We provide 2 powerful tools to infer from the data recorded.
 - [**Data Parser**](../Software/EmotiBit_Data_Parser.md)- A parser that reads the recorded data and generates a separate time-stamped  file for each signal recorded.
 - [**Python Viewer**](../Software/EmotiBit_Data_Viewer.md)- A toolkit developed in python for visualizing the recorded data with all the associated tags.
+
 ## Troubleshooting
 - [LED's](#LED-Indicators) and the serial monitor can be useful tools for debugging
   - if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
