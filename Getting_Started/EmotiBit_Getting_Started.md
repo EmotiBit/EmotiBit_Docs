@@ -86,25 +86,32 @@ Formatting to FAT32</summary>
   - Follow the instructions provided below based on the Operating Syatem(Windows, Mac, Linux) you are currently using:
     - **For Mac Users:**
         - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
-            You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`. 
+            You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
+            ![alt-text][macOS-version] 
         - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
-        - You will find the Application(EmotiBit Oscilloscope or EmotiBit DataParser) in the `Bin` folder under the extracted folder just created.[ToDo: Add screenshot of the directory tree]
+        - You will find the Application(EmotiBit Oscilloscope or EmotiBit DataParser) in the `Bin` folder under the extracted folder just created.
+        ![][oscilloscope-drirectory]
             - **Opening in mojave:** 
                 - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
                 - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
                 - You will see the EmotiBit Oscilloscope Application start.
             - **Opening in Catalina:** 
                 - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-                - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:[TODo: add screenshot fot this step on catalina]
+                - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:
+                ![][macOs-Catalina-Initial_Oscilloscope_Error]
                     - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
-                    - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Allow`. 
-                    - This will open the `EmotiBit Oscilloscope` application.
+                    ![][macOS-Catalina-sys_pref]
+                    - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
+                    ![][macOS-Catalina-System_pref_Security&options]
+                    - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
+                    ![][macOS-Catalina-Allow_emotibit]
+                    
             
-    - **For Windows Users:** 
-        - **Note:** EmotiBit software is supported only for the Windows 10.
-        - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
-        - Double click on the installer inside the folder just extracted.
-        - ToDo: Add notes for running through the installer.
+  - **For Windows Users:** 
+    - **Note:** EmotiBit software is supported only for the Windows 10.
+    - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
+    - Double click on the installer inside the folder just extracted.
+    - ToDo: Add notes for running through the installer.
         
 
 ### Powering Up
@@ -268,4 +275,9 @@ Once you initiate recording, the data is stored on the SD-Card. We provide 2 pow
 [Hardware]: ../assets/hardwarewithback.png "EmotiBit Hardware"
 [SideView]: ../assets/EmotiBitSideView.jpg "EmotiBit Side View"
 [LED]: ../assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"
-
+[macOS-version]: ../assets/macOS-Catalina-OS_version.png "macOS version" 
+[oscilloscope-drirectory]: ../assets/macOS-oscilloscope_file_heirarchy.png ""
+[macOs-Catalina-Initial_Oscilloscope_Error]: ../assets/macOs-Catalina-Initial_Oscilloscope_Error.png ""
+[macOS-Catalina-sys_pref]: ../assets/macOS-Catalina-sys_pref.png "" 
+[macOS-Catalina-System_pref_Security&options]: ../assets/macOS-Catalina-System_pref_Security&options.png "" 
+[macOS-Catalina-Allow_emotibit]: ../assets/macOS-Catalina-Allow_emotibit.png "" 
