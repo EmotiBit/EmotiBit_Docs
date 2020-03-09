@@ -24,7 +24,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - Please be careful of the following: 
         - Only follow the instructions on the link bellow till the section `Install Adafruit SAMD`
         - Under `Install Adafruit SAMD` section, _**(use version 1.5.1)**_
-    - [click here to add support for SAMD Boards](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
+    - [Guide to add support for SAMD Boards](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
       - <details>
         <summary>Click here to check a summary of the above link</summary>
         <br>
@@ -33,7 +33,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
             - Install Arduino SAMD Boards
             - Install Adafruit SAMD _**(use version 1.5.1)**_
         </details>
-- If you are using a Feather not provided by us, you might have to update teh WiFi shield. [Click here](./Updating_WiFi_Shield.md) to update the WiFi shield.
+- If you are using a Feather not provided by us, you might have to update the WiFi shield. [Click here](./Updating_WiFi_Shield.md) to update the WiFi shield.
 - Along with the main FW(Firmware), yo will also need to grab some other Libraries fo reprogram the EmotiBit.
 - Open Arduino IDE is not already open.
 - Go to `Tools` > `Library Manager`. Enter the names of the following Libraries in the search box. When the search results show the required library,hover your mouse over the option displayed, click on `install` button that appears. For any Library listed with a particular version, make sure you choose the appropriate version in the dropdown for that library, and install that.
@@ -49,7 +49,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
   - EmotiBit NCP5632
   - EmotiBit XPlat Utils
 - After you have installed the libraries, you can verify the libraries have been downloaded, by checking the `Documents > Arduino > libraries` folder in your system.
-- **Note: Make sure you followed any version requirements listed in teh above list**
+- **Note: Make sure you followed any version requirements listed in the above list**
 
 ## Programming the Feather
 - In the Arduino program (IDE), `open File > Examples > EmotiBit FeatherWing > EmotiBit_Example`
@@ -64,7 +64,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 ## Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! Grab the [EmotiBit Oscilloscope](https://github.com/emotibit/ofxemotibit/releases/latest), if you have not already got it!
 
-[comment]: <>(Add links to images here)
+[comment]: <> (Add links to images below)
 
 [arduino_chooseExample]: ../assets/arduino-choose_emotibit_example.png
 [arduino_choosePort]: ../assets/arduino-uploading_FW.png
