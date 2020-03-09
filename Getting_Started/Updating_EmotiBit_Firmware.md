@@ -54,11 +54,17 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 ## Programming the Feather
 - In the Arduino program (IDE), `open File > Examples > EmotiBit FeatherWing > EmotiBit_Example`
   - Alternatively you can double click the `EmotiBit_Example.ino` file presenst at the location:`Documents/Arduino/libraries/EmotiBit_FeatherWing/examples/Emotibit_Example/` 
+  ![][arduino_chooseExample]
 - In the open arduino windows, Choose Tools > Board > “Adafruit Feather M0”
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing and the available port(in _Tools > Port_) should change.
 - Choose Tools > Port > `[the correct port for your board]`
-- Click “Upload” button
+![][arduino_choosePort]
+- Click “Upload” button.
 
 ## Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! Grab the [EmotiBit Oscilloscope](https://github.com/emotibit/ofxemotibit/releases/latest), if you have not already got it!
 
+[comment]: <>(Add links to images here)
+
+[arduino_chooseExample]: ../assets/arduino-choose_emotibit_example.png
+[arduino_choosePort]: ../assets/arduino-uploading_FW.png

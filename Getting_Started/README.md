@@ -13,4 +13,3 @@ Click here to do more:
 
 [comment]: <> (Add the Links to images in the section below)
 
-[EmotiBit_Oscilloscope]: ../assets/Visualizer_green_800px.gif ""
