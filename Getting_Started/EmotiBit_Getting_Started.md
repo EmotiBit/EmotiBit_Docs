@@ -1,5 +1,5 @@
 # Getting Started with EmotiBit
-![alt text][SideView]
+[comment]: <> ([alt text][SideView])
 
 ## Table of Contents
 - [Overview](#overview)
@@ -20,8 +20,12 @@
 - [Repositories](#repositories)
 
 ## Overview
-
-![alt text][Hardware]
+Congratulations! You are a proud owner of an EmotiBit! This guide will help you set up EmotiBit. We will go over
+- The contents of the EmotiBit box.
+- SD-Card setup for enable WiFi Access.
+- Instructions on Installing the EmotiBit Software.
+- Details about various aspects of EmotiBit Functionality.
+[comment]: <> (![alt text][Hardware])
 
 ## If you just received your EmotiBit
 ### Unboxing
