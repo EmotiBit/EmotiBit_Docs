@@ -39,31 +39,31 @@
 - **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
 - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
 - If using a SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the Instructions below to Format the SD-Card
-- <details>
-  <summary>
-  Formatting to FAT32</summary>
-  <br>
+  - <details>
+    <summary>
+    Formatting to FAT32</summary>
+    <br>
 
-    - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
-    - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
-  </details>
+      - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
+      - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
+    </details>
 
 - Create a **config.txt** file on the SD-Card.
 - The contents of the file should be in format as shown below:
   - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
 - Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
 
-<details>
-<summary>Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)</summary>
-<br>
+- <details>
+  <summary>Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)</summary>
+  <br>
  
-- a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
-  - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
-- In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
-  - Shorten the list
-  - Organize the list in order of priority of connection
-</details>
+  - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
+    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+    - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
+  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
+    - Shorten the list
+    - Organize the list in order of priority of connection
+  </details>
 
 - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
 - If you have not already done so, Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
