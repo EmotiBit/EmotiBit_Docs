@@ -1,6 +1,5 @@
 # Getting Started with EmotiBit
 ![alt text][SideView]
-![alt text][GUI]
 
 ## Table of Contents
 - [Overview](#overview)
