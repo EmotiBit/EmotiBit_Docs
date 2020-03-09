@@ -25,6 +25,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 - SD-Card setup for enable WiFi Access.
 - Instructions on Installing the EmotiBit Software.
 - Details about various aspects of EmotiBit Functionality.
+
 [comment]: <> (![alt text][Hardware])
 
 ## If you just received your EmotiBit
