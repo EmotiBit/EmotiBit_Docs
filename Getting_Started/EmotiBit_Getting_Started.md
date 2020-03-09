@@ -35,28 +35,18 @@
   - 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
 
 ### Connecting to WiFi
-- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name and Password:WiFi Password` to a file named `config.txt` on the SD-Card provided.
+- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password:WiFi Password` to a file named `config.txt` on the SD-Card provided.
 - **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
 - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
 - If using a SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the Instructions below to Format the SD-Card
-<details>
-<summary>
-Formatting to FAT32</summary>
-<br>
+- <details>
+  <summary>
+  Formatting to FAT32</summary>
+  <br>
 
-  - **For Windows Users:** 
-    - Open a new File Explorer Window.
-    - Choose **This PC** from the menu bar on the left.
-    - On the disk representing the SD-Card:
-        - _right click > format_ 
-        - Choose the Format as FAT32 in the File System drop down.
-        - Click on **Format**
-  - **For macOS users**
-    - **Find**  guy with Windows and do as directed above.
-  - Other operating systems, or large SD card capacities may require the use of 3rd party partitioners such as AOMEI
-- After you have made sure that the SD-Card is in FAT32 format, you can follow the following steps to Add the Config file to the SD-Card
-
-</details>
+    - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
+    - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
+  </details>
 
 - Create a **config.txt** file on the SD-Card.
 - The contents of the file should be in format as shown below:

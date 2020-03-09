@@ -34,21 +34,24 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
             - Install Adafruit SAMD _**(use version 1.5.1)**_
         </details>
 - If you are using a Feather not provided by us, you might have to update the WiFi shield. [Click here](./Updating_WiFi_Shield.md) to update the WiFi shield.
-- Along with the main FW(Firmware), yo will also need to grab some other Libraries fo reprogram the EmotiBit.
+- Along with the main FW(Firmware), you will also need to grab some other Libraries fo reprogram the EmotiBit.
 - Open Arduino IDE is not already open.
 - Go to `Tools` > `Library Manager`. Enter the names of the following Libraries in the search box. When the search results show the required library,hover your mouse over the option displayed, click on `install` button that appears. For any Library listed with a particular version, make sure you choose the appropriate version in the dropdown for that library, and install that.
-  - WiFi101
-  - SdFat
+  - WiFi101 by Arduino
+  - SdFat by Bill Greiman
   - Adafruit SleepyDog
   - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
+  - Arduino Low Power
+  - RTCZero
+  - EmotiBit BMI160
   - EmotiBit FeatherWing
   - EmotiBit MAX30101
-  - EmotiBit SI7013
-  - EmotiBit BMI160
   - EmotiBit MLX90632
   - EmotiBit NCP5632
+  - EmotiBit SI7013
   - EmotiBit XPlat Utils
 - After you have installed the libraries, you can verify the libraries have been downloaded, by checking the `Documents > Arduino > libraries` folder in your system.
+- You should close and re-open the Arduino Application to make sure the changes take effect.
 - **Note: Make sure you followed any version requirements listed in the above list**
 
 ## Programming the Feather
