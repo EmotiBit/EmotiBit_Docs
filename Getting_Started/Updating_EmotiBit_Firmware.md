@@ -25,8 +25,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - ### Install firmware libraries
   - Open the Arduino IDE and go to `Tools > Manage Libraries...`
   - Search for and install the following Libraries. **Be sure to install the correct version when specified for any library below**
-    - WiFi101 by Arduino
-    - SdFat by Bill Greiman
+    - WiFi101 *by Arduino*
+    - SdFat *by Bill Greiman*
     - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
     - Arduino Low Power
     - RTCZero
