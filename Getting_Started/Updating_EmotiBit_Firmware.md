@@ -21,6 +21,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+)` *by Arduino*
     - Install `Adafruit SAMD Boards` *by Adafruit* _**(use version 1.5.1)**_
     - [*[See Adafruit's page if you'd like instructions with images]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
+      - If you're on Windows 7  or 8, the above link also has driver installation instructions (note, however, that EmotiBit software is not officially supported on Windows versions prior to Windows 10)
 - ### Install firmware libraries
   - Open the Arduino IDE and go to `Tools > Manage Libraries...`
   - Search for and install the following Libraries. **Be sure to install the correct version when specified for any library below**
