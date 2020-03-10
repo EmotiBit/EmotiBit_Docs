@@ -1,3 +1,5 @@
+# Updating EmotiBit Firmware
+
 ## Overview
 If you just received your EmotiBit, please checkout our [EmotiBit Getting Started](./EmotiBit_Getting_Started.md) startup-guide.
 Trying to update EmotiBit Firmware? You are at the right place! **Lets get started!!!**
