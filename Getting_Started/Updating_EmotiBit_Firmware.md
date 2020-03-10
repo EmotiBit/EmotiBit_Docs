@@ -11,28 +11,16 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - Download and install the Arduino IDE - https://www.arduino.cc/en/main/software
 - Arduino come pre-installed with files required to work with Arduino boards. To Work with the Adafruit Feather M0 WiFi(which comes with the EmotiBit), we are going to install additional libraries using Arduino. Follow these instructions to install the correct board libraries 
   
-  - [Adding Feather in additional board managers](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/setup)
-    - <details>
-      <summary>Click here to check a summary of the above link</summary>
-      <br>
-      
-        - Preferences > Additional Board Manager URLs
-        - Copy-Paste the link: https:<span></span>//adafruit.github.io/arduino-board-index/package_adafruit_index.json
-      </details>
-  
-  - **Adding support for SAMD boards**
-    - Please be careful of the following: 
-        - Only follow the instructions on the link bellow till the section `Install Adafruit SAMD`
-        - Under `Install Adafruit SAMD` section, _**(use version 1.5.1)**_
-    - [Guide to add support for SAMD Boards](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
-      - <details>
-        <summary>Click here to check a summary of the above link</summary>
-        <br>
-      
-          - Tools>Board: “..”>Boards Manager
-            - Install Arduino SAMD Boards
-            - Install Adafruit SAMD _**(use version 1.5.1)**_
-        </details>
+  - **Point Arduino IDE at Adafruit boards library**
+    - `File > Preferences > [Settings Tab]`
+    - Copy-Paste the following link into `Additional Board Manager URLs`: https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+    - [*[See Adafruit's page if you'd like instructions with images]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/setup)
+  - **Add support for specific SAMD boards**
+    - `Tools > Board: [...] > Boards Manager`
+    - Search for `SAMD`
+    - Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+) by Arduino`
+    - Install `Adafruit SAMD Boards by Adafruit` _**(use version 1.5.1)**_
+    - [*[See Adafruit's page if you'd like instructions with images, **but stop after `Install Adafruit SAMD`**]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
 - If you are using a Feather not provided by us, you might have to update the WiFi shield. [Click here](./Updating_WiFi_Shield.md) to update the WiFi shield.
 - Along with the main FW(Firmware), you will also need to grab some other Libraries fo reprogram the EmotiBit.
 - Open Arduino IDE is not already open.
