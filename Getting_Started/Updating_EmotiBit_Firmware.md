@@ -12,7 +12,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - ### Add Adafruit Feather boards to Arduino IDE
   - #### Point Arduino IDE at Adafruit boards library
     - `File > Preferences > [Settings Tab]`
-    - Copy-Paste the following link into `Additional Board Manager URLs`: https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+    - Copy-Paste the following link into `Additional Board Manager URLs`: 
+      - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
     - [*[See Adafruit's page if you'd like instructions with images]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/setup)
   - #### Add support for specific SAMD boards
     - `Tools > Board: [...] > Boards Manager`
