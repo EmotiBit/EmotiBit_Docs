@@ -8,7 +8,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 
 ## Setup
 - ### Download and install the Arduino IDE
-  - https://www.arduino.cc/en/main/software
+  - https://www.arduino.cc/en/main/software#download
 - ### Add support for Adafruit Feather boards   
   - #### Point Arduino IDE at Adafruit boards library
     - `File > Preferences > [Settings Tab]`
