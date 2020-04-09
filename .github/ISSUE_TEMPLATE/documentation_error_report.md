@@ -1,3 +1,12 @@
+---
+name: Documentation_error_report
+about: Suggest changes to the documentation
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ## Description
 
 ## Type of correction
@@ -8,4 +17,3 @@
 
 ## Link
 - Add Link to the page where the problem exits [here]()
-
