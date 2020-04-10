@@ -53,6 +53,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - Choose `Tools > Port > [the correct port for your board]`
 ![][arduino_choosePort]
 - Click “Upload” button.
+![][arduino_upload_button]
+
 
 ## Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! Grab the [EmotiBit Oscilloscope](https://github.com/emotibit/ofxemotibit/releases/latest), if you have not already got it!
@@ -61,3 +63,4 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 
 [arduino_chooseExample]: ../assets/arduino-choose_emotibit_example.png
 [arduino_choosePort]: ../assets/arduino-uploading_FW.png
+[arduino_upload_button]: ../../Arduino_upload_button.png
