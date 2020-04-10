@@ -76,14 +76,14 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 
 ### Get the Software - Download the Oscilloscope!
 - To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-  - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the EmotiBit Oscilloscope(`EmotiBit-Oscilloscope.zip`) and the dataParser(`EmotiBit-DataParser.zip`).
+  - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the `EmotiBitSoftware-macOS.zip` for mac OS or `EmotiBitSoftware-Windows.zip` for windows platform.
   - Follow the instructions provided below based on the Operating Syatem(Windows, Mac, Linux) you are currently using:
     - **For Mac Users:**
-        - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
+        - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15]. Make sure you are using a compatible macOS version. 
             You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
             ![alt-text][macOS-version] 
-        - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
-        - You will find the Application(EmotiBit Oscilloscope or EmotiBit DataParser) in the `Bin` folder under the extracted folder just created.
+        - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
+        - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
         ![][oscilloscope-drirectory]
             - **Opening in mojave:** 
                 - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
@@ -103,9 +103,10 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
             
   - **For Windows Users:** 
     - **Note:** EmotiBit software is supported only for the Windows 10.
-    - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
-    - Double click on the installer inside the folder just extracted.
-    - ToDo: Add notes for running through the installer.
+    - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
+    - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double clicking.
+    - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
+    - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
         
 
 ### Powering Up
