@@ -53,7 +53,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - Choose `Tools > Port > [the correct port for your board]`
 ![][arduino_choosePort]
 - Click “Upload” button.
-![][arduino_upload_button]
+<img src="../assets/Arduino_upload_button.png" width="500">
 
 
 ## Ready to go!
