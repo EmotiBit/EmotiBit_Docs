@@ -1,5 +1,5 @@
 ---
-name: Documentation_error
+name: Documentation_change
 about: suggest a change to the documentation
 title: ''
 labels: ''
