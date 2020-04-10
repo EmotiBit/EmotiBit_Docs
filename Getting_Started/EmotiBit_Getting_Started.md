@@ -6,7 +6,7 @@
 - [If you just received your EmotiBit](#If-you-just-received-your-EmotiBit)
   - [Unboxing](#Unboxing)
   - [Connecting To WiFi](#connecting-to-wifi)
-  - [Get the Software - Download the Oscilloscope](#Get-the-Software-\--Download-the-Oscilloscope!)
+  - [Get the Software](#Get-the-Software)
   - [Powering Up](#Powering-up)
 - [LED Indicators](#LED-Indicators)
 - [Switches](#switches)
@@ -78,7 +78,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 - If you have not already done so, Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
 - **YOU ARE READY TO GO!!!**
 
-### Get the Software - Download the Oscilloscope!
+### Get the Software
 - To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
   - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the `EmotiBitSoftware-macOS.zip` for mac OS or `EmotiBitSoftware-Windows.zip` for windows platform.
   - Follow the instructions provided below based on the Operating Syatem(Windows, Mac, Linux) you are currently using:
