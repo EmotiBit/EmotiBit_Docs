@@ -261,10 +261,10 @@ Once you initiate recording, the data is stored on the SD-Card. We provide 2 pow
   - https://github.com/EmotiBit/EmotiBit_Android_App/
 - Firmware
   - https://github.com/EmotiBit/EmotiBit_FW_FeatherWing
-  - Latest release: https://github.com/EmotiBit/EmotiBit_FW_FeatherWing/releases
+  - Latest release: https://github.com/EmotiBit/EmotiBit_FW_FeatherWing/releases/latest
 - OpenFrameworks GUI
   - https://github.com/EmotiBit/ofxEmotiBit
-  - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases
+  - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases/latest
 
 [GUI]: ../assets/ofxEmotiBit.png "ofxEmotiBit GUI"
 [Hardware]: ../assets/hardwarewithback.png "EmotiBit Hardware"
