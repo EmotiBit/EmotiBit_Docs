@@ -9,15 +9,18 @@ assignees: ''
 
 ## Description
 
+
 ## Type of correction
-- [ ] Documentation structure change
-- [ ] Documentation update
-- [ ] Permission Issue(Any page you do not have access to)
+- [ ] Missing Content
+- [ ] Broken Link
 - [ ] Inaccurate content
-- [ ] Inappropriate content
 - [ ] Outdated/Deprecated content
+- [ ] Inappropriate content
+- [ ] Document structure needs updating
+
 
 ## Link
-- Add Link to the page where the problem exits [here]()
+- Add Link to the page where the problem exits.
+- 
 
 ## Screenshots
