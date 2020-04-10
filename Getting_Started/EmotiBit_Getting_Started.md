@@ -210,10 +210,11 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 - When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope can be stored as a file in the location mentioned below.
 - **Note: The Data stored by the oscilloscope is transmitted over the UDP is not a true record of the Data collected by the EmotiBit. 
 The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session has been initiated.** 
-- Oscilloscope data(stored only if `:` is pressed on the oscilloscope) can be found in `bin\data` folder as:
+- Oscilloscope data(stored only if `:` is pressed on the oscilloscope) can be found in `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data` folder as:
   - dataLog.txt
   - consoleLog.txt
     - can be used as a psuedo serial monitor during the recording instead of Serial.print()
+- **NOTE:** To enable this feature, the oscilloscope must be run as an Administrator. You can do this by `Right Click EmotiBit Oscilloscope` > `Run as Administrator`.
 - **IMPORTANT NOTE: We recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
 
 ### Data Analysis
