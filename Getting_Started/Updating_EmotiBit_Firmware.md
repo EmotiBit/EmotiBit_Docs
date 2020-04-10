@@ -63,4 +63,4 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 
 [arduino_chooseExample]: ../assets/arduino-choose_emotibit_example.png
 [arduino_choosePort]: ../assets/arduino-uploading_FW.png
-[arduino_upload_button]: ../../Arduino_upload_button.png
+[arduino_upload_button]: ../assets/Arduino_upload_button.png
