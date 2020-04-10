@@ -20,7 +20,7 @@
   - [Oscilloscope data storage](#Oscilloscope-data-storage)
   - [Data Analysis](#Data-Analysis)
 - [Troubleshooting](#Troubleshooting)
-- [For Advanced Users](#For-Advanced-Users\(If-you-want-to-dive-into-theinner-workings-of-EmotiBit\))
+- [For Advanced Users](#For-Advanced-Users)
 - [Repositories](#repositories)
 
 ## Overview
@@ -252,7 +252,7 @@ Once you initiate recording, the data is stored on the SD-Card. We provide 2 pow
   - Check that your network supports device connections in this manner; many Universities and public work spaces disallow it
 - If the red light significantly deviates from the patterns shown in the [above section](#adafruit-feather-m0-led-indicators), including getting stuck on or off for a large period of time during recording, there is a firmware error that is causing _loop()_ to delay. Check any changes that you made to the release code. Remove any while loops that take more than 15ms.
 
-## For Advanced Users(If you want to dive into the inner workings of EmotiBit)
+## For Advanced Users
 - We have designed the EmotiBit to be built on an Open Source Architecture. 
 - The Following links will guide you to the internal workings of the EmotiBit
   - [Packet Architecture](../EmotiBit_FeatherWing/Packet_Architecture.md)
