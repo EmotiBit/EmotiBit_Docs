@@ -91,6 +91,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 #### For Mac Users:
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
+  
     - <details>
       <summary>Opening in mojave:</summary>
       <br> 
@@ -99,7 +100,6 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
         - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
         - You will see the EmotiBit Oscilloscope Application start.
       </details>
-      
     - <details>
       <summary>Opening in Catalina:</summary>
       <br>
