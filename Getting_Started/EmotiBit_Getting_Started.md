@@ -7,6 +7,8 @@
   - [Unboxing](#Unboxing)
   - [Connecting To WiFi](#connecting-to-wifi)
   - [Get the Software](#Get-the-Software)
+    - [For Windows Users](#For-Windows-Users)
+    - [For Mac Users](#For-Mac-Users)
   - [Powering Up](#Powering-up)
 - [LED Indicators](#LED-Indicators)
 - [Switches](#switches)
@@ -117,7 +119,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
       </details>
   - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15]. Make sure you are using a compatible macOS version. 
             You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
-            <img src="../assets/macOS-Catalina-OS_version.png" width="500">
+            <img src="../assets/macOS-Catalina-OS_version.png" width="800">
         
 
 ### Powering Up
