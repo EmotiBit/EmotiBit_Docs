@@ -92,15 +92,18 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
     - <details>
-      <summary>**Opening in mojave:**</summary>
+      <summary>Opening in mojave:</summary>
       <br> 
+        
         - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
         - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
         - You will see the EmotiBit Oscilloscope Application start.
       </details>
+      
     - <details>
-      <summary>**Opening in Catalina:**</summary>
-      <br> 
+      <summary>Opening in Catalina:</summary>
+      <br>
+  
         - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
         - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:
                 ![][macOs-Catalina-Initial_Oscilloscope_Error]
