@@ -4,7 +4,12 @@
 ## Table of Contents
 - [Overview](#overview)
 - [If you just received your EmotiBit](#If-you-just-received-your-EmotiBit)
-- [Connecting To WiFi](#connecting-to-wifi)
+  - [Unboxing](#Unboxing)
+  - [Connecting To WiFi](#connecting-to-wifi)
+  - [Get the Software](#Get-the-Software)
+    - [For Windows Users](#For-Windows-Users)
+    - [For Mac Users](#For-Mac-Users)
+  - [Powering Up](#Powering-up)
 - [LED Indicators](#LED-Indicators)
 - [Switches](#switches)
 - [Maintenance](#maintenance)
@@ -14,9 +19,9 @@
     - [TypeTag Character Codes](#TypeTag-Character-Codes)
       - [Biometric TypeTags](#Biometric-TypeTags)
       - [General Typetags and Computer to EmotiBit Typetags](#General-Typetags-and-Computer-to-EmotiBit-Typetags)
-  - [Oscilloscope data storage](#Oscilloscope-data-storage)
   - [Data Analysis](#Data-Analysis)
 - [Troubleshooting](#Troubleshooting)
+- [For Advanced Users](#For-Advanced-Users)
 - [Repositories](#repositories)
 
 ## Overview
@@ -74,38 +79,46 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 - If you have not already done so, Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
 - **YOU ARE READY TO GO!!!**
 
-### Get the Software - Download the Oscilloscope!
+### Get the Software
 - To start using the EmotiBit, you will also need the Oscilloscope designed for the EmotiBit. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-  - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the EmotiBit Oscilloscope(`EmotiBit-Oscilloscope.zip`) and the dataParser(`EmotiBit-DataParser.zip`).
+  - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the `EmotiBitSoftware-macOS.zip` for mac OS or `EmotiBitSoftware-Windows.zip` for windows platform.
   - Follow the instructions provided below based on the Operating Syatem(Windows, Mac, Linux) you are currently using:
-    - **For Mac Users:**
-        - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
-            You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
-            ![alt-text][macOS-version] 
-        - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
-        - You will find the Application(EmotiBit Oscilloscope or EmotiBit DataParser) in the `Bin` folder under the extracted folder just created.
+#### For Windows Users: 
+  - **Note:** EmotiBit software is supported only for the Windows 10.
+  - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
+  - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double clicking.
+  - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
+  - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
+#### For Mac Users:
+  - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
+  - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
         ![][oscilloscope-drirectory]
-            - **Opening in mojave:** 
-                - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-                - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
-                - You will see the EmotiBit Oscilloscope Application start.
-            - **Opening in Catalina:** 
-                - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-                - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:
+  
+    - <details>
+      <summary>Opening Software in mojave</summary>
+      <br> 
+        
+        - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+        - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+        - You will see the EmotiBit Oscilloscope Application start.
+      </details>
+    - <details>
+      <summary>Opening Software in Catalina</summary>
+      <br>
+  
+        - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+        - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:
                 ![][macOs-Catalina-Initial_Oscilloscope_Error]
-                    - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
+        - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
                     ![][macOS-Catalina-sys_pref]
-                    - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
+        - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
                     ![][macOS-Catalina-System_pref_Security&options]
-                    - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
+        - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
                     ![][macOS-Catalina-Allow_emotibit]
-                    
-            
-  - **For Windows Users:** 
-    - **Note:** EmotiBit software is supported only for the Windows 10.
-    - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it and you will see the a new folder is created in the same directory with the contents of the zip file.
-    - Double click on the installer inside the folder just extracted.
-    - ToDo: Add notes for running through the installer.
+      </details>
+  - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15]. Make sure you are using a compatible macOS version. 
+            You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
+            <img src="../assets/macOS-Catalina-OS_version.png" width="800">
         
 
 ### Powering Up
@@ -161,7 +174,7 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 [{"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},{"info":{"name":"Gyroscope","type":"Gyroscope","typeTags":["GX","GY","GZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"degrees/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":1000}}},{"info":{"name":"Magnetometer","type":"Magnetometer","typeTags":["MX","MY","MZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"raw samples","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{}}},{"info":{"name":"ElectrodermalActivity","type":"ElectrodermalActivity","typeTags":["EA"],"channel_count":1,"nominal_srate":15,"channel_format":"float","units":"microsiemens","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"adc_bits":12,"voltage_divider_resistance":5000000,"EDR_amplification":20,"low_pass_filter_frequency":"15.91Hz","samples_averaged":4,"oversampling_rate":60}}},{"info":{"name":"Humidity0","type":"Humidity","typeTags":["H0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"Percent","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Temperature0","type":"Temperature","typeTags":["T0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"degrees celcius","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Thermistor","type":"Thermistor","typeTags":["TH"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"raw adc units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"ADC_speed":"ADC_NORMAL","Vin_buffering":"VIN_UNBUFFERED","VREFP":"VREFP_VDDA","voltage_divider_resistance":10000,"thermistor_resistance":10000,"low_pass_filter_frequency":"0.1591Hz","amplification":10,"samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"PPG","type":"PPG","typeTags":["PI","PR","PG"],"channel_count":3,"nominal_srate":25,"channel_format":"float","units":"raw units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"LED_power_level":47,"samples_averaged":16,"LED_mode":3,"oversampling_rate":400,"pulse_width":215,"ADC_range":4096}}}]
 ```
 #### Data Packet Structure
-- - `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
+- `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
   - **Timestamp:** milliseconds since start of EmotiBit
   - **Packet Number:** packet count since start of EmotiBit
   - **Number of Datapoints:** Number of data points in the payload
@@ -205,15 +218,6 @@ Recording must be initiated from the [GUI](https://github.com/EmotiBit/ofxEmotiB
 |       |                                   |MH     |Mode Hibernate                                   |
 |       |                                   |HE     |Hello EmotiBit, used to establish communication  |
 
-### Oscilloscope data storage
-- When the EmotiBit is not in a recording state, the data streamed to the Oscilloscope can be stored as a file in the location mentioned below.
-- **Note: The Data stored by the oscilloscope is transmitted over the UDP is not a true record of the Data collected by the EmotiBit. 
-The _true source_ of Data MUST ALWAYS be the SD-Card after a recording session has been initiated.** 
-- Oscilloscope data(stored only if `:` is pressed on the oscilloscope) can be found in `bin\data` folder as:
-  - dataLog.txt
-  - consoleLog.txt
-    - can be used as a psuedo serial monitor during the recording instead of Serial.print()
-- **IMPORTANT NOTE: We recommend not editing any files(except the `dataLog.txt` and `consoleLog.txt`) in the `\bin\data` folder. These files are necessary for the functioning of the Oscilloscope.**
 
 ### Data Analysis
 Once you initiate recording, the data is stored on the SD-Card. We provide 2 powerful tools to infer from the data recorded.
@@ -246,7 +250,7 @@ Once you initiate recording, the data is stored on the SD-Card. We provide 2 pow
   - Check that your network supports device connections in this manner; many Universities and public work spaces disallow it
 - If the red light significantly deviates from the patterns shown in the [above section](#adafruit-feather-m0-led-indicators), including getting stuck on or off for a large period of time during recording, there is a firmware error that is causing _loop()_ to delay. Check any changes that you made to the release code. Remove any while loops that take more than 15ms.
 
-## For Advanced Users(If you want to dive into the inner workings of EmotiBit)
+## For Advanced Users
 - We have designed the EmotiBit to be built on an Open Source Architecture. 
 - The Following links will guide you to the internal workings of the EmotiBit
   - [Packet Architecture](../EmotiBit_FeatherWing/Packet_Architecture.md)
@@ -260,10 +264,10 @@ Once you initiate recording, the data is stored on the SD-Card. We provide 2 pow
   - https://github.com/EmotiBit/EmotiBit_Android_App/
 - Firmware
   - https://github.com/EmotiBit/EmotiBit_FW_FeatherWing
-  - Latest release: https://github.com/EmotiBit/EmotiBit_FW_FeatherWing/releases
+  - Latest release: https://github.com/EmotiBit/EmotiBit_FW_FeatherWing/releases/latest
 - OpenFrameworks GUI
   - https://github.com/EmotiBit/ofxEmotiBit
-  - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases
+  - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases/latest
 
 [GUI]: ../assets/ofxEmotiBit.png "ofxEmotiBit GUI"
 [Hardware]: ../assets/hardwarewithback.png "EmotiBit Hardware"
