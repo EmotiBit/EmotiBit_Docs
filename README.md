@@ -1,4 +1,4 @@
-# EmotiBit Documentation
+# [EmotiBit](https://www.emotibit.com/) Documentation
 ### [`01. Getting Started`](./Getting_Started) 
 Instructions for New Users to get their EmotiBit's up and running! Follow the instructions provided to access your Physiological Data!
 
