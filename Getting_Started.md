@@ -129,20 +129,23 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
   - You should see the red and green LED's on the PPG sensor at the bottom light up.
   - The Wifi Shield goes up next, indicated with a green light at the bottom on the feather
 - **You should see the Data start to stream on the Oscilloscope!!**
-- Don't see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](#Trouble-Shooting)
+- Don't see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](#Troubleshooting)
 
 ## Streaming Data in Real Time and Recording
-- Now that you have your EmotiBit up and running, we recommend you learn more about the EmotiBit Oscilloscope to make the most of EmotiBit. [Learn more about streaming and recording data using the EmotiBit Oscilloscope]()
+Now that you have your EmotiBit up and running, we recommend you learn more about the EmotiBit Oscilloscope to make the most of EmotiBit.
+- [Learn more about streaming and recording data using the EmotiBit Oscilloscope]()
 
 
 ## EmotiBit: LEDs and Buttons
-- The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
+The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
 ![alt text][LED]
-- [More about the LEDs and buttons on EmotiBit]()
+
+[More about the LEDs and buttons on EmotiBit]()
 
 ## Convert Raw Data
-- Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.
-- **The EmotiBit DataParser** is a tool designed just for this objective.
+Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.
+
+**The EmotiBit DataParser** is a tool designed just for this objective.
 - [Follow this link to take the next steps in analysing the recirded data.]() 
 
 ## Visualize Recorded Data
@@ -151,7 +154,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 - [Checkout these visualizing tools]() we think will greatly help you!. 
 
 ## Next Steps
-- By this point, you are an EmotiBit ninja. However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
+By this point, you are an EmotiBit ninja. However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
 - [`Work with your data`]()
 - [`Keep EmotiBit up to date`]()
 - [`Contributing to the EmotiBit Community`]()
