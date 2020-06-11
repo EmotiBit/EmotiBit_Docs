@@ -14,7 +14,7 @@
   - [Powering Up](#Powering-up)
 - [Streaming Data in Real Time and Recording](#Streaming-Data-in-Real-Time-and-Recording)
 - [EmotiBit: LEDs and Buttons](#EmotiBit:-LEDs-and-Buttons)
-- [Convert Raw Data](#Convert Raw Data)
+- [Convert Raw Data](#Convert-Raw-Data)
 - [Visualize Recorded Data](#Visualize-Recorded-Data)
 - [Next Steps](#Next-Steps)
 - [Troubleshooting](#Troubleshooting)
