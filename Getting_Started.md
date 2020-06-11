@@ -5,11 +5,11 @@
 - [If you just received your EmotiBit](#If-you-just-received-your-EmotiBit)
   - [Unboxing](#Unboxing)
   - [Connecting To WiFi](#connecting-to-wifi)
-    - [Prepare included SD-Card](#Prepare-Included-Sd-Card)
-    - [Connecting to multiple WiFi networks](#Conencting-to-multiple-WiFi-networks)
+    - Prepare included SD-Card
+    - Connecting to multiple WiFi networks
   - [Get the Software](#Get-the-Software)
-    - [For Windows Users](#For-Windows-Users)
-    - [For Mac Users](#For-Mac-Users)
+    - For Windows Users
+    - For Mac Users
   - [Powering Up](#Powering-up)
 - [Streaming Data in Real Time and Recording](#Streaming-Data-in-Real-Time-and-Recording)
 - [EmotiBit: LEDs and Buttons](#EmotiBit:-LEDs-and-Buttons)
@@ -55,7 +55,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   </details>
 
 - <details>
-  <summary><b>Conencting to multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
+  <summary><b>Access multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
   <br>
  
   - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
@@ -140,22 +140,35 @@ Now that you have your EmotiBit up and running, we recommend you learn more abou
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
 ![alt text][LED]
 
-[More about the LEDs and buttons on EmotiBit]()
+- Learn [More about the LEDs and buttons on EmotiBit]()
 
-## Convert Raw Data
-Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.
-
-**The EmotiBit DataParser** is a tool designed just for this objective.
+## Converting Raw Data
+Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.The `EmotiBit DataParser` is a tool designed just for this objective.
 - [Follow this link to take the next steps in analzing the recorded data.]() 
 
 ## Visualize Recorded Data
 - When working with data, having visualizing tools acts as a great enabler.
-- By now, we expect you have successfully [recorded data using the EmotiBit]() and used the data parser to [convert the raw data](). If you have not done this already, we recommend you check out the linked pages.
+- By now, we expect you have successfully [recorded data using the EmotiBit]() and used the data parser to [convert the raw data]().
 - [Check out these visualizing tools]() we think will greatly help you!. 
 
 ## Next Steps
 By this point, you are an EmotiBit ninja. However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
-- [`Work with your data`]()
+- **Working with your data**
+  - <details>
+    <summary><b>Converting Raw Data</b></summary>
+    <br>
+    
+    Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.The `EmotiBit DataParser` is a tool designed just for this objective.
+      - [Follow this link to take the next steps in analzing the recorded data.]()
+    </details>     
+  - <details>
+    <summary><b>Visualizing Recorded Data</b></summary>
+    <br>
+    
+    - When working with data, having visualizing tools acts as a great enabler.
+    - By now, we expect you have successfully [recorded data using the EmotiBit]() and used the data parser to [convert the raw data]().
+    - [Check out these visualizing tools]() we think will greatly help you!. 
+    </details>
 - [`Keep EmotiBit up to date`]()
 - [`Contributing to the EmotiBit Community`]()
 - [`Learn more about EmotiBit`]()
