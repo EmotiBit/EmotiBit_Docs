@@ -42,10 +42,10 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 ### Connecting to WiFi
 
 #### Prepare Included Sd-Card
-- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password:WiFi Password` to a file named `config.txt` on the SD-Card provided.
+- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided.
 - **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
 - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
-- If using a SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the Instructions below to Format the SD-Card
+- If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
   - <details>
     <summary>Formatting to FAT32</summary>
     <br>
@@ -68,9 +68,9 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
   - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
     - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
     - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
-  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If quick connection is desired after programming or reset:
+  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If a quick connection is desired after programming or reset:
     - Shorten the list
-    - Organize the list in order of priority of connection
+    - Organize the list in order of priority of the connection
   </details>
 
 - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
@@ -80,12 +80,12 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 ### Get the Software
 - To start using the EmotiBit, you will also need the EmotiBit Oscilloscope. [Get the Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
   - You will find the software as  `.zip` files attached under the `Assets` dropdown. Go ahead and download the `EmotiBitSoftware-macOS.zip` for mac OS or `EmotiBitSoftware-Windows.zip` for windows platform.
-  - Follow the instructions below based on the your Operating Syatem(Windows, Mac, Linux):
+  - Follow the instructions below based on your Operating System(Windows, Mac, Linux):
 
 #### For Windows Users: 
-  - **Note:** EmotiBit software is supported only for the Windows 10.
+  - **Note:** EmotiBit software is supported only for Windows 10.
   - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
-  - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double clicking.
+  - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double-clicking.
   - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
   - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
 
@@ -99,7 +99,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
       <br> 
         
         - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-        - If this is the first time you are Using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+        - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
         - You will see the EmotiBit Oscilloscope Application start.
       </details>
     - <details>
@@ -107,7 +107,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
       <br>
   
         - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-        - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center.To do so:
+        - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
                 ![][macOs-Catalina-Initial_Oscilloscope_Error]
         - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
                     ![][macOS-Catalina-sys_pref]
@@ -123,7 +123,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 
 ### Powering Up
 - Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.
-- If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push button below the USB connector) on the feather.
+- If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push-button below the USB connector) on the feather.
 - Wait for the EmotiBit to run through the setup.
   - The EmotiBit will light up RED, YELLOW and then BLUE light in sequence.
   - You should see the red and green LED's on the PPG sensor at the bottom light up.
@@ -131,7 +131,7 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
 - **You should see the Data start to stream on the Oscilloscope!!**
 - Don't see anything on the Oscilloscope? Check out our guide for [Trouble Shooting](#Troubleshooting)
 
-## Streaming Data in Real Time and Recording
+## Streaming Data in Real-Time and Recording
 Now that you have your EmotiBit up and running, we recommend you learn more about the EmotiBit Oscilloscope to make the most of EmotiBit.
 - [Learn more about streaming and recording data using the EmotiBit Oscilloscope]()
 
@@ -146,12 +146,12 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.
 
 **The EmotiBit DataParser** is a tool designed just for this objective.
-- [Follow this link to take the next steps in analysing the recirded data.]() 
+- [Follow this link to take the next steps in analzing the recorded data.]() 
 
 ## Visualize Recorded Data
 - When working with data, having visualizing tools acts as a great enabler.
-- By now, we expect you have succesully [recorded data using the the EmotiBit]() and used the dataParser to [convert the raw data](). If you have not done this already, we recommend you check out the linked pages.
-- [Checkout these visualizing tools]() we think will greatly help you!. 
+- By now, we expect you have successfully [recorded data using the EmotiBit]() and used the data parser to [convert the raw data](). If you have not done this already, we recommend you check out the linked pages.
+- [Check out these visualizing tools]() we think will greatly help you!. 
 
 ## Next Steps
 By this point, you are an EmotiBit ninja. However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
