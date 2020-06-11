@@ -76,7 +76,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - Follow the instructions below based on your Operating System(Windows, Mac, Linux):
 
   - <details>
-    <summary><b>For Windows Users:</b>></summary>
+    <summary><b>For Windows Users:</b></summary>
     <br>
      
     - **Note:** EmotiBit software is supported only for Windows 10.
@@ -94,30 +94,30 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
     - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
         ![][oscilloscope-drirectory]
   
-      - <details>
-        <summary>Opening Software in mojave</summary>
-        <br> 
+    - <details>
+      <summary>Opening Software in mojave</summary>
+      <br> 
         
-          - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-          - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
-          - You will see the EmotiBit Oscilloscope Application start.
-        </details>
-      - <details>
-        <summary>Opening Software in Catalina</summary>
-        <br>
+        - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+        - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+        - You will see the EmotiBit Oscilloscope Application start.
+      </details>
+    - <details>
+      <summary>Opening Software in Catalina</summary>
+      <br>
   
-          - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-          - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
+        - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+        - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
                 ![][macOs-Catalina-Initial_Oscilloscope_Error]
-          - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
+        - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
                     ![][macOS-Catalina-sys_pref]
-          - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
+        - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
                     ![][macOS-Catalina-System_pref_Security&options]
-          - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
+        - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
                     ![][macOS-Catalina-Allow_emotibit]
-        </details>
-    - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15]. Make sure you are using a compatible macOS version. 
-            You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
+      </details>
+    - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
+    - Make sure you are using a compatible macOS version. You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
             <img src="../assets/macOS-Catalina-OS_version.png" width="800">
     </details>    
 
