@@ -151,8 +151,9 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
     <summary>Converting Raw Data</summary>
     <br>
     
-    Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.The `EmotiBit DataParser` is a tool designed just for this objective.
-      - [Follow this link to take the next steps in analzing the recorded data.]()
+    - Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.
+    - The `EmotiBit DataParser` is a tool designed just for this objective.
+    - [Follow this link to take the next steps in analzing the recorded data.]()
     </details>     
   - <details>
     <summary>Visualizing Data</summary>
