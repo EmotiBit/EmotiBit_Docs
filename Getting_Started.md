@@ -2,7 +2,6 @@
 [comment]: <> ([alt text][SideView])
 
 ## Table of Contents
-- [Overview](#overview)
 - [If you just received your EmotiBit](#If-you-just-received-your-EmotiBit)
   - [Unboxing](#Unboxing)
   - [Connecting To WiFi](#connecting-to-wifi)
@@ -19,33 +18,26 @@
 - [Next Steps](#Next-Steps)
 - [Troubleshooting](#Troubleshooting)
 
-## Overview
-Congratulations! You are a proud owner of an EmotiBit! This guide will help you set up EmotiBit. We will go over
-- The contents of the EmotiBit box.
-- Setting up the EmotiBit to connect to WiFi network
-- Installing the Softwares required to work with the EmotiBit
-- Next steps to  take after you get your EmotiBit running successfully
-
 [comment]: <> (![alt text][Hardware])
 
 ## If you just received your EmotiBit
 ### Unboxing
 [comment]: <> ()
-- Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
-  - EmotiBit with straps
-  - Adafruit feather M0 WiFi, programmed and ready to use
-  - Micro SD-Card with SD-Card adapter
-  - Micro SD-Card USB reader
-  - 3.7V battery
-  - 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
+Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
+- EmotiBit with straps
+- Adafruit feather M0 WiFi, programmed and ready to use
+- Micro SD-Card with SD-Card adapter
+- Micro SD-Card USB reader
+- 3.7V battery
+- 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
 
 ### Connecting to WiFi
 
-#### Prepare Included Sd-Card
-- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided.
-- **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
-- If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
-- If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
+- **Prepare Included Sd-Card**
+  - To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided.
+  - **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
+  - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
+  - If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
   - <details>
     <summary>Formatting to FAT32</summary>
     <br>
@@ -54,12 +46,12 @@ Congratulations! You are a proud owner of an EmotiBit! This guide will help you 
       - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
     </details>
 
-- Create a **config.txt** file on the SD-Card.
-- The contents of the file should be in format as shown below:
-  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
-- Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
+  - Create a **config.txt** file on the SD-Card.
+  - The contents of the file should be in format as shown below:
+    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+  - Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
 
-#### Conencting to multiple WiFi networks
+- **Conencting to multiple WiFi networks**
 
 - <details>
   <summary>Multiple WiFi Networks (EmotiBit FeatherWing v0.5.4+)</summary>
