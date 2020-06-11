@@ -34,7 +34,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 ### Connecting to WiFi
 
 - <details>
-  <summary>**Prepare Included Sd-Card**</summary>
+  <summary><b>Prepare Included Sd-Card</b></summary>
   <br>
   
   - To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
@@ -55,7 +55,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   </details>
 
 - <details>
-  <summary>**Conencting to multiple WiFi networks**(EmotiBit FeatherWing v0.5.4+)</summary>
+  <summary><b>Conencting to multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
   <br>
  
   - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
