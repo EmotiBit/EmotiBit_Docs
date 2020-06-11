@@ -142,18 +142,9 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 
 - Learn [More about the LEDs and buttons on EmotiBit]()
 
-## Converting Raw Data
-Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.The `EmotiBit DataParser` is a tool designed just for this objective.
-- [Follow this link to take the next steps in analzing the recorded data.]() 
-
-## Visualize Recorded Data
-- When working with data, having visualizing tools acts as a great enabler.
-- By now, we expect you have successfully [recorded data using the EmotiBit]() and used the data parser to [convert the raw data]().
-- [Check out these visualizing tools]() we think will greatly help you!. 
-
 ## Next Steps
 By this point, you are an EmotiBit ninja. However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
-- **Working with your data**
+- `Working with your data`
   - <details>
     <summary><b>Converting Raw Data</b></summary>
     <br>
@@ -172,6 +163,7 @@ By this point, you are an EmotiBit ninja. However, we at CFL believe in empoweri
 - [`Keep EmotiBit up to date`]()
 - [`Contributing to the EmotiBit Community`]()
 - [`Learn more about EmotiBit`]()
+
 ## Troubleshooting
 - <details>
   <summary>[LED's](#LED-Indicators) and the serial monitor can be useful tools for debugging</summary>
