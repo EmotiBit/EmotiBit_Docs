@@ -13,9 +13,11 @@
   - [Powering Up](#Powering-up)
 - [Streaming Data in Real Time and Recording](#Streaming-Data-in-Real-Time-and-Recording)
 - [EmotiBit: LEDs and Buttons](#EmotiBit:-LEDs-and-Buttons)
-- [Convert Raw Data](#Convert-Raw-Data)
-- [Visualize Recorded Data](#Visualize-Recorded-Data)
 - [Next Steps](#Next-Steps)
+  - Working with EmotiBit Data
+  - Keep EmotiBit up to date
+  - Contributing to the EmotiBit Community
+  - Learn more about EmotiBit
 - [Troubleshooting](#Troubleshooting)
 
 [comment]: <> (![alt text][Hardware])
@@ -143,26 +145,26 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 - Learn [More about the LEDs and buttons on EmotiBit]()
 
 ## Next Steps
-By this point, you are an EmotiBit ninja. However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
+By this point, you are a EmotiBit ninja!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
 - `Working with your data`
   - <details>
-    <summary><b>Converting Raw Data</b></summary>
+    <summary>Converting Raw Data</summary>
     <br>
     
     Once you have successfully installed and used the EmotiBit Oscilloscope to stream and record your data, you are now ready for the next steps.... **parse the recorded data**.The `EmotiBit DataParser` is a tool designed just for this objective.
       - [Follow this link to take the next steps in analzing the recorded data.]()
     </details>     
   - <details>
-    <summary><b>Visualizing Recorded Data</b></summary>
+    <summary>Visualizing Data</summary>
     <br>
     
     - When working with data, having visualizing tools acts as a great enabler.
     - By now, we expect you have successfully [recorded data using the EmotiBit]() and used the data parser to [convert the raw data]().
     - [Check out these visualizing tools]() we think will greatly help you!. 
     </details>
-- [`Keep EmotiBit up to date`]()
-- [`Contributing to the EmotiBit Community`]()
-- [`Learn more about EmotiBit`]()
+- [Keep EmotiBit up to date]()
+- [Contributing to the EmotiBit Community]()
+- [Learn more about EmotiBit]()
 
 ## Troubleshooting
 - <details>
