@@ -146,7 +146,7 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 
 ## Next Steps
 By this point, you are a EmotiBit ninja!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
-- `Working with your data`
+- **Working with your data**
   - <details>
     <summary>Converting Raw Data</summary>
     <br>
