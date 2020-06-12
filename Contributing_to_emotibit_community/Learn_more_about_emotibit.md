@@ -4,6 +4,25 @@
 
 ## EmotiBit HW subsystems
 
+### LEDs and Buttons
+- **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit FeatherWing has 3 LEDs to indicate its present status.
+  - RED: Blinks at ~1Hz when recording
+  - BLUE: Steady-on when connected to the EmotiBit Oscilloscope
+  - Yellow: Steady-on when the battery level is low
+
+- **LED's on the Adafruit Feather M0 WiFi:** In addition to the EmotiBit LEDs, the Feather has 4 indicator LED's 
+  - RED: Is the I2C SCL Line. Under regular Operation, it should be always ON
+  - ORANGE: This is the Charging indicator, which glows if a battery is connected to the feather and is being charged by the USB connection
+  - GREEN: This is the WiFi indicator. If the EmotiBit is Connected to Wifi, there should be a constant glow.
+  - YELLOW: It blinks whenever the EmotiBit receives a message from the computer. This blinks periodically when an EmotiBit Oscilloscope executable is running on the network.
+
+- **Buttons on the EmotiBit**
+  - EmotiBit Button: _adjacent to the SD card_
+    - Long Press (3 sec) to put EmotiBit into hibernate mode
+    - Short Press- Switch between WiFi modes. In future will support mapping to different functionality.
+  - Reset button on the feather resets the board and restarts the code
+
+
 ## EmotiBit SW subsystems
 
 #### Data Stored on the SD Card 
