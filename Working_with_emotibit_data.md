@@ -7,7 +7,7 @@ recording, add User-Notes to data being recorded and an array of other useful fe
 - **EmotiBit DataParser**: The raw data collected by the EmotiBit is hard to parse using human eyes. It is also hard to make intuitive sense of the raw data collected by the EmotiBIt. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
 - **Data Visualization**: Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
 
-## Real TIme Streaming
+## Real-Time Streaming
 The ability to stream data in real-time from the EmotiBit to a computer is incredible. The EmotiBit Oscilloscope offers this capability along with an array of other functionalities.
 
 ### Get the oscilloscope

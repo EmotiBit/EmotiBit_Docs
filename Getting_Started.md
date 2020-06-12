@@ -132,14 +132,14 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 
 ## Streaming Data in Real-Time and Recording
 Now that you have your EmotiBit up and running, we recommend you learn more about the EmotiBit Oscilloscope to make the most of EmotiBit.
-- [Learn more about streaming and recording data using the EmotiBit Oscilloscope]()
+- [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
 
 ## Next Steps
 By this point, you are a EmotiBit ninja!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
 - **Working with your data**
-  - [Converting raw data]()
-  - [Visualizing  Data]()
+  - [Converting raw data](./Working_with_emotibit_data.md/#Converting-Raw-Data)
+  - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-Recorded-Data)
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
 - [Learn more about EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md)
