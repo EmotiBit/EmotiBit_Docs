@@ -4,7 +4,7 @@ some essential tools which we think will help our users interact better with the
 On this page we will talk about:
 - **EmotiBit Oscilloscope**: An intuitive and powerful tool to live stream data from any EmotiBit active on the Network. You would also use this tool to initiate
 recording, add User-Notes to data being recorded and an array of other useful features
-- ** EmotiBit DataParser**: The raw data collected by the EmotiBit is hard to parse using human eyes. It is also hard to make intuitive sense of the raw data collected by the EmotiBIt. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
+- **EmotiBit DataParser**: The raw data collected by the EmotiBit is hard to parse using human eyes. It is also hard to make intuitive sense of the raw data collected by the EmotiBIt. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
 - **Data Visualization**: Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
 
 ## Real TIme Streaming
@@ -44,6 +44,15 @@ You can follow the installation instruction on the [getting started]() page.
     </details>
     
   - <details>
+    <summary>DC/DO counter</summary>
+    <br>
+    Data Clipping and Data Overflow are metric that are used to determine data integrity. Each metric is explained here:
+    
+    - Data Clipping: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. The user should interpret the        occurrence of a clipping event as a point in time where the captured data does not represent the actual physical phenomenon.
+    - Data Overflow: An overflow event occurs when the internal data buffers are filled and no new data being generated can be recorded. This leads to    "blanks" in the data time series. An overflow event should be taken more seriously, as the EmotiBit has been designed to avoid such scenarios.
+    </details>
+    
+  - <details>
     <summary>Adding User Notes(labeling data)</summary>
     <br>
     
@@ -67,13 +76,14 @@ You can follow the installation instruction on the [getting started]() page.
     - **Low Power Mode**: In Low power mode, the EmotiBit can record but cannot transmit data in real-time. It, however, continues to get the time-sync pulses.
     - **WiFi Off**: This mode causes the EmotiBit to shut down the onboard WiFi shield. This saves power and enables long recording sessions. However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping od data.  The EmotiBit can be toggled between normal mode and WiFi off mode by performing a `long press` the onboard button. If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a couple of minutes after going back to normal mode. This can potentially help with time-syncing issues.
     - **Hibernate**: In hibernate mode, EmotiBit stops any task it is performing and goes to sleep. We recommend using this mode instead of un-plugging the EmotiBit battery when not in use.
+    </details>
 
 ### Next Steps: Converting raw recorded data
-
-### Troubleshooting
+Being able to stream and record data is a great enabler but often, tools are required to help in analysing the data acquired. In the next sections, you will find additional tools that you might find useful. 
 
 ## Converting Raw Data
-
+The EmotiBit collects data giving data integrity and time syncing the paramount importance. Hence, the raw data collected by the EmotiBit is hard to read by human eyes. The `EmotiBit data parser` is a tool that converts this **Raw** data into files which can be better understood by humans.
+ 
 ### What you should have at this point
 
 ### User Guide
