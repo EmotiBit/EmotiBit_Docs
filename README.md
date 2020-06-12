@@ -4,7 +4,7 @@ Instructions for New Users to get their EmotiBit's up and running! Follow the in
 
 <img src="./assets/emotibit-outOfBox.png" width="500">
 
-### [`02. Work with EmotiBit data`](./Work_with_emotibit_data.md) 
+### [`02. Work with EmotiBit data`](./Working_with_emotibit_data.md) 
 Get access to a range of Tools developed by us to help you interpret the data captured by EmotiBit.
 
 ### [`03. Keep EmotiBit up to date`](./Keep_emotibit_up_to_date.md)
