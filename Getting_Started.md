@@ -26,7 +26,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Connecting to WiFi
 
-> <details>
+- <details>
   <summary><b>Adding WiFi credentials to SD-Card</b></summary>
   <br>
   
