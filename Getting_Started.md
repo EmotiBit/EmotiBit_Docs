@@ -58,54 +58,47 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 
 ### Get the Software
-- [Get the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-- Follow the instructions below based on your Operating System(Windows, Mac, Linux):
+[Get the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
+<details><summary><b>Installation Instructions For Windows Users:</b></summary>
+ 
+  - **Note:** EmotiBit software is supported only for Windows 10.
+  - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
+  - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double-clicking.
+  - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
+  - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
+</details>
 
-  - <details>
-    <summary><b>For Windows Users:</b></summary>
-    <br>
-     
-    - **Note:** EmotiBit software is supported only for Windows 10.
-    - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
-    - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double-clicking.
-    - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
-    - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
-    </details>
-
-  - <details>
-    <summary><b>For Mac Users:</b></summary>
-    <br>
+ <details><summary><b>Installation Instructions For Mac Users:</b></summary>
     
-    - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
-    - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
-        ![][oscilloscope-drirectory]
+  - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
+  - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
+      ![][oscilloscope-drirectory]
   
-    - <details>
-      <summary>Opening Software in mojave</summary>
-      <br> 
+  - <details><summary>Opening Software in mojave</summary>
         
-        - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-        - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
-        - You will see the EmotiBit Oscilloscope Application start.
-      </details>
-    - <details>
-      <summary>Opening Software in Catalina</summary>
-      <br>
+      - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+      - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+      - You will see the EmotiBit Oscilloscope Application start.
+    </details>
+  - <details><summary>Opening Software in Catalina</summary>
   
-        - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-        - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
-                ![][macOs-Catalina-Initial_Oscilloscope_Error]
-        - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
-                    ![][macOS-Catalina-sys_pref]
-        - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
-                    ![][macOS-Catalina-System_pref_Security&options]
-        - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
-                    ![][macOS-Catalina-Allow_emotibit]
-      </details>
-    - **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
-    - Make sure you are using a compatible macOS version. You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
-            <img src="../assets/macOS-Catalina-OS_version.png" width="800">
-    </details>    
+      - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
+      - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
+              ![][macOs-Catalina-Initial_Oscilloscope_Error]
+      - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
+              ![][macOS-Catalina-sys_pref]
+      - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
+              ![][macOS-Catalina-System_pref_Security&options]
+      - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
+              ![][macOS-Catalina-Allow_emotibit]
+    </details>
+> **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
+
+> Make sure you are using a compatible macOS version. You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
+
+> <img src="../assets/macOS-Catalina-OS_version.png" width="800">
+
+ </details>    
 
 ### Powering Up
 - Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
