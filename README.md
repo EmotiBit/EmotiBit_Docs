@@ -2,8 +2,6 @@
 ### [`01. Getting Started`](./Getting_Started.md) 
 Instructions for New Users to get their EmotiBit's up and running! Follow the instructions provided to access your Physiological Data!
 
-<img src="./assets/emotibit-outOfBox.png" width="500">
-
 ### [`02. Working with EmotiBit data`](./Working_with_emotibit_data.md) 
 Get access to a range of Tools developed by us to help you interpret the data captured by EmotiBit.
 
