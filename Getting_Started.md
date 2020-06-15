@@ -125,6 +125,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ## EmotiBit: LEDs and Buttons
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
+
 ![alt text][LED]
 
 - Learn [More about the LEDs and buttons on EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md)
@@ -145,7 +146,7 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
 
 ## Troubleshooting
 - <details>
-  <summary>[LED's](#LED-Indicators) and the serial monitor can be useful tools for debugging</summary>
+  <summary>LEDs and the serial monitor can be useful tools for debugging</summary>
   <br>
   
   - if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
