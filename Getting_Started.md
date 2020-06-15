@@ -15,7 +15,7 @@
 
 ## If you just received your EmotiBit
 ### Unboxing
-<img src="./assets/emotibit-outOfBox.png" align="right" width="450">
+<img src="./assets/emotibit-outOfBox.png" align="right" width="350">
 
 Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
 - EmotiBit with straps
@@ -115,9 +115,8 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - Don't see anything on the Oscilloscope? Check out our guide for [Troubleshooting](#Troubleshooting)
 
 ## EmotiBit: LEDs and Buttons
-<img src="./assets/M0_WiFi_LED_Indicators_01.png" align="right" width="500">
-
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
+![][LED]
 - Learn [More about the LEDs and buttons on EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 ## Streaming Data in Real-Time and Recording
