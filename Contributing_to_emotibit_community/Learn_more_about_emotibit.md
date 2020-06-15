@@ -2,8 +2,8 @@
 
 ##Overview
 
-## EmotiBit HW subsystems
 
+## EmotiBit HW
 ### LEDs and Buttons
 - **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit FeatherWing has 3 LEDs to indicate its present status.
   - RED: Blinks at ~1Hz when recording
@@ -22,9 +22,12 @@
     - Short Press- Switch between WiFi modes. In future will support mapping to different functionality.
   - Reset button on the feather resets the board and restarts the code
 
+## EmotiBit FW
+### Update Feather WiFi chip firmware
+  - Occasionally there are important updates to the Feather WiFi chip firmware. **If you recently got your Feather M0 WiFi board from us, you're up-to-date and good-to-go**, [but if not you should follow these instructions](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module)
 
-## EmotiBit SW subsystems
 
+## EmotiBit SW
 #### Data Stored on the SD Card 
 - CSV: Experimental Data
   - All data is saved to the SD card into a .csv file when recording is initiated from the GUI
@@ -194,6 +197,7 @@ This document shows an in-depth view of the EmotiBit packet Architecture and Dat
 249054,45373,1,LM,1,100,TSC,264448.0612918,TS,264448.0607235,LC,264448.0676169,LD,Hello
 250555,45660,1,LM,1,100,TSC,264449.5732830,TS,264449.5727040,LC,264449.5778914,LD,World
 ```
+
 
 ## Repositories
 - Parent Github

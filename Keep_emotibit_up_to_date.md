@@ -10,24 +10,38 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - [Programming the Feather](#programming-the-feather)
 
 ## Setup
-- ### Download and install the Arduino IDE
+### Download and install the Arduino IDE
   - https://www.arduino.cc/en/main/software#download
-- ### Add Adafruit Feather boards to Arduino IDE
-  - #### Point Arduino IDE at Adafruit boards library
+### Add Adafruit Feather boards to Arduino IDE
+  - <details>
+    <summary><b>Point Arduino IDE at Adafruit boards library</b></summary>
+    <br>
+    
     - `File > Preferences > [Settings Tab]`
     - Copy-Paste the following link into `Additional Board Manager URLs:` 
       - https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
     - [*[See Adafruit's page if you'd like instructions with images]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/setup)
-  - #### Add support for specific SAMD boards
+    </details>
+    
+  - <details>
+    <summary><b>Add support for specific SAMD boards</b></summary>
+    <br>
+    
     - `Tools > Board: [...] > Boards Manager...`
     - Search for `SAMD`
     - Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+)` *by Arduino*
     - Install `Adafruit SAMD Boards` *by Adafruit* _**(use version 1.5.1)**_
     - [*[See Adafruit's page if you'd like instructions with images]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
       - If you're on Windows 7  or 8, the above link also has driver installation instructions (note, however, that EmotiBit software is not officially supported on Windows versions prior to Windows 10)
-- ### Install firmware libraries
+    </details>
+    
+### Install firmware libraries
   - Open the Arduino IDE and go to `Tools > Manage Libraries...`
   - Search for and install the following Libraries. **Be sure to install the correct version when specified for any library below**
+  - <details>
+    <summary><b>Library List</b></summary>
+    <br>
+    
     - WiFi101 *by Arduino*
     - SdFat *by Bill Greiman*
     - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
@@ -40,10 +54,11 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - EmotiBit NCP5632
     - EmotiBit SI7013
     - EmotiBit XPlat Utils
-- ### Close and re-open Arduino IDE
+    </details>
+    
+### Close and re-open Arduino IDE
   - After installing boards or libraries you should close and re-open the Arduino Application to make sure the changes take effect.
-- ### Update Feather WiFi chip firmware
-  - Occasionally there are important updates to the Feather WiFi chip firmware. **If you recently got your Feather M0 WiFi board from us, you're up-to-date and good-to-go**, [but if not you should follow these instructions](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module)
+
 ## Programming the Feather
 - In the Arduino program (IDE), open `File > Examples > EmotiBit FeatherWing > EmotiBit_Example`
   ![][arduino_chooseExample]
@@ -53,8 +68,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - Choose `Tools > Port > [the correct port for your board]`
 ![][arduino_choosePort]
 - Click “Upload” button.
-<img src="../assets/Arduino_upload_button.png" width="350">
-
+<img src="./assets/Arduino_upload_button.png" width="350">
 
 ## Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! Grab the [EmotiBit Oscilloscope](https://github.com/emotibit/ofxemotibit/releases/latest), if you have not already got it!

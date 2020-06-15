@@ -7,12 +7,11 @@
   - [Connecting To WiFi](#connecting-to-wifi)
   - [Get the Software](#Get-the-Software)
   - [Powering Up](#Powering-up)
+- [EmotiBit: LEDs and Buttons](#EmotiBit-LEDs-and-Buttons)
 - [Streaming Data in Real Time and Recording](#Streaming-Data-in-Real-Time-and-Recording)
-- [EmotiBit: LEDs and Buttons](#EmotiBit:-LEDs-and-Buttons)
 - [Next Steps](#Next-Steps)
 - [Troubleshooting](#Troubleshooting)
 
-[comment]: <> (![alt text][Hardware])
 
 ## If you just received your EmotiBit
 ### Unboxing
@@ -24,6 +23,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - 3.7V battery
 - 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
 <img src="./assets/emotibit-outOfBox.png" width="500">
+
 ### Connecting to WiFi
 
 - <details>
