@@ -55,7 +55,8 @@
 
 ##### TypeTag Character Codes
 
-###### Biometric TypeTags
+<details><summary><b>Biometric TypeTags</b></summary>
+
 |Tag    | Description          |Tag    | Description          |
 |:-----:|----------------------|:-----:|----------------------|
 |EA     |EDA                   |AX     |Accelerometer X       |
@@ -68,8 +69,9 @@
 |TH     |Thermopile(ML90632)   |MY     |Magnetometer Y        |
 |H0     |Humidity (Si7013)     |MZ     |Magnetometer Z        |
 
+</details>
 
-###### General Typetags and Computer to EmotiBit Typetags
+<details><summary><b>General Typetags and Computer to EmotiBit Typetags</b></summary>
 
 |General Tag    | Description               |Computer to EmotiBit Tag    | Description                |              
 |:-----:|:----------------------------------|:-----:|:------------------------------------------------|
@@ -88,8 +90,8 @@
 |       |                                   |MH     |Mode Hibernate                                   |
 |       |                                   |HE     |Hello EmotiBit, used to establish communication  |
 
+</details> 
 
-This document shows an in-depth view of the EmotiBit packet Architecture and Data Type Tags.
 
 ## Packet Format
 - `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
@@ -105,7 +107,8 @@ This document shows an in-depth view of the EmotiBit packet Architecture and Dat
 ![alt text][Pack]
 ### TypeTag Character Codes
 
-#### Biometric TypeTags
+<details><summary><b>Biometric TypeTags</b></summary>
+
 |Tag    | Description          |
 |:-----:|----------------------|
 |EA     |EDA                   |
@@ -127,7 +130,9 @@ This document shows an in-depth view of the EmotiBit packet Architecture and Dat
 |MY     |Magnetometer Y        |
 |MZ     |Magnetometer Z        |
 
-#### General Typetags
+</details>
+
+<details><summary><b>General Typetags</b></summary>
 
 |Tag    | Description                       |
 |:-----:|:----------------------------------|
@@ -142,7 +147,9 @@ This document shows an in-depth view of the EmotiBit packet Architecture and Dat
 |PO     |Pong                               |
 |RS     |Reset                              |
 
-#### Computer to EmotiBit TypeTags
+</details>
+
+<details><summary><b>Computer to EmotiBit TypeTags</b></summary>
 
 |Tag    | Description                       |
 |:-----:|:----------------------------------|
@@ -159,6 +166,8 @@ This document shows an in-depth view of the EmotiBit packet Architecture and Dat
 |UN     |User Note                          |
 |MH     |Mode Hibernate                     |
 |HE     |Hello EmotiBit, used to establish communication  |
+
+</details>
 
 [GPS]: https://developer.android.com/reference/android/location/Location
 [Pack]: ../assets/PacketExample.png "Example Packets"
