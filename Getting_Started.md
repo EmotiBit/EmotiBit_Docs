@@ -26,38 +26,33 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Connecting to WiFi
 
-- <details>
-  <summary><b>Adding WiFi credentials to SD-Card</b></summary>
-  <br>
-  
-  - To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
-  - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
-  - If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
-  - <details>
-    <summary>Formatting to FAT32</summary>
-    <br>
+<details><summary><b>Adding WiFi credentials to SD-Card</b></summary>
 
-      - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
-      - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
-    </details>
+- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
+- If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
+- If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
+- <details><summary>Formatting to FAT32</summary>
 
-  - Create a **config.txt** file on the SD-Card.
-  - The contents of the file should be in format as shown below:
-    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
-  - Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
-
-  - <details>
-    <summary><b>Access multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
-    <br>
-     
-    - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-      - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
-      - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
-    - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If a quick connection is desired after programming or reset:
-      - Shorten the list
-      - Organize the list in order of priority of the connection
-    </details>
+  - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
+  - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
   </details>
+
+- Create a **config.txt** file on the SD-Card.
+- The contents of the file should be in format as shown below:
+- ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+- Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
+
+- <details><summary><b>Access multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
+ 
+  - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
+    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+    - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
+  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If a quick connection is desired after programming or reset:
+    - Shorten the list
+    - Organize the list in order of priority of the connection
+  </details>
+
+</details>
 
 - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
 
