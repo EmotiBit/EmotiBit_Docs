@@ -5,7 +5,7 @@
 
 ## EmotiBit HW
 ### LEDs and Buttons
-![][LED]
+<img src="../assets/M0_WiFi_LED_Indicators_01.png" align="right" width=500>
 - **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit FeatherWing has 3 LEDs to indicate its present status.
   - RED: Blinks at ~1Hz when recording
   - BLUE: Steady-on when connected to the EmotiBit Oscilloscope
