@@ -116,6 +116,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ## EmotiBit: LEDs and Buttons
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
+
 ![][LED]
 - Learn [More about the LEDs and buttons on EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
