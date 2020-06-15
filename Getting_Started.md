@@ -94,11 +94,15 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
     </details>
 > **Note** that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].
 
-> Make sure you are using a compatible macOS version. You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
+<details><summary>Check the operating system you are using</summary>
 
-> <img src="../assets/macOS-Catalina-OS_version.png" width="800">
+You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
 
- </details>    
+<img src="./assets/macOS-Catalina-OS_version.png" width="800">
+
+</details>
+
+</details>    
 
 ### Powering Up
 - Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
