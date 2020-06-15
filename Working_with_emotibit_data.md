@@ -87,7 +87,7 @@ Data integrity and precise time stamping have been given paramount importance wh
 ### What you should have at this point
 - [Get the data parser](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
 - Data recorded using the EmotiBit. 
-  - EmotiBit records data in a single csv file on the onboard SD_Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
+  - EmotiBit records data in a single csv file on the onboard SD-Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
   - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` file onto the system using the SD-Card USB reader provided in the box.[ToDo: find a place to explain the contents of json file]
 ### User Guide
 [ToDo: Add data parser image]
