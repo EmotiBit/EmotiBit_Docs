@@ -54,7 +54,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 </details>
 
-- After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
+> After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
 
 
 ### Get the Software
