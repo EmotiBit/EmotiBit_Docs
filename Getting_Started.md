@@ -92,10 +92,13 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
       - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
               ![][macOS-Catalina-Allow_emotibit]
     </details>
-> **Note that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].**
-> You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
-> <img src="./assets/macOS-Catalina-OS_version.png" width="800">
-
+  > **Note that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].**
+  - <details><summary>Check your Operating System version</summary>
+    
+    - You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
+    
+    <img src="./assets/macOS-Catalina-OS_version.png" width="800">
+    </details>
 </details>    
 
 ### Powering Up
