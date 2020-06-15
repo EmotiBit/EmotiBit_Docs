@@ -11,8 +11,8 @@ recording, add User-Notes to data being recorded and an array of other useful fe
 The ability to stream data in real-time from the EmotiBit to a computer is incredible. The EmotiBit Oscilloscope offers this capability along with an array of other functionalities.
 
 ### Get the oscilloscope
-- If you have not already, get the [latest release of EMotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
-You can follow the installation instruction on the [getting started]() page.
+- If you have not already, get the [latest release of EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
+You can follow the installation instruction on the [getting started](./Getting_Started.md/#Get-the-Software) page.
 
 ### EmotiBit Oscilloscope user guide
 - The Oscilloscope offers the following functionalities:
@@ -85,23 +85,32 @@ Being able to stream and record data is a great enabler but often, tools are req
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
  
 ### What you should have at this point
-- [Get the data parser]()
+- [Get the data parser](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
 - Data recorded using the EmotiBit. 
   - EmotiBit records data in a single csv file on the onboard SD_Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
   - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` file onto the system using the SD-Card USB reader provided in the box.[ToDo: find a place to explain the contents of json file]
 ### User Guide
 [ToDo: Add data parser image]
-- EmotiBit data parser sections
+- <details>
+  <summary><b>EmotiBit data parser sections</b></summary>
+  <br>
+  
   - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
   - `Process File Button`: Click on the button to load a file to process.
   - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
-- Running the EmotiBit data parser
+  </details>
+  
+- <details>
+  <summary><b>Using the EmotiBit data parser</b></summary>
+  <br>
+  
   - Open the EmotiBit data parser. 
   - Click on the `Process file button`. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
   - You can see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
   - When EmotiBit data parser has finished processing the file, it will exit automatically. 
   - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
   - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.[ToDo: Add an image for the folder containing parsed files]
+  </details>
 ### Next Steps: Visualize recorded data
 Once you have the individual files representing data from the array of sensors on EmotiBit, the possibilities to use that data are limitless. A great way to understand what the data represents is to visualize it. Read on to discover cool ways to visualize data.
 ## Visualize Recorded Data
@@ -113,5 +122,5 @@ Visualization tools can often help answer some immediate questions and hence, ca
 - Spreadsheet softwares
   - Microsoft Excel
   - Google Sheets 
-- [EmotiBit python data viewer]()
+- [EmotiBit python data viewer](https://github.com/EmotiBit/EmotiBit_Biometric_Lib/tree/master/py/examples/dataviewer_example)
 
