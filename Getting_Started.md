@@ -121,8 +121,7 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 - Learn [More about the LEDs and buttons on EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 ## Streaming Data in Real-Time and Recording
-Now that you have your EmotiBit up and running, we recommend you learn more about the EmotiBit Oscilloscope to make the most of EmotiBit.
-- [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+> [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
 
 ## Next Steps
