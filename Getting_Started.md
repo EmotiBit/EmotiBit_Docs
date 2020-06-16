@@ -61,7 +61,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Get the Software
 [Get the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-<details><summary><b>Installation Instructions For Windows Users:</b></summary>
+<details><summary>Installation Instructions For Windows Users:</summary>
  
   - **Note:** EmotiBit software is supported only for Windows 10.
   - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
@@ -70,7 +70,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
 </details>
 
- <details><summary><b>Installation Instructions For Mac Users:</b></summary>
+ <details><summary>Installation Instructions For Mac Users:</summary>
     
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
