@@ -59,7 +59,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 > For quick reference:<br>
 > The config.txt file should shoud contain the contents in the following format
 > `{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`
-```
+
 ### Get the Software
 [Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
 - <details><summary>Installation Instructions For Windows Users:</summary>
