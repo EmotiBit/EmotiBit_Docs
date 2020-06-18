@@ -8,7 +8,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 ## Table of Contents
 - [Setup](#setup)
 - [Programming the Feather](#programming-the-feather)
-
+- [Additional Information](#Additional-Information)
 ## Setup
 ### Download and install the Arduino IDE
   - https://www.arduino.cc/en/main/software#download
@@ -73,6 +73,13 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 
 ## Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! [Start working with your data](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+
+## Additional Information
+- Adafruit feather M0 works with the `ATWINC1500` for wireless communication. The `ATWINC` exists as a independent submodule to the feather
+and might get updates which require a different set of instructions to be followed. 
+  - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 
+  a feather purchased independently, check out the documentation to [update the WiFi module](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#Update-Feather-WiFi-chip-firmware)  
+
 
 [comment]: <> (Add links to images below)
 
