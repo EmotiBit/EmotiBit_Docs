@@ -57,7 +57,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   </details>
 
 > For quick reference:<br>
-> The config.txt file should shoud contain the contents in the following format
+> The config.txt file should shoud contain the contents in the following format <br>
 > `{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`
 
 ### Get the Software
