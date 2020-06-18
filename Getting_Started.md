@@ -56,8 +56,12 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot. 
   </details>
 
+> For quick reference:<br>
+> The config.txt file should shoud contain the contents in the following format
+> `{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`
+```
 ### Get the Software
-[Get the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
+[Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
 - <details><summary>Installation Instructions For Windows Users:</summary>
  
     - **Note:** EmotiBit software is supported only for Windows 10.
@@ -105,10 +109,10 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.[ToDo:Add image of stacked up EmotiBit]
 - If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push-button below the USB connector) on the feather.
 - Wait for the EmotiBit to run through the setup.
-  - The EmotiBit will light up RED, YELLOW and then BLUE light in sequence as it goes through the bootup.
-  - You should see the red and green LED's on the PPG sensor at the bottom light up.
-  - The Wifi Shield goes up next, indicated with a green light at the bottom on the feather
-- **You should see the Data start to stream on the Oscilloscope!!**
+  - The EmotiBit momentarily lights up RED, YELLOW and then BLUE light in sequence as it goes through the bootup.
+  - The Wifi Shield gets activated next, indicated with a green light at the bottom on the feather.(see image in the section below for reference)
+- Open the EmotiBit Oscilloscope you installed in the previous steps.
+  - **You should see the Data start to stream on the Oscilloscope!!**
 - Don't see anything on the Oscilloscope? Check out our guide for [Troubleshooting](#Troubleshooting)
 
 ## EmotiBit: LEDs and Buttons
@@ -118,7 +122,7 @@ The on-board LEDs are a great way to understand the state of your EmotiBit. Belo
 - Learn [More about the LEDs and buttons on EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 ## Streaming Data in Real-Time and Recording
-> [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+- [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
 
 ## Next Steps
