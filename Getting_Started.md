@@ -28,49 +28,46 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Connecting to WiFi
 
-<details><summary><b>Adding WiFi credentials to SD-Card</b></summary>
+- <details><summary><b>Adding WiFi credentials to SD-Card</b></summary>
 
-- To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
-- If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
-- If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
-- <details><summary>Formatting to FAT32</summary>
+  - To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID: WIFi Name` and `Password: WiFi Password` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
+  - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
+  - If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
+  - <details><summary>Formatting to FAT32</summary>
 
-  - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
-  - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
-  </details>
+    - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
+    - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
+    </details>
 
-- Create a **config.txt** file on the SD-Card.
-- The contents of the file should be in format as shown below:
-- ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
-- Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
+  - Create a **config.txt** file on the SD-Card.
+  - The contents of the file should be in format as shown below:
+  - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+  - Replace `Foo` with the `WiFi name` and `Bar` with the `WiFi password`.
 
-- <details><summary><b>Access multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
+  - <details><summary><b>Access multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
  
-  - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-    - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
-    - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
-  - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If a quick connection is desired after programming or reset:
-    - Shorten the list
-    - Organize the list in order of priority of the connection
+    - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
+      - ``{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"},{"ssid": "Fnord", "password" : "Baz"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card_)
+      - Replace `Foo` with the `WiFi 1 name` and `Bar` with the `WiFi 1 password`. Replace `Fnord` with the `WiFi 2 name` and `Baz` with the `WiFi 2 password`
+    - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If a quick connection is desired after programming or reset:
+      - Shorten the list
+      - Organize the list in order of priority of the connection
+    </details>
+  - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot. 
   </details>
-
-</details>
-
-> After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot.
-
 
 ### Get the Software
 [Get the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-<details><summary>Installation Instructions For Windows Users:</summary>
+- <details><summary>Installation Instructions For Windows Users:</summary>
  
-  - **Note:** EmotiBit software is supported only for Windows 10.
-  - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
-  - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double-clicking.
-  - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
-  - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
-</details>
+    - **Note:** EmotiBit software is supported only for Windows 10.
+    - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
+    - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double-clicking.
+    - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
+    - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
+  </details>
 
- <details><summary>Installation Instructions For Mac Users:</summary>
+- <details><summary>Installation Instructions For Mac Users:</summary>
     
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
@@ -101,7 +98,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
     
     <img src="./assets/macOS-Catalina-OS_version.png" width="800">
     </details>
-</details>    
+  </details>    
 
 ### Powering Up
 - Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
