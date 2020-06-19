@@ -59,6 +59,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 > For quick reference:<br>
 > The config.txt file should shoud contain the contents in the following format <br>
 > `{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`
+- **Note: EmotiBit only supports the 2.4GHz band for WiFi.**
 
 ### Get the Software
 [Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
@@ -66,9 +67,10 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
  
     - **Note:** EmotiBit software is supported only for Windows 10.
     - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
-    - You will find a `setup.exe` executable inside the extracted folder. Run the setup by double-clicking.
+    - You will find a `.msi` installer inside the extracted folder. Run the installer by double-clicking.
     - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
     - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
+    - **Note: The EmotiBit Software installation process is sometimes blocked by any anti-virus tool you might have installed on your system. If you face any issues with installation, make sure to check that the appropriate settings are enabled on your anti-virus software to allow a third-party installs.**
   </details>
 
 - <details><summary>Installation Instructions For Mac Users:</summary>
