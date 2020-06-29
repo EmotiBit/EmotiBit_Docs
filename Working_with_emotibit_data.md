@@ -98,6 +98,9 @@ Data integrity and precise time stamping have been given paramount importance wh
   - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
   - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.[ToDo: Add an image for the folder containing parsed files]
   </details>
+  
+#### EmotiBit File Types
+![][EmotiBit-File-Types]
 ### Next Steps: Visualize recorded data
 Once you have the individual files representing data from the array of sensors on EmotiBit, the possibilities to use that data are limitless. A great way to understand what the data represents is to visualize it. Read-on to discover cool ways to visualize data.
 ## Visualize Recorded Data
@@ -113,3 +116,4 @@ Visualization tools can often help answer some immediate questions and hence, ca
   - A tool created for visualizing all data channels in one window. 
 
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
+[EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
