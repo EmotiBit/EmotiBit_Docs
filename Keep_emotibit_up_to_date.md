@@ -1,4 +1,4 @@
-# Updating EmotiBit Firmware
+# Keeping EmotiBit up-to date
 
 ## Overview
 If you just received your EmotiBit, please checkout our [EmotiBit Getting Started](./Getting_Started.md) startup-guide.
@@ -8,13 +8,13 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 ## Table of Contents
 - [Setup](#setup)
 - [Programming the Feather](#programming-the-feather)
-- [Additional Information](#Additional-Information)
+- [About the WiFi shield](#About-the-WiFi-shield)
 ## Setup
 ### Download and install the Arduino IDE
   - https://www.arduino.cc/en/main/software#download
 ### Add Adafruit Feather boards to Arduino IDE
   - <details>
-    <summary><b>Point Arduino IDE at Adafruit boards library</b></summary>
+    <summary><b>Add URL to Adafruit Boards</b></summary>
     <br>
     
     - `File > Preferences > [Settings Tab]`
@@ -29,8 +29,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     
     - `Tools > Board: [...] > Boards Manager...`
     - Search for `SAMD`
-    - Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+)` *by Arduino*
-    - Install `Adafruit SAMD Boards` *by Adafruit* _**(use version 1.5.1)**_
+      - Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+)` *by Arduino*
+      - Install `Adafruit SAMD Boards` *by Adafruit* _**(use version 1.5.1)**_
     - [*[See Adafruit's page if you'd like instructions with images]*](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-with-arduino-ide)
       - If you're on Windows 7  or 8, the above link also has driver installation instructions (note, however, that EmotiBit software is not officially supported on Windows versions prior to Windows 10)
     </details>
@@ -74,7 +74,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 ## Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! [Start working with your data](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
-## Additional Information
+## About the WiFi shield
 - Adafruit feather M0 works with the `ATWINC1500` for wireless communication. The `ATWINC` exists as a independent submodule to the feather
 and might get updates which require a different set of instructions to be followed. 
   - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 

@@ -1,7 +1,15 @@
 # Learn More About EmotiBit
 
-## Overview
-
+## Table of contents
+- [EmotiBit HW](#EmotiBit-HW)
+  - [LEDs nad Buttons](#LEDs-and-Buttons)
+- [EmotiBIt FW](#EmotiBit-FW)
+  - [Update Feather WiFi chip firmware](#Update-Feather-WiFi-chip-firmware)
+- [EmotiBit SW](#EmotiBit-SW)
+  - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
+  - [Packet Format](#Packet-Format)
+  - [TypeTag Character Codes](#TypeTag-Character-Codes)
+- [Repositories](#Repositories)
 
 ## EmotiBit HW
 ### LEDs and Buttons
@@ -26,11 +34,11 @@
 
 ## EmotiBit FW
 ### Update Feather WiFi chip firmware
-  - Occasionally there are important updates to the Feather WiFi chip firmware. **If you recently got your Feather M0 WiFi board from us, you're up-to-date and good-to-go**, [but if not you should follow these instructions](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module)
+  - Occasionally there are important updates to the Feather WiFi chip firmware. **If you recently got your Feather M0 WiFi board from us, you're up-to-date and good-to-go**, [but if not you should follow these instructions on Adafruit's page.](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module)
 
 
 ## EmotiBit SW
-#### Data Stored on the SD Card 
+### How is Data Stored on the SD Card 
 - CSV: Experimental Data
   - All data is saved to the SD card into a .csv file when recording is initiated from the GUI
   - The file is named with the date-time that the recording started
@@ -41,59 +49,20 @@
     - 2019-01-30_11-57-13-492_info.json
     
 ```
-[{"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},{"info":{"name":"Gyroscope","type":"Gyroscope","typeTags":["GX","GY","GZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"degrees/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":1000}}},{"info":{"name":"Magnetometer","type":"Magnetometer","typeTags":["MX","MY","MZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"raw samples","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{}}},{"info":{"name":"ElectrodermalActivity","type":"ElectrodermalActivity","typeTags":["EA"],"channel_count":1,"nominal_srate":15,"channel_format":"float","units":"microsiemens","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"adc_bits":12,"voltage_divider_resistance":5000000,"EDR_amplification":20,"low_pass_filter_frequency":"15.91Hz","samples_averaged":4,"oversampling_rate":60}}},{"info":{"name":"Humidity0","type":"Humidity","typeTags":["H0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"Percent","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Temperature0","type":"Temperature","typeTags":["T0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"degrees celcius","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"Thermistor","type":"Thermistor","typeTags":["TH"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"raw adc units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"ADC_speed":"ADC_NORMAL","Vin_buffering":"VIN_UNBUFFERED","VREFP":"VREFP_VDDA","voltage_divider_resistance":10000,"thermistor_resistance":10000,"low_pass_filter_frequency":"0.1591Hz","amplification":10,"samples_averaged":2,"oversampling_rate":15}}},{"info":{"name":"PPG","type":"PPG","typeTags":["PI","PR","PG"],"channel_count":3,"nominal_srate":25,"channel_format":"float","units":"raw units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"LED_power_level":47,"samples_averaged":16,"LED_mode":3,"oversampling_rate":400,"pulse_width":215,"ADC_range":4096}}}]
+[
+{"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},
+{"info":{"name":"Gyroscope","type":"Gyroscope","typeTags":["GX","GY","GZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"degrees/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":1000}}},
+{"info":{"name":"Magnetometer","type":"Magnetometer","typeTags":["MX","MY","MZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"raw samples","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{}}},
+{"info":{"name":"ElectrodermalActivity","type":"ElectrodermalActivity","typeTags":["EA"],"channel_count":1,"nominal_srate":15,"channel_format":"float","units":"microsiemens","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"adc_bits":12,"voltage_divider_resistance":5000000,"EDR_amplification":20,"low_pass_filter_frequency":"15.91Hz","samples_averaged":4,"oversampling_rate":60}}},
+{"info":{"name":"Humidity0","type":"Humidity","typeTags":["H0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"Percent","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},
+{"info":{"name":"Temperature0","type":"Temperature","typeTags":["T0"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"degrees celcius","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"resolution":"RESOLUTION_H11_T11","samples_averaged":2,"oversampling_rate":15}}},
+{"info":{"name":"Thermistor","type":"Thermistor","typeTags":["TH"],"channel_count":1,"nominal_srate":7,"channel_format":"float","units":"raw adc units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"ADC_speed":"ADC_NORMAL","Vin_buffering":"VIN_UNBUFFERED","VREFP":"VREFP_VDDA","voltage_divider_resistance":10000,"thermistor_resistance":10000,"low_pass_filter_frequency":"0.1591Hz","amplification":10,"samples_averaged":2,"oversampling_rate":15}}},
+{"info":{"name":"PPG","type":"PPG","typeTags":["PI","PR","PG"],"channel_count":3,"nominal_srate":25,"channel_format":"float","units":"raw units","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"LED_power_level":47,"samples_averaged":16,"LED_mode":3,"oversampling_rate":400,"pulse_width":215,"ADC_range":4096}}}
+]
 ```
-#### Data Packet Structure
-- `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
-  - **Timestamp:** milliseconds since start of EmotiBit
-  - **Packet Number:** packet count since start of EmotiBit
-  - **Number of Datapoints:** Number of data points in the payload
-  - **Typetag:** type of data being sent
-  - **Version:** version of packet protocol
-  - **Reliability:** data reliability score out of 100, currently always 100
-  - **Payload:** data to send
 
-##### TypeTag Character Codes
+### Packet Format
 
-<details><summary><b>Biometric TypeTags</b></summary>
-
-|Tag    | Description          |Tag    | Description          |
-|:-----:|----------------------|:-----:|----------------------|
-|EA     |EDA                   |AX     |Accelerometer X       |
-|EL     |EDL                   |AY     |Accelerometer Y       |
-|ER     |EDR                   |AZ     |Accelerometer Z       |
-|PI     |PPG Infrared          |GX     |Gyroscope X           |
-|PR     |PPG Red               |GY     |Gyroscope Y           |
-|PG     |PPG Green             |GZ     |Gyroscope Z           |
-|T0     |Temperature (Si7013)  |MX     |Magnetometer X        |
-|TH     |Thermopile(ML90632)   |MY     |Magnetometer Y        |
-|H0     |Humidity (Si7013)     |MZ     |Magnetometer Z        |
-
-</details>
-
-<details><summary><b>General Typetags and Computer to EmotiBit Typetags</b></summary>
-
-|General Tag    | Description               |Computer to EmotiBit Tag    | Description                |              
-|:-----:|:----------------------------------|:-----:|:------------------------------------------------|
-|EI     |EmotiBit Info Json                 |GL     |[GPS latitude and Longitude][GPS]                |
-|DC     |Data Clipping, TypeTag in Payload  |GS     |[GPS Speed][GPS]                                 |
-|DO     |Data Overflow, TypeTag in Payload  |GB     |[GPS Bearing][GPS]                               |
-|B%     |Battery Percentage Remaining       |GA     |[GPS Altitude][GPS]                              |
-|BV     |Battery Voltage                    |TL     |Local Computer Timestamp                         |
-|D%     |SD card percent capacity filled    |TU     |UTC Timestamp                                    |
-|RD     |Request Data, TypeTag in Payload   |TU     |UTC Timestamp                                    |
-|PI     |Ping                               |TX     |Crosstime, used for timestamp comparison         |
-|PO     |Pong                               |LM     |LSL Marker/message                               |
-|RS     |Reset                              |RB     |Record begin (Include timestamp in Data)         |
-|       |                                   |RE     |Record End                                       |
-|       |                                   |UN     |User Note                                        |
-|       |                                   |MH     |Mode Hibernate                                   |
-|       |                                   |HE     |Hello EmotiBit, used to establish communication  |
-
-</details> 
-
-
-## Packet Format
 - `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
   - **Timestamp:** milliseconds since start of EmotiBit
   - **Packet Number:** packet count since start of EmotiBit
@@ -105,69 +74,70 @@
 - Example Packets:
 
 ![alt text][Pack]
+
 ### TypeTag Character Codes
 
-<details><summary><b>Biometric TypeTags</b></summary>
+- <details><summary><b>Biometric TypeTags</b></summary>
 
-|Tag    | Description          |
-|:-----:|----------------------|
-|EA     |EDA                   |
-|EL     |EDL                   |
-|ER     |EDR                   |
-|PI     |PPG Infrared          |
-|PR     |PPG Red               |
-|PG     |PPG Green             |
-|T0     |Temperature (Si7013)  |
-|TH     |Thermopile(ML90632)            |
-|H0     |Humidity (Si7013)     |
-|AX     |Accelerometer X       |
-|AY     |Accelerometer Y       |
-|AZ     |Accelerometer Z       |
-|GX     |Gyroscope X           |
-|GY     |Gyroscope Y           |
-|GZ     |Gyroscope Z           |
-|MX     |Magnetometer X        |
-|MY     |Magnetometer Y        |
-|MZ     |Magnetometer Z        |
+  |Tag    | Description          |
+  |:-----:|----------------------|
+  |EA     |EDA                   |
+  |EL     |EDL                   |
+  |ER     |EDR                   |
+  |PI     |PPG Infrared          |
+  |PR     |PPG Red               |
+  |PG     |PPG Green             |
+  |T0     |Temperature (Si7013)  |
+  |TH     |Thermopile(ML90632)            |
+  |H0     |Humidity (Si7013)     |
+  |AX     |Accelerometer X       |
+  |AY     |Accelerometer Y       |
+  |AZ     |Accelerometer Z       |
+  |GX     |Gyroscope X           |
+  |GY     |Gyroscope Y           |
+  |GZ     |Gyroscope Z           |
+  |MX     |Magnetometer X        |
+  |MY     |Magnetometer Y        |
+  |MZ     |Magnetometer Z        |
 
-</details>
+  </details>
 
-<details><summary><b>General Typetags</b></summary>
+- <details><summary><b>General Typetags</b></summary>
 
-|Tag    | Description                       |
-|:-----:|:----------------------------------|
-|EI     |EmotiBit Info Json                 |
-|DC     |Data Clipping, TypeTag in Payload  |
-|DO     |Data Overflow, TypeTag in Payload  |
-|B%     |Battery Percentage Remaining       |
-|BV     |Battery Voltage                    |
-|D%     |SD card percent capacity filled    |
-|RD     |Request Data, TypeTag in Payload   |
-|PI     |Ping                               |
-|PO     |Pong                               |
-|RS     |Reset                              |
+  |Tag    | Description                       |
+  |:-----:|:----------------------------------|
+  |EI     |EmotiBit Info Json                 |
+  |DC     |Data Clipping, TypeTag in Payload  |
+  |DO     |Data Overflow, TypeTag in Payload  |
+  |B%     |Battery Percentage Remaining       |
+  |BV     |Battery Voltage                    |
+  |D%     |SD card percent capacity filled    |
+  |RD     |Request Data, TypeTag in Payload   |
+  |PI     |Ping                               |
+  |PO     |Pong                               |
+  |RS     |Reset                              |
 
-</details>
+  </details>
 
-<details><summary><b>Computer to EmotiBit TypeTags</b></summary>
+- <details><summary><b>Computer to EmotiBit TypeTags</b></summary>
 
-|Tag    | Description                       |
-|:-----:|:----------------------------------|
-|GL     |[GPS latitude and Longitude][GPS]  |
-|GS     |[GPS Speed][GPS]                   |
-|GB     |[GPS Bearing][GPS]                 |
-|GA     |[GPS Altitude][GPS]                |
-|TL     |Local Computer Timestamp           |
-|TU     |UTC Timestamp                      |
-|TX     |Crosstime, used for timestamp comparison   |
-|LM     |LSL Marker/message                 |
-|RB     |Record begin (Include timestamp in Data)   |
-|RE     |Record End                         |
-|UN     |User Note                          |
-|MH     |Mode Hibernate                     |
-|HE     |Hello EmotiBit, used to establish communication  |
+  |Tag    | Description                       |
+  |:-----:|:----------------------------------|
+  |GL     |[GPS latitude and Longitude][GPS]  |
+  |GS     |[GPS Speed][GPS]                   |
+  |GB     |[GPS Bearing][GPS]                 |
+  |GA     |[GPS Altitude][GPS]                |
+  |TL     |Local Computer Timestamp           |
+  |TU     |UTC Timestamp                      |
+  |TX     |Crosstime, used for timestamp comparison   |
+  |LM     |LSL Marker/message                 |
+  |RB     |Record begin (Include timestamp in Data)   |
+  |RE     |Record End                         |
+  |UN     |User Note                          |
+  |MH     |Mode Hibernate                     |
+  |HE     |Hello EmotiBit, used to establish communication  |
 
-</details>
+  </details>
 
 [GPS]: https://developer.android.com/reference/android/location/Location
 [Pack]: ../assets/PacketExample.png "Example Packets"

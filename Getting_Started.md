@@ -63,9 +63,9 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Get the Software
 [Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-- <details><summary>Installation Instructions For Windows Users:</summary>
+- <details><summary><b>Installation Instructions For Windows Users</b></summary>
  
-    - **Note:** EmotiBit software is supported only for Windows 10.
+    - _**Note:** EmotiBit software is supported only for Windows 10._
     - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
     - You will find a `.msi` installer inside the extracted folder. Run the installer by double-clicking.
     - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
@@ -73,7 +73,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
     - **Note: The EmotiBit Software installation process is sometimes blocked by any anti-virus tool you might have installed on your system. If you face any issues with installation, make sure to check that the appropriate settings are enabled on your anti-virus software to allow a third-party installs.**
   </details>
 
-- <details><summary>Installation Instructions For Mac Users:</summary>
+- <details><summary><b>Installation Instructions For Mac Users</b></summary>
     
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
@@ -111,7 +111,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.[ToDo:Add image of stacked up EmotiBit]
 - If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push-button below the USB connector) on the feather.
 - Wait for the EmotiBit to run through the setup.
-  - The EmotiBit momentarily lights up RED, YELLOW and then BLUE light in sequence as it goes through the bootup.
+  - The EmotiBit momentarily lights up RED, YELLOW and then BLUE light in sequence as it goes through the bootup. The boot-up may take longer depending on time taken to connect to WiFi.
   - The Wifi Shield gets activated next, indicated with a green light at the bottom on the feather.(see image in the section below for reference)
 - Open the EmotiBit Oscilloscope you installed in the previous steps.
   - **You should see the Data start to stream on the Oscilloscope!!**

@@ -70,7 +70,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     </details>
 
 ### Next Steps: Converting raw recorded data
-Being able to stream and record data is a great enabler but often, tools are required to help in analysing the data acquired. In the next sections, you will find additional tools that you might find useful. 
+Being able to stream and record data is a great enabler but often, tools are required to help in analysing the data acquired. In the [next section](#Converting-raw-data), you will find additional tools that will help you convert the raw data captured by EmotiBit into individual data streams.
 
 ## Converting Raw Data
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit,although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
@@ -82,7 +82,7 @@ Data integrity and precise time stamping have been given paramount importance wh
   - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` files onto the system using the SD-Card USB reader provided in the box.[ToDo: find a place to explain the contents of json file]
 ### User Guide
 [ToDo: Add data parser image]
-- <details><summary><b>Sections of EmotiBit data parser</b></summary>
+- <details><summary><b>EmotiBit data parser GUI segments</b></summary>
   
   - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
   - `Process File Button`: Click on the button to load a file to process.
