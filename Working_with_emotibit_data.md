@@ -100,7 +100,7 @@ Data integrity and precise time stamping have been given paramount importance wh
   </details>
   
 #### EmotiBit File Types
-![][EmotiBit-File-Types]
+img src="./assets/EmotiBit_File_Types.png.png" width="350">
 ### Next Steps: Visualize recorded data
 Once you have the individual files representing data from the array of sensors on EmotiBit, the possibilities to use that data are limitless. A great way to understand what the data represents is to visualize it. Read-on to discover cool ways to visualize data.
 ## Visualize Recorded Data
