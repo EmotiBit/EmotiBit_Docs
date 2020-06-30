@@ -108,10 +108,7 @@ Data integrity and precise time stamping have been given paramount importance wh
     
   - For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
   </details>
-  
 
-### Next Steps: Visualize recorded data
-Once you have the individual files representing data from the array of sensors on EmotiBit, the possibilities to use that data are limitless. A great way to understand what the data represents is to visualize it. Read-on to discover cool ways to visualize data.
 ## Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time series data. Below we have outlined a number of tools which we think can be very successful.
 ### Visualization Tools
