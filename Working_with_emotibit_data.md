@@ -18,7 +18,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
 - The Oscilloscope offers the following functionalities:
 ![][EmotiBit-Oscilloscope]
 
-[ToDo:Update the Gif below to represent the new oscilloscope]
+[ToDo:Update the Gif above to represent the new oscilloscope]
   - <details><summary>Track All EmotiBits on the N/W</summary>
 
     - All active EmotiBits on the same network as the host computer show up on the Oscilloscope.  
@@ -38,6 +38,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     - The Important thing to note is that a recording session can be initiated only from an EmotiBit Oscilloscope window.
     - The EmotiBit uses this connection with an Oscilloscope to generate time syncing information essential for data integrity. We, therefore, recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope.
     - Once the Recording has been Initiated, you will notice the `red recording` indicator led flashing on the EmotiBit. You are also free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
+    - **Note:** _When you initiate a recording, EmotiBit automatically names the file with the date and time, when the recording was initiated. For example, `2019-08-22_14-10-33-300661.csv` represents the recording session started at 2:10:33pm on 22 August 2019._
     </details>
   
   - <details><summary>Adding User Notes(labeling data)</summary>
@@ -96,12 +97,10 @@ Data integrity and precise time stamping have been given paramount importance wh
   - You will see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
   - When EmotiBit data parser has finished processing the file, it will exit automatically. 
   - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
-  - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.[ToDo: Add an image for the folder containing parsed files]
+  - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.
+  - **EmotiBit File Types**
+    <img src="./assets/EmotiBit_File_Types.png" width="600">
   </details>
-  
-#### EmotiBit File Types
-<img src="./assets/EmotiBit_File_Types.png" width="600">
-
 ### Next Steps: Visualize recorded data
 Once you have the individual files representing data from the array of sensors on EmotiBit, the possibilities to use that data are limitless. A great way to understand what the data represents is to visualize it. Read-on to discover cool ways to visualize data.
 ## Visualize Recorded Data
