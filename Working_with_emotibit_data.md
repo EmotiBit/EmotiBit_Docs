@@ -90,8 +90,7 @@ Data integrity and precise time stamping have been given paramount importance wh
 
 - <details open><summary><b>Using the EmotiBit data parser</b></summary>
   
-  <img src="./assets/DataParser.png" width="600">
-  
+  ![][EmotiBit-DataParser]
   - Open the EmotiBit data parser. 
   - The data perser is split into 3 main regions:
     - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
@@ -123,3 +122,4 @@ Visualization tools can often help answer some immediate questions and hence, ca
 
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
+[EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"
