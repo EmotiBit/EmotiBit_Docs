@@ -78,7 +78,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - Adafruit feather M0 works with the `ATWINC1500` for wireless communication. The `ATWINC` exists as a independent submodule to the feather
 and might get updates which require a different set of instructions to be followed. 
   - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 
-  a feather purchased independently, check out the documentation to [update the WiFi module](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#Update-Feather-WiFi-chip-firmware)  
+  a feather purchased independently, check out the documentation to [update the WiFi module](Learn_more_about_emotibit.md/#Update-Feather-WiFi-chip-firmware)  
 
 
 [comment]: <> (Add links to images below)

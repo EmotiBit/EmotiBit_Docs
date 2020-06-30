@@ -121,7 +121,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
 
 ![][LED]
-- Learn [More about the LEDs and buttons on EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md/#LEDs-and-Buttons)
+- Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 ## Streaming Data in Real-Time and Recording
 - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
@@ -134,7 +134,7 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
   - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-Recorded-Data)
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
-- [Learn more about EmotiBit](./Contributing_to_emotibit_community/Learn_more_about_emotibit.md)
+- [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
 
 ## Troubleshooting
 - <details>
