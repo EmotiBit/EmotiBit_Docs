@@ -102,7 +102,7 @@ Data integrity and precise time stamping have been given paramount importance wh
   
     <img src="./assets/EmotiBit_File_Types.png" width="600">
     
-  - For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture]()
+  - For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
   </details>
   
 
