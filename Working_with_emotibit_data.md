@@ -38,7 +38,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     - The Important thing to note is that a recording session can be initiated only from an EmotiBit Oscilloscope window.
     - The EmotiBit uses this connection with an Oscilloscope to generate time syncing information essential for data integrity. We, therefore, recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope.
     - Once the Recording has been Initiated, you will notice the `red recording` indicator led flashing on the EmotiBit. You are also free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
-    - **Note:** _When you initiate a recording, EmotiBit automatically names the file with the date and time, when the recording was initiated. For example, `2019-08-22_14-10-33-300661.csv` represents the recording session started at 2:10:33pm on 22 August 2019._
+
     </details>
   
   - <details><summary>Adding User Notes(labeling data)</summary>
@@ -80,19 +80,23 @@ Data integrity and precise time stamping have been given paramount importance wh
 - [Get the data parser](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
 - Data recorded using the EmotiBit. 
   - EmotiBit records data in a single csv file on the onboard SD-Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
-  - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` files onto the system using the SD-Card USB reader provided in the box.[ToDo: find a place to explain the contents of json file]
+  - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` files onto the system using the SD-Card USB reader provided in the box.
+  - **Note:** _When you initiate a recording, EmotiBit automatically names the file with the date and time, when the recording was initiated. For example, `2019-08-22_14-10-33-300661.csv`, can be decoded as_ 
+    - `2019-08-22` as the date
+    - `14-10-33-300661` as the time.
+
+[ToDo: find a place to explain the contents of json file]
 ### User Guide
-[ToDo: Add data parser image]
-- <details><summary><b>EmotiBit data parser GUI segments</b></summary>
+
+- <details open><summary><b>Using the EmotiBit data parser</b></summary>
   
-  - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
-  - `Process File Button`: Click on the button to load a file to process.
-  - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
-  </details>
-  
-- <details><summary><b>Using the EmotiBit data parser</b></summary>
+  <img src="./assets/DataParser.png" width="600">
   
   - Open the EmotiBit data parser. 
+  - The data perser is split into 3 main regions:
+    - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
+    - `Process File Button`: Click on the button to load a file to process.
+    - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
   - Click on the `Process file button`. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
   - You will see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
   - When EmotiBit data parser has finished processing the file, it will exit automatically. 
