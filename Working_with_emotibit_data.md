@@ -2,7 +2,7 @@
 We at Connected Future Labs created EmotiBit keeping **data** at the core of development. We realize that Data is the most important aspect of working with EmotiBit and therefore, we have developed
 some essential tools which we think will help our users interact better with the EmotiBit.
 On this page we will talk about:
-- [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to live stream data from any EmotiBit active on the Network. You would also use this tool to initiate
+- [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to **live stream data** from any EmotiBit active on the Network. You would also use this tool to initiate
 recording, add User-Notes and an array of other useful features
 - [**EmotiBit DataParser**](#Converting-Raw-Data): It is hard to parse and make intuitive sense of the raw data collected by the EmotiBit. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
 - [**Data Visualization**](#Visualize-Recorded-Data): Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
@@ -69,9 +69,6 @@ You can follow the installation instruction on the [getting started](./Getting_S
   
     - The Battery Level indicator displays the charge available in the battery as a percentage. We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
-
-### Next Steps: Converting raw recorded data
-Being able to stream and record data is a great enabler but often, tools are required to help in analysing the data acquired. In the [next section](#Converting-raw-data), you will find additional tools that will help you convert the raw data captured by EmotiBit into individual data streams.
 
 ## Converting Raw Data
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit,although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
