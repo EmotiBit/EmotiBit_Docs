@@ -79,8 +79,8 @@ Data integrity and precise time stamping have been given paramount importance wh
   - EmotiBit records data in a single csv file on the onboard SD-Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
   - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` files onto the system using the SD-Card USB reader provided in the box.
   - **Note:** _When you initiate a recording, EmotiBit automatically names the file with the date and time, when the recording was initiated. For example, `2019-08-22_14-10-33-300661.csv`, can be decoded as_ 
-    - `2019-08-22` as the date
-    - `14-10-33-300661` as the time.
+    - `2019-08-22` as the date in the format `YYYY-MM-DD`
+    - `14-10-33-300661` as the time in the format `HH-MM-SS-MicroSeconds`
 
 [ToDo: find a place to explain the contents of json file]
 ### User Guide
