@@ -69,53 +69,50 @@ You can follow the installation instruction on the [getting started](./Getting_S
   
     - The Battery Level indicator displays the charge available in the battery as a percentage. We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
-    
-  - <details><summary>Output List</summary>
-     
-      - The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
-      - Look for more information in teh specific sections below.
-    </details>
 
 #### Output List
+- The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+- <details><summary>OSC</summary>
 
-##### OSC
-- EmotiBit Oscilloscope v1.2.0 and up support the ability to transmit incoming data from an EmotiBit to a user defined output channel using the OSC protocol.
-- The EmotiBit Oscilloscope reads the transmits data out according to the specifications provided in a `oscOutputSettings.xml` file.
-  - This file is located in the EmotiBit Oscilloscope folder in the C:. Ex: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`.
-- You can modify the contents of this file to control the behavior of the OSC output stream.
-- A snippet of the default contents are shared below
-```
-<patchboard>
-	<settings>
-		<input>
-			<type>EmotiBit</type>
-		</input>
-		<output>
-			<type>OSC</type>
-			<ipAddress>localhost</ipAddress>
-			<port>12345</port>
-		</output>
-	</settings>
-	<patchcords>
-		<patch>
-			<input>PR</input>
-			<output>/EmotiBit/0/PPG:RED</output>
-		</patch>		<patch>
-			<input>PI</input>
-			<output>/EmotiBit/0/PPG:IR</output>
-		</patch>	
-		<patch>
-			<input>PG</input>
-			<output>/EmotiBit/0/PPG:GRN</output>
-		</patch>
-	</patchcords>
-</patchboard>	
-```
-  - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
-  - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
-  - A `patch` connects an input stream to an output stream. 
-    - As an example, the input `PR` stream to patched to the output stream called `/EmotiBit/0/PPG:IR`. 
-  - When using the OSC protocol, at the receiver, you must use the same label you used as the output label here.  
+  - EmotiBit Oscilloscope v1.2.0 and up support the ability to transmit incoming data from an EmotiBit to a user defined output channel using the OSC protocol.
+  - The EmotiBit Oscilloscope reads the transmits data out according to the specifications provided in a `oscOutputSettings.xml` file.
+    - This file is located in the EmotiBit Oscilloscope folder in the C:. Ex: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`.
+  - You can modify the contents of this file to control the behavior of the OSC output stream.
+  - A snippet of the default contents are shared below
+  ```
+  <patchboard>
+	  <settings>
+		  <input>
+			  <type>EmotiBit</type>
+		  </input>
+		  <output>
+			  <type>OSC</type>
+			  <ipAddress>localhost</ipAddress>
+			  <port>12345</port>
+		  </output>
+	  </settings>
+	  <patchcords>
+		  <patch>
+			  <input>PR</input>
+			  <output>/EmotiBit/0/PPG:RED</output>
+		  </patch>		
+          <patch>
+			  <input>PI</input>
+			  <output>/EmotiBit/0/PPG:IR</output>
+		  </patch>	
+		  <patch>
+			  <input>PG</input>
+			  <output>/EmotiBit/0/PPG:GRN</output>
+		  </patch>
+	  </patchcords>
+  </patchboard>	
+  ```
+    - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
+    - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
+    - A `patch` connects an input stream to an output stream. 
+      - As an example, the input `PR` stream to patched to the output stream called `/EmotiBit/0/PPG:IR`. 
+    - When using the OSC protocol, at the receiver, you must use the same label you used as the output label here.  
+  </details>
 ## Next Steps: Converting Raw Data
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit,although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
  
