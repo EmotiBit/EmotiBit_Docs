@@ -71,7 +71,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     </details>
 
 #### Output List
-- The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
 - <details><summary>OSC</summary>
 
   - EmotiBit Oscilloscope v1.2.0 and up support the ability to transmit incoming data from an EmotiBit to a user defined output channel using the OSC protocol.
