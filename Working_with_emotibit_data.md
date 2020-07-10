@@ -74,9 +74,10 @@ You can follow the installation instruction on the [getting started](./Getting_S
 The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
 - <details><summary>OSC</summary>
 
-  - EmotiBit Oscilloscope v1.2.0 and up support the ability to transmit incoming data from an EmotiBit to a user defined output channel using the OSC protocol.
-  - The EmotiBit Oscilloscope reads the transmits data out according to the specifications provided in a `oscOutputSettings.xml` file.
-    - This file is located in the EmotiBit Oscilloscope folder in the C:. Ex: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`.
+  - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
+  - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
+  - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file.
+    - This file is located in the EmotiBit Oscilloscope folder in the C: - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`.
   - You can modify the contents of this file to control the behavior of the OSC output stream.
   - A snippet of the default contents are shared below
   ```
@@ -110,8 +111,8 @@ The output list shows the options available to transmit the data out of the Emot
     - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
     - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
     - A `patch` connects an input stream to an output stream. 
-      - As an example, the input `PR` stream to patched to the output stream called `/EmotiBit/0/PPG:IR`. 
-    - When using the OSC protocol, at the receiver, you must use the same label you used as the output label here.  
+      - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
+    - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number and label name you used as the output label here.  
   </details>
 ## Next Steps: Converting Raw Data
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit,although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
