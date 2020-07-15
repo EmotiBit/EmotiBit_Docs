@@ -108,7 +108,8 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Powering Up
 - Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
-- Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.[ToDo:Add image of stacked up EmotiBit]
+- Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.t]
+![][EmotiBit-stackup]
 - If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push-button below the USB connector) on the feather.
 - Wait for the EmotiBit to run through the setup.
   - The EmotiBit momentarily lights up RED, YELLOW and then BLUE light in sequence as it goes through the bootup. The boot-up may take longer depending on time taken to connect to WiFi.
@@ -159,3 +160,4 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
 [macOS-Catalina-sys_pref]: ./assets/macOS-Catalina-sys_pref.png "" 
 [macOS-Catalina-System_pref_Security&options]: ./assets/macOS-Catalina-System_pref_Security&options.png "" 
 [macOS-Catalina-Allow_emotibit]: ./assets/macOS-Catalina-Allow_emotibit.png "" 
+[EmotiBit-stackup]: ./assets/EmotiBit_stack_boards.gif ""
