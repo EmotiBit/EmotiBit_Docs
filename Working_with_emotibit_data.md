@@ -142,12 +142,14 @@ Data integrity and precise time stamping have been given paramount importance wh
   - When EmotiBit data parser has finished processing the file, it will exit automatically. 
   - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
   - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.
-    - **EmotiBit File Types**
-  
-      <img src="./assets/EmotiBit_File_Types.png" width="600">
-    
-    - For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
   </details>
+
+#### EmotiBit File Types
+  
+<img src="./assets/EmotiBit_File_Types.png" width="600">
+      
+- For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
+
 
 ## Next Steps: Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time series data. Below we have outlined a number of tools which we think can be very successful.
