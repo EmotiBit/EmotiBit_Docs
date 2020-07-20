@@ -44,7 +44,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
   - <details><summary>Adding User Notes(labeling data)</summary>
     
     - The ability to add User Notes was recognized as **essential for the user experience** by our development team. 
-    The EmotiBit Oscilloscope can be used to label/tag the data being recorded the EmotiBit in real-time.
+    The EmotiBit Oscilloscope can be used to label/tag the data being recorded by the EmotiBit in real-time.
     Note that the User Note feature is available only when a recording session has been initiated by the user.
     </details> 
     
@@ -53,7 +53,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     The EmotiBit has 4 power modes it can work in. All modes can be accessed using the EmotiBit Oscilloscope.
     - **Normal Mode**: In normal mode, the EmotiBit works with complete functionality, being able to record and transmit data.
     - **Low Power Mode**: In Low power mode, the EmotiBit can record but cannot transmit data in real-time. It, however, continues to get the time-sync pulses.
-    - **WiFi Off**: This mode causes the EmotiBit to shut down the onboard WiFi shield. This saves power and enables long recording sessions. However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode` . If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a couple of minutes towards the end of the record session in `normal mode`. This can potentially help with time-syncing issues.
+    - **WiFi Off**: This mode causes the EmotiBit to shut down the onboard WiFi shield. This saves power and enables long recording sessions. However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode`. If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a couple of minutes towards the end of the record session in `normal mode`. This can potentially help with time-syncing issues.
     - **Hibernate**: In hibernate mode, EmotiBit stops any tasks it is performing and goes to sleep. We recommend switching the EmotiBit into `Hibernate mode` instead of un-plugging the EmotiBit battery when not in use.
     </details>
   
@@ -61,7 +61,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
 
     Data Clipping and Data Overflow are metrics that are used to determine data integrity. Each metric is explained here:
     
-    - Data Clipping: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. The user should interpret the        occurrence of a clipping event as a point in time where the captured data does not represent the actual physical phenomenon.
+    - Data Clipping: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. The user should interpret the occurrence of a clipping event as a point in time where the captured data does not represent the actual physical phenomenon.
     - Data Overflow: An overflow event occurs when the internal data buffers are filled and no new data being generated can be recorded. This leads to    "blanks" in the data time series. An overflow event should be taken more seriously, as the EmotiBit has been designed to avoid such scenarios.
     </details>
 
@@ -112,10 +112,10 @@ The output list shows the options available to transmit the data out of the Emot
     - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
     - A `patch` connects an input stream to an output stream. 
       - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
-    - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number and label name you used as the output label here.  
+    - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here.  
   </details>
 ## Next Steps: Converting Raw Data
-Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit,although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
+Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit, although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
  
 ### What you should have at this point
 - [Get the data parser](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
@@ -133,7 +133,7 @@ Data integrity and precise time stamping have been given paramount importance wh
   
   ![][EmotiBit-DataParser]
   - Open the EmotiBit data parser. 
-  - The data perser is split into 3 main regions:
+  - The data parser is split into 3 main regions:
     - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
     - `Process File Button`: Click on the button to load a file to process.
     - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
@@ -152,7 +152,7 @@ Data integrity and precise time stamping have been given paramount importance wh
 
 #### EmotiBit sensor sampling rates
 
-- The following table shows the sampling rates at which the sensors operate. Since, all the sensors are not operating at the same sampling rates, this information can be useful in understanding teh time-stamping between data from different sensors
+- The following table shows the sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors
 
 | Function | Sensor IC | Sampling Rate|
 |----------|-----------|--------------|
@@ -163,7 +163,7 @@ Data integrity and precise time stamping have been given paramount importance wh
 |EDA|-|15|
 
 ## Next Steps: Visualize Recorded Data
-Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time series data. Below we have outlined a number of tools which we think can be very successful.
+Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.
 ### Visualization Tools
 - Text Editors
   - Notepad++(on Windows)
