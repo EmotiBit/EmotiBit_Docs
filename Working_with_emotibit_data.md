@@ -154,7 +154,7 @@ Data integrity and precise time stamping have been given paramount importance wh
 
 - The following table shows the sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors
 
-| Function |Data Type| Sensor IC | Sampling Rate|
+| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
 |PPG (heartrate) |`PI` `PG` `PR`| MAX30101|25|
