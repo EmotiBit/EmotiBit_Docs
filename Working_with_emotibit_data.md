@@ -150,6 +150,17 @@ Data integrity and precise time stamping have been given paramount importance wh
       
 - For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
 
+#### EmotiBit sensor sampling rates
+
+- The following table shows the sampling rates at which the sensors operate. Since, all the sensors are not operating at the same sampling rates, this information can be useful in understanding teh time-stamping between data from different sensors
+
+| Function | Sensor IC | Sampling Rate|
+|----------|-----------|--------------|
+| Motion   |BMI160+BMI150|25|
+|PPG (heartrate) | MAX30101|25|
+|Temperature & Humidity|SI-7013|7.5|
+|Temperature(FIR)|MLX90632|7.5|
+|EDA|-|15|
 
 ## Next Steps: Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time series data. Below we have outlined a number of tools which we think can be very successful.
