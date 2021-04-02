@@ -173,7 +173,8 @@ Visualization tools can often help answer some immediate questions and hence, ca
   - Google Sheets 
 - [EmotiBit python data viewer](https://github.com/EmotiBit/EmotiBit_Biometric_Lib/tree/master/py/examples/dataviewer_example)
   - A tool created for visualizing all data channels in one window. 
-
+  - ![](EmotiBit-PythonDataViewer)
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
 [EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"
+[EmotiBit-PythonDataViewer]: ./assets/PythonDataViewer.jpg "EmotiBit-PythonDataViewer"
