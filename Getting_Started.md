@@ -15,13 +15,12 @@
 
 ## If you just received your EmotiBit
 ### Unboxing
-<img src="./assets/emotibit-outOfBox.png" align="right" width="350">
+<img src="./assets/EmotiBit-boxContents.jpg" align="right" width="350">
 
 Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
 - EmotiBit with straps
 - Adafruit feather M0 WiFi, programmed and ready to use
 - Micro SD-Card with SD-Card adapter
-- Micro SD-Card USB reader
 - 3.7V battery
 - 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
 
