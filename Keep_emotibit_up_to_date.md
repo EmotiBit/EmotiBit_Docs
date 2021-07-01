@@ -37,7 +37,10 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     
 ### Install firmware libraries
   - Open the Arduino IDE and go to `Tools > Manage Libraries...`
-  - Search for and install the following Libraries. **Be sure to install the correct version when specified for any library below**
+  - Search for and install the following Libraries.
+```diff
+-- Be sure to install the correct version when specified for any library below --
+```
   - <details>
     <summary><b>Library List</b></summary>
     <br>
