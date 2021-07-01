@@ -60,8 +60,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
   - After installing boards or libraries you should close and re-open the Arduino Application to make sure the changes take effect.
 
 ## Programming the Feather
-- In the Arduino program (IDE), open `File > Examples > EmotiBit FeatherWing > EmotiBit_stock_firmware`
-  - <img src="./assets/arduino-choose_emotibit_stock_fw.png" width="450">
+- In the Arduino program (IDE), open `File > Examples > EmotiBit FeatherWing > EmotiBit Example`
+  - <img src="./assets/arduino-choose_emotibit_example.png" width="450">
   - Alternatively you can double click the `EmotiBit_Example.ino` file presenst at the location:`Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_stock_firmware/EmotiBit_stock_firmware.ino` 
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing.
 - In the `Emotibit_Example` Arduino window that opens, Choose `Tools > Board > “Adafruit Feather M0”`
