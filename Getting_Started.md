@@ -18,11 +18,13 @@
 <img src="./assets/EmotiBit-boxContents.jpg" align="right" width="350">
 
 Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
-- EmotiBit with straps
+- EmotiBit with finger loop velstretch + EmotiBit-Skin Barrier + attached Electrodes
 - Adafruit feather M0 WiFi, programmed and ready to use
 - Micro SD-Card with SD-Card adapter
 - 3.7V battery
-- 2 snaps with Ag-AgCl coated studs + 2 extra snaps(can be used to attach external electrodes)
+- Extra snaps
+  - 2 snaps with Ag-AgCl coated studs 
+  - 2 extra snaps (can be used to solder wires to)
 
 
 ### Connecting to WiFi
