@@ -143,8 +143,8 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
   <summary>LEDs and the serial monitor can be useful tools for debugging</summary>
   <br>
   
-  - if the green _WiFi Connected_ LED is on, the feather is connected to WiFi
-  - if the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit
+  - If the green _WiFi Connected_ LED is on, the feather is connected to WiFi. If the green LED on the Feather does not illuminate, check that you have the correct WiFi credentials in config.txt and that your network is not WPA-enterprise.
+  - If the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit.
   </details>
 - <details>
   <summary>Things to check for:</summary>
