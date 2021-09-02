@@ -57,6 +57,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - EmotiBit NCP5632
     - EmotiBit SI7013
     - EmotiBit XPlat Utils
+    - Adafruit_GFX_Library
+    - Adafruit_IS31FL3731_Library
     </details>
     
 ### Close and re-open Arduino IDE
