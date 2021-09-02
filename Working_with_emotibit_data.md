@@ -112,7 +112,7 @@ The output list shows the options available to transmit the data out of the Emot
     - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
     - A `patch` connects an input stream to an output stream. 
       - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
-    - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here.  
+    - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
   </details>
 ## Next Steps: Converting Raw Data
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit, although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
