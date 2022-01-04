@@ -54,7 +54,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     - **Normal Mode**: In normal mode, the EmotiBit works with complete functionality, being able to record and transmit data.
     - **Low Power Mode**: In Low power mode, the EmotiBit can record but cannot transmit data in real-time. It, however, continues to get the time-sync pulses.
     - **WiFi Off**: This mode causes the EmotiBit to shut down the onboard WiFi shield. This saves power and enables long recording sessions. However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode`. If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a couple of minutes towards the end of the record session in `normal mode`. This can potentially help with time-syncing issues.
-    - **Hibernate**: In hibernate mode, EmotiBit stops any tasks it is performing and goes to sleep. We recommend switching the EmotiBit into `Hibernate mode` instead of un-plugging the EmotiBit battery when not in use.
+    - **Sleep**: In sleep mode, EmotiBit stops any tasks it is performing and goes to sleep. We recommend switching the EmotiBit into `Sleep mode` instead of un-plugging the EmotiBit battery when not in use for short periods. If the EmotiBit is being left un-used for a long duration, it is best to flip the Hibernate Switch located at the bottom to `HIB`. 
     </details>
   
   - <details><summary>DC/DO counter</summary>
