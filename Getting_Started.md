@@ -116,7 +116,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   </details>    
 
 ### Powering Up
-- **Note: If You have an EmotiBit V4, make sure that the `Hibernate Switch` located at the bottom is not on `HIB`**.
+- **Note: If You have an EmotiBit V4, make sure that the `Hibernate Switch` located at the bottom is not on `HIB`**. You may use the plastic spudger provided in the kit to toggle the switch.
   - The EmotiBit version can be found printed on the board near the top-right hole, where the SD-Card is inserted.
 - Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
 - Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.t]
