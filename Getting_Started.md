@@ -14,17 +14,24 @@
 
 
 ## If you just received your EmotiBit
-### Unboxing
+### Unboxing your beta bundle
 <img src="./assets/EmotiBit-boxContents.jpg" align="right" width="350">
 
 Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
-- EmotiBit with finger loop velstretch + EmotiBit-Skin Barrier + attached Electrodes
-- Adafruit feather M0 WiFi, programmed and ready to use
-- Micro SD-Card with SD-Card adapter
-- 3.7V battery
-- Extra snaps
+- **EmotiBit** with finger loop velstretch + EmotiBit cover(acts as barrier between skin) + attached Electrodes
+- **Adafruit feather** M0 WiFi, programmed and ready to use
+- **Micro SD-Card** with SD-Card adapter
+- **3.7V battery**
+- **Extra snaps**
   - 2 snaps with Ag-AgCl coated studs 
   - 2 extra snaps (can be used to solder wires to)
+- **USB cable**
+- **velstretch straps** of 3 different sizes
+  - 1x headstrap
+  - 1x shoulder strap
+  - 1x wrist strap
+- **Plastic spudger**
+  - This should be used to easily toggle the hibernate switch, accessible from the bottom of the EmotiBit.
 
 
 ### Connecting to WiFi
