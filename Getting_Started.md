@@ -69,6 +69,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 > `{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`
 - **Note: EmotiBit only supports the 2.4GHz band for WiFi.**
 
+
 ### Get the Software
 [Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
 - <details><summary><b>Installation Instructions For Windows Users</b></summary>
@@ -115,6 +116,8 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
   </details>    
 
 ### Powering Up
+- **Note: If You have an EmotiBit V4, make sure that the `Hibernate Switch` located at the bottom is not on `HIB`**.
+  - The EmotiBit version can be found printed on the board near the top-right hole, where the SD-Card is inserted.
 - Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
 - Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.t]
 ![][EmotiBit-stackup]
