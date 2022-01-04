@@ -14,6 +14,7 @@
 ## EmotiBit HW
 ### LEDs and Buttons
 <img src="assets/M0_WiFi_LED_Indicators_01.png" align="right" width=500>
+<img src="assets/EmotiBit-buttonsAndSwitches.jpg" align="right" width=500>
 
 - **LED's on the EmotiBit:** As shown in the Images above, The EmotiBit FeatherWing has 3 LEDs to indicate its present status.
   - RED: Blinks at ~1Hz when recording
@@ -27,10 +28,13 @@
   - YELLOW: It blinks whenever the EmotiBit receives a message from the computer. This blinks periodically when an EmotiBit Oscilloscope executable is running on the network.
 
 - **Buttons on the EmotiBit**
-  - EmotiBit Button: _adjacent to the SD card_
-    - Long Press (3 sec) to put EmotiBit into hibernate mode
+  - `EmotiBit Button`: _adjacent to the SD card_
+    - Long Press (5 sec) to put EmotiBit into `Sleep mode`
     - Short Press- Switch between WiFi modes. In future will support mapping to different functionality.
-  - Reset button on the feather resets the board and restarts the code
+  - `Reset button`:
+    - resets the microncontroller board. All current operations are halted and EmotiBit restarts.
+  - `Hibernate Switch`(**Only Available on V4**):
+    - The Hibernate Switch kills power to both the Feather and the EmotiBit. It is recommended to toggle the switch to `HIB` if leaving the EmotiBit unused for long durations.
 
 ## EmotiBit FW
 ### Update Feather WiFi chip firmware
