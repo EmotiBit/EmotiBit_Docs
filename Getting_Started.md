@@ -133,6 +133,8 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
 
 ![][LED]
+<img src="./assets/EmotiBit-buttonsAndSwitches.jpg" width="530">
+
 - Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 ## Streaming Data in Real-Time and Recording
@@ -164,6 +166,7 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
   - Verify if the **WiFi-Name** and **WiFi-Password** are correctly entered in the config file.
   </details>
 
+[ButtonsAndSwitches]: ./assets/EmotiBit-buttonsAndSwitches.jpg "EmotiBit Buttons and Switches"
 [LED]: ./assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"
 [macOS-version]: ./assets/macOS-Catalina-OS_version.png "macOS version" 
 [oscilloscope-drirectory]: ./assets/macOS-oscilloscope_file_heirarchy.png ""
