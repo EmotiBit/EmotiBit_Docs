@@ -67,7 +67,7 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 > For quick reference:<br>
 > The config.txt file should shoud contain the contents in the following format <br>
 > `{"WifiCredentials": [{"ssid": "Foo", "password" : "Bar"}]}`
-- **Note: EmotiBit only supports the 2.4GHz band for WiFi.**
+- **Note: EmotiBit only supports the 2.4GHz band for WiFi. Also, currently there is no support for enterprise networks.**
 
 
 ### Get the Software
