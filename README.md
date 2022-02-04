@@ -11,6 +11,7 @@
 > EmotiBit keeps getting better day by day. Follow this guide to update the EmotiBit to access the latest and greatest.
 
 [**`04. Contributing to EmotiBit community`**](./Contributing_to_emotibit_community/)
+> Join the EmotiBit community subreddit at http://forum.emotibit.com/
 > Learn more about EmotiBit. Contribute to the community and help us grow!!
 
 [EmotiBit_outOfBox]: ./assets/emotibit-outOfBox.png ""
