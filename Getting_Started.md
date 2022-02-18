@@ -22,9 +22,6 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - **Adafruit feather** M0 WiFi, programmed and ready to use
 - **Micro SD-Card** with SD-Card adapter
 - **3.7V battery**
-- **Extra snaps**
-  - 2 snaps with Ag-AgCl coated studs 
-  - 2 extra snaps (can be used to solder wires to)
 - **USB cable**
 - **velstretch straps** of 3 different sizes
   - 1x headstrap
