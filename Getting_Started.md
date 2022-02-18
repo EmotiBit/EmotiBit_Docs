@@ -15,7 +15,7 @@
 
 ## If you just received your EmotiBit
 ### Unboxing your beta bundle
-<img src="./assets/EmotiBit-boxContents.jpg" align="right" width="350">
+<img src="./assets/EmotiBit-EssentialsKit.jpg" align="right" width="400">
 
 Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
 - **EmotiBit** with finger loop velstretch + EmotiBit cover(acts as barrier between skin) + attached Electrodes
