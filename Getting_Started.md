@@ -38,6 +38,10 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 
 ### Connecting to WiFi
 
+<img src="./assets/SD-CardInReader.jpg" align="right" width="300">
+
+- The WiFi Credentials are added to the SD-Card. You can find the SD-Card inside the *micro-SD to USB reader* provided in the box.
+
 - <details><summary><b>Adding WiFi credentials to SD-Card</b></summary>
 
   - To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID(WIFi Name)` and `Password(WiFi Password)` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
