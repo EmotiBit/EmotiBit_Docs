@@ -33,6 +33,11 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - **Plastic spudger**
   - This should be used to easily toggle the hibernate switch, accessible from the bottom of the EmotiBit.
 
+### Stack, Sense and Stream
+
+<img src="./assets/StackSenseStream.png" width="1000">
+
+- Follow the steps below for more information on how to connect to the WiFi and downloading EmotiBit software.
 
 ### Connecting to WiFi
 
