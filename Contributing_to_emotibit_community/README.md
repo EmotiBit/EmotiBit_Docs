@@ -6,6 +6,7 @@ Stay up to date on news and work together with others to solve problems and chan
 
 
 <a id="raw-url" href="https://raw.githubusercontent.com/EmotiBit/EmotiBit_Docs/master/README.md">Download FILE</a>
-<a href="https://raw.githubusercontent.com/EmotiBit/EmotiBit_Docs/master/README.md" download>Click to Download</a>
+
+<a href="https://raw.githubusercontent.com/EmotiBit/EmotiBit_Docs/master/README.md" download="README.md">Click to Download</a>
 
 view-source:https://raw.githubusercontent.com/EmotiBit/EmotiBit_Docs/master/README.md
