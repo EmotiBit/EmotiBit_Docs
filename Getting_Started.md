@@ -1,7 +1,7 @@
 # Getting Started with EmotiBit
 [comment]: <> ([alt text][SideView])
 
-## Table of Contents
+# Table of Contents
 - [If you just received your EmotiBit](#If-you-just-received-your-EmotiBit)
   - [Unboxing](#Unboxing)
   - [Connecting To WiFi](#connecting-to-wifi)
@@ -12,16 +12,28 @@
 - [Next Steps](#Next-Steps)
 - [Troubleshooting](#Troubleshooting)
 
+# Stack, Sense and Stream
 
-## If you just received your EmotiBit
-### Unboxing your beta bundle
+<img src="./assets/StackSenseStream.png" width="1000">
+
+- Follow the steps below for more information on how to connect to the WiFi and downloading EmotiBit software.
+
+## Unboxing
+Depending on your order, you will have received one of the following EmotiBit packages.
+
+### EmotiBit 
+- **1x EmotiBit** with finger loop velstretch
+  - Depending on your purchase, you may either have an EmotiBit MD or an EmotiBit EMO
+- **1x EmotiBit cover**(acts as barrier between skin)
+- **2x Ag-AgCl Electrodes** attached to the EmotiBit
+- **2x EmotiBit stickers**
+### Essentials Kit
 <img src="./assets/EmotiBit-EssentialsKit.jpg" align="right" width="400">
 
-Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box you will find:
-- **EmotiBit** with finger loop velstretch + EmotiBit cover(acts as barrier between skin) + attached Electrodes
+The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find
 - **Adafruit feather** M0 WiFi, programmed and ready to use
 - **Micro SD-Card** with SD-Card adapter
-- **3.7V battery**
+- **3.7V 400mAh battery**
 - **USB cable**
 - **velstretch straps** of 3 different sizes
   - 1x headstrap
@@ -30,52 +42,39 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
 - **Plastic spudger**
   - This should be used to easily toggle the hibernate switch, accessible from the bottom of the EmotiBit.
 
-### Stack, Sense and Stream
+### Electrode Kit
+The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. the electrode kit includes
+- 10x Ag-AgCl snap electrodes
+- 4x solder cup electrodes
+  - The solder cup electrodes can be used to solder wires to. The user can then use the solder cup electrodes to breakout the EDA sub-system input.
+### All-in-one-bundle
+If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) and [Electrode Kit](#Electrode-Kit).
 
-<img src="./assets/StackSenseStream.png" width="1000">
+## Assembling your EmotiBit
+### Adding the WiFi credentials
 
-- Follow the steps below for more information on how to connect to the WiFi and downloading EmotiBit software.
+- Plug in the USB card reader loaded with the SD-Card into the computer.
+- Download the config file from https://www.emotibit.com/files/config.
+- Open the config file in any text editor(ex: Notepad on windows or text edit on macOS) and add the WiFi credentials. To do so,  change `myWifiNetwork` to the name of your WiFi network and change `myPassword`to the password for your WiFi network. 
+- Save the file onto your microSD card. Eject the SD-Card from your computer. 
 
-### Connecting to WiFi
+**Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this: {"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}.
 
-<img src="./assets/SD-CardInReader.jpg" align="right" width="300">
+**Note: EmotiBit only supports the 2.4GHz band for WiFi. Also, currently there is no support for enterprise networks.**
 
-- The WiFi Credentials are added to the SD-Card. You can find the SD-Card inside the *micro-SD to USB reader* provided in the box.
+### Stack your EmotiBit!
 
-- <details><summary><b>Adding WiFi credentials to SD-Card</b></summary>
+- On the EmotiBit
+  - Insert the SD-Card into the slot on EmotiBit.
+  - Make sure the sliding switch on the lower side is not on HIB(Avaiable on only V4). You may use the plastic spudger provided in the kit to toggle the switch.
+- Plug in the Battery into the Feather.
+- Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
 
-  - To connect the EmotiBit to WiFi, you have to add the WiFi credentials`SSID(WIFi Name)` and `Password(WiFi Password)` to a file named `config.txt` on the SD-Card provided. **Note**: _FAT32 is important for the EmotiBit to function as designed_ 
-  - If you got your SD-card with your EmotiBit, it's already in the FAT32 format. 
-  - If using an SD-Card **other** than the one provided in the box, please **make sure it is formatted to be FAT32**. If it is not in **FAT32** format, follow the instructions below to Format the SD-Card
-  - <details><summary>Formatting to FAT32</summary>
+![][EmotiBit-stackup]
+- Plug in the Adafruit Feather into your computer using the USB cable provided.
 
-    - Download [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/)
-    - You can use SD Memory Card Formatter to format the SD-Card into FAT32 format. 
-    </details>
+## Installing EmotiBit Software
 
-  - Create a **config.txt** file on the SD-Card.
-  - The contents of the file should be in format as shown below:
-  - ``{"WifiCredentials": [{"ssid": "YourWiFiNameHere", "password" : "YourWiFiPasswordHere"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card and add in the network credentials as directed above_)
-  - Add in your WiFi Name and password where required above.
-
-  - <details><summary><b>Access multiple WiFi networks</b>(EmotiBit FeatherWing v0.5.4+)</summary>
- 
-    - a JSON list can be used to store up to 12 sets of network credentials in config.txt:
-      - ``{"WifiCredentials": [{"ssid": "YourWiFiName-1", "password" : "YourWiFi-1Password"},{"ssid": "YourWiFiName-2", "password" : "YourWiFiPassword-2"}]}`` (_Just copy and paste this line in the **config.txt** file on the SD-Card and add in the network credentials as directed above_)
-    - In the setup of EmotiBit_Example, all the WiFi networks are tried sequentially, a process that times out at ~1min. If a quick connection is desired after programming or reset:
-      - Shorten the list
-      - Organize the list in order of priority of the connection
-    </details>
-  - After your SD-Card is setup and ready for use, insert it into the EmotiBit SD-Card slot. 
-  </details>
-
-> For quick reference:<br>
-> The config.txt file should shoud contain the contents in the following format <br>
-> ``{"WifiCredentials": [{"ssid": "YourWiFiNameHere", "password" : "YourWiFiPasswordHere"}]}``
-- **Note: EmotiBit only supports the 2.4GHz band for WiFi. Also, currently there is no support for enterprise networks.**
-
-
-### Get the Software
 [Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
 - <details><summary><b>Installation Instructions For Windows Users</b></summary>
  
@@ -120,19 +119,39 @@ Welcome to the World of EmotiBit. If you just received your EmotiBit, in the box
     </details>
   </details>    
 
-### Powering Up
-- **Note: If You have an EmotiBit V4, make sure that the `Hibernate Switch` located at the bottom is not on `HIB`**. You may use the plastic spudger provided in the kit to toggle the switch.
-  - The EmotiBit version can be found printed on the board near the top-right hole, where the SD-Card is inserted.
-- Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
-- Plug in the 3.7V battery provided with the EmotiBit. We recommend that you plug in the Micro-USB cable too, as this will begin recharging the battery, which will be indicated by the YELLOW light on the Adafruit Feather.t]
-![][EmotiBit-stackup]
-- If the EmotiBit does not automatically start when you plug in the battery, press the reset button(black push-button below the USB connector) on the feather.
-- Wait for the EmotiBit to run through the setup.
-  - The EmotiBit momentarily lights up RED, YELLOW and then BLUE light in sequence as it goes through the bootup. The boot-up may take longer depending on time taken to connect to WiFi.
-  - The Wifi Shield gets activated next, indicated with a green light at the bottom on the feather.(see image in the section below for reference)
-- Open the EmotiBit Oscilloscope you installed in the previous steps.
-  - **You should see the Data start to stream on the Oscilloscope!!**
-- Don't see anything on the Oscilloscope? Check out our guide for [Troubleshooting](#Troubleshooting)
+
+## Installing EmotiBit Firmware
+- ToDo: add the steps for using firmware installer
+
+
+## EmotiBit Bootup
+- [ToDo: Add a GIF indicating successful bootup sequence]
+- On reset, feathers starts the bootup sequence to setup EmotiBit.
+- If the SD-Card is detected, the Red LED on the feather turns ON and stays ON for as long as EmotiBit is being used.
+- Next the EmotiBit Red LED turns ON while the config file is being loaded. 
+  - If the EmotiBit Red LED stays on indefinitely, that means the config file is missing on the SD-Card.
+  - Follow the steps above to [add the WiFi credetials on the SD-Card](#Adding-the-WiFi-credentials).
+- After the config file is loaded, the EmotiBit Red LED turns OFF and EmotiBit Blue LED turns ON. 
+  - The EmotiBit is not trying to connect to the WiFi listed on the SD-Card.
+- Once connected, the Green LED on the Feather turns ON.
+
+
+|Stage| LED Indicator| Stage Description|
+|-----|--------------|------------------|
+|1|Feather Red LED| SD-Card Detected |
+|2|Feather Red LED, EmotiBit Red LED| Loading config file from the SD-Card|
+|3|Feather Red LED, EmotiBit Blue LED| Connecting to WiFi network listed on the SD-Card|
+|4|Feather Red LED, Feather Green LED| EmotiBit Conected to WiFi|
+
+|Bootup Stage| Stage Description|Feather Red LED|Feather Green LED| EmotiBit Red LED| EmotiBit Blue LED|
+|-----|--------------|------------------|-------------------|-------------|-------------------|
+|Detect SD Card| EmotiBit checks the presence of SD-Card| ON- SD-Card Detected <br> ON -> OFF SD-Card not present| OFF|OFF|OFF|
+|Read Config File| EmotiBit parses the Config File for WiFi credentials| ON|OFF|ON|OFF|
+|Connect to Network| EmotiBit tries to connect to network listed on SD-Card|ON|OFF|OFF|ON|
+|Conencted to Network| EmotiBit is connected to a network listed on the Sd-Card|ON|ON|OFF|OFF|
+
+
+
 
 ## EmotiBit: LEDs and Buttons
 The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
