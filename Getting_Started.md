@@ -143,12 +143,12 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 |3|Feather Red LED, EmotiBit Blue LED| Connecting to WiFi network listed on the SD-Card|
 |4|Feather Red LED, Feather Green LED| EmotiBit Conected to WiFi|
 
-|Bootup Stage| Stage Description|Feather Red LED|Feather Green LED| EmotiBit Red LED| EmotiBit Blue LED|
+|Bootup Stage| Stage Description|Feather Red LED| EmotiBit Red LED| EmotiBit Blue LED|Feather Green LED|
 |-----|--------------|------------------|-------------------|-------------|-------------------|
-|Detect SD Card| EmotiBit checks the presence of SD-Card| ON- SD-Card Detected <br> ON -> OFF SD-Card not present| OFF|OFF|OFF|
-|Read Config File| EmotiBit parses the Config File for WiFi credentials| ON|OFF|ON|OFF|
-|Connect to Network| EmotiBit tries to connect to network listed on SD-Card|ON|OFF|OFF|ON|
-|Conencted to Network| EmotiBit is connected to a network listed on the Sd-Card|ON|ON|OFF|OFF|
+|Detect SD Card| EmotiBit checks the presence of SD-Card| **ON**- SD-Card Detected <br> **ON -> OFF** SD-Card not present|-|-|-|
+|Read Config File| EmotiBit parses the Config File for WiFi credentials|**ON**|**ON**|-|-|
+|Connect to Network| EmotiBit tries to connect to network listed on SD-Card|**ON**|-|**ON**|-|
+|Conencted to Network| EmotiBit is connected to a network listed on the Sd-Card|**ON**|-|-|**ON**|
 
 
 
