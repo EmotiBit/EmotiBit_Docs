@@ -30,7 +30,7 @@ You can use the forum for
 ## Unboxing
 Depending on your order, you will have received one of the following EmotiBit packages.
 
-#### EmotiBit 
+### EmotiBit 
 
 - **1x EmotiBit** with finger loop velstretch
   - Depending on your purchase, you may either have an EmotiBit MD or an EmotiBit EMO
@@ -42,7 +42,7 @@ Depending on your order, you will have received one of the following EmotiBit pa
 
 -------------------------------
 
-#### Essentials Kit
+### Essentials Kit
 
 The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find
 - **Adafruit feather** M0 WiFi, programmed and ready to use
@@ -59,16 +59,16 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 <img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
 
 -------------------------
-#### Electrode Kit
+### Electrode Kit
 The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. the electrode kit includes
 - 10x Ag-AgCl snap electrodes
 - 4x solder cup electrodes
   - The solder cup electrodes can be used to solder wires to. The user can then use the solder cup electrodes to breakout the EDA sub-system input.
 
-<img src="./assets/Electrode-Kit.jpg" width="300">
+<img src="./assets/Electrode-kit.jpg" width="300">
 
 ---------------------------
-#### All-in-one-bundle
+### All-in-one-bundle
 If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) and [Electrode Kit](#Electrode-Kit).
 
 ------------------
