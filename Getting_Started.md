@@ -18,17 +18,31 @@
 
 - Follow the steps below for more information on how to connect to the WiFi and downloading EmotiBit software.
 
+## EmotiBit Forum
+<img src="./assets/EmotiBit-forum.png" align="right" width="300">
+
+The [EmotiBit forum](http://forum.emotibit.com) is a great place to get answers to all things EmotiBit!<br>
+You can use the forum for
+- Find answers to questions you may have about using EmotiBit.
+- Offering support to fellow community members by providing insight into your experience.
+- Take a glance at the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/comments/s6hv54/emotibit_frequently_asked_questions_faq/). *Great minds think alike! If you have a question, the FAQ page probably has an answer.*
+
 ## Unboxing
 Depending on your order, you will have received one of the following EmotiBit packages.
 
-### EmotiBit 
+#### EmotiBit 
+
 - **1x EmotiBit** with finger loop velstretch
   - Depending on your purchase, you may either have an EmotiBit MD or an EmotiBit EMO
 - **1x EmotiBit cover**(acts as barrier between skin)
 - **2x Ag-AgCl Electrodes** attached to the EmotiBit
 - **2x EmotiBit stickers**
-### Essentials Kit
-<img src="./assets/EmotiBit-EssentialsKit.jpg" align="right" width="400">
+
+<img src="./assets/EmotiBit-box-contents.jpg" width="300">
+
+-------------------------------
+
+#### Essentials Kit
 
 The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find
 - **Adafruit feather** M0 WiFi, programmed and ready to use
@@ -42,20 +56,30 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 - **Plastic spudger**
   - This should be used to easily toggle the hibernate switch, accessible from the bottom of the EmotiBit.
 
-### Electrode Kit
+<img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
+
+-------------------------
+#### Electrode Kit
 The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. the electrode kit includes
 - 10x Ag-AgCl snap electrodes
 - 4x solder cup electrodes
   - The solder cup electrodes can be used to solder wires to. The user can then use the solder cup electrodes to breakout the EDA sub-system input.
-### All-in-one-bundle
+
+<img src="./assets/Electrode-Kit.jpg" width="300">
+
+---------------------------
+#### All-in-one-bundle
 If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) and [Electrode Kit](#Electrode-Kit).
 
+------------------
 ## Assembling your EmotiBit
 ### Adding the WiFi credentials
+<img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
 - Plug in the USB card reader loaded with the SD-Card into the computer.
 - Download the config file from https://www.emotibit.com/files/config.
-- Open the config file in any text editor(ex: Notepad on windows or text edit on macOS) and add the WiFi credentials. To do so,  change `myWifiNetwork` to the name of your WiFi network and change `myPassword`to the password for your WiFi network. 
+- Open the config file in any text editor(ex: Notepad on windows or text edit on macOS).
+- Add the WiFi credentials by changing `myWifiNetwork` to the name of your WiFi network and change `myPassword`to the password for your WiFi network. 
 - Save the file onto your microSD card. Eject the SD-Card from your computer. 
 
 **Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this: {"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}.
@@ -65,13 +89,12 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 ### Stack your EmotiBit!
 
 - On the EmotiBit
-  - Insert the SD-Card into the slot on EmotiBit.
-  - Make sure the sliding switch on the lower side is not on HIB(Avaiable on only V4). You may use the plastic spudger provided in the kit to toggle the switch.
+  - Insert the SD-Card into the EmotiBit.
+  - Make sure the sliding switch(*Hibernate switch*) on the lower side is not on HIB. *(Avaiable on only V4)*
 - Plug in the Battery into the Feather.
-- Stack the Feather with the EmotiBit(12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket).
+- Stack the Feather with the EmotiBit(*12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket*)
 
 ![][EmotiBit-stackup]
-- Plug in the Adafruit Feather into your computer using the USB cable provided.
 
 ## Installing EmotiBit Software
 
@@ -81,6 +104,9 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
     - _**Note:** EmotiBit software is supported only for Windows 10._
     - After you have downloaded `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
     - You will find a `.msi` installer inside the extracted folder. Run the installer by double-clicking.
+      - If the Windows Defender SmartScreen pops up, click on `More Info`.
+      - Then click on `Run Anyway`.
+      - <img src="./assets/windows-smart-screen-more-info.png" width="250">
     - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
     - You will notice that shortcuts to `EmotiBit Oscilloscope` and `EmotiBit DataParser` have been created in the start menu and on the desktop.
     - **Note: The EmotiBit Software installation process is sometimes blocked by any anti-virus tool you might have installed on your system. If you face any issues with installation, make sure to check that the appropriate settings are enabled on your anti-virus software to allow a third-party installs.**
@@ -126,48 +152,28 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 ## EmotiBit Bootup
 - [ToDo: Add a GIF indicating successful bootup sequence]
-- On reset, feathers starts the bootup sequence to setup EmotiBit.
-- If the SD-Card is detected, the Red LED on the feather turns ON and stays ON for as long as EmotiBit is being used.
-- Next the EmotiBit Red LED turns ON while the config file is being loaded. 
-  - If the EmotiBit Red LED stays on indefinitely, that means the config file is missing on the SD-Card.
-  - Follow the steps above to [add the WiFi credetials on the SD-Card](#Adding-the-WiFi-credentials).
-- After the config file is loaded, the EmotiBit Red LED turns OFF and EmotiBit Blue LED turns ON. 
-  - The EmotiBit is not trying to connect to the WiFi listed on the SD-Card.
-- Once connected, the Green LED on the Feather turns ON.
 
+|LED Indicator|Bootup Stage|Stuck here ?|
+|--------------|------------------|---------|
+|Feather Red LED turns OFF seconds after turning ON| Detecting SD-Card|Check if SD-Card is correctly inserted|
+|Feather Red LED ON|Initializing all sensors|Contact info@emotibit.com|
+|EmotiBit Red LED ON,<br> Feather Red LED ON|Reading Config File|Check if config file is present on the SD-Card|
+|EmotiBit Blue LED ON,<br> Feather Red LED ON|Connecting to Network|Verify WiFi credentials in config File|
+| Feather Green LED, <br>Feather Red LED ON|Conencted to Network. Ready to stream|-|
 
-|Stage| LED Indicator| Stage Description|
-|-----|--------------|------------------|
-|1|Feather Red LED| SD-Card Detected |
-|2|Feather Red LED, EmotiBit Red LED| Loading config file from the SD-Card|
-|3|Feather Red LED, EmotiBit Blue LED| Connecting to WiFi network listed on the SD-Card|
-|4|Feather Red LED, Feather Green LED| EmotiBit Conected to WiFi|
-
-|Bootup Stage| Stage Description|Feather Red LED| EmotiBit Red LED| EmotiBit Blue LED|Feather Green LED|
-|-----|--------------|------------------|-------------------|-------------|-------------------|
-|Detect SD Card| EmotiBit checks the presence of SD-Card| **ON**- SD-Card Detected <br> **ON -> OFF** SD-Card not present|-|-|-|
-|Read Config File| EmotiBit parses the Config File for WiFi credentials|**ON**|**ON**|-|-|
-|Connect to Network| EmotiBit tries to connect to network listed on SD-Card|**ON**|-|**ON**|-|
-|Conencted to Network| EmotiBit is connected to a network listed on the Sd-Card|**ON**|-|-|**ON**|
-
-
-
+## Using EmotiBit Oscilloscope
+[Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
 ## EmotiBit: LEDs and Buttons
-The on-board LEDs are a great way to understand the state of your EmotiBit. Below is an image we recommend you use for reference to understand more about the EmotiBit functionality.
 
-![][LED]
-<img src="./assets/EmotiBit-buttonsAndSwitches.jpg" width="530">
-
-- Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
-
-## Streaming Data in Real-Time and Recording
-- [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 
 ## Next Steps
 By this point, you are a EmotiBit ninja!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
-- **Working with your data**
+- EmotiBit Oscilloscope
+  - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+- Working with your data
   - [Converting raw data](./Working_with_emotibit_data.md/#Converting-Raw-Data)
   - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-Recorded-Data)
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
@@ -175,20 +181,8 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
 - [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
 
 ## Troubleshooting
-- <details>
-  <summary>LEDs and the serial monitor can be useful tools for debugging</summary>
-  <br>
-  
-  - If the green _WiFi Connected_ LED is on, the feather is connected to WiFi. If the green LED on the Feather does not illuminate, check that you have the correct WiFi credentials in config.txt and that your network is not WPA-enterprise.
-  - If the yellow _Network Traffic_ LED flashes at all, it suggests that the EmotiBit is exchanging packets with ofxEmotiBit.
-  </details>
-- <details>
-  <summary>Things to check for:</summary>
-  <br>
-  
-  - Make sure the SD-Card contains the **config.txt** file.
-  - Verify if the **WiFi-Name** and **WiFi-Password** are correctly entered in the config file.
-  </details>
+- Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/comments/s6hv54/emotibit_frequently_asked_questions_faq/).
+- FAQs did not help out? Post on the [EmotiBit Forum](http://forum.emotibit.com)
 
 [ButtonsAndSwitches]: ./assets/EmotiBit-buttonsAndSwitches.jpg "EmotiBit Buttons and Switches"
 [LED]: ./assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"
@@ -199,3 +193,5 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
 [macOS-Catalina-System_pref_Security&options]: ./assets/macOS-Catalina-System_pref_Security&options.png "" 
 [macOS-Catalina-Allow_emotibit]: ./assets/macOS-Catalina-Allow_emotibit.png "" 
 [EmotiBit-stackup]: ./assets/EmotiBit_stack_boards.gif ""
+[EmotiBit-box-contents]: ./assets/EmotiBit-box-contents.jpg ""
+[Electrode Kit]: ./assets/Electrode-Kit.jpg ""
