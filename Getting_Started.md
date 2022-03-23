@@ -155,8 +155,8 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 |LED Indicator|Bootup Stage|Stuck here ?|
 |--------------|------------------|---------|
-|Feather Red LED turns OFF seconds after turning ON| Detecting SD-Card|Check if SD-Card is correctly inserted|
 |Feather Red LED ON|Initializing all sensors|Contact info@emotibit.com|
+|Feather Red LED turns OFF seconds after turning ON| Detecting SD-Card|Check if SD-Card is correctly inserted|
 |EmotiBit Red LED ON,<br> Feather Red LED ON|Reading Config File|Check if config file is present on the SD-Card|
 |EmotiBit Blue LED ON,<br> Feather Red LED ON|Connecting to Network|Verify WiFi credentials in config File|
 | Feather Green LED, <br>Feather Red LED ON|Conencted to Network. Ready to stream|-|
