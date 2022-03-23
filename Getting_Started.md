@@ -153,13 +153,21 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 ## EmotiBit Bootup
 - [ToDo: Add a GIF indicating successful bootup sequence]
 
-|LED Indicator|Bootup Stage|Stuck here ?|
-|--------------|------------------|---------|
-|Feather Red LED ON|Initializing all sensors|Contact info@emotibit.com|
-|Feather Red LED turns OFF seconds after turning ON| Detecting SD-Card|Check if SD-Card is correctly inserted|
-|EmotiBit Red LED ON,<br> Feather Red LED ON|Reading Config File|Check if config file is present on the SD-Card|
-|EmotiBit Blue LED ON,<br> Feather Red LED ON|Connecting to Network|Verify WiFi credentials in config File|
-| Feather Green LED, <br>Feather Red LED ON|Conencted to Network. Ready to stream|-|
+|LED Indicator|Stuck here ?|
+|--------------|---------|
+|Feather Red LED ON **with no other LED ON**|Link to FAQ|
+|Feather Red LED turns OFF seconds after turning ON| Check if SD-Card is correctly inserted|
+|EmotiBit Red LED ON|Check if config file is present on the SD-Card|
+|EmotiBit Blue LED ON|Verify WiFi credentials in config File|
+| Feather Green LED|-|
+
+|LED Indicator|Stuck here ?|
+|--------------|---------|
+|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="200">|Link to FAQ|
+|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="200">|Check if SD-Card is correctly inserted|
+|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="200">|Check if config file is present on the SD-Card|
+|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="200">|Verify WiFi credentials in config File|
+| <img src="./assets/EmotiBit-bootup-stage-4.jpg" width="200">, <br>Feather Red LED ON|-|
 
 ## Using EmotiBit Oscilloscope
 [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
