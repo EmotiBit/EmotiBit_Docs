@@ -2,15 +2,24 @@
 [comment]: <> ([alt text][SideView])
 
 # Table of Contents
-- [If you just received your EmotiBit](#If-you-just-received-your-EmotiBit)
+- [Stack, Sense and Stream](#Stack-Sense-and-Stream)
+  - [EmotiBit Forum](#EmotiBit-Forum)
   - [Unboxing](#Unboxing)
-  - [Connecting To WiFi](#connecting-to-wifi)
-  - [Get the Software](#Get-the-Software)
-  - [Powering Up](#Powering-up)
+    - [EmotiBit](#EmotiBit)
+    - [Essentials Kit](#Essentials-Kit)
+    - [Electrode Kit](#Electrode-Kit)
+    - [All-in-one-bundle](#All-in-one-bundle)
+  - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
+    - [Adding the WiFi credentials](#Adding-the-WiFi-credentials)
+    - [Stack your EmotiBit!](#Stack-your-EmotiBit!)
+  - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
+- [Installing EmotiBit Firmware](#Installing-EmotiBit-Firmware)
+- [EmotiBit Bootup](#EmotiBit-Bootup)
+- [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
 - [EmotiBit: LEDs and Buttons](#EmotiBit-LEDs-and-Buttons)
-- [Streaming Data in Real Time and Recording](#Streaming-Data-in-Real-Time-and-Recording)
 - [Next Steps](#Next-Steps)
 - [Troubleshooting](#Troubleshooting)
+
 
 # Stack, Sense and Stream
 
@@ -146,11 +155,29 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   </details>    
 
 
-## Installing EmotiBit Firmware
-- ToDo: add the steps for using firmware installer
+# Installing EmotiBit Firmware
+- If you ordered an [Essesntials Kit](#Essentials-kit), then you received an Adafruit Feather in that box.
+  - If you have your own Feather M0 WiFi, you can use that as well!
+- To start using EmotiBit, you will first need to install the firmware on the feather.
+- You will need the **EmotiBitFirmwareInstaller**, which comes with the EMotiBit Software bundle.
+  - If you have not done so already, follow the steps [here to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
+- To run the EmotiBitFirmwareInstaller,
+  - On Windows
+    - You can click on the start menu and type `EmotiBitFirmwareInstaller`, and the application should pop up in the search. double click on the application to run it!
+  - On macOS
+    - You can find the aplication in the folder you just extracted, as mentioned in the steps in the previous section.
+    - Check out the instructions [here]() on how to open the applciation in macOS.
+  - On Linux
+    - Build the application from source. 
+- After you start the application, follow the on-screen instructions to complete installing the firmware.
+- <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
+        
+      - [image1]()
+      - [image2]()
+      - [image3]()
+  </details>
 
-
-## EmotiBit Bootup
+# EmotiBit Bootup
 
 |**LED Indicator**|**Stuck here ?**|
 |--------------|---------|
@@ -160,15 +187,15 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 |<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify WiFi credentials in config File|
 |<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Look for EmotiBit on EmotiBit Oscilloscope|
 
-## Using EmotiBit Oscilloscope
+# Using EmotiBit Oscilloscope
 [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
-## EmotiBit: LEDs and Buttons
+# EmotiBit: LEDs and Buttons
 
 Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
 
 
-## Next Steps
+# Next Steps
 By this point, you are a EmotiBit ninja!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**
 - EmotiBit Oscilloscope
   - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
@@ -179,7 +206,7 @@ By this point, you are a EmotiBit ninja!! However, we at CFL believe in empoweri
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
 - [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
 
-## Troubleshooting
+# Troubleshooting
 - Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/comments/s6hv54/emotibit_frequently_asked_questions_faq/).
 - FAQs did not help out? Post on the [EmotiBit Forum](http://forum.emotibit.com)
 
