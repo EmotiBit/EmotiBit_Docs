@@ -13,6 +13,10 @@
     - [Adding the WiFi credentials](#Adding-the-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit!)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
+  - [Running EmotiBit Software](#Running-EmotiBit-software)
+    - [On Windows](#On-Windows)
+    - [On macOS](#On-macOS)
+    - [On Linux](#On-Linux)
 - [Installing EmotiBit Firmware](#Installing-EmotiBit-Firmware)
 - [EmotiBit Bootup](#EmotiBit-Bootup)
 - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
@@ -91,7 +95,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - Add the WiFi credentials by changing `myWifiNetwork` to the name of your WiFi network and change `myPassword`to the password for your WiFi network. 
 - Save the file onto your microSD card. Eject the SD-Card from your computer. 
 
-**Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this: {"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}.
+**Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> `{"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}.`
 
 **Note: EmotiBit only supports the 2.4GHz band for WiFi. Also, currently there is no support for enterprise networks.**
 
@@ -123,28 +127,10 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 - <details><summary><b>Installation Instructions For Mac Users</b></summary>
     
+  - Download `EmotiBitSoftware-macOS.zip` from the release page.
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
       ![][oscilloscope-drirectory]
-  
-  - <details><summary>Opening Software in mojave</summary>
-        
-      - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-      - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
-      - You will see the EmotiBit Oscilloscope Application start.
-    </details>
-  - <details><summary>Opening Software in Catalina</summary>
-  
-      - Right click on the EmotiBitOscilloscope app. Choose **Open**. 
-      - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
-              ![][macOs-Catalina-Initial_Oscilloscope_Error]
-      - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
-              ![][macOS-Catalina-sys_pref]
-      - You will find a request for `EmotiBit Oscilloscope` at the bottom of this window. Click on `Open Anyways`. 
-              ![][macOS-Catalina-System_pref_Security&options]
-      - Click on `Allow` on the dialog box that appears.This will open the `EmotiBit Oscilloscope` application.
-              ![][macOS-Catalina-Allow_emotibit]
-    </details>
   > **Note that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].**
   - <details><summary>Check your Operating System version</summary>
     
@@ -152,23 +138,54 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
     
     <img src="./assets/macOS-Catalina-OS_version.png" width="800">
     </details>
+  </details> 
+
+- <details><summary><b>Installation Instructions For Linux Users</b></summary>
+    
+  - Download `EmotiBitSoftware-linux.zip` from the release page.
+  - Move the downloaded zip file to a folder location you desire. Extract the zipped download.
+  - Follow the instructions in the ReadMe file inside the extracted forlder.
   </details>    
+
+## Running EmotiBit software
+Based on your operating system, follow the steps below
+### On Windows
+You can click on the start menu and type `EmotiBitFirmwareInstaller`, and the application should pop up in the search. Double-click on the application to run it!
+
+### On macOS
+You can find the aplication in the folder you just extracted, as mentioned in the steps in the previous section.
+- <details><summary>Opening Software in mojave</summary>
+        
+    - Right click on the `EmotiBitFirmwareInstaller` app. Choose **Open**. 
+    - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+    - You will see the EmotiBit Application start.
+  </details>
+- <details><summary>Opening Software in Catalina</summary>
+  
+    - Right click on the `EmotiBitFirmwareInstaller` app. Choose **Open**. 
+    - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
+            ![][macOs-Catalina-Initial_Oscilloscope_Error]
+    - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
+            ![][macOS-Catalina-sys_pref]
+    - You will find a request for the applicaiton at the bottom of this window. Click on `Open Anyways`. 
+            ![][macOS-Catalina-System_pref_Security&options]
+    - Click on `Allow` on the dialog box that appears.This will open the application.
+            ![][macOS-Catalina-Allow_emotibit]
+  </details>
+
+### On Linux
+Build the application from source. You can find the instruction in the `ReadMe` provided with the zip file downloaded in the previous step..
 
 
 # Installing EmotiBit Firmware
-- If you ordered an [Essesntials Kit](#Essentials-kit), then you received an Adafruit Feather in that box.
-  - If you have your own Feather M0 WiFi, you can use that as well!
-- To start using EmotiBit, you will first need to install the firmware on the feather.
-- You will need the **EmotiBitFirmwareInstaller**, which comes with the EMotiBit Software bundle.
+- To start using EmotiBit, you will first need to install the EmotiBit-Firmware on the feather.
+  - If you did not order an Essentials-Kit, Basic-Kit(*Kickstarter*) or Research-Kit(*Kickstarter*), you will need to 
+get an Adafruit Feather M0 to be able to use the EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598)
+- You will need the **EmotiBitFirmwareInstaller**, which comes with the EmotiBit Software bundle.
   - If you have not done so already, follow the steps [here to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
-- To run the EmotiBitFirmwareInstaller,
-  - On Windows
-    - You can click on the start menu and type `EmotiBitFirmwareInstaller`, and the application should pop up in the search. double click on the application to run it!
-  - On macOS
-    - You can find the aplication in the folder you just extracted, as mentioned in the steps in the previous section.
-    - Check out the instructions [here]() on how to open the applciation in macOS.
-  - On Linux
-    - Build the application from source. 
+- Open the `EmotiBitFirmwareInstaller`. You can follow the instructions in the [section above](#Running-EmotiBit-software).
+- 
+## Using the EmotiBit Firmware Installer
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
         
