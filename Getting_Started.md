@@ -65,7 +65,7 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 - **High-speed microSD card**
 - **MicroSD card reader**
 - **Micro USB cable**
-- **3x Emoti-stretch straps** of different lengths to wear EmotiBit nearly anywhere on the body, ranging from a child’s wrist to an adult head
+- **3x Emoti-stretch straps** of different lengths to wear EmotiBit nearly anywhere on the body, ranging from a childâ€™s wrist to an adult head
 - **Plastic spudger** -- used to easily toggle the hibernate switch and EmotiBit button
 
 <img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
@@ -198,7 +198,7 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
   </details>
 
 ## For Linux and Advanced Users
-- <details><summary> Installing Emotibit Firmware </summary></details>
+- <details><summary> Installing Emotibit Firmware </summary>
   
   - The FirmwareInstaller essentaily performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
