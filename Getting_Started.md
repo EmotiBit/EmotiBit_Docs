@@ -11,7 +11,7 @@
     - [All-in-one-bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
     - [Adding the WiFi credentials](#Adding-the-WiFi-credentials)
-    - [Stack your EmotiBit!](#Stack-your-EmotiBit!)
+    - [Stack your EmotiBit!](#Stack-your-EmotiBit)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
   - [Running EmotiBit Software](#Running-EmotiBit-software)
     - [On Windows](#On-Windows)
@@ -103,7 +103,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 - On the EmotiBit
   - Insert the SD-Card into the EmotiBit.
-  - Make sure the sliding switch(*Hibernate switch*) on the lower side is not on HIB. *(Avaiable on only V4)*
+  - Make sure the sliding switch(*Hibernate switch*) on the lower side is not on HIB. *(Avaiable on only EmotiBit-V4)*
 - Plug in the Battery into the Feather.
 - Stack the Feather with the EmotiBit(*12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket*)
 
@@ -150,10 +150,10 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 ## Running EmotiBit software
 Based on your operating system, follow the steps below
 ### On Windows
-You can click on the start menu and type `EmotiBitFirmwareInstaller`, and the application should pop up in the search. Double-click on the application to run it!
+You can click on the start menu and search for the name of the application you want to run, ex:`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
 
 ### On macOS
-You can find the aplication in the folder you just extracted, as mentioned in the steps in the previous section.
+You can find the EmotiBit applications in the folder you just extracted(*as mentioned in the steps in the previous section*)
 - <details><summary>Opening Software in mojave</summary>
         
     - Right click on the `EmotiBitFirmwareInstaller` app. Choose **Open**. 
@@ -162,12 +162,12 @@ You can find the aplication in the folder you just extracted, as mentioned in th
   </details>
 - <details><summary>Opening Software in Catalina</summary>
   
-    - Right click on the `EmotiBitFirmwareInstaller` app. Choose **Open**. 
+    - Right click on the application you want to run. Choose **Open**. 
     - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:<br>
             ![][macOs-Catalina-Initial_Oscilloscope_Error]
     - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
             ![][macOS-Catalina-sys_pref]
-    - You will find a request for the applicaiton at the bottom of this window. Click on `Open Anyways`. 
+    - You will find a request from the applicaiton at the bottom of this window. Click on `Open Anyways`. 
             ![][macOS-Catalina-System_pref_Security&options]
     - Click on `Allow` on the dialog box that appears.This will open the application.
             ![][macOS-Catalina-Allow_emotibit]
@@ -186,16 +186,36 @@ get an Adafruit Feather M0 to start using EmotiBit. You can grab one at [Adafrui
 - Open the `EmotiBitFirmwareInstaller`. 
   - Follow the instructions mentioned in the [section above](#Running-EmotiBit-software) to start using `EmotiBitFirmwareinstaller`
 
-
 ## Using the EmotiBit Firmware Installer
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
         
-      - [image1]()
-      - [image2]()
-      - [image3]()
+  - [image1]()
+  - [image2]()
+  - [image3]()
   </details>
 
+- <details><summary> for Linux and advanced users</summary>
+
+  - The FirmwareInstaller essentaily performs 3 actions:
+    1. It uploads the firmware updater sketch to prep the feather for WINC updater.
+    2. It updates the FW on the WINC module to version 19.6.1
+    3. It uploads the EmotiBit FW on the feather, after the WINC has been updated.
+  - We use the [`bossac`](http://manpages.ubuntu.com/manpages/bionic/man1/bossac.1.html) command line tool to upload binary files to the feather.
+  - There are 2 requirements to run bossac
+    - COM port the feather is detected on
+    - the bin file(*provided in the software release*)
+  - To perform the operations manually, the follow the below listed steps:
+    - Connect the feather to the computer using a data-capable USB cable
+    - Double-press the reset button to set the feather in programmer mode
+    - Upload the firmware updater sketch by running (*replace bossac with bossac.exe for windows*)
+      - `bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v locationOfBinFile -R`
+    - Update the WINC F by running 
+      - `FirmwareUploader -port YOUR_FEATHER_COM_PORT -firmware pathTo_m2m_aio_3a0.bin`
+    - Double-press the reset button to set the feather in programmer mode
+    - Upload the EmotiBit FW using (*replace bossac with bossac.exe for windows*)
+      - `bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v locationOfEmotiBitFwBinFile -R`
+  </details>
 # EmotiBit Bootup
 
 |LED Description|**LED Indicator**|**Stuck here ?**|
