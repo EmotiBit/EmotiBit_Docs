@@ -50,17 +50,18 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
     - Arduino Low Power
     - RTCZero
-    - EmotiBit BMI160
-    - EmotiBit FeatherWing
-    - EmotiBit MAX30101
-    - EmotiBit MLX90632
-    - EmotiBit NCP5632
-    - EmotiBit SI7013
-    - EmotiBit External EEPROM 
-    - EmotiBit ADS1X15
-    - EmotiBit XPlat Utils
     - Adafruit_GFX_Library
     - Adafruit_IS31FL3731_Library
+    - EmotiBit FeatherWing
+      - It will automatically install the following EmotiBit dependencies
+        - EmotiBit BMI160
+        - EmotiBit MAX30101
+        - EmotiBit MLX90632
+        - EmotiBit NCP5632
+        - EmotiBit SI7013
+        - EmotiBit External EEPROM 
+        - EmotiBit ADS1X15
+        - EmotiBit XPlat Utils
     </details>
     
 ### Close and re-open Arduino IDE
