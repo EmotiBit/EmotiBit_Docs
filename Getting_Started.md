@@ -227,7 +227,7 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
     - ONLY AFTER the FirmwareUploader command completes, double-press the reset button to set the Feather in programmer mode again
     - Upload the EmotiBit FW using (*use .\bossac.exe for windows*)
       - `./bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
-</details> 
+  </details> 
 
 # EmotiBit Bootup
 When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
