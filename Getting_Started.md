@@ -181,7 +181,7 @@ Build the application from source. You can find instructions in the `ReadMe` pro
 # Installing EmotiBit Firmware
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
 - If you did not order an Essentials-Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to 
-get an  to start using EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598).
+get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598).
 
 ## Using the EmotiBit Firmware Installer
 - You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
@@ -191,12 +191,15 @@ get an  to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
         
+  - ToDo: add screengrabs
   - [image1]()
   - [image2]()
   - [image3]()
   </details>
 
 ## For Linux and Advanced Users
+- <details><summary> Installing Emotibit Firmware </summary></details>
+  
   - The FirmwareInstaller essentaily performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
     2. Updates the WINC WiFi module FW to version 19.6.1
@@ -224,6 +227,7 @@ get an  to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
     - ONLY AFTER the FirmwareUploader command completes, double-press the reset button to set the Feather in programmer mode again
     - Upload the EmotiBit FW using (*use .\bossac.exe for windows*)
       - `./bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
+</details> 
 
 # EmotiBit Bootup
 When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
