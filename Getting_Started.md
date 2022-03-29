@@ -41,7 +41,7 @@ You can use the forum for
 - Take a glance at the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/comments/s6hv54/emotibit_frequently_asked_questions_faq/). *Great minds think alike! If you have a question, the FAQ page probably has an answer.*
 
 ## Unboxing
-Depending on your order, you will have received one of the following EmotiBit packages.
+Depending on your order, you will have received:
 
 ### EmotiBit 
 
@@ -129,9 +129,9 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
     
   - Download `EmotiBitSoftware-macOS.zip` from the release page.
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
-  - You will find the Application(`EmotiBit Oscilloscope` and `EmotiBit DataParser`) in the extracted folder.
-      ![][oscilloscope-drirectory]
-  > **Note that the Software is currently supported only for macOS-**Mojave**[version 10.14] and macOS-**Catalina**[version 10.15].**
+  - You will find the Applications in the extracted folder.
+  
+  > **Note that the Software is currently supported only for macOS-Mojave[version 10.14] and macOS-Catalina[version 10.15].**
   - <details><summary>Check your Operating System version</summary>
     
     - You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
@@ -163,7 +163,7 @@ You can find the aplication in the folder you just extracted, as mentioned in th
 - <details><summary>Opening Software in Catalina</summary>
   
     - Right click on the `EmotiBitFirmwareInstaller` app. Choose **Open**. 
-    - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:
+    - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:<br>
             ![][macOs-Catalina-Initial_Oscilloscope_Error]
     - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
             ![][macOS-Catalina-sys_pref]
@@ -180,11 +180,13 @@ Build the application from source. You can find the instruction in the `ReadMe` 
 # Installing EmotiBit Firmware
 - To start using EmotiBit, you will first need to install the EmotiBit-Firmware on the feather.
   - If you did not order an Essentials-Kit, Basic-Kit(*Kickstarter*) or Research-Kit(*Kickstarter*), you will need to 
-get an Adafruit Feather M0 to be able to use the EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598)
+get an Adafruit Feather M0 to start using EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598)
 - You will need the **EmotiBitFirmwareInstaller**, which comes with the EmotiBit Software bundle.
   - If you have not done so already, follow the steps [here to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
-- Open the `EmotiBitFirmwareInstaller`. You can follow the instructions in the [section above](#Running-EmotiBit-software).
-- 
+- Open the `EmotiBitFirmwareInstaller`. 
+  - Follow the instructions mentioned in the [section above](#Running-EmotiBit-software) to start using `EmotiBitFirmwareinstaller`
+
+
 ## Using the EmotiBit Firmware Installer
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
@@ -196,13 +198,13 @@ get an Adafruit Feather M0 to be able to use the EmotiBit. You can grab one at [
 
 # EmotiBit Bootup
 
-|**LED Indicator**|**Stuck here ?**|
-|--------------|---------|
-|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Link to FAQ|
-|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD-Card is correctly inserted|
-|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD-Card|
-|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify WiFi credentials in config File|
-|<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Look for EmotiBit on EmotiBit Oscilloscope|
+|LED Description|**LED Indicator**|**Stuck here ?**|
+|--|--------------|---------|
+|Feather RED LED ON|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Link to FAQ|
+|Feather RED LED turns OFF|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD-Card is correctly inserted|
+|EmotiBit RED LED ON|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD-Card|
+|EmotiBit BLUE LED ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify WiFi credentials in config File|
+|Feather Green LED ON|<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Look for EmotiBit on EmotiBit Oscilloscope|
 
 # Using EmotiBit Oscilloscope
 [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
