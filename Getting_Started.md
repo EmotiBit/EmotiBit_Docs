@@ -10,7 +10,7 @@
     - [Electrode Kit](#Electrode-Kit)
     - [All-in-one-bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
-    - [Adding the WiFi credentials](#Adding-the-WiFi-credentials)
+    - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
   - [Running EmotiBit Software](#Running-EmotiBit-software)
@@ -64,8 +64,7 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 - **MicroSD card reader**
 - **Micro USB cable**
 - **3x Emoti-stretch straps** of different lengths to wear EmotiBit nearly anywhere on the body, ranging from a child’s wrist to an adult head
-- **Plastic spudger**
-  - This should be used to easily toggle the hibernate switch and EmotiBit button
+- **Plastic spudger** -- used to easily toggle the hibernate switch and EmotiBit button
 
 <img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
 
@@ -73,7 +72,7 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 ### Electrode Kit
 The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. the electrode kit includes
 - **10x EDA electrodes (Ag/AgCl)**
-- **4x solder-cup snaps (to add your own EDA leads)**
+- **4x solder-cup snaps** (to add your own EDA leads)
 - **5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)
 
 <img src="./assets/Electrode-kit.jpg" width="300">
@@ -232,8 +231,8 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |Feather RED LED ON|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Write a post describing your steps on http://forum.emotibit.com/ |
 |Feather RED LED turns ON for a few seconds and then stays OFF|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD-Card is correctly inserted|
 |EmotiBit RED LED ON|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD-Card|
-|EmotiBit BLUE LED ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding the WiFi credentials](https://github.com/EmotiBit/EmotiBit_Docs/blob/fix-documentationUpdate/Getting_Started.md#adding-the-wifi-credentials))|
-|Feather Green LED ON|<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Huzzah! EmotiBit is connected to your WiFi! Look for EmotiBit on EmotiBit Oscilloscope|
+|EmotiBit BLUE LED ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding the WiFi credentials](https://github.com/EmotiBit/EmotiBit_Docs/blob/fix-documentationUpdate/Getting_Started.md#adding-wifi-credentials))|
+|Feather Green LED ON|<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Huzzah! EmotiBit is connected to your WiFi! Look for EmotiBit in the devices list of EmotiBit Oscilloscope|
 
 # Using EmotiBit Oscilloscope
 [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
