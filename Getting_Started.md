@@ -18,6 +18,8 @@
     - [On macOS](#On-macOS)
     - [On Linux](#On-Linux)
 - [Installing EmotiBit Firmware](#Installing-EmotiBit-Firmware)
+  - [Using the EmotiBit Firmware Installer](#Using-the-EmotiBit-Firmware-Installer)
+  - [For Linux and Advanced Users](#For-Linux-and-Advanced-Users)
 - [EmotiBit Bootup](#EmotiBit-Bootup)
 - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
 - [EmotiBit: LEDs and Buttons](#EmotiBit-LEDs-and-Buttons)
@@ -130,7 +132,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Applications in the extracted folder.
   
-  > **Note that the Software is currently supported only for macOS-Mojave[version 10.14] and macOS-Catalina[version 10.15]. (Mojave mostly works, but has some issues with the DataParser that we're working on)**
+  > **Note that the Software is currently supported only for macOS-Mojave[version 10.14] and macOS-Catalina[version 10.15]. (Monterey mostly works, but has some issues with the DataParser that we're working on)**
   - <details><summary>Check your Operating System version</summary>
     
     - You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
@@ -204,7 +206,7 @@ get an  to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
     - COM port on which the Feather is detected
     - The bin file (*provided in the software release*)
   - To perform the operations manually, the follow the below listed steps:
-    - Navigate to the data folder located inside the EmotiBit software directory.
+    - Navigate to the `data` folder located inside the EmotiBit software directory.
       - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
       - On MacOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
       - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
