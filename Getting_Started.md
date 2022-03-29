@@ -35,13 +35,12 @@
 <img src="./assets/EmotiBit-forum.png" align="right" width="300">
 
 The [EmotiBit forum](http://forum.emotibit.com) is a great place to get answers to all things EmotiBit!<br>
-You can use the forum for
 - Find answers to questions you may have about using EmotiBit.
-- Offering support to fellow community members by providing insight into your experience.
+- Offer support to fellow community members by providing insight into your experience.
 - Take a glance at the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/comments/s6hv54/emotibit_frequently_asked_questions_faq/). *Great minds think alike! If you have a question, the FAQ page probably has an answer.*
 
 ## Unboxing
-Depending on your order, you will have received:
+The following sections explain the contents of each item available for purchase at the [openBCI online store](https://shop.openbci.com/collections/frontpage):
 
 ### EmotiBit 
 
@@ -76,13 +75,13 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. the electrode kit includes
 - 10x Ag-AgCl snap electrodes
 - 4x solder cup electrodes
-  - The solder cup electrodes can be used to solder wires to. The user can then use the solder cup electrodes to breakout the EDA sub-system input.
+  - The solder cup electrodes can be used to solder wires to. Users can then use the solder cup electrodes to breakout the EDA sensor.
 
 <img src="./assets/Electrode-kit.jpg" width="300">
 
 ---------------------------
 ### All-in-one-bundle
-If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) and [Electrode Kit](#Electrode-Kit).
+If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrode Kit](#Electrode-Kit).
 
 ------------------
 ## Assembling your EmotiBit
@@ -104,7 +103,9 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - On the EmotiBit
   - Insert the SD-Card into the EmotiBit.
   - Make sure the sliding switch(*Hibernate switch*) on the lower side is not on HIB. *(Avaiable on only EmotiBit-V4)*
-- Plug in the Battery into the Feather.
+    - <img src="./assets/correctHibernateSwitch.jpg" width="250">
+
+- Plug in the Battery into the Feather.(**The battery should be firmly pushed in all the way into the feather connector**)
 - Stack the Feather with the EmotiBit(*12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket*)
 
 ![][EmotiBit-stackup]
@@ -156,7 +157,7 @@ You can click on the start menu and search for the name of the application you w
 You can find the EmotiBit applications in the folder you just extracted(*as mentioned in the steps in the previous section*)
 - <details><summary>Opening Software in mojave</summary>
         
-    - Right click on the `EmotiBitFirmwareInstaller` app. Choose **Open**. 
+    - Right click on the application you want to run. Choose **Open**. 
     - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
     - You will see the EmotiBit Application start.
   </details>
@@ -178,12 +179,12 @@ Build the application from source. You can find the instruction in the `ReadMe` 
 
 
 # Installing EmotiBit Firmware
-- To start using EmotiBit, you will first need to install the EmotiBit-Firmware on the feather.
+1. To start using EmotiBit, you will first need to install the EmotiBit-Firmware on the feather.
   - If you did not order an Essentials-Kit, Basic-Kit(*Kickstarter*) or Research-Kit(*Kickstarter*), you will need to 
 get an Adafruit Feather M0 to start using EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598)
-- You will need the **EmotiBitFirmwareInstaller**, which comes with the EmotiBit Software bundle.
+2.  You will need the **EmotiBitFirmwareInstaller**, which comes with the EmotiBit Software bundle.
   - If you have not done so already, follow the steps [here to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
-- Open the `EmotiBitFirmwareInstaller`. 
+3. Open the `EmotiBitFirmwareInstaller`. 
   - Follow the instructions mentioned in the [section above](#Running-EmotiBit-software) to start using `EmotiBitFirmwareinstaller`
 
 ## Using the EmotiBit Firmware Installer
@@ -195,7 +196,7 @@ get an Adafruit Feather M0 to start using EmotiBit. You can grab one at [Adafrui
   - [image3]()
   </details>
 
-- <details><summary> for Linux and advanced users</summary>
+- <details><summary> For Linux and advanced users</summary>
 
   - The FirmwareInstaller essentaily performs 3 actions:
     1. It uploads the firmware updater sketch to prep the feather for WINC updater.
@@ -204,17 +205,22 @@ get an Adafruit Feather M0 to start using EmotiBit. You can grab one at [Adafrui
   - We use the [`bossac`](http://manpages.ubuntu.com/manpages/bionic/man1/bossac.1.html) command line tool to upload binary files to the feather.
   - There are 2 requirements to run bossac
     - COM port the feather is detected on
-    - the bin file(*provided in the software release*)
+    - The bin file(*provided in the software release*)
   - To perform the operations manually, the follow the below listed steps:
+    - Navigate to the folder data folder, located inside the folder extracted in the step above.
+      - The path to the data folder should look like `ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+    - Open a `cmd prompt` window for Windows or `terminal` for linux at this location
     - Connect the feather to the computer using a data-capable USB cable
-    - Double-press the reset button to set the feather in programmer mode
+      - The EmotiBit should not be stacked.
+    - Double-press the reset button to set the feather in programmer mode.
+      - You should see the RED LED on the feather pulsating!
     - Upload the firmware updater sketch by running (*replace bossac with bossac.exe for windows*)
-      - `bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v locationOfBinFile -R`
-    - Update the WINC F by running 
-      - `FirmwareUploader -port YOUR_FEATHER_COM_PORT -firmware pathTo_m2m_aio_3a0.bin`
+      - `./bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v ./WINC/FirmwareUpdater.ino.feather_m0.bin -R`
+    - Update the WINC F by running (*replace FirmwareUploader with FirmwareUploader.exe for windows*)
+      - `./WINC/FirmwareUploader -port YOUR_FEATHER_COM_PORT -firmware ./WINC/m2m_aio_3a0.bin`
     - Double-press the reset button to set the feather in programmer mode
     - Upload the EmotiBit FW using (*replace bossac with bossac.exe for windows*)
-      - `bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v locationOfEmotiBitFwBinFile -R`
+      - `./bossac -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
   </details>
 # EmotiBit Bootup
 
