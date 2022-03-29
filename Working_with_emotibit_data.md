@@ -12,7 +12,7 @@ The ability to stream data in real-time from the EmotiBit to a computer is incre
 
 ### Grab the EmotiBit oscilloscope
 - If you have not already, grab the [latest release of EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
-You can follow the installation instruction on the [getting started](./Getting_Started.md/#Get-the-Software) page.
+You can follow the installation instruction on the [getting started](./Getting_Started.md/#Installing-EmotiBit-Software) page.
 
 ### EmotiBit Oscilloscope user guide
 - The Oscilloscope offers the following functionalities:
