@@ -92,6 +92,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - Download the config file from https://www.emotibit.com/files/config.
 - Open the config file in any text editor (e.g. Notepad on Windows or text edit on macOS).
 - Add your WiFi credentials by changing `myWifiNetwork` to the name of your WiFi network and change `myPassword`to the password for your WiFi network. 
+  - <img src="./assets/config-file-example.png" width="550">
 - Save the file onto your microSD card. Eject the SD-Card from your computer. 
 
 **Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> `{"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}`
@@ -152,6 +153,15 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 Based on your operating system, follow the steps below:
 ### On Windows
 You can click on the start menu and search for the name of the application you want to run, e.g.`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
+<br>
+- <details><summary>Windows Security Alert access</summary>
+  
+  - If a `Windows Security Alert` pop-up appears, **allow private network access**. 
+If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant EmotiBit software
+network access.
+  - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="800">
+  </details>
+
 
 ### On macOS
 You can find the EmotiBit applications in the folder you just extracted (*as mentioned in the steps in the previous section*)
@@ -190,11 +200,13 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
   - Follow the instructions mentioned in the [section above](#Running-EmotiBit-software) to start using `EmotiBit FirmwareInstaller`
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
-        
-  - ToDo: add screengrabs
-  - [image1]()
-  - [image2]()
-  - [image3]()
+
+  - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
+  - <img src="./assets/EmotiBitFirmwareInstaller-step2.png" width="600">
+  - <img src="./assets/EmotiBitFirmwareInstaller-step3.png" width="600">
+  - <img src="./assets/EmotiBitFirmwareInstaller-step4.png" width="600">
+  - <img src="./assets/EmotiBitFirmwareInstaller-step5.png" width="600">
+  - <img src="./assets/EmotiBitFirmwareInstaller-step6.png" width="600">
   </details>
 
 ## For Linux and Advanced Users
