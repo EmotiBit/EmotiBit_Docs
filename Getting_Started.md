@@ -154,7 +154,7 @@ Based on your operating system, follow the steps below:
 ### On Windows
 You can click on the start menu and search for the name of the application you want to run, e.g.`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
 <br>
-- <details><summary>Windows Security Alert access</summary>
+- <details><summary>Windows Security Alert pop-up</summary>
   
   - If a `Windows Security Alert` pop-up appears, **allow private network access**. 
 If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant EmotiBit software
@@ -274,6 +274,8 @@ By this point, you're ready to be an EmotiBit rockstar!! However, we at CFL beli
 # Troubleshooting
 - Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/collection/27921349-c38f-4df4-b708-99346979039f).
 - FAQs did not help out? Post on the [EmotiBit Forum](http://forum.emotibit.com)
+  - Having trouble connecting to network? check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/tsiu7j/how_do_i_add_my_wifi_credentials_to_connect_to_a/)
+
 
 [ButtonsAndSwitches]: ./assets/EmotiBit-buttonsAndSwitches.jpg "EmotiBit Buttons and Switches"
 [LED]: ./assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"
