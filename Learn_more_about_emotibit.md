@@ -4,7 +4,6 @@
 - [EmotiBit HW](#EmotiBit-HW)
   - [LEDs nad Buttons](#LEDs-and-Buttons)
 - [EmotiBIt FW](#EmotiBit-FW)
-  - [Update Feather WiFi chip firmware](#Update-Feather-WiFi-chip-firmware)
   - [Raw data packet architecture](#Raw-data-packet-architecture)
   - [TypeTag Character Codes](#TypeTag-Character-Codes)
 - [EmotiBit SW](#EmotiBit-SW)
@@ -37,8 +36,6 @@
     - The Hibernate Switch kills power to both the Feather and the EmotiBit. It is recommended to toggle the switch to `HIB` if leaving the EmotiBit unused for long durations.
 
 ## EmotiBit FW
-### Update Feather WiFi chip firmware
-  - Occasionally there are important updates to the Feather WiFi chip firmware. **If you recently got your Feather M0 WiFi board from us, you're up-to-date and good-to-go**, [but if not you should follow these instructions on Adafruit's page.](https://learn.adafruit.com/adafruit-feather-m0-wifi-atwinc1500/using-the-wifi-module)
 
 ### Raw data packet architecture
 
@@ -54,6 +51,9 @@
 
 ![alt text][Pack]
 ### TypeTag Character Codes
+The most up-to-date list of type tags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
+<br>
+For a quick look at the available typetags, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
 
 - <details open><summary><b>Biometric TypeTags</b></summary>
 
