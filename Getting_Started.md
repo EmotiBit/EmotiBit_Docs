@@ -199,15 +199,8 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
 - Open the `EmotiBit FirmwareInstaller`. 
   - Follow the instructions mentioned in the [section above](#Running-EmotiBit-software) to start using `EmotiBit FirmwareInstaller`
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
-- <details><summary>Screengrabs from EmotiBitFirmwareInstaller</summary>
-
+- Screengrab from `EmotiBitFirmwareInstaller`
   - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
-  - <img src="./assets/EmotiBitFirmwareInstaller-step2.png" width="600">
-  - <img src="./assets/EmotiBitFirmwareInstaller-step3.png" width="600">
-  - <img src="./assets/EmotiBitFirmwareInstaller-step4.png" width="600">
-  - <img src="./assets/EmotiBitFirmwareInstaller-step5.png" width="600">
-  - <img src="./assets/EmotiBitFirmwareInstaller-step6.png" width="600">
-  </details>
 
 ## For Linux and Advanced Users
 - <details><summary> Installing Emotibit Firmware </summary>
