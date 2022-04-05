@@ -70,8 +70,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
     - The Battery Level indicator displays the charge available in the battery as a percentage. We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
 
-  - <details><summary>Output List</summary></details>
-
+  - <details><summary>Output List</summary>
 
     The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
     - <details><summary>OSC</summary>
@@ -110,12 +109,12 @@ You can follow the installation instruction on the [getting started](./Getting_S
 	      </patchcords>
       </patchboard>	
       ```
-        - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
-        - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
-        - A `patch` connects an input stream to an output stream. 
-          - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
-        - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
-      </details>
+      - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
+      - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
+      - A `patch` connects an input stream to an output stream. 
+        - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
+      - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
+    </details>
   </details>
 
 ## Next Steps: Converting Raw Data
