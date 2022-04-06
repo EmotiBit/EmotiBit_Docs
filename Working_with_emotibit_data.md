@@ -138,6 +138,23 @@ Follow this guide to open EmotiBit DataParser.
 
 ## Using EmotiBit Data Parser
 ![][EmotiBit-DataParser]
+- <details open><summary><b>Using the EmotiBit data parser</b></summary>
+  
+  ![][EmotiBit-DataParser]
+  - Open the EmotiBit data parser. 
+  - The data parser is split into 3 main regions:
+    - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
+    - `Process File Button`: Click on the button to load a file to process.
+    - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
+  - Click on the `Process file button`. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
+  - You will see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
+  - When EmotiBit data parser has finished processing the file, it will exit automatically. 
+  - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
+  - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.
+  </details>
+
+#### EmotiBit File Types
+After running the data parser, each EmotiBit data stream is split into a separate CSV file. In addition to the original raw data file and \_info.json file (which contains information like sampling rates and other important settings for each sensor/stream), there will be a number of additional files, each containing a specific data stream as indicated by the `_XX.csv` file suffix. For more details, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
 
 - **Understnading the DataParser**
   - `Status Bar`
@@ -153,10 +170,89 @@ Follow this guide to open EmotiBit DataParser.
   - The parser will quite once the data has been processed.
   - The parsed data files are created in the same directory as the original **raw** file
 
-## EmotiBit Typetags
+## EmotiBit Data Types
+EmotiBit data is transmitted and stored in a CSV structure using unique `TypeTags` for each type of recorded data. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
 
-For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
+For a quick look at the available TypeTags, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
 
+- <details open><summary><b>Biometric TypeTags</b></summary>
+
+  |Tag    | Description          |
+  |:-----:|----------------------|
+  |EA     |EDA- Electrodermal Activity  |
+  |EL     |EDL- Electrodermal Level     |
+  |ER     |EDR- Electrodermal Response  |
+  |PI     |PPG Infrared          |
+  |PR     |PPG Red               |
+  |PG     |PPG Green             |
+  |T0     |Temperature          |
+  |TH     |Temperature via Medical-grade Thermopile (only on EmotiBit MD)   |
+  |AX     |Accelerometer X       |
+  |AY     |Accelerometer Y       |
+  |AZ     |Accelerometer Z       |
+  |GX     |Gyroscope X           |
+  |GY     |Gyroscope Y           |
+  |GZ     |Gyroscope Z           |
+  |MX     |Magnetometer X        |
+  |MY     |Magnetometer Y        |
+  |MZ     |Magnetometer Z        |
+  |SA     |Skin Conductance Response Amplitude        |
+  |SR     |Skin Conductance Response Rise Time |
+  |SF     |Skin Conductance Response Frequency |
+  |HR     |Heart Rate        |
+  |BI     |Heart Inter-beat Interval        |
+  |H0     |Humidity (only on EmotiBit Alpha/Beta V1, V2, V3)     |
+
+  </details>
+
+- <details><summary><b>General Typetags</b></summary>
+
+  |Tag    | Description                       |
+  |:-----:|:----------------------------------|
+  |EI     |EmotiBit Info Json                 |
+  |DC     |Data Clipping, TypeTag in Payload  |
+  |DO     |Data Overflow, TypeTag in Payload  |
+  |B%     |Battery Percentage Remaining       |
+  |BV     |Battery Voltage                    |
+  |D%     |SD card percent capacity filled    |
+  |RD     |Request Data, TypeTag in Payload   |
+  |PI     |Ping                               |
+  |PO     |Pong                               |
+  |RS     |Reset                              |
+
+  </details>
+
+- <details><summary><b>Computer to EmotiBit TypeTags</b></summary>
+
+  |Tag    | Description                       |
+  |:-----:|:----------------------------------|
+  |GL     |[GPS latitude and Longitude][GPS]  |
+  |GS     |[GPS Speed][GPS]                   |
+  |GB     |[GPS Bearing][GPS]                 |
+  |GA     |[GPS Altitude][GPS]                |
+  |TL     |Local Computer Timestamp           |
+  |TU     |UTC Timestamp                      |
+  |TX     |Crosstime, used for timestamp comparison   |
+  |LM     |LSL Marker/message                 |
+  |RB     |Record begin (Include timestamp in Data)   |
+  |RE     |Record End                         |
+  |UN     |User Note                          |
+  |MH     |Mode Hibernate                     |
+  |HE     |Hello EmotiBit, used to establish communication  |
+
+  </details>
+  
+
+#### EmotiBit data sampling rates
+
+- The most up to date list of sampling rates for each data stream can be found in the `_info.json` file created adjacent to each recorded raw data file. The following table lists the typical sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors.
+
+| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
+|----------|---------|-----------|--------------|
+| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
+|PPG |`PI` `PG` `PR`| MAX30101|25|
+|Temperature |`T0` / `TH`|MAX30301 / MLX90632 |7.5|
+|EDA|`EA` `EL` `ER`|-|15|
 
 ## Next Steps: Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.

@@ -66,9 +66,8 @@ For a quick look at the available typetags, you can check out the table below. W
   |PI     |PPG Infrared          |
   |PR     |PPG Red               |
   |PG     |PPG Green             |
-  |T0     |Temperature (Si7013)  |
-  |TH     |Thermopile(ML90632)          |
-  |H0     |Humidity (Si7013)     |
+  |T0     |Temperature          |
+  |TH     |Temperature via Medical-grade Thermopile          |
   |AX     |Accelerometer X       |
   |AY     |Accelerometer Y       |
   |AZ     |Accelerometer Z       |
@@ -78,6 +77,12 @@ For a quick look at the available typetags, you can check out the table below. W
   |MX     |Magnetometer X        |
   |MY     |Magnetometer Y        |
   |MZ     |Magnetometer Z        |
+  |SA     |Skin Conductance Response Amplitude        |
+  |SR     |Skin Conductance Response Rise Time |
+  |SF     |Skin Conductance Response Frequency |
+  |HR     |Heart Rate        |
+  |BI     |Heart Inter-beat Interval        |
+  |H0     |Humidity (only on EmotiBit Alpha/Beta V1, V2, V3)     |
 
   </details>
 
