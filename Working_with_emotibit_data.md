@@ -10,6 +10,7 @@
   - [Using EmotiBit DataParser](#Using-EmotiBit-DataParser)
   - [EmotiBit file types](#EmotiBit-file-types)
   - [EmotiBit data types](#EmotiBit-data-types)
+    - [Sampling rates](#Sampling-rates)
 - [Visualize Recorded Data](#Visualize-Recorded-Data)
   - [Opening EmotiBit DataViewer](#Opening-EmotiBit-DataViewer)
   - [Visualization Tools](#Visualization-Tools)
@@ -27,7 +28,7 @@ recording, Log Notes and an array of other useful features
 EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiBit to your computer along with an array of other features.
 
 ## Opening EmotiBit Oscilloscope
-Follow this guide to open EmotiBit Oscillosopce.
+Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-software) page to run EmotiBit Oscilloscope.
 
 ## Using EmotiBit Oscilloscope
 - The Oscilloscope offers the following features:
@@ -136,7 +137,7 @@ Follow this guide to open EmotiBit Oscillosopce.
 The DataParser is used to convert the recorded data into individual files, where each file represents a typetag.
 
 ## Opening EmotiBit DataParser
-Follow this guide to open EmotiBit DataParser.
+Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-software) page to run EmotiBit DataParser.
 
 ## Using EmotiBit DataParser
 ![][EmotiBit-DataParser]
@@ -236,16 +237,10 @@ For a quick look at the available TypeTags, you can check out the table below. W
   </details>
   
 
-#### EmotiBit data sampling rates
+### EmotiBit data sampling rates
+The most up to date list of sampling rates for each data stream can be found in the `_info.json` file created with each recording session. 
+The sampling rates for all the sensors can he found [here](./Learn_more_about_emotibit.md#Sampling-rates).
 
-- The most up to date list of sampling rates for each data stream can be found in the `_info.json` file created adjacent to each recorded raw data file. The following table lists the typical sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors.
-
-| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
-|----------|---------|-----------|--------------|
-| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
-|PPG |`PI` `PG` `PR`| MAX30101|25|
-|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
-|EDA|`EA` `EL` `ER`|-|15|
 
 # Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.

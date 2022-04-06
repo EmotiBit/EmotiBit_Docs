@@ -129,10 +129,8 @@ For a quick look at the available typetags, you can check out the table below. W
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
-|PPG (heartrate) |`PI` `PG` `PR`| MAX30101|25|
-|Temperature & Humidity|`T0` `H0`|SI-7013|7.5|
-|Temperature(FIR)|`TH`|MLX90632|7.5|
-|Temperature(PPG)|`T1`|MAX30101|7.5|
+|PPG |`PI` `PG` `PR`| MAX30101|25|
+|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
 |EDA|`EA` `EL` `ER`|-|15|
 
 ## EmotiBit SW
