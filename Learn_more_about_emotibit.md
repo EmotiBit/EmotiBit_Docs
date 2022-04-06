@@ -67,7 +67,7 @@ For a quick look at the available typetags, you can check out the table below. W
   |PG     |PPG Green             |
   |T0     |Temperature (Si7013)  |
   |TH     |Thermopile(ML90632)          |
-  |H0     |Humidity (Si7013)     |
+  |--H0--     |--Humidity (Si7013)--     |
   |AX     |Accelerometer X       |
   |AY     |Accelerometer Y       |
   |AZ     |Accelerometer Z       |
