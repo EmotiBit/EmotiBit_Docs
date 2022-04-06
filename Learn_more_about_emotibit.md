@@ -77,6 +77,11 @@ For a quick look at the available typetags, you can check out the table below. W
   |MX     |Magnetometer X        |
   |MY     |Magnetometer Y        |
   |MZ     |Magnetometer Z        |
+  |SA     |Skin Conductance Response Amplitude        |
+  |SR     |Skin Conductance Response        |
+  |SF     |Skin Conductance Response        |
+  |HR     |Heart Rate        |
+  |BI     |Heart Inter-beat Interval        |
 
   </details>
 
