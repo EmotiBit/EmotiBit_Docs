@@ -177,9 +177,9 @@ For a quick look at the available TypeTags, you can check out the table below. W
   |MX     |Magnetometer X        |
   |MY     |Magnetometer Y        |
   |MZ     |Magnetometer Z        |
-  |SA     |Skin Conductance Response Amplitude        |
-  |SR     |Skin Conductance Response Rise Time |
-  |SF     |Skin Conductance Response Frequency |
+  |SA     |Skin Conductance Response (SCR) Amplitude        |
+  |SR     |Skin Conductance Response (SCR) Rise Time |
+  |SF     |Skin Conductance Response (SCR) Frequency |
   |HR     |Heart Rate        |
   |BI     |Heart Inter-beat Interval        |
   |H0     |Humidity (only on EmotiBit Alpha/Beta V1, V2, V3)     |
