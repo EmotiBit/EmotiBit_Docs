@@ -1,4 +1,18 @@
 # Working with EmotiBit Data
+
+# Table of Contents
+- Overview
+- EmotiBit Oscilloscope
+  - Opening EmotiBit Oscilloscope
+  - Using EmotiBit Oscilloscope
+- EmotiBit DataParser
+  - Opening EmotiBit dataParser
+  - Using EmotiBit DataParser
+- EmotiBit DataViewer
+  - Opening EmotiBit DataViewer
+  - Using EmotiBit DataViewer
+
+# Overview
 We at Connected Future Labs created EmotiBit keeping **data** at the core of development. We realize that Data is the most important aspect of working with EmotiBit and therefore, we have developed
 some essential tools which we think will help our users interact better with the EmotiBit.
 On this page we will talk about:
@@ -7,15 +21,14 @@ recording, add User-Notes and an array of other useful features
 - [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): It is hard to parse and make intuitive sense of the raw data collected by the EmotiBit. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
 - [**Data Visualization**](#Next-Steps-Visualize-Recorded-Data): Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
 
-## Real-Time Streaming
-The ability to stream data in real-time from the EmotiBit to a computer is incredible. The EmotiBit Oscilloscope offers this capability along with an array of other functionalities.
+# EmotiBit Oscilloscope
+EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiBit to your computer along with an array of other features.
 
-### Grab the EmotiBit oscilloscope
-- If you have not already, grab the [latest release of EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
-You can follow the installation instruction on the [getting started](./Getting_Started.md/#Installing-EmotiBit-Software) page.
+## Opening EmotiBit Oscillosocpe
+Follow this guide to open EmotiBit Oscillosopce.
 
-### EmotiBit Oscilloscope user guide
-- The Oscilloscope offers the following functionalities:
+## Using EmotiBit Oscilloscope
+- The Oscilloscope offers the following features:
 ![][EmotiBit-Oscilloscope]
 
 [ToDo:Update the Gif above to represent the new oscilloscope]
@@ -41,7 +54,7 @@ You can follow the installation instruction on the [getting started](./Getting_S
 
     </details>
   
-  - <details><summary>Adding User Notes(labeling data)</summary>
+  - <details><summary>Log note(labeling data)</summary>
     
     - The ability to add User Notes was recognized as **essential for the user experience** by our development team. 
     The EmotiBit Oscilloscope can be used to label/tag the data being recorded by the EmotiBit in real-time.
@@ -117,53 +130,33 @@ You can follow the installation instruction on the [getting started](./Getting_S
     </details>
   </details>
 
-## Next Steps: Converting Raw Data
-Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit, although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
- 
-### What you should have at this point
-- [Get the data parser](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
-- Data recorded using the EmotiBit. 
-  - EmotiBit records data in a single csv file on the onboard SD-Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
-  - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` files onto the system using the SD-Card USB reader provided in the box.
-  - **Note:** _When you initiate a recording, EmotiBit automatically names the file with the date and time, when the recording was initiated. For example, `2019-08-22_14-10-33-300661.csv`, can be decoded as_ 
-    - `2019-08-22` as the date in the format `YYYY-MM-DD`
-    - `14-10-33-300661` as the time in the format `HH-MM-SS-MicroSeconds`
+# EmotiBit DataParser
+The DataParser is used to convert the recorded data into individual files, where each file represents a typetag.
 
-[ToDo: find a place to explain the contents of json file]
-### User Guide
+## Opening EmotiBit DataParser
+Follow this guide to open EmotiBit DataParser.
 
-- <details open><summary><b>Using the EmotiBit data parser</b></summary>
-  
-  ![][EmotiBit-DataParser]
-  - Open the EmotiBit data parser. 
-  - The data parser is split into 3 main regions:
-    - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
-    - `Process File Button`: Click on the button to load a file to process.
-    - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
-  - Click on the `Process file button`. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
-  - You will see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
-  - When EmotiBit data parser has finished processing the file, it will exit automatically. 
-  - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
-  - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.
-  </details>
+## Using EmotiBit Data Parser
+![][EmotiBit-DataParser]
 
-#### EmotiBit File Types
-  
-<img src="./assets/EmotiBit_File_Types.png" width="600">
-      
-- For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
+- **Understnading the DataParser**
+  - `Status Bar`
+    - It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
+  - `Load file` button
+    - Click on the button to load a file to parse.
+  - `Activity monitor`
+    - This section displays data from the file which is being parsed. When `IDLE`, this section is blank.
 
-#### EmotiBit sensor sampling rates
+- **Parsing  the recorded data:**
+  - Click on the `Load file` button. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
+  - The parser will show the "percentage completed" as it parses the data.
+  - The parser will quite once the data has been processed.
+  - The parsed data files are created in the same directory as the original **raw** file
 
-- The following table shows the sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors
+## EmotiBit Typetags
 
-| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
-|----------|---------|-----------|--------------|
-| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
-|PPG (heartrate) |`PI` `PG` `PR`| MAX30101|25|
-|Temperature & Humidity|`T0` `H0`|SI-7013|7.5|
-|Temperature(FIR)|`TH`|MLX90632|7.5|
-|EDA|`EA` `EL` `ER`|-|15|
+For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
+
 
 ## Next Steps: Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.

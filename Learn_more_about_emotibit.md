@@ -6,6 +6,7 @@
 - [EmotiBIt FW](#EmotiBit-FW)
   - [Raw data packet architecture](#Raw-data-packet-architecture)
   - [TypeTag Character Codes](#TypeTag-Character-Codes)
+  - [Sampling rates](#Sampling-rates)
 - [EmotiBit SW](#EmotiBit-SW)
   - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
 - [Repositories](#Repositories)
@@ -116,6 +117,18 @@ For a quick look at the available typetags, you can check out the table below. W
   |HE     |Hello EmotiBit, used to establish communication  |
 
   </details>
+
+### Sampling rates
+- The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware.
+
+| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
+|----------|---------|-----------|--------------|
+| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
+|PPG (heartrate) |`PI` `PG` `PR`| MAX30101|25|
+|Temperature & Humidity|`T0` `H0`|SI-7013|7.5|
+|Temperature(FIR)|`TH`|MLX90632|7.5|
+|Temperature(PPG)|`T1`|MAX30101|7.5|
+|EDA|`EA` `EL` `ER`|-|15|
 
 ## EmotiBit SW
 ### How is Data Stored on the SD Card 
