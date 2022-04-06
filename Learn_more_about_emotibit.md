@@ -43,84 +43,17 @@
   - **Timestamp:** milliseconds since start of EmotiBit
   - **Packet Number:** packet count since start of EmotiBit
   - **Number of Datapoints:** Number of data points in the payload
-  - **Typetag:** type of data being sent
+  - **TypeTag:** type of data being sent
   - **Version:** version of packet protocol
   - **Reliability:** data reliability score out of 100, currently always 100
   - **Payload:** data to send
-- Example Packets:
+
+- Example packets:
 
 ![alt text][Pack]
-### TypeTag Character Codes
-The most up-to-date list of type tags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
-<br>
-For a quick look at the available typetags, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
 
-- <details open><summary><b>Biometric TypeTags</b></summary>
 
-  |Tag    | Description          |
-  |:-----:|----------------------|
-  |EA     |EDA- Electrodermal Activity  |
-  |EL     |EDL- Electrodermal Level     |
-  |ER     |EDR- Electrodermal Response  |
-  |PI     |PPG Infrared          |
-  |PR     |PPG Red               |
-  |PG     |PPG Green             |
-  |T0     |Temperature          |
-  |TH     |Temperature via Medical-grade Thermopile          |
-  |AX     |Accelerometer X       |
-  |AY     |Accelerometer Y       |
-  |AZ     |Accelerometer Z       |
-  |GX     |Gyroscope X           |
-  |GY     |Gyroscope Y           |
-  |GZ     |Gyroscope Z           |
-  |MX     |Magnetometer X        |
-  |MY     |Magnetometer Y        |
-  |MZ     |Magnetometer Z        |
-  |SA     |Skin Conductance Response Amplitude        |
-  |SR     |Skin Conductance Response Rise Time |
-  |SF     |Skin Conductance Response Frequency |
-  |HR     |Heart Rate        |
-  |BI     |Heart Inter-beat Interval        |
-  |H0     |Humidity (only on EmotiBit Alpha/Beta V1, V2, V3)     |
-
-  </details>
-
-- <details><summary><b>General Typetags</b></summary>
-
-  |Tag    | Description                       |
-  |:-----:|:----------------------------------|
-  |EI     |EmotiBit Info Json                 |
-  |DC     |Data Clipping, TypeTag in Payload  |
-  |DO     |Data Overflow, TypeTag in Payload  |
-  |B%     |Battery Percentage Remaining       |
-  |BV     |Battery Voltage                    |
-  |D%     |SD card percent capacity filled    |
-  |RD     |Request Data, TypeTag in Payload   |
-  |PI     |Ping                               |
-  |PO     |Pong                               |
-  |RS     |Reset                              |
-
-  </details>
-
-- <details><summary><b>Computer to EmotiBit TypeTags</b></summary>
-
-  |Tag    | Description                       |
-  |:-----:|:----------------------------------|
-  |GL     |[GPS latitude and Longitude][GPS]  |
-  |GS     |[GPS Speed][GPS]                   |
-  |GB     |[GPS Bearing][GPS]                 |
-  |GA     |[GPS Altitude][GPS]                |
-  |TL     |Local Computer Timestamp           |
-  |TU     |UTC Timestamp                      |
-  |TX     |Crosstime, used for timestamp comparison   |
-  |LM     |LSL Marker/message                 |
-  |RB     |Record begin (Include timestamp in Data)   |
-  |RE     |Record End                         |
-  |UN     |User Note                          |
-  |MH     |Mode Hibernate                     |
-  |HE     |Hello EmotiBit, used to establish communication  |
-
-  </details>
+For more details about Emotibit data streams, go to [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types).
 
 ## EmotiBit SW
 ### How is Data Stored on the SD Card 
