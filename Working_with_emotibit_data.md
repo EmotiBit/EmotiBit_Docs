@@ -114,6 +114,7 @@ The output list shows the options available to transmit the data out of the Emot
       - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
     - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
   </details>
+ 
 ## Next Steps: Converting Raw Data
 Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit, although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
  
@@ -145,21 +146,93 @@ Data integrity and precise time stamping have been given paramount importance wh
   </details>
 
 #### EmotiBit File Types
-  
+After running the data parser, each EmotiBit data stream is split into a separate CSV file. In addition to the original raw data file and \_info.json file (which contains information like sampling rates and other important settings for each sensor/stream), there will be a number of additional files, each containing a specific data stream as indicated by the `_XX.csv` file suffix. For more details, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
+
 <img src="./assets/EmotiBit_File_Types.png" width="600">
-      
-- For more details on the EmotiBit data types, check out the [EmotiBit Packet Architecture](./Learn_more_about_emotibit.md/#TypeTag-Character-Codes)
 
-#### EmotiBit sensor sampling rates
 
-- The following table shows the sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors
+## EmotiBit Data Types
+EmotiBit data is transmitted and stored in a CSV structure using unique `TypeTags` for each type of recorded data. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
+
+For a quick look at the available TypeTags, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
+
+- <details open><summary><b>Biometric TypeTags</b></summary>
+
+  |Tag    | Description          |
+  |:-----:|----------------------|
+  |EA     |EDA- Electrodermal Activity  |
+  |EL     |EDL- Electrodermal Level     |
+  |ER     |EDR- Electrodermal Response  |
+  |PI     |PPG Infrared          |
+  |PR     |PPG Red               |
+  |PG     |PPG Green             |
+  |T0     |Temperature          |
+  |TH     |Temperature via Medical-grade Thermopile (only on EmotiBit MD)   |
+  |AX     |Accelerometer X       |
+  |AY     |Accelerometer Y       |
+  |AZ     |Accelerometer Z       |
+  |GX     |Gyroscope X           |
+  |GY     |Gyroscope Y           |
+  |GZ     |Gyroscope Z           |
+  |MX     |Magnetometer X        |
+  |MY     |Magnetometer Y        |
+  |MZ     |Magnetometer Z        |
+  |SA     |Skin Conductance Response Amplitude        |
+  |SR     |Skin Conductance Response Rise Time |
+  |SF     |Skin Conductance Response Frequency |
+  |HR     |Heart Rate        |
+  |BI     |Heart Inter-beat Interval        |
+  |H0     |Humidity (only on EmotiBit Alpha/Beta V1, V2, V3)     |
+
+  </details>
+
+- <details><summary><b>General Typetags</b></summary>
+
+  |Tag    | Description                       |
+  |:-----:|:----------------------------------|
+  |EI     |EmotiBit Info Json                 |
+  |DC     |Data Clipping, TypeTag in Payload  |
+  |DO     |Data Overflow, TypeTag in Payload  |
+  |B%     |Battery Percentage Remaining       |
+  |BV     |Battery Voltage                    |
+  |D%     |SD card percent capacity filled    |
+  |RD     |Request Data, TypeTag in Payload   |
+  |PI     |Ping                               |
+  |PO     |Pong                               |
+  |RS     |Reset                              |
+
+  </details>
+
+- <details><summary><b>Computer to EmotiBit TypeTags</b></summary>
+
+  |Tag    | Description                       |
+  |:-----:|:----------------------------------|
+  |GL     |[GPS latitude and Longitude][GPS]  |
+  |GS     |[GPS Speed][GPS]                   |
+  |GB     |[GPS Bearing][GPS]                 |
+  |GA     |[GPS Altitude][GPS]                |
+  |TL     |Local Computer Timestamp           |
+  |TU     |UTC Timestamp                      |
+  |TX     |Crosstime, used for timestamp comparison   |
+  |LM     |LSL Marker/message                 |
+  |RB     |Record begin (Include timestamp in Data)   |
+  |RE     |Record End                         |
+  |UN     |User Note                          |
+  |MH     |Mode Hibernate                     |
+  |HE     |Hello EmotiBit, used to establish communication  |
+
+  </details>
+  
+
+#### EmotiBit data sampling rates
+
+- The most up to date list of sampling rates for each data stream can be found in the `_info.json` file created adjacent to each recorded raw data file. The following table lists the typical sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors.
 
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
-|PPG (heartrate) |`PI` `PG` `PR`| MAX30101|25|
-|Temperature & Humidity|`T0` `H0`|SI-7013|7.5|
-|Temperature(FIR)|`TH`|MLX90632|7.5|
+|PPG |`PI` `PG` `PR`| MAX30101|25|
+|Temperature |`T0` / `TH`|MAX30301 / MLX90632 |7.5|
 |EDA|`EA` `EL` `ER`|-|15|
 
 ## Next Steps: Visualize Recorded Data
