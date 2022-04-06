@@ -1,30 +1,32 @@
 # Working with EmotiBit Data
 
 # Table of Contents
-- Overview
-- EmotiBit Oscilloscope
-  - Opening EmotiBit Oscilloscope
-  - Using EmotiBit Oscilloscope
-- EmotiBit DataParser
-  - Opening EmotiBit dataParser
-  - Using EmotiBit DataParser
-- EmotiBit DataViewer
-  - Opening EmotiBit DataViewer
-  - Using EmotiBit DataViewer
+- [Overview](#Overview)
+- [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
+  - [Opening EmotiBit Oscilloscope](#Opening-EmotiBit-Oscilloscope)
+  - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
+- [EmotiBit DataParser](#EmotiBit-DataParser)
+  - [Opening EmotiBit dataParser](#Opening-EmotiBit-dataParser)
+  - [Using EmotiBit DataParser](#Using-EmotiBit-DataParser)
+  - [EmotiBit file types](#EmotiBit-file-types)
+  - [EmotiBit data types](#EmotiBit-data-types)
+- [Visualize Recorded Data](#Visualize-Recorded-Data)
+  - [Opening EmotiBit DataViewer](#Opening-EmotiBit-DataViewer)
+  - [Visualization Tools](#Visualization-Tools)
 
 # Overview
 We at Connected Future Labs created EmotiBit keeping **data** at the core of development. We realize that Data is the most important aspect of working with EmotiBit and therefore, we have developed
 some essential tools which we think will help our users interact better with the EmotiBit.
 On this page we will talk about:
 - [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to **live stream data** from any EmotiBit active on the Network. You would also use this tool to initiate
-recording, add User-Notes and an array of other useful features
-- [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): It is hard to parse and make intuitive sense of the raw data collected by the EmotiBit. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
+recording, Log Notes and an array of other useful features
+- [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): Converts the raw data and creates data files that are easy to read and interpret.
 - [**Data Visualization**](#Next-Steps-Visualize-Recorded-Data): Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
 
 # EmotiBit Oscilloscope
 EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiBit to your computer along with an array of other features.
 
-## Opening EmotiBit Oscillosocpe
+## Opening EmotiBit Oscilloscope
 Follow this guide to open EmotiBit Oscillosopce.
 
 ## Using EmotiBit Oscilloscope
@@ -136,27 +138,9 @@ The DataParser is used to convert the recorded data into individual files, where
 ## Opening EmotiBit DataParser
 Follow this guide to open EmotiBit DataParser.
 
-## Using EmotiBit Data Parser
+## Using EmotiBit DataParser
 ![][EmotiBit-DataParser]
-- <details open><summary><b>Using the EmotiBit data parser</b></summary>
-  
-  ![][EmotiBit-DataParser]
-  - Open the EmotiBit data parser. 
-  - The data parser is split into 3 main regions:
-    - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
-    - `Process File Button`: Click on the button to load a file to process.
-    - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
-  - Click on the `Process file button`. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
-  - You will see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
-  - When EmotiBit data parser has finished processing the file, it will exit automatically. 
-  - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
-  - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.
-  </details>
-
-#### EmotiBit File Types
-After running the data parser, each EmotiBit data stream is split into a separate CSV file. In addition to the original raw data file and \_info.json file (which contains information like sampling rates and other important settings for each sensor/stream), there will be a number of additional files, each containing a specific data stream as indicated by the `_XX.csv` file suffix. For more details, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
-
-- **Understnading the DataParser**
+- **Understanding the DataParser**
   - `Status Bar`
     - It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
   - `Load file` button
@@ -169,6 +153,15 @@ After running the data parser, each EmotiBit data stream is split into a separat
   - The parser will show the "percentage completed" as it parses the data.
   - The parser will quite once the data has been processed.
   - The parsed data files are created in the same directory as the original **raw** file
+
+
+## EmotiBit File Types
+After running the data parser, each EmotiBit data stream is split into a separate CSV file.
+In addition to the original raw data file and \_info.json file (which contains information like 
+sampling rates and other important settings for each sensor/stream), 
+there will be a number of additional files, each containing a specific 
+data stream as indicated by the `_XX.csv` file suffix. For more details, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
+
 
 ## EmotiBit Data Types
 EmotiBit data is transmitted and stored in a CSV structure using unique `TypeTags` for each type of recorded data. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
@@ -251,12 +244,12 @@ For a quick look at the available TypeTags, you can check out the table below. W
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
 |PPG |`PI` `PG` `PR`| MAX30101|25|
-|Temperature |`T0` / `TH`|MAX30301 / MLX90632 |7.5|
+|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
 |EDA|`EA` `EL` `ER`|-|15|
 
-## Next Steps: Visualize Recorded Data
+# Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.
-### Visualization Tools
+## Visualization Tools
 - Text Editors
   - Notepad++(on Windows)
   - Text Edit(on mac)
