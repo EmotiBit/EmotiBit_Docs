@@ -25,8 +25,8 @@ EmotiBit software suite.
 The EmotiBit workflow can be described as follows:
 - After we have set up the EmotiBit as described in the Getting Started page, we will use the EmotiBit Oscilloscope to record data.
 - The raw data is recorded as a single file on the Sd-Card.
-- The raw data file is copied to the computer.
-- Once we have the raw data file in the computer, we will use the EmotiBit DataParser to process this raw data.
+- After a recording is complete, the raw data file is copied to the computer.
+- We will then use the EmotiBit DataParser to process this raw data.
 - The DataParser generates one data type file for each data type.
 - Finally, after the recorded data has been processed, we will dive into some techniques to visualize the processed recorded data.
 
