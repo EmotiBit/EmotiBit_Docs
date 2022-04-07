@@ -3,32 +3,59 @@
 # Table of Contents
 - [Overview](#Overview)
 - [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
-  - [Opening EmotiBit Oscilloscope](#Opening-EmotiBit-Oscilloscope)
-  - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
+  - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
+  - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
 - [EmotiBit DataParser](#EmotiBit-DataParser)
+  - [Process raw data using EmotiBit DataParser](#Process-raw-data-using-EmotiBit-DataParser)
+    - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
+    - [Parse raw data file](#Parse-raw-data-file)
   - [EmotiBit file types](#EmotiBit-file-types)
   - [EmotiBit data types](#EmotiBit-data-types)  
-  - [Opening EmotiBit dataParser](#Opening-EmotiBit-dataParser)
-  - [Using EmotiBit DataParser](#Using-EmotiBit-DataParser)
-    - [Sampling rates](#Sampling-rates)
 - [Visualize Recorded Data](#Visualize-Recorded-Data)
   - [Opening EmotiBit DataViewer](#Opening-EmotiBit-DataViewer)
   - [Visualization Tools](#Visualization-Tools)
 
 # Overview
-On this page we will talk about:
-- [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to **live stream data** from any EmotiBit active on the Network. 
- You will also use this tool to initiate recording, Log Notes and access some other useful functions.
-- [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): Reads the raw file(created with every record session) and create individual data files for each `dataType`.
-- [**Data Visualization**](#Next-Steps-Visualize-Recorded-Data): Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
+
+On this page, we will talk about using EmotiBit to record data. We will also talk about various functions available in the 
+EmotiBit software suite.
+
+<img src="./assets/WorkingWithEmotiBitWorkflow.png" width="1000">
+
+The EmotiBit workflow can be described as follows:
+- After we have set up the EmotiBit as described in the Getting Started page, we will use the EmotiBit Oscilloscope to record data.
+- The raw data is recorded as a single file on the Sd-Card.
+- The raw data file is copied to the computer.
+- Once we have the raw data file in the computer, we will use the EmotiBit DataParser to process this raw data.
+- The DataParser generates one data type file for each data type.
+- Finally, after the recorded data has been processed, we will dive into some techniques to visualize the processed recorded data.
 
 # EmotiBit Oscilloscope
 EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiBit to your computer along with an array of other features.
 
-## Opening EmotiBit Oscilloscope
-Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-software) page to run EmotiBit Oscilloscope.
+Start by opening the EmotiBit Oscillosocpe on your computer. If you need more help on opening the Emotibit Oscilloscope, 
+you may refer to the instructions on the [Getting Started](./Getting_Started.md#Running-EmotiBit-software) page.
 
-## Using EmotiBit Oscilloscope
+## Using EmotiBit Oscilloscope to Record Data
+Once you have succesfully set up your EmotiBit, you can start recording data using the EmotiBit Oscilloscope. If you have
+not yet set up your EmotiBit, check our guide on the Getting Started page.
+
+To start a record session, follow these steps:
+- Select the EmotiBit from the `EmotiBit Device List`.
+  - If you have multiple EmotiBits on the network, select the EmotiBit you want to record data on.
+- Once an EmotiBit is selected, the Oscilloscope starts streaming data.
+- Click on the `Record Button` on the top console on the Oscillscope.
+- Once the a record session has been started, the `Record Button` section becomes red.
+- You will notice that the EmotiBit RED LED starts blinking.
+- The name of the file being recorded appears below the `Record Button` on the Oscilloscope.
+- You can end the recording session by pressing the `Record Button` again.
+  - Once ended, the EmotiBit RED LED stops blinking.
+- You now have a raw data file on the SD-Card!
+
+Click [here to learn how to use the DataParser](#Process-raw-data-using-EmotiBit-DataParser) to convert the raw data into processed data type files.
+<br> If you want to learn about all the features offered by the EmotiBit Oscilloscope, check out the section [below](#EmotiBit-Oscilloscope-features).
+
+## EmotiBit Oscilloscope features
 - The Oscilloscope offers the following features:
 ![][EmotiBit-Oscilloscope]
 
@@ -129,21 +156,39 @@ Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-
   </details>
 
 # EmotiBit DataParser
-The DataParser is used to convert the un-processed recorded data into processed data type files.
+The DataParser is used to convert the raw recorded data into processed data type files.<br>
+Start by opening the EmotiBit DataParser on your computer. If you need more help on opening the Emotibit DataParser, 
+you may refer to the instructions on the [Getting Started](./Getting_Started.md#Running-EmotiBit-software) page.
+
+## Process raw data using EmotiBit DataParser
+
+### Transfer file from SD-Card to computer
+The data recorded using EmotiBit is stored on the SD-Card. To process the raw data, copy the raw data file from the SD-Card to the computer(You may use the provided SD-Card reader to do so!).
+
+### Parse raw data file
+ 
+The steps below describe how you can use the DataParser to process the raw data file to generate individual data type files.
+- Click on the `Load file` button to open a file browser. Navigate to the `csv` file which you want to process and select that file.
+- The parser will show the progress as it parses the data. The DataParser quits automatically on completion.
+- The processed data type files are created in the same directory as the original **raw** file
+
+![][EmotiBit-DataParser]
+For more deatils on the file types check out the section [below]().
+
 
 ## EmotiBit file types
 There are 3 types of files associated with EmotiBit
-- Un-processed data file(**csv**)
-  - Every recording sessions generates 1 un-processed data file.
+- Raw data file(**csv**)
+  - Every recording sessions generates 1 raw data file.
   - This file is named with the start time of the recording session. Ex: `2019-01-30_11-57-13-492.csv`
 - Information file(**json**)
   - Contains information like sampling rates and other important settings for each sensor/stream.
-  - It shares the name of the un-processed file. For example, the `info` file for the above un-processed file will be named `2019-01-30_11-57-13-492_info.json`
-- Processed data file(**csv**)
-  - the un-processed file is converted to processed files by running the DataParser.
+  - It shares the name of the raw file. For example, the `info` file for the above raw file will be named `2019-01-30_11-57-13-492_info.json`
+- Processed data type file(**csv**)
+  - the raw file is converted to processed files by running the DataParser.
   - Each processed file contains data for a specific data type.
-  - The name for each processed file is created by joining the `TypeTag` of the data type to the un-processed file name.
-    - Ex: After running the data parser on `2019-01-30_11-57-13-492.csv`, the processed data file containing the data for `PPG IR channel` 
+  - The name for each processed file is created by joining the `TypeTag` of the data type to the raw file name.
+    - Ex: After running the data parser on `2019-01-30_11-57-13-492.csv`, the processed data type file containing the data for `PPG IR channel` 
     will be called `2019-01-30_11-57-13-492_PI.csv`
     - For more details on data types, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
 
@@ -218,31 +263,6 @@ For a quick look at the available data types, you can check out the table below.
   |HE     |Hello EmotiBit, used to establish communication  |
 
   </details>
-
-## Opening EmotiBit DataParser
-Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-software) page to run EmotiBit DataParser.
-
-## Using EmotiBit DataParser
-![][EmotiBit-DataParser]
-- **Understanding the DataParser**
-  - `Status Bar`
-    - It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
-  - `Load file` button
-    - Click on the button to load a file to parse.
-  - `Activity monitor`
-    - This section displays data from the file which is being parsed. When `IDLE`, this section is blank.
-
-- **Parsing  the recorded data:**
-  - Click on the `Load file` button. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
-  - The parser will show the "percentage completed" as it parses the data.
-  - The parser will quite once the data has been processed.
-  - The parsed data files are created in the same directory as the original **raw** file
-  
-
-### EmotiBit data sampling rates
-The most up to date list of sampling rates for each data stream can be found in the `_info.json`. 
-The sampling rates for all the sensors can alse be found [here](./Learn_more_about_emotibit.md#Sampling-rates).
-
 
 # Visualize Recorded Data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.
