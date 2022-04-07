@@ -6,22 +6,20 @@
   - [Opening EmotiBit Oscilloscope](#Opening-EmotiBit-Oscilloscope)
   - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
 - [EmotiBit DataParser](#EmotiBit-DataParser)
+  - [EmotiBit file types](#EmotiBit-file-types)
+  - [EmotiBit data types](#EmotiBit-data-types)  
   - [Opening EmotiBit dataParser](#Opening-EmotiBit-dataParser)
   - [Using EmotiBit DataParser](#Using-EmotiBit-DataParser)
-  - [EmotiBit file types](#EmotiBit-file-types)
-  - [EmotiBit data types](#EmotiBit-data-types)
     - [Sampling rates](#Sampling-rates)
 - [Visualize Recorded Data](#Visualize-Recorded-Data)
   - [Opening EmotiBit DataViewer](#Opening-EmotiBit-DataViewer)
   - [Visualization Tools](#Visualization-Tools)
 
 # Overview
-We at Connected Future Labs created EmotiBit keeping **data** at the core of development. We realize that Data is the most important aspect of working with EmotiBit and therefore, we have developed
-some essential tools which we think will help our users interact better with the EmotiBit.
 On this page we will talk about:
-- [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to **live stream data** from any EmotiBit active on the Network. You would also use this tool to initiate
-recording, Log Notes and an array of other useful features
-- [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): Converts the raw data and creates data files that are easy to read and interpret.
+- [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to **live stream data** from any EmotiBit active on the Network. 
+ You will also use this tool to initiate recording, Log Notes and access some other useful functions.
+- [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): Reads the raw file(created with every record session) and create individual data files for each `dataType`.
 - [**Data Visualization**](#Next-Steps-Visualize-Recorded-Data): Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
 
 # EmotiBit Oscilloscope
@@ -35,38 +33,34 @@ Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-
 ![][EmotiBit-Oscilloscope]
 
 [ToDo:Update the Gif above to represent the new oscilloscope]
-  - <details><summary>Track All EmotiBits on the N/W</summary>
+  - <details><summary>Connecting to EmotiBit</summary>
 
-    - All active EmotiBits on the same network as the host computer show up on the Oscilloscope.  
-    - The EmotiBit you are connected to appears with an `X` in front of the IP address of that EmotiBit.  
-    - All other EmotiBits, if present are grouped as a list. You can have several Oscilloscopes open on the same computer with an EmotiBit connected to each Oscilloscope. **However**, one Oscilloscope can be connected only to one EmotiBit at a time. If an EmotiBit is already connected to an Oscilloscope, it appears **greyed out** to all other oscilloscopes on the network.
+    - The Oscilloscope displays all available EmotiBits on the network in a list.  
+    - You can click on any EmotiBit in the list to connect to it. 
     </details>
 
-  - <details><summary>Stream real-time Data</summary>
+  - <details><summary>Streaming real-time Data</summary>
 
-    - The Moment you connect to an EmotiBit, the EmotiBIt Ocsilloscope will begin to display the data being transmitted by the EmotiBit. You can switch between available EmotiBits in the list and the data streams will update automatically.
+    - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
     </details>
   
   - <details><summary>Recording Data</summary>
     
-    - This is one of the most important features offered by the EmotiBit Oscilloscope. 
-    - By clicking on the Record button, you can initiate a record session on the Selected EmotiBit. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
-    - The Important thing to note is that a recording session can be initiated only from an EmotiBit Oscilloscope window.
-    - The EmotiBit uses this connection with an Oscilloscope to generate time syncing information essential for data integrity. We, therefore, recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope.
+    - Select an EmotiBit from the list of available EmotiBits.
+    - You can initiate a record session by clicking on the record button. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
     - Once the Recording has been Initiated, you will notice the `red recording` indicator led flashing on the EmotiBit. You are also free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
-
+    -  We recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope. This helps in generating more time-syncs which improves timestamp accuracy.
     </details>
   
   - <details><summary>Log note(labeling data)</summary>
     
-    - The ability to add User Notes was recognized as **essential for the user experience** by our development team. 
-    The EmotiBit Oscilloscope can be used to label/tag the data being recorded by the EmotiBit in real-time.
-    Note that the User Note feature is available only when a recording session has been initiated by the user.
+    - Users can annotate data by adding labels/notes in real time. 
+    - Type in the Note in the `Log Note` text box and click on the `Log Note` button to add notes to the data being recorded.
     </details> 
     
   - <details><summary>Power Modes</summary>
     
-    The EmotiBit has 4 power modes it can work in. All modes can be accessed using the EmotiBit Oscilloscope.
+    The EmotiBit has 4 power modes. All modes can be accessed using the EmotiBit Oscilloscope.
     - **Normal Mode**: In normal mode, the EmotiBit works with complete functionality, being able to record and transmit data.
     - **Low Power Mode**: In Low power mode, the EmotiBit can record but cannot transmit data in real-time. It, however, continues to get the time-sync pulses.
     - **WiFi Off**: This mode causes the EmotiBit to shut down the onboard WiFi shield. This saves power and enables long recording sessions. However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode`. If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a couple of minutes towards the end of the record session in `normal mode`. This can potentially help with time-syncing issues.
@@ -75,15 +69,16 @@ Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-
   
   - <details><summary>DC/DO counter</summary>
 
-    Data Clipping and Data Overflow are metrics that are used to determine data integrity. Each metric is explained here:
+    `Data Clipping` and `Data Overflow` are metrics that are used to determine data integrity.
     
-    - Data Clipping: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. The user should interpret the occurrence of a clipping event as a point in time where the captured data does not represent the actual physical phenomenon.
-    - Data Overflow: An overflow event occurs when the internal data buffers are filled and no new data being generated can be recorded. This leads to    "blanks" in the data time series. An overflow event should be taken more seriously, as the EmotiBit has been designed to avoid such scenarios.
+    - `Data Clipping`: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. 
+    - `Data Overflow`: An overflow event occurs when the internal data buffers overflow, which results in loss of data samples.
     </details>
 
   - <details><summary>Battery Level Indicator</summary>
   
-    - The Battery Level indicator displays the charge available in the battery as a percentage. We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
+    - The Battery Level indicator displays the charge available in the battery as a percentage. 
+    - We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
 
   - <details><summary>Output List</summary>
@@ -134,44 +129,32 @@ Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-
   </details>
 
 # EmotiBit DataParser
-The DataParser is used to convert the recorded data into individual files, where each file represents a typetag.
+The DataParser is used to convert the un-processed recorded data into processed data type files.
 
-## Opening EmotiBit DataParser
-Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-software) page to run EmotiBit DataParser.
+## EmotiBit file types
+There are 3 types of files associated with EmotiBit
+- Un-processed data file(**csv**)
+  - Every recording sessions generates 1 un-processed data file.
+  - This file is named with the start time of the recording session. Ex: `2019-01-30_11-57-13-492.csv`
+- Information file(**json**)
+  - Contains information like sampling rates and other important settings for each sensor/stream.
+  - It shares the name of the un-processed file. For example, the `info` file for the above un-processed file will be named `2019-01-30_11-57-13-492_info.json`
+- Processed data file(**csv**)
+  - the un-processed file is converted to processed files by running the DataParser.
+  - Each processed file contains data for a specific data type.
+  - The name for each processed file is created by joining the `TypeTag` of the data type to the un-processed file name.
+    - Ex: After running the data parser on `2019-01-30_11-57-13-492.csv`, the processed data file containing the data for `PPG IR channel` 
+    will be called `2019-01-30_11-57-13-492_PI.csv`
+    - For more details on data types, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
 
-## Using EmotiBit DataParser
-![][EmotiBit-DataParser]
-- **Understanding the DataParser**
-  - `Status Bar`
-    - It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
-  - `Load file` button
-    - Click on the button to load a file to parse.
-  - `Activity monitor`
-    - This section displays data from the file which is being parsed. When `IDLE`, this section is blank.
+## EmotiBit data types
+Each data type represents a unique signal captured by EmotiBit and is represented by a unique `TypeTag`. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
 
-- **Parsing  the recorded data:**
-  - Click on the `Load file` button. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
-  - The parser will show the "percentage completed" as it parses the data.
-  - The parser will quite once the data has been processed.
-  - The parsed data files are created in the same directory as the original **raw** file
-
-
-## EmotiBit File Types
-After running the data parser, each EmotiBit data stream is split into a separate CSV file.
-In addition to the original raw data file and \_info.json file (which contains information like 
-sampling rates and other important settings for each sensor/stream), 
-there will be a number of additional files, each containing a specific 
-data stream as indicated by the `_XX.csv` file suffix. For more details, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
-
-
-## EmotiBit Data Types
-EmotiBit data is transmitted and stored in a CSV structure using unique `TypeTags` for each type of recorded data. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
-
-For a quick look at the available TypeTags, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
+For a quick look at the available data types, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
 
 - <details open><summary><b>Biometric TypeTags</b></summary>
 
-  |Tag    | Description          |
+  |TypeTag    | Description          |
   |:-----:|----------------------|
   |EA     |EDA- Electrodermal Activity  |
   |EL     |EDL- Electrodermal Level     |
@@ -201,7 +184,7 @@ For a quick look at the available TypeTags, you can check out the table below. W
 
 - <details><summary><b>General Typetags</b></summary>
 
-  |Tag    | Description                       |
+  |TypeTag    | Description                       |
   |:-----:|:----------------------------------|
   |EI     |EmotiBit Info Json                 |
   |DC     |Data Clipping, TypeTag in Payload  |
@@ -218,7 +201,7 @@ For a quick look at the available TypeTags, you can check out the table below. W
 
 - <details><summary><b>Computer to EmotiBit TypeTags</b></summary>
 
-  |Tag    | Description                       |
+  |TypeTag    | Description                       |
   |:-----:|:----------------------------------|
   |GL     |[GPS latitude and Longitude][GPS]  |
   |GS     |[GPS Speed][GPS]                   |
@@ -235,11 +218,30 @@ For a quick look at the available TypeTags, you can check out the table below. W
   |HE     |Hello EmotiBit, used to establish communication  |
 
   </details>
+
+## Opening EmotiBit DataParser
+Follow the [steps on the Getting Started](./Getting_Started.md#Running-EmotiBit-software) page to run EmotiBit DataParser.
+
+## Using EmotiBit DataParser
+![][EmotiBit-DataParser]
+- **Understanding the DataParser**
+  - `Status Bar`
+    - It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
+  - `Load file` button
+    - Click on the button to load a file to parse.
+  - `Activity monitor`
+    - This section displays data from the file which is being parsed. When `IDLE`, this section is blank.
+
+- **Parsing  the recorded data:**
+  - Click on the `Load file` button. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
+  - The parser will show the "percentage completed" as it parses the data.
+  - The parser will quite once the data has been processed.
+  - The parsed data files are created in the same directory as the original **raw** file
   
 
 ### EmotiBit data sampling rates
-The most up to date list of sampling rates for each data stream can be found in the `_info.json` file created with each recording session. 
-The sampling rates for all the sensors can he found [here](./Learn_more_about_emotibit.md#Sampling-rates).
+The most up to date list of sampling rates for each data stream can be found in the `_info.json`. 
+The sampling rates for all the sensors can alse be found [here](./Learn_more_about_emotibit.md#Sampling-rates).
 
 
 # Visualize Recorded Data
