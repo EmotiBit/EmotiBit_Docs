@@ -6,6 +6,7 @@
 - [EmotiBIt FW](#EmotiBit-FW)
   - [Raw data packet architecture](#Raw-data-packet-architecture)
   - [TypeTag Character Codes](#TypeTag-Character-Codes)
+  - [Sampling rates](#Sampling-rates)
 - [EmotiBit SW](#EmotiBit-SW)
   - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
 - [Repositories](#Repositories)
@@ -54,6 +55,16 @@
 
 
 For more details about Emotibit data streams, go to [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types).
+
+### Sampling rates
+- The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware.
+
+| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
+|----------|---------|-----------|--------------|
+| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
+|PPG |`PI` `PG` `PR`| MAX30101|25|
+|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
+|EDA|`EA` `EL` `ER`|-|15|
 
 ## EmotiBit SW
 ### How is Data Stored on the SD Card 

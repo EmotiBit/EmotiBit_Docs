@@ -1,164 +1,223 @@
 # Working with EmotiBit Data
-We at Connected Future Labs created EmotiBit keeping **data** at the core of development. We realize that Data is the most important aspect of working with EmotiBit and therefore, we have developed
-some essential tools which we think will help our users interact better with the EmotiBit.
-On this page we will talk about:
-- [**EmotiBit Oscilloscope**](#Real-Time-Streaming): An intuitive and powerful tool to **live stream data** from any EmotiBit active on the Network. You would also use this tool to initiate
-recording, add User-Notes and an array of other useful features
-- [**EmotiBit DataParser**](#Next-Steps-Converting-Raw-Data): It is hard to parse and make intuitive sense of the raw data collected by the EmotiBit. We have therefore created a parser, which goes through the raw data and creates data files that are easy to read and interpret by humans or other visualization software.
-- [**Data Visualization**](#Next-Steps-Visualize-Recorded-Data): Being able to visualize data helps in making intuitive sense of the data collected. We suggest some tools which we have found to be very useful in analyzing data and also introduce a tool we have created in python to visualize all data streams on one screen.
 
-## Real-Time Streaming
-The ability to stream data in real-time from the EmotiBit to a computer is incredible. The EmotiBit Oscilloscope offers this capability along with an array of other functionalities.
+# Table of Contents
+- [Overview](#Overview)
+- [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
+  - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
+  - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
+- [EmotiBit DataParser](#EmotiBit-DataParser)
+  - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
+    - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
+    - [Parse raw data file](#Parse-raw-data-file)
+  - [EmotiBit file types](#EmotiBit-file-types)
+  - [EmotiBit data types](#EmotiBit-data-types) 
+    - [Data type sampling rates](#Data-type-sampling-rates)
+- [Visualize parsed data](#Visualize-parsed-data)
+  - [Visualization tools](#Visualization-tools)
 
-### Grab the EmotiBit oscilloscope
-- If you have not already, grab the [latest release of EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
-You can follow the installation instruction on the [getting started](./Getting_Started.md/#Installing-EmotiBit-Software) page.
+# Overview
 
-### EmotiBit Oscilloscope user guide
-- The Oscilloscope offers the following functionalities:
+On this page, we will talk about using EmotiBit to record data. We will also talk about various functions available in the 
+EmotiBit software suite.
+
+<img src="./assets/WorkingWithEmotiBitWorkflow.png" width="1000">
+
+The EmotiBit workflow can be described as follows:
+- Set up the EmotiBit as described in the Getting Started page.
+- Use the EmotiBit Oscilloscope to record data.
+  - The raw data is recorded as a single file on the SD-Card.
+- Copy raw data files from SD-Card to computer.
+- Use the EmotiBit DataParser to parse this raw data.
+  - The DataParser generates one parsed data file for each data type.
+- After the recorded data has been parsed, visualize the data.
+
+# EmotiBit Oscilloscope
+EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiBit to your computer along with an array of other features.
+
+Start by opening the EmotiBit Oscillosocpe on your computer. If you need more help with opening the Emotibit Oscilloscope, 
+you may refer to the instructions on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
+
+## Using EmotiBit Oscilloscope to Record Data
+Once you have succesfully set up your EmotiBit, you can start recording data using the EmotiBit Oscilloscope. If you have
+not yet set up your EmotiBit, check our guide on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
+
+To start a record session, follow these steps:
+- Select the EmotiBit from the `EmotiBit Device List`.
+  - If you have multiple EmotiBits on the network, select the EmotiBit you want to record data from.
+- Once an EmotiBit is selected, the Oscilloscope starts streaming data.
+- Click on the `Record Button` on the top console on the Oscillscope.
+- Once a recording session has been started, the `Record Button` section becomes red.
+- You will notice that the EmotiBit RED LED starts blinking.
+- The name of the file being recorded appears below the `Record Button` on the Oscilloscope.
+- You can end the recording session by pressing the `Record Button` again.
+  - Once ended, the EmotiBit RED LED stops blinking.
+- You now have a raw data files on the SD-Card!
+
+[Click here to learn how to use the DataParser](#Parse-raw-data-using-EmotiBit-DataParser) to convert the raw data into parsed data files.
+<br> If you want to learn about all the features offered by the EmotiBit Oscilloscope, check out the section [below](#EmotiBit-Oscilloscope-features).
+
+## EmotiBit Oscilloscope features
+- The Oscilloscope offers the following features:
 ![][EmotiBit-Oscilloscope]
 
 [ToDo:Update the Gif above to represent the new oscilloscope]
-  - <details><summary>Track All EmotiBits on the N/W</summary>
+  - <details><summary>Connecting to EmotiBit</summary>
 
-    - All active EmotiBits on the same network as the host computer show up on the Oscilloscope.  
-    - The EmotiBit you are connected to appears with an `X` in front of the IP address of that EmotiBit.  
-    - All other EmotiBits, if present are grouped as a list. You can have several Oscilloscopes open on the same computer with an EmotiBit connected to each Oscilloscope. **However**, one Oscilloscope can be connected only to one EmotiBit at a time. If an EmotiBit is already connected to an Oscilloscope, it appears **greyed out** to all other oscilloscopes on the network.
+    - The Oscilloscope displays all available EmotiBits on the network in a list.  
+    - You can click on any EmotiBit in the list to connect to it. 
     </details>
 
-  - <details><summary>Stream real-time Data</summary>
+  - <details><summary>Streaming real-time Data</summary>
 
-    - The Moment you connect to an EmotiBit, the EmotiBIt Ocsilloscope will begin to display the data being transmitted by the EmotiBit. You can switch between available EmotiBits in the list and the data streams will update automatically.
+    - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
+    - Once a connection between the Oscilloscope and EmotiBit has been established, the EmotiBit Blue LED turns ON.
+      - The EmotiBit Blue LED stays on as long as the EmotiBit is connected to an Oscilloscope. 
     </details>
   
   - <details><summary>Recording Data</summary>
     
-    - This is one of the most important features offered by the EmotiBit Oscilloscope. 
-    - By clicking on the Record button, you can initiate a record session on the Selected EmotiBit. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
-    - The Important thing to note is that a recording session can be initiated only from an EmotiBit Oscilloscope window.
-    - The EmotiBit uses this connection with an Oscilloscope to generate time syncing information essential for data integrity. We, therefore, recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope.
-    - Once the Recording has been Initiated, you will notice the `red recording` indicator led flashing on the EmotiBit. You are also free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
-
+    - Select an EmotiBit from the list of available EmotiBits.
+    - You can initiate a record session by clicking on the record button. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
+      - The EmotiBit Red LED starts blinking once a recording session has been initiated.
+    - You are free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
+    - We recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope. This helps in generating more time-syncs which improves timestamp accuracy.
     </details>
   
-  - <details><summary>Adding User Notes(labeling data)</summary>
+  - <details><summary>Log note(labeling data)</summary>
     
-    - The ability to add User Notes was recognized as **essential for the user experience** by our development team. 
-    The EmotiBit Oscilloscope can be used to label/tag the data being recorded by the EmotiBit in real-time.
-    Note that the User Note feature is available only when a recording session has been initiated by the user.
+    - Users can annotate data by adding labels/notes in real time. 
+    - Type in the Note in the `Log Note` text box and click on the `Log Note` button to add notes to the data being recorded.
     </details> 
     
   - <details><summary>Power Modes</summary>
     
-    The EmotiBit has 4 power modes it can work in. All modes can be accessed using the EmotiBit Oscilloscope.
+    The EmotiBit has 4 power modes. All modes can be accessed using the EmotiBit Oscilloscope.
     - **Normal Mode**: In normal mode, the EmotiBit works with complete functionality, being able to record and transmit data.
     - **Low Power Mode**: In Low power mode, the EmotiBit can record but cannot transmit data in real-time. It, however, continues to get the time-sync pulses.
-    - **WiFi Off**: This mode causes the EmotiBit to shut down the onboard WiFi shield. This saves power and enables long recording sessions. However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode`. If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a couple of minutes towards the end of the record session in `normal mode`. This can potentially help with time-syncing issues.
-    - **Sleep**: In sleep mode, EmotiBit stops any tasks it is performing and goes to sleep. We recommend switching the EmotiBit into `Sleep mode` instead of un-plugging the EmotiBit battery when not in use for short periods. If the EmotiBit is being left un-used for a long duration, it is best to flip the Hibernate Switch located at the bottom to `HIB`. 
+    - **WiFi Off**: The onboard WiFi shield is shut down in this mode. This saves power and enables longer recording sessions.
+      - However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. 
+      - A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode`.
+      - If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a few minutes towards the end of the record session in `normal mode`.
+    - **Sleep**: In sleep mode, EmotiBit stops any tasks it is performing and goes to sleep.
+      - We recommend switching the EmotiBit into `Sleep mode` instead of un-plugging the EmotiBit battery when not in use for short periods.
+      - If the EmotiBit is being left un-used for a long duration, it is best to flip the Hibernate Switch to `HIB`.
+      - Refer [EmotiBit LEDs and buttons section](./Learn_more_about_emotibit.md#LEDs-and-Buttons) for more information on the Hibernate switch.
     </details>
   
   - <details><summary>DC/DO counter</summary>
 
-    Data Clipping and Data Overflow are metrics that are used to determine data integrity. Each metric is explained here:
+    `Data Clipping` and `Data Overflow` are metrics that are used to determine data integrity.
     
-    - Data Clipping: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. The user should interpret the occurrence of a clipping event as a point in time where the captured data does not represent the actual physical phenomenon.
-    - Data Overflow: An overflow event occurs when the internal data buffers are filled and no new data being generated can be recorded. This leads to    "blanks" in the data time series. An overflow event should be taken more seriously, as the EmotiBit has been designed to avoid such scenarios.
+    - `Data Clipping`: A clipping event occurs when the data recorded by any sensor goes out of the predefined bounds. 
+    - `Data Overflow`: An overflow event occurs when the internal data buffers overflow, which results in loss of data samples.
     </details>
 
-  - <details><summary>Battery Level Indication</summary>
+  - <details><summary>Battery Level Indicator</summary>
   
-    - The Battery Level indicator displays the charge available in the battery as a percentage. We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
+    - The Battery Level indicator displays the charge available in the battery as a percentage. 
+    - We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
 
-#### Output List
-The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
-- <details><summary>OSC</summary>
+  - <details><summary>Output List</summary>
 
-  - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
-  - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
-  - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file.
-    - This file is located in the EmotiBit Oscilloscope folder in the C: - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`.
-  - You can modify the contents of this file to control the behavior of the OSC output stream.
-  - A snippet of the default contents are shared below
-  ```
-  <patchboard>
-	  <settings>
-		  <input>
-			  <type>EmotiBit</type>
-		  </input>
-		  <output>
-			  <type>OSC</type>
-			  <ipAddress>localhost</ipAddress>
-			  <port>12345</port>
-		  </output>
-	  </settings>
-	  <patchcords>
-		  <patch>
-			  <input>PR</input>
-			  <output>/EmotiBit/0/PPG:RED</output>
-		  </patch>		
-          <patch>
-			  <input>PI</input>
-			  <output>/EmotiBit/0/PPG:IR</output>
-		  </patch>	
-		  <patch>
-			  <input>PG</input>
-			  <output>/EmotiBit/0/PPG:GRN</output>
-		  </patch>
-	  </patchcords>
-  </patchboard>	
-  ```
-    - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
-    - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
-    - A `patch` connects an input stream to an output stream. 
-      - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
-    - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
-  </details>
- 
-## Next Steps: Converting Raw Data
-Data integrity and precise time stamping have been given paramount importance while designing the EmotiBit. Hence, the raw data collected by the EmotiBit, although very accurate, is less intuitively understood by human eyes. The `EmotiBit data parser` is a tool that converts this **raw** data into individual files that represent each channel of data acquired.
- 
-### What you should have at this point
-- [Get the data parser](https://github.com/EmotiBit/ofxEmotiBit/releases/latest)
-- Data recorded using the EmotiBit. 
-  - EmotiBit records data in a single csv file on the onboard SD-Card. To use the parser, you will need to transfer the data file(csv) onto the computer. 
-  - You can do so by removing the SD-Card from the EmotiBit and transfer the `.csv` and `.json` files onto the system using the SD-Card USB reader provided in the box.
-  - **Note:** _When you initiate a recording, EmotiBit automatically names the file with the date and time, when the recording was initiated. For example, `2019-08-22_14-10-33-300661.csv`, can be decoded as_ 
-    - `2019-08-22` as the date in the format `YYYY-MM-DD`
-    - `14-10-33-300661` as the time in the format `HH-MM-SS-MicroSeconds`
+    The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+    - <details><summary>OSC</summary>
 
-[ToDo: find a place to explain the contents of json file]
-### User Guide
-
-- <details open><summary><b>Using the EmotiBit data parser</b></summary>
-  
-  ![][EmotiBit-DataParser]
-  - Open the EmotiBit data parser. 
-  - The data parser is split into 3 main regions:
-    - `Status Bar`: The Status bar on the EmotiBit data parser displays the state of the parser. It can either be `IDLE` or `PROCESSING`. The data parser is in the `PROCESSING` state when it is performing the conversion of a file. It is `IDLE` otherwise
-    - `Process File Button`: Click on the button to load a file to process.
-    - `Activity monitor`: This section displays data from the file which is being parsed. When the EmotiBit data parser is `IDLE` this section is blank.
-  - Click on the `Process file button`. A file browser opens up. Navigate to the `csv` file which you want to process and select that file.
-  - You will see the lines in the data file being displayed on the `Activity monitor` as the parser goes through the file.
-  - When EmotiBit data parser has finished processing the file, it will exit automatically. 
-  - You will notice the folder that contained the original `csv` file will now contain additional `csv` files. Each additional `csv` file has the name of the sensor channel it represents appended to base file name.
-  - For example, if the base file was named `2019-08-22_14-10-33-300661.csv`, you will get, among other files, a file named `2019-08-22_14-10-33-300661_AX.csv` which represents the data for the accelerometer X-axis channel.
+      - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
+      - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
+      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. The file path depends on your operating system.
+        - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\oscOutputSettings.xml`
+        - macOS: `EmotiBitOscilloscope/Contents/resources/oscOutputSettings.xml`
+        - Linux: `EmotiBit Oscilloscope/bin/data/oscOutputSettings.xml`
+      - You can modify the contents of this file to control the behavior of the OSC output stream.
+      - A snippet of the default contents are shared below
+      ```
+      <patchboard>
+	      <settings>
+		      <input>
+			      <type>EmotiBit</type>
+		      </input>
+		      <output>
+			      <type>OSC</type>
+			      <ipAddress>localhost</ipAddress>
+			      <port>12345</port>
+		      </output>
+	      </settings>
+	      <patchcords>
+		      <patch>
+			      <input>PR</input>
+			      <output>/EmotiBit/0/PPG:RED</output>
+		      </patch>		
+              <patch>
+			      <input>PI</input>
+			      <output>/EmotiBit/0/PPG:IR</output>
+		      </patch>	
+		      <patch>
+			      <input>PG</input>
+			      <output>/EmotiBit/0/PPG:GRN</output>
+		      </patch>
+	      </patchcords>
+      </patchboard>	
+      ```
+      - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
+      - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
+      - A `patch` connects an input stream to an output stream. 
+        - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
+      - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
+    </details>
   </details>
 
-#### EmotiBit File Types
-After running the data parser, each EmotiBit data stream is split into a separate CSV file. In addition to the original raw data file and \_info.json file (which contains information like sampling rates and other important settings for each sensor/stream), there will be a number of additional files, each containing a specific data stream as indicated by the `_XX.csv` file suffix. For more details, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
+# EmotiBit DataParser
+The DataParser is used to convert the raw recorded data into parsed data files.<br>
+Start by opening the EmotiBit DataParser on your computer. If you need more help with opening the Emotibit DataParser, 
+you may refer to the instructions on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
 
-<img src="./assets/EmotiBit_File_Types.png" width="600">
+## Parse raw data using EmotiBit DataParser
+
+### Transfer file from SD-Card to computer
+The data recorded using EmotiBit is stored on the SD-Card. To parse the raw data, 
+copy both the **raw data file** and the **info file**(`_info.json`) from the SD-Card to the computer(You may use the provided SD-Card reader to do so!).
+
+### Parse raw data file
+ 
+The steps below describe how you can use the DataParser to parse the raw data file to generate individual parsed data files.
+- Click on the `Load file` button to open a file browser. Navigate to the raw data(**csv**) file which you want to parse and select that file.
+- The parser will show the progress as it parses the data. The DataParser quits automatically on completion.
+- The parsed data files are created in the same directory as the original **raw data file**.
+
+![][EmotiBit-DataParser]
+
+For more deatils on the file types check out the section [below]().
 
 
-## EmotiBit Data Types
-EmotiBit data is transmitted and stored in a CSV structure using unique `TypeTags` for each type of recorded data. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
+## EmotiBit file types
+There are 3 types of files associated with EmotiBit
+- Raw data file(**csv**)
+  - Every recording sessions generates 1 raw data file.
+  - This file is named with the start time of the recording session. Ex: `2019-01-30_11-57-13-492.csv`
+- Information file(**json**)
+  - Along with the raw data file, each recording session generates 1 `info` file.
+  - It contains information like sampling rates and other important settings for each sensor/stream.
+  - It shares the name of the raw file. For example, the `info` file for the above raw file will be named `2019-01-30_11-57-13-492_info.json`
+- Parsed data files(**csv**)
+  - the raw file is converted to parsed files by running the DataParser.
+  - Each parsed file contains data for a specific data type.
+  - The name for each parsed file is created by joining the `TypeTag` of the data type to the raw file name.
+    - Ex: After running the data parser on `2019-01-30_11-57-13-492.csv`, the parsed data file containing the data for `PPG IR channel` 
+    will be called `2019-01-30_11-57-13-492_PI.csv`
+    - For more details on data types, see [EmotiBit Data Types](#emotibit-data-types) (below).
 
-For a quick look at the available TypeTags, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
+![][EmotiBit-File-Types]
+
+
+## EmotiBit data types
+Each data type represents a unique signal captured by EmotiBit and is represented by a unique `TypeTag`. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
+
+For a quick look at the available data types, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
 
 - <details open><summary><b>Biometric TypeTags</b></summary>
 
-  |Tag    | Description          |
+  |TypeTag    | Description          |
   |:-----:|----------------------|
   |EA     |EDA- Electrodermal Activity  |
   |EL     |EDL- Electrodermal Level     |
@@ -188,7 +247,7 @@ For a quick look at the available TypeTags, you can check out the table below. W
 
 - <details><summary><b>General Typetags</b></summary>
 
-  |Tag    | Description                       |
+  |TypeTag    | Description                       |
   |:-----:|:----------------------------------|
   |EI     |EmotiBit Info Json                 |
   |DC     |Data Clipping, TypeTag in Payload  |
@@ -205,7 +264,7 @@ For a quick look at the available TypeTags, you can check out the table below. W
 
 - <details><summary><b>Computer to EmotiBit TypeTags</b></summary>
 
-  |Tag    | Description                       |
+  |TypeTag    | Description                       |
   |:-----:|:----------------------------------|
   |GL     |[GPS latitude and Longitude][GPS]  |
   |GS     |[GPS Speed][GPS]                   |
@@ -222,22 +281,20 @@ For a quick look at the available TypeTags, you can check out the table below. W
   |HE     |Hello EmotiBit, used to establish communication  |
 
   </details>
-  
 
-#### EmotiBit data sampling rates
-
-- The most up to date list of sampling rates for each data stream can be found in the `_info.json` file created adjacent to each recorded raw data file. The following table lists the typical sampling rates at which the sensors operate. Since all the sensors are not operating at the same sampling rates, this information can be useful in understanding the time-stamping between data from different sensors.
+### Data type sampling rates
+The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware.
 
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
 |PPG |`PI` `PG` `PR`| MAX30101|25|
-|Temperature |`T0` / `TH`|MAX30301 / MLX90632 |7.5|
-|EDA|`EA` `EL` `ER`|-|15|
+|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
+|EDA|`EA` `EL` `ER`|ADS1113|15|
 
-## Next Steps: Visualize Recorded Data
+# Visualize parsed data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.
-### Visualization Tools
+## Visualization tools
 - Text Editors
   - Notepad++(on Windows)
   - Text Edit(on mac)
