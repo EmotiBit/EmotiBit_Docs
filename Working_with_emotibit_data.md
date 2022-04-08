@@ -10,9 +10,9 @@
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
     - [Parse raw data file](#Parse-raw-data-file)
   - [EmotiBit file types](#EmotiBit-file-types)
-  - [EmotiBit data types](#EmotiBit-data-types)  
+  - [EmotiBit data types](#EmotiBit-data-types) 
+    - [Data type sampling rates](#Data-type-sampling-rates)
 - [Visualize Recorded Data](#Visualize-Recorded-Data)
-  - [Opening EmotiBit DataViewer](#Opening-EmotiBit-DataViewer)
   - [Visualization Tools](#Visualization-Tools)
 
 # Overview
@@ -282,7 +282,7 @@ For a quick look at the available data types, you can check out the table below.
 
   </details>
 
-## Data type sampling rates
+### Data type sampling rates
 The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware.
 
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
