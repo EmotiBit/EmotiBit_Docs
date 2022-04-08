@@ -35,11 +35,11 @@ The EmotiBit workflow can be described as follows:
 EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiBit to your computer along with an array of other features.
 
 Start by opening the EmotiBit Oscillosocpe on your computer. If you need more help with opening the Emotibit Oscilloscope, 
-you may refer to the instructions on the [Getting Started](./Getting_Started.md#Running-EmotiBit-software) page.
+you may refer to the instructions on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
 
 ## Using EmotiBit Oscilloscope to Record Data
 Once you have succesfully set up your EmotiBit, you can start recording data using the EmotiBit Oscilloscope. If you have
-not yet set up your EmotiBit, check our guide on the [Getting Started](./Getting_Started.md#Running-EmotiBit-software) page.
+not yet set up your EmotiBit, check our guide on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
 
 To start a record session, follow these steps:
 - Select the EmotiBit from the `EmotiBit Device List`.
@@ -170,7 +170,7 @@ To start a record session, follow these steps:
 # EmotiBit DataParser
 The DataParser is used to convert the raw recorded data into parsed data files.<br>
 Start by opening the EmotiBit DataParser on your computer. If you need more help with opening the Emotibit DataParser, 
-you may refer to the instructions on the [Getting Started](./Getting_Started.md#Running-EmotiBit-software) page.
+you may refer to the instructions on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
 
 ## Parse raw data using EmotiBit DataParser
 
@@ -205,7 +205,7 @@ There are 3 types of files associated with EmotiBit
   - The name for each parsed file is created by joining the `TypeTag` of the data type to the raw file name.
     - Ex: After running the data parser on `2019-01-30_11-57-13-492.csv`, the parsed data file containing the data for `PPG IR channel` 
     will be called `2019-01-30_11-57-13-492_PI.csv`
-    - For more details on data types, see [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types) (below).
+    - For more details on data types, see [EmotiBit Data Types](#emotibit-data-types) (below).
 
 ![][EmotiBit-File-Types]
 
