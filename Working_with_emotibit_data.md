@@ -12,8 +12,8 @@
   - [EmotiBit file types](#EmotiBit-file-types)
   - [EmotiBit data types](#EmotiBit-data-types) 
     - [Data type sampling rates](#Data-type-sampling-rates)
-- [Visualize Recorded Data](#Visualize-Recorded-Data)
-  - [Visualization Tools](#Visualization-Tools)
+- [Visualize parsed data](#Visualize-parsed-data)
+  - [Visualization tools](#Visualization-tools)
 
 # Overview
 
@@ -292,9 +292,9 @@ The following table shows the sampling rates at which the sensors operate with t
 |Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
 |EDA|`EA` `EL` `ER`|ADS1113|15|
 
-# Visualize Recorded Data
+# Visualize parsed data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.
-## Visualization Tools
+## Visualization tools
 - Text Editors
   - Notepad++(on Windows)
   - Text Edit(on mac)

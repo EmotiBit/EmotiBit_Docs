@@ -113,7 +113,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 ## Installing EmotiBit Software
 
-[Download the EmotiBit Oscilloscope](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
+[Download the EmotiBit Software](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
 - <details><summary><b>Installation Instructions For Windows Users</b></summary>
  
     - _**Note:** EmotiBit software is supported only for Windows 10+._
@@ -246,7 +246,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |Feather Green LED ON|<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
 # Using EmotiBit Oscilloscope
-[Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+[Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#EmotiBit-Oscilloscope)
 
 # EmotiBit: LEDs and Buttons
 
@@ -256,10 +256,10 @@ Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.
 # Next Steps
 By this point, you're ready to be an EmotiBit rockstar!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**.
 - EmotiBit Oscilloscope
-  - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#Real-Time-Streaming)
+  - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#EmotiBit-Oscilloscope)
 - Working with your data
-  - [Converting raw data](./Working_with_emotibit_data.md/#Converting-Raw-Data)
-  - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-Recorded-Data)
+  - [Parsing raw data](./Working_with_emotibit_data.md/#Parse-raw-data-using-EmotiBit-DataParser)
+  - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-parsed-data)
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
 - [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
