@@ -30,7 +30,7 @@
 
 
 # ELECTRICAL SHOCK WARNING
-EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power. Connecting EmotiBit USB or any other pin to another device can be a shock risk hazzard and should ONLY be done when EmotiBit is not in physical contact with the body.
+EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power. Connecting EmotiBit USB or any other pin to another device can be a shock risk hazzard and should ONLY be done when EmotiBit is NOT in physical contact with the body.
 
 
 # Stack, Sense and Stream
