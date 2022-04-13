@@ -1,6 +1,9 @@
 # Getting Started with EmotiBit
 [comment]: <> ([alt text][SideView])
 
+## WARNING
+EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power. Connecting EmotiBit USB or any other pin to another device can be a shock risk hazzard and should ONLY be done when EmotiBit is not in physical contact with the body.
+
 # Table of Contents
 - [Stack, Sense and Stream](#Stack-Sense-and-Stream)
   - [EmotiBit Forum](#EmotiBit-Forum)
