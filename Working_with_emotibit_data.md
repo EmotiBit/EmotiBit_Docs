@@ -221,7 +221,7 @@ For a quick look at the available data types, you can check out the table below.
   |:-----:|----------------------|
   |EA     |EDA- Electrodermal Activity  |
   |EL     |EDL- Electrodermal Level     |
-  |ER     |EDR- Electrodermal Response (EmotiBit V4+ keeps combines ER into EA signal)  |
+  |ER     |EDR- Electrodermal Response (EmotiBit V4+ combines ER into EA signal)  |
   |PI     |PPG Infrared          |
   |PR     |PPG Red               |
   |PG     |PPG Green             |
