@@ -234,8 +234,10 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
     - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
     - Upload the firmware updater sketch by running the following command (*use .\bossac.exe for windows*, *use ./bossac for macOS*)
       - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v ./WINC/FirmwareUpdater.ino.feather_m0.bin -R`
+        - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./bossac_linux`, to make the file executable.
     - Update the WINC by running (*use .\FirmwareUploader.exe for windows*, *use ./FirmwareUploader for macOS*)
       - `./WINC/FirmwareUploader_linux -port YOUR_FEATHER_COM_PORT -firmware ./WINC/m2m_aio_3a0.bin`
+        - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./WINC/FirmwareUploader_linux` , to make the file executable.
     - ONLY AFTER the FirmwareUploader command completes, double-press the reset button to set the Feather in programmer mode again
     - Upload the EmotiBit FW using (*use .\bossac.exe for windows*, *use ./bossac for macOS*)
       - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
