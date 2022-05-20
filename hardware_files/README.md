@@ -1,5 +1,5 @@
 # Description
 Check out the links below to learn more about EmotiBit hardware.
 
-# Schematic
+# Schematics
 - [EmotiBit-V4 schematic](https://www.emotibit.com/files/)
