@@ -5,6 +5,7 @@
 - [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
   - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
   - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
+  - [Using LSL with EmotiBit Oscilloscope]()
 - [EmotiBit DataParser](#EmotiBit-DataParser)
   - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
@@ -167,6 +168,31 @@ To start a record session, follow these steps:
     </details>
   </details>
 
+### Using LSL with EmotiBit Oscilloscope
+You may use EmotiBit Oscilloscope to timestamp EmotiBit data to an LSL clock on the network. EmotiBit uses a marker stream
+to generate the LSL equivalent time stamps.
+- <dettails><summary>Specifying LSL marker stream for EmotiBit Oscilloscope</summary>
+
+  EmotiBit Oscilloscope uses a marker stream on LSL to create links between EmotiBit time, local time and LSL clock time.
+  If you don't already have a marker stream on LSL, you may use the example in [`EmotiBit/ofxLSL`](https://github.com/EmotiBit/ofxLSL#example-for-generating-marker-stream).
+  For EmotiBit Oscilloscope to look for the marker stream, you need to specify the marker stream information in the
+  `emotibitCommSettings.json` file. You can find this file:
+  - On Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`
+  - On macOS: `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
+  - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+  
+  The LSL marker stream with **name** `DataSyncMarker` and **source_id** `12345` can be specified as shown below
+  ```
+  "lsl": {
+      "marker": {
+        "name": "DataSyncMarker",
+        "source_id": "12345"
+  }
+  ```
+  Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has a name specified
+  can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!
+  </details>
+
 # EmotiBit DataParser
 The DataParser is used to convert the raw recorded data into parsed data files.<br>
 Start by opening the EmotiBit DataParser on your computer. If you need more help with opening the Emotibit DataParser, 
@@ -189,6 +215,41 @@ The steps below describe how you can use the DataParser to parse the raw data fi
 
 For more deatils on the file types check out the section [below]().
 
+### Parsing EmotiBit timestamps to LSL time
+EmotiBit DataParser can be used to parse the EmotiBit data using LSL timestamps. 
+- <details><summary>Parsing EmotiBit data using LSL timestamps</summary>
+  
+  To do so, you will need to use the `parsedDataFormat.json` file. You can find the file:
+  - On Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`
+  - On macOS: `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
+  - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+
+  The LSL protocol runs local LSL clocks on every system on the LSL network. When you record data using EmotiBit Oscilloscope,
+  you have an option to add timestamps to the data in your Local LSl clock or to the local LSL clock of the marker generator.
+  To include the appropriate LSL time in the parsed output, just set the `addToOutput` filed to `true` in the `parsedDataFormat.json` file.
+  For example, if you want to add the timestamps as per your local LSL clock (the clock on the system running the EmotiBit Oscilloscope), the file should look like as shown below
+  ```
+  {
+    "timestampColumns": [
+      {
+        "identifier": "TL",
+        "columnHeader": "LocalTimestamp",
+        "addToOutput": true
+      },
+      {
+        "identifier": "LC",
+        "columnHeader": "LslLocalTimestamp",
+        "addToOutput": true
+      },
+      {
+        "identifier": "LM",
+        "columnHeader": "LslMarkerSourceTimestamp",
+        "addToOutput": false
+      }
+    ]
+  }
+  ```
+  </details>
 
 ## EmotiBit file types
 There are 3 types of files associated with EmotiBit
