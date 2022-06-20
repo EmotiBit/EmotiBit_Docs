@@ -188,10 +188,10 @@ to generate the LSL equivalent time stamps.
   }
   ```
   With the stream information specified, when you open the EmotiBit Oscilloscope, the stream information specified on the status bar (at the bottom of the Oscilloscope). The EmotiBit Oscilloscope will continue to search for it till the stream is detected. 
-<img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Search.png" width="1000">	
+  <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Search.png" width="1000">	
 
-Once detected, the EmotiBit starts receiving markers from the stream and displays a `markers received` count on the status bar. You need at-least 2 markers to generate LSL timestamps.
-<img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Received.png" width="1000">
+  Once detected, the EmotiBit starts receiving markers from the stream and displays a `markers received` count on the status bar. You need at-least 2 markers to generate LSL timestamps.
+  <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Received.png" width="1000">
   **Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has a name specified
   can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!**
   </details>
