@@ -233,7 +233,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
   - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
 
 ## For Linux and Advanced Users
-- <details><summary> Installing Emotibit Firmware </summary>
+- <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
   - The FirmwareInstaller essentaily performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
@@ -267,6 +267,27 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
       - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
   </details> 
 
+- <details><summary> Installing Emotibit Firmware on Feather ESP32 Huzzah</summary>
+  
+  - The FirmwareInstaller essentaily uploads the latest EmotiBit FW onto the Feather
+  - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
+  - There are 2 requirements to run esptool
+    - COM port on which the Feather is detected
+    - The esptool bin file (*provided in the software release*).
+  - To perform the operations manually, the follow the below listed steps:
+    - Navigate to the `data` folder located inside the EmotiBit software directory.
+      - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+      - On MacOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
+      - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
+    - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
+    - Connect the Feather to the computer using a data-capable USB cable.
+    - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
+    - Upload the EmotiBit FW using
+      - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
+        - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
+        - [For Windows] use `.\exec\win\esptool.exe`. You will also need to change all file paths to .\esp32\name-of-file
+        - [For macOS] use `./exec/mac/esptool`.
+  </details> 
 # EmotiBit Bootup
 When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
 
