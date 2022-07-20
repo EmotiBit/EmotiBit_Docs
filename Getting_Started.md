@@ -281,6 +281,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
       - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
     - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
     - Connect the Feather to the computer using a data-capable USB cable.
+      - Pro-tip: On linux, the Feather may likely show up as `dev/ttyUSB0`
     - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
     - Upload the EmotiBit FW using
       - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
