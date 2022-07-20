@@ -15,6 +15,8 @@
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
+    - [Prerequisites](#Prerequisites)
+    - [Run EmotiBit](#Run-EmotiBit-Firmware-Installer) 
   - [Running EmotiBit Software](#Running-EmotiBit-software)
     - [On Windows](#On-Windows)
     - [On macOS](#On-macOS)
@@ -197,9 +199,31 @@ Build the application from source. You can find instructions in the `ReadMe` pro
 # Installing EmotiBit Firmware
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
 - If you did not order an Essentials-Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to 
-get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598).
+get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/2598) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3405) from the Adafruit online store.
 
 ## Using the EmotiBit Firmware Installer
+
+### Prerequisites
+- Drivers
+  - Install the drivers provided with the downloaded EmotiBitsoftware bundle.
+    - <details><summary> On Windows </summary>
+      
+      - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+      - You can find the driver installer in `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+      - Double click to run `CP210xVCPInstaller_x64.exe`
+      - Follow through the on-screen instructions to complete driver installation.
+      </details>
+ 
+    - <details><summary>On macOS</summary>
+      
+      - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
+      - You can find the driver installer in `EmotiBitSoftware-macOS` > `macOS_VCP_Driver`.
+      - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
+      - Double click on `Install CP210x VCP driver` to run the installer.
+      - Follow through the on-screen instructions to complete the driver installation.
+      </details>
+
+### Run EmotiBit Firmware Installer
 - You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
   - If you have not done so already, follow [these steps to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
 - Open the `EmotiBit FirmwareInstaller`. 
