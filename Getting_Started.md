@@ -206,24 +206,25 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 ## Using the EmotiBit Firmware Installer
 
 ### Prerequisites
-#### Drivers
-Install the drivers provided with the downloaded EmotiBitSoftware bundle.
-- <details><summary> On Windows </summary>
 
-  - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
-  - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
-  - Double click to run `CP210xVCPInstaller_x64.exe`
-  - Follow the on-screen instructions to complete driver installation.
-  </details>
+- **Drivers**: Install the drivers provided with the downloaded EmotiBitSoftware bundle.
 
-- <details><summary>On macOS</summary>
+  - <details><summary> On Windows </summary>
 
-  - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
-  - Navigate to `EmotiBitSoftware-macOS` > `macOS_VCP_Driver`.
-  - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
-  - Double click on `Install CP210x VCP driver` to run the installer.
-  - Follow the on-screen instructions to complete the driver installation.
-  </details>
+    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+    - Double click to run `CP210xVCPInstaller_x64.exe`
+    - Follow the on-screen instructions to complete driver installation.
+    </details>
+
+  - <details><summary>On macOS</summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
+    - Navigate to `EmotiBitSoftware-macOS` > `macOS_VCP_Driver`.
+    - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
+    - Double click on `Install CP210x VCP driver` to run the installer.
+    - Follow the on-screen instructions to complete the driver installation.
+    </details>
 
 ### Run EmotiBit Firmware Installer
 - You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
