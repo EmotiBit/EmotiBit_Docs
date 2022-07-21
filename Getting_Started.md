@@ -205,22 +205,22 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 
 ### Prerequisites
 - Drivers
-  - Install the drivers provided with the downloaded EmotiBitsoftware bundle.
+  - Install the drivers provided with the downloaded EmotiBitSoftware bundle.
     - <details><summary> On Windows </summary>
       
       - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
-      - You can find the driver installer in `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+      - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
       - Double click to run `CP210xVCPInstaller_x64.exe`
-      - Follow through the on-screen instructions to complete driver installation.
+      - Follow the on-screen instructions to complete driver installation.
       </details>
  
     - <details><summary>On macOS</summary>
       
       - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
-      - You can find the driver installer in `EmotiBitSoftware-macOS` > `macOS_VCP_Driver`.
+      - Navigate to `EmotiBitSoftware-macOS` > `macOS_VCP_Driver`.
       - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
       - Double click on `Install CP210x VCP driver` to run the installer.
-      - Follow through the on-screen instructions to complete the driver installation.
+      - Follow the on-screen instructions to complete the driver installation.
       </details>
 
 ### Run EmotiBit Firmware Installer
