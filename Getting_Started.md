@@ -209,12 +209,20 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 
 - **Drivers**: Install the drivers provided with the downloaded EmotiBitSoftware bundle.
 
-  - <details><summary> On Windows </summary>
+  - <details><summary> On Windows 10 </summary>
 
     - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
     - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
     - Double click to run `CP210xVCPInstaller_x64.exe`
     - Follow the on-screen instructions to complete driver installation.
+    </details>
+
+  - <details><summary> On Windows 11 </summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
+    - Right click on `silabser.inf` and select `install`.
+    - That should install the required the drivers on your Windows 11 machine.
     </details>
 
   - <details><summary>On macOS</summary>
