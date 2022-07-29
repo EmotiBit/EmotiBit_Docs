@@ -220,7 +220,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
   - <details><summary>On macOS</summary>
 
     - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
-    - Navigate to `EmotiBitSoftware-macOS` > `macOS_VCP_Driver`.
+    - Navigate to `EmotiBitSoftware-macOS` > `CP210X VCP Mac OSX driver`.
     - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
     - Double click on `Install CP210x VCP driver` to run the installer.
     - Follow the on-screen instructions to complete the driver installation.
