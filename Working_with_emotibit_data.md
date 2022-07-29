@@ -172,17 +172,16 @@ To start a record session, follow these steps:
 ### Using LSL with EmotiBit Oscilloscope
 You can use the EmotiBit oscillosocpe to ingest an LSL marker stream and use that stream to timestamp
 EmotiBit data to LSL time. To start receiving LSL stream, you need to specify the LSL stream name and
-source_id to. Follow the steps below:
+source_id. To do so, follow the steps below:
 
 - <details><summary>Specifying LSL marker stream for EmotiBit Oscilloscope</summary>
 
- You need to specify the marker stream information in the `emotibitCommSettings.json` file. You can find this file:
-  - On Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`
-  - On macOS: `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources`
-  - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data`
+  You need to specify the marker stream information in the `emotibitCommSettings.json` file. You can find this file:
+    - On Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`
+    - On macOS: `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources`
+    - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data`
  
- If you don't already have an LSL marker stream, you may use the example in
- [`EmotiBit/ofxLSL`](https://github.com/EmotiBit/ofxLSL#example-for-generating-marker-stream).
+   If you don't already have an LSL marker stream, you may use the example in [`EmotiBit/ofxLSL`](https://github.com/EmotiBit/ofxLSL#example-for-generating-marker-stream).
   For Example, an LSL marker stream with **name** `DataSyncMarker` and **source_id** `12345` can be specified in the `emotibitCommSettings.json` as shown below
   ```
     {
@@ -211,14 +210,14 @@ source_id to. Follow the steps below:
         }
       }
     }
-
   ```
   With the stream information specified, when you open the EmotiBit Oscilloscope, you can find the same information on the status bar (at the bottom of the Oscilloscope). The EmotiBit Oscilloscope will continue to search for the stream till it is detected. 
   <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Search.png" width="1000">	
 
-  Once detected, the EmotiBit starts receiving markers from the stream and displays a `markers received` count on the status bar. You need at-least 2 markers to generate LSL timestamps.
+  Once detected, the EmotiBit starts receiving markers from the stream and displays a `markers received` count on the status bar. You need atleast 2 markers to generate LSL timestamps.
   <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Received.png" width="1000">
-  **Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has a name specified
+  
+  **Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has the **name** specified
   can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!**
   </details>
 
@@ -253,10 +252,10 @@ For more deatils on the file types check out the section [below]().
   - On macOS: `EmotiBitSoftware-macOS/EmotiBitDataParser.app/Contents/Resources`
   - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitDataParser/bin/data`
 
-  To include the appropriate LSL time in the parsed output, 
-just set the **addToOutput** filed to `true` in the `parsedDataFormat.json` file.
-  Setting `LslLocalTimestamp` to `true` adds timestamps acording to the time on the local LSL clock of the system.
-  Setting `LslMarkerSourceTimestamp` to `true` adds timestamps according to the time set on the 
+  
+  To include the appropriate LSL time in the parsed output, just set the **addToOutput** filed to `true` in the `parsedDataFormat.json` file.
+  - Setting **LslLocalTimestamp** to `true` adds timestamps acording to the time on the local LSL clock of the system.
+  - Setting **LslMarkerSourceTimestamp** to `true` adds timestamps according to the time set on the 
 marker source generator system.
   For example, if you want to add the timestamps as per your local LSL clock (the clock on the system running the EmotiBit Oscilloscope), the file should look like as shown below.
   ```
@@ -280,8 +279,7 @@ marker source generator system.
     ]
   }
   ```
-  When **addToOutput** is set to `true`, an additional column is added to the parsed output, 
-with the column header equal to the `columnHeader` specified in the file.
+  When **addToOutput** is set to `true`, an additional column is added to the parsed output, with the column header set as the `columnHeader` specified in the file above.
   </details>
 
 ## EmotiBit file types
