@@ -5,10 +5,12 @@
 - [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
   - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
   - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
+  - [Using LSL with EmotiBit Oscilloscope](#Using-LSL-with-EmotiBit-Oscilloscope)
 - [EmotiBit DataParser](#EmotiBit-DataParser)
   - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
     - [Parse raw data file](#Parse-raw-data-file)
+    - [Parsing EmotiBit timestamps to LSL time](#Parsing-EmotiBit-timestamps-to-LSL-time)
   - [EmotiBit file types](#EmotiBit-file-types)
   - [EmotiBit data types](#EmotiBit-data-types) 
     - [Data type sampling rates](#Data-type-sampling-rates)
@@ -167,6 +169,58 @@ To start a record session, follow these steps:
     </details>
   </details>
 
+### Using LSL with EmotiBit Oscilloscope
+You can use the EmotiBit oscillosocpe to ingest an LSL marker stream and use that stream to timestamp
+EmotiBit data to LSL time. To start receiving LSL stream, you need to specify the LSL stream name and
+source_id. To do so, follow the steps below:
+
+- <details><summary>Specifying LSL marker stream for EmotiBit Oscilloscope</summary>
+
+  You need to specify the marker stream information in the `emotibitCommSettings.json` file. You can find this file:
+    - On Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`
+    - On macOS: `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources`
+    - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data`
+ 
+   If you don't already have an LSL marker stream, you may use the example in [`EmotiBit/ofxLSL`](https://github.com/EmotiBit/ofxLSL#example-for-generating-marker-stream).
+  For Example, an LSL marker stream with **name** `DataSyncMarker` and **source_id** `12345` can be specified in the `emotibitCommSettings.json` as shown below
+  ```
+    {
+      "wifi": {
+        "advertising": {
+          "transmission": {
+            "broadcast": {
+              "enabled": true
+            },
+            "unicast": {
+              "enabled": false,
+              "ipMax": 254,
+              "ipMin": 2
+            }
+          }
+        },
+        "network": {
+          "excludeList": [ "" ],
+          "includeList": [ "*.*.*.*" ]
+        }
+      },
+      "lsl": {
+        "marker": {
+          "name": "DataSyncMarker",
+          "sourceId": "12345"
+        }
+      }
+    }
+  ```
+  With the stream information specified, when you open the EmotiBit Oscilloscope, you can find the same information on the status bar (at the bottom of the Oscilloscope). The EmotiBit Oscilloscope will continue to search for the stream till it is detected. 
+  <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Search.png" width="1000">	
+
+  Once detected, the EmotiBit starts receiving markers from the stream and displays a `markers received` count on the status bar. You need at least 2 markers during the recording to generate LSL timestamps.
+  <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Received.png" width="1000">
+  
+  **Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has the **name** specified
+  can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!**
+  </details>
+
 # EmotiBit DataParser
 The DataParser is used to convert the raw recorded data into parsed data files.<br>
 Start by opening the EmotiBit DataParser on your computer. If you need more help with opening the Emotibit DataParser, 
@@ -189,6 +243,44 @@ The steps below describe how you can use the DataParser to parse the raw data fi
 
 For more deatils on the file types check out the section [below]().
 
+### Parsing EmotiBit timestamps to LSL time
+
+- <details><summary>Parsing EmotiBit data using LSL timestamps</summary>
+  
+  To do so, you will need to use the `parsedDataFormat.json` file. You can find the file:
+  - On Windows: `C:\Program Files\EmotiBit\EmotiBit DataParser\data`
+  - On macOS: `EmotiBitSoftware-macOS/EmotiBitDataParser.app/Contents/Resources`
+  - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitDataParser/bin/data`
+
+  
+  To include the appropriate LSL time in the parsed output, just set the **addToOutput** to `true` in the `parsedDataFormat.json` file.
+  - Setting **LslLocalTimestamp** to `true` adds timestamps acording to the time on the local LSL clock of the system.
+  - Setting **LslMarkerSourceTimestamp** to `true` adds timestamps according to the time set on the 
+marker source generator system.
+  For example, if you want to add the timestamps as per your local LSL clock (the clock on the system running the EmotiBit Oscilloscope), the file should look like as shown below.
+  ```
+  {
+    "timestampColumns": [
+      {
+        "identifier": "TL",
+        "columnHeader": "LocalTimestamp",
+        "addToOutput": true
+      },
+      {
+        "identifier": "LC",
+        "columnHeader": "LslLocalTimestamp",
+        "addToOutput": true
+      },
+      {
+        "identifier": "LM",
+        "columnHeader": "LslMarkerSourceTimestamp",
+        "addToOutput": false
+      }
+    ]
+  }
+  ```
+  When **addToOutput** is set to `true`, an additional column is added to the parsed output, with the column header set as the `columnHeader` specified in the file above.
+  </details>
 
 ## EmotiBit file types
 There are 3 types of files associated with EmotiBit
