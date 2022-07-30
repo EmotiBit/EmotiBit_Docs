@@ -15,12 +15,16 @@
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
+    - [Prerequisites](#Prerequisites)
+    - [Run EmotiBit](#Run-EmotiBit-Firmware-Installer) 
   - [Running EmotiBit Software](#Running-EmotiBit-software)
     - [On Windows](#On-Windows)
     - [On macOS](#On-macOS)
     - [On Linux](#On-Linux)
 - [Installing EmotiBit Firmware](#Installing-EmotiBit-Firmware)
   - [Using the EmotiBit Firmware Installer](#Using-the-EmotiBit-Firmware-Installer)
+    - [Prerequisites](#Prerequisites)
+    - [Run EmotiBit Firmware Installer](#Run-EmotiBit-Firmware-Installer)
   - [For Linux and Advanced Users](#For-Linux-and-Advanced-Users)
 - [EmotiBit Bootup](#EmotiBit-Bootup)
 - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
@@ -197,9 +201,40 @@ Build the application from source. You can find instructions in the `ReadMe` pro
 # Installing EmotiBit Firmware
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
 - If you did not order an Essentials-Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to 
-get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.adafruit.com/product/2598).
+get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3405) from the Adafruit online store.
 
 ## Using the EmotiBit Firmware Installer
+
+### Prerequisites
+
+- **Drivers**: Install the drivers provided with the downloaded EmotiBitSoftware bundle.
+
+  - <details><summary> On Windows 10 </summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+    - Double click to run `CP210xVCPInstaller_x64.exe`
+    - Follow the on-screen instructions to complete driver installation.
+    </details>
+
+  - <details><summary> On Windows 11 </summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
+    - Right click on `silabser.inf` and select `install`.
+    - That should install the required the drivers on your Windows 11 machine.
+    </details>
+
+  - <details><summary>On macOS</summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
+    - Navigate to `EmotiBitSoftware-macOS` > `CP210X VCP Mac OSX driver`.
+    - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
+    - Double click on `Install CP210x VCP driver` to run the installer.
+    - Follow the on-screen instructions to complete the driver installation.
+    </details>
+
+### Run EmotiBit Firmware Installer
 - You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
   - If you have not done so already, follow [these steps to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
 - Open the `EmotiBit FirmwareInstaller`. 
@@ -209,7 +244,7 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
   - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
 
 ## For Linux and Advanced Users
-- <details><summary> Installing Emotibit Firmware </summary>
+- <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
   - The FirmwareInstaller essentaily performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
@@ -243,6 +278,28 @@ get one to start using EmotiBit. You can grab one at [Adafruit.com](https://www.
       - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
   </details> 
 
+- <details><summary> Installing Emotibit Firmware on Feather ESP32 Huzzah</summary>
+  
+  - The FirmwareInstaller essentaily uploads the latest EmotiBit FW onto the Feather
+  - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
+  - There are 2 requirements to run esptool
+    - COM port on which the Feather is detected
+    - The esptool bin file (*provided in the software release*).
+  - To perform the operations manually, the follow the below listed steps:
+    - Navigate to the `data` folder located inside the EmotiBit software directory.
+      - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+      - On MacOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
+      - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
+    - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
+    - Connect the Feather to the computer using a data-capable USB cable.
+      - Pro-tip: On linux, the Feather may likely show up as `/dev/ttyUSB0`
+    - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
+    - Upload the EmotiBit FW using
+      - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
+        - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
+        - [For Windows] use `.\exec\win\esptool.exe`. You will also need to change all file paths to .\esp32\name-of-file
+        - [For macOS] use `./exec/mac/esptool`.
+  </details> 
 # EmotiBit Bootup
 When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
 
@@ -251,8 +308,8 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |Feather RED LED ON|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Write a post describing your steps on http://forum.emotibit.com/ |
 |Feather RED LED turns ON for a few seconds and then stays OFF|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD-Card is correctly inserted|
 |EmotiBit RED LED ON|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD-Card|
-|EmotiBit BLUE LED ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#Adding-WiFi-credentials))|
-|Feather Green LED ON|<img src="./assets/EmotiBit-bootup-stage-4.jpg" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
+|EmotiBit BLUE LED solid ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#Adding-WiFi-credentials))|
+|EmotiBit BLUE LED BLINKING|<img src="./assets/EmotiBit-bootup-stage-4.gif" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
 # Using EmotiBit Oscilloscope
 [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#EmotiBit-Oscilloscope)
