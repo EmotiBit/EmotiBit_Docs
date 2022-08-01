@@ -24,6 +24,25 @@ Follow the steps below to get started!
 #### Download and install the Arduino IDE
   - https://www.arduino.cc/en/main/software#download
 #### Add Adafruit Feather boards to Arduino IDE
+
+- For Feather ESP32 huzzah boards
+  - <details><summary><b>Add URL for ESP boards</b></summary>
+    
+    - `File > Preferences > [Settings Tab]`
+    - Copy-Paste the following link into `Additional Board Manager URLs:`. Note: Use `,` to separate a list of URLs
+      - https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+    - [See Espressif's page for detailed instructions ](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
+    </details>
+  
+  - <details><summary><b>Add support for ESP boards</b></summary>
+    <br>
+    
+    - `Tools > Board: [...] > Boards Manager...`
+    - Search for `ESP32`
+      - Install `esp32` *by Espressif Systems* **version 2.0.3**
+    </details>
+
+- For Feather M0 WiFi boards
   - <details>
     <summary><b>Add URL to Adafruit Boards</b></summary>
     <br>
@@ -83,7 +102,9 @@ Follow the steps below to get started!
   - <img src="./assets/arduino-choose_emotibit_example.png" width="450">
   - Alternatively you can double click the `EmotiBit_Example.ino` file presenst at the location:`Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_stock_firmware/EmotiBit_stock_firmware.ino` 
 - Put the Feather in programming mode by double clicking the reset button. You should see the red LED pulsing.*(Please note that the LED pulsates only in EmotiBit V2 and not V3. You can find your EmotiBit version printed near the board edge on the front top right corner)*
-- In the `Emotibit_Example` Arduino window that opens, Choose `Tools > Board > “Adafruit Feather M0”`
+- In the `Emotibit_Example` Arduino window that opens, Choose the board you will be programming
+  - For Feather M0 WiFi: `Tools > Board > Adafruit SAMD (32-bits ARM Cortex-M0+ and Cortex-M4) Boards > Adafruit Feather M0`
+  - For feather ESP32 Huzzah: `Tools > Board > ESP32 Arduino > Adafruit ESP32 Feather`
 - Choose `Tools > Port > [the correct port for your board]`
   - <img src="./assets/arduino-uploading_FW.png" width="450">
 
