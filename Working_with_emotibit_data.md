@@ -169,61 +169,57 @@ To start a record session, follow these steps:
     </details>
   </details>
 
-### Changing EmotiBit Oscilloscope Settings
-
-#### EmotiBit Oscilloscope network settings
-The software release, v1.4.11 adds the ability for users to tweak their network settings using the `emotibitCommSettings.json` file.
+### EmotiBit Oscilloscope network settings
+The software release `v1.4.11` adds the ability for users to tweak their network settings using the `emotibitCommSettings.json` file.
 - <details><summary><b>emotibitCommSettings.json</b></summary>
 
-    1. **Features accessed using the emotibitCommSettings file**
-      - Ability to choose advertising protocol. Users can now choose between broadcast vs unicast advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
-        - are working with routers that block broadcast(ex: iPhone hotspot). Check out the note below for using the latest Oscilloscope(v1.4.11) with iPhone hotspot.
-        - perform poorly with unicast. The oscilloscope now uses broadcast by default, so it should just work... and work better!
-      - Ability to exclude or include networks while looking for EmotiBits.
-        - `excludeList`: If you don't want EmotiBit Oscilloscope to look for EmotiBit in a particular network, add it to the excludeList
-        - `includeList`: If you want EmotiBit Oscilloscope to look for EmotiBits ins specific networks, add it to the includeList
+  - Users can now choose between broadcast vs unicast advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
+    - are working with routers that block broadcast(ex: iPhone hotspot). Check out the note below for using the latest Oscilloscope(v1.4.11) with iPhone hotspot.
+    - perform poorly with unicast. The oscilloscope now uses broadcast by default, so it should just work... and work better!
+  - Ability to exclude or include networks while looking for EmotiBits.
+    - `excludeList`: If you don't want EmotiBit Oscilloscope to look for EmotiBit in a particular network, add it to the excludeList
+    - `includeList`: If you want EmotiBit Oscilloscope to look for EmotiBits ins specific networks, add it to the includeList
 
-    2. **File location on the computer**
-    
-        Users can find the emotibitCommSettings.json file in the following locations, based on your operating system:
-          - For Windows users(Users will also need to give the file "write privileges". Check out this FAQ to learn how):
-            - C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\
-          - For mac users
-            - EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources/
-          - For linux users
-            - EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data/
+  - Users can find the emotibitCommSettings.json file in the following locations, based on your operating system:
+    - For Windows users(Users will also need to give the file "write privileges". Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urp7dq/how_do_i_edit_files_installed_by_emotibit/) to learn how):
+      - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
+    - For mac users
+      - `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources/`
+    - For linux users
+      - `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data/`
 
-    3. **Special note for iPhone hotspot users**
-        iPhone does not allow broadcasting on its hotspot. Since the new Oscilloscope(v1.4.11+) uses broadcast(for advertising) by default, users will have to make the following change in the emotibitCommSettings.json to use EmotiBit on iPhone hotspot.
-         1. Locate the file (as suggested above) based on your operating system.
-         2. change "broadcast" -> "enabled" to false
-         3. change "unicast" -> "enabled" to true
-         4. Save the file.
-         5. Run the Oscilloscope app!
-        
-        The modified file should look like the snippet shown below.
-        ```
-            {
-                "wifi" : {
-                    "advertising" : {
-                        "transmission" : {
-                            "broadcast" : {
-                                "enabled" : false
-                            },
-                            "unicast" : {
-                                "enabled" : true,
-                                "ipMax" : 254,
-                                "ipMin" : 2
-                            }
-                        }
-                    },
-                    "network" : {
-                        "excludeList" : [ "" ],
-                        "includeList" : [ "*.*.*.*" ]
-                    }
-                }
-            }
-        ```
+  **Special note for iPhone hotspot users**
+	
+    iPhone does not allow broadcasting on its hotspot. Since the new Oscilloscope(v1.4.11+) uses broadcast(for advertising) by default, users will have to make the following change in the emotibitCommSettings.json to use EmotiBit on iPhone hotspot.
+	1. Locate the file (as suggested above) based on your operating system.
+	2. change "broadcast" -> "enabled" to false
+	3. change "unicast" -> "enabled" to true
+	4. Save the file.
+	5. Run the Oscilloscope app!
+
+    The modified file should look like the snippet shown below.
+	```
+	    {
+		"wifi" : {
+		    "advertising" : {
+			"transmission" : {
+			    "broadcast" : {
+				"enabled" : false
+			    },
+			    "unicast" : {
+				"enabled" : true,
+				"ipMax" : 254,
+				"ipMin" : 2
+			    }
+			}
+		    },
+		    "network" : {
+			"excludeList" : [ "" ],
+			"includeList" : [ "*.*.*.*" ]
+		    }
+		}
+	    }
+	```
   </details>
 
 ### Using LSL with EmotiBit Oscilloscope
