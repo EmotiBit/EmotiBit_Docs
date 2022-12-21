@@ -297,13 +297,16 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
       - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
     - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
     - Connect the Feather to the computer using a data-capable USB cable.
-      - Pro-tip: On linux, the Feather may likely show up as `/dev/ttyUSB0`
+      - The Feather should show up as a COM port on the system.
+        - On `Windows`: The device appears with a same similiar to `COM X` (where `X` is a number)
+        - On `mac/linux`: You may find the COM port by running the terminal command `ls -la /dev/tty*`
+        - Pro-tip for linux: the Feather may likely show up as `/dev/ttyUSB0`
     - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
     - Upload the EmotiBit FW using
       - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
         - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
-        - [For Windows] use `.\exec\win\esptool.exe`. You will also need to change all file paths to .\esp32\name-of-file
-        - [For macOS] use `./exec/mac/esptool`.
+        - [For Windows] replace `./exec/linux/esptool` with `.\exec\win\esptool.exe`. You will also need to change all file paths to `.\esp32\name-of-file`
+        - [For macOS] replace `./exec/linux/esptool` with `./exec/mac/esptool`.
   </details> 
 # EmotiBit Bootup
 When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
