@@ -10,7 +10,7 @@
 [**`03. Keep EmotiBit up to date`**](./Keep_emotibit_up_to_date.md)
 > EmotiBit keeps getting better day by day. Follow this guide to update the EmotiBit to access the latest and greatest.
 
-[**`04. Join the EmotiBit community`**](./Contributing_to_emotibit_community/)
+[**`04. EmotiBit community`**](./Contributing_to_emotibit_community/)
 > Join the EmotiBit community subreddit at http://forum.emotibit.com/.
 > Learn more about EmotiBit. Contribute to the community and help us grow!!
 
