@@ -324,7 +324,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 
 # EmotiBit: LEDs and Buttons
 
-Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
+Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit/EmotiBit_hardware.md#LEDs-and-Buttons)
 
 
 # Next Steps
@@ -336,7 +336,7 @@ By this point, you're ready to be an EmotiBit rockstar!! However, we at CFL beli
   - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-parsed-data)
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
-- [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
+- [Learn more about EmotiBit](./Learn_more_about_emotibit/README.md)
 
 # Troubleshooting
 - Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/collection/27921349-c38f-4df4-b708-99346979039f).

@@ -11,6 +11,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
   - [Setup](#setup)
   - [Programming the Feather](#programming-the-feather)
   - [About the WiFi shield](#About-the-WiFi-shield)
+- [Building firmware using PlatformIO](#Building-firmware-using-PlatformIO)
 
 ## Update firmware using EmotiBit FirmwareInstaller
 Using the `EmotiBit FirmwareInstaller` is the easiest way to update EmotiBit firmware.
@@ -118,7 +119,61 @@ Follow the steps below to get started!
 - Adafruit feather M0 works with the `ATWINC1500` for wireless communication. The `ATWINC` exists as a independent submodule to the feather
 and might get updates which require a different set of instructions to be followed. 
   - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 
-  a feather purchased independently, check out the documentation to [update the WiFi module](Learn_more_about_emotibit.md/#Update-Feather-WiFi-chip-firmware)  
+  a feather purchased independently, check out the documentation on the [Adafruit website](https://learn.adafruit.com/adafruit-winc1500-wifi-shield-for-arduino/updating-firmware).
+
+## Building firmware using PlatformIO
+Note: This section is for advanced users, who have some experience with programming for
+embedded environemts. <br>
+
+### Things you will need
+The EmotiBit firmware can be built using PlatformIO. To start using PlatformIO, you will need:
+1. PlatformIO development environment
+  - Get the platformIO development environment using instructions available on their [website](https://platformio.org/platformio-ide).
+  - We recommend starting with PlatformIO+VScode.
+2. A platformIO `.ini` project file
+  - For EmotiBit source code, a `platformIO.ini` file is present inside the firmware variant directory (see directory structure below).
+
+### How to build a firmware variant
+
+#### Downloading required dependencies
+1. You can download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
+(using Arduino IDE).
+2. All the libraries will downloaded to the `Documents/Arduino/libraries` folder.
+3. Alternatively, you may also choose to clone the libraries specified in the list, 
+if you want version control.
+
+**Note**: Make sure that after the libraies have been installed, the following directory structure is maintained.
+```
+libraries
+    |-- EmotiBit Feather Wing
+    |   |-- EmotiBit_stock_firmware
+    |   |   |-- EmotiBit_stock_firmware.ino
+    |   |   |-- platformio.ini
+    |   |-- EmotiBit_stock_firmware_100Hz_PPG
+    |   |   |-- platformio.ini
+    |   |-- EmotiBit MAX30101
+    |   |-- EmotiBit XPlat Utils
+    |   |-- EmotiBit BMI160
+    |   |-- [dep_lib1]
+    |   |-- [dep_lib2]
+```
+
+#### Building a project
+- Follow the instructions on the [platformIO website](https://docs.platformio.org/en/latest/home/index.html) to open the PIO extension in VS-Code.
+- Use the platformIO home page to navigate to `Open Project`.
+- Navigate to the platformIO ini file.
+  - `EmotiBit_FeatherWing/EmotiBit_stock_firmware/platformio.ini `
+
+```diff
+-- Note: Do not close or try to open the project immediately after opening it the first time. Opening the project takes some time.
+Unfortunately, PIO does not show a "progress screen" while initializing the project.
+As a hack, you can try to switch between the PIO panes (on the left. `Project`, `Inspect`, `Libraries` etc.)
+If the initialization is complete, returning to `Projects` pane will show the new project you just started.
+```
+- Once the project is loaded in PIO, you can open it in your workspace.
+- The project has already been setup for use, so you can simply click on the build button to create the firmware binary.
+  - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) for learning more about build/upload/debug options. 
+
 
 
 [comment]: <> (Add links to images below)

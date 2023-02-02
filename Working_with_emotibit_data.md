@@ -5,7 +5,9 @@
 - [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
   - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
   - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
+  - [EmotiBit Oscilloscope network settings](#EmotiBit-Oscilloscope-network-settings)
   - [Using LSL with EmotiBit Oscilloscope](#Using-LSL-with-EmotiBit-Oscilloscope)
+  - [EmotiBit Oscilloscope display settings](#EmotiBit-Oscilloscope-display-settings)
 - [EmotiBit DataParser](#EmotiBit-DataParser)
   - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
@@ -103,7 +105,7 @@ To start a record session, follow these steps:
     - **Sleep**: In sleep mode, EmotiBit stops any tasks it is performing and goes to sleep.
       - We recommend switching the EmotiBit into `Sleep mode` instead of un-plugging the EmotiBit battery when not in use for short periods.
       - If the EmotiBit is being left un-used for a long duration, it is best to flip the Hibernate Switch to `HIB`.
-      - Refer [EmotiBit LEDs and buttons section](./Learn_more_about_emotibit.md#LEDs-and-Buttons) for more information on the Hibernate switch.
+      - Refer [EmotiBit LEDs and buttons section](./Learn_more_about_emotibit/EmotiBit_hardware.md#LEDs-and-Buttons) for more information on the Hibernate switch.
     </details>
   
   - <details><summary>DC/DO counter</summary>
@@ -169,8 +171,23 @@ To start a record session, follow these steps:
     </details>
   </details>
 
+## EmotiBit Oscilloscope settings
+
+### Settings files location
+
+[ToDo: explain where to find the Oscilloscope settings file]
+Based on the operating system, users can find the settings files in the following locations, :
+- For Windows users(Users will also need to give the file "write privileges". Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urp7dq/how_do_i_edit_files_installed_by_emotibit/) to learn how):
+  - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
+- For mac users
+  - `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources/`
+- For linux users
+  - `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data/`
+
 ### EmotiBit Oscilloscope network settings
 The software release `v1.4.11` adds the ability for users to tweak their network settings using the `emotibitCommSettings.json` file.
+Refer the [section above](#Settings-files-location) to locate this file on your system.
+
 - <details><summary><b>emotibitCommSettings.json</b></summary>
 
   - Users can now choose between broadcast vs unicast advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
@@ -179,14 +196,6 @@ The software release `v1.4.11` adds the ability for users to tweak their network
   - Ability to exclude or include networks while looking for EmotiBits.
     - `excludeList`: If you don't want EmotiBit Oscilloscope to look for EmotiBit in a particular network, add it to the excludeList
     - `includeList`: If you want EmotiBit Oscilloscope to look for EmotiBits ins specific networks, add it to the includeList
-
-  - Users can find the emotibitCommSettings.json file in the following locations, based on your operating system:
-    - For Windows users(Users will also need to give the file "write privileges". Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urp7dq/how_do_i_edit_files_installed_by_emotibit/) to learn how):
-      - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
-    - For mac users
-      - `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources/`
-    - For linux users
-      - `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data/`
 
   **Special note for iPhone hotspot users**
 	
@@ -229,10 +238,8 @@ source_id. To do so, follow the steps below:
 
 - <details><summary>Specifying LSL marker stream for EmotiBit Oscilloscope</summary>
 
-  You need to specify the marker stream information in the `emotibitCommSettings.json` file. You can find this file:
-    - On Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data`
-    - On macOS: `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources`
-    - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data`
+  You need to specify the marker stream information in the `emotibitCommSettings.json` file. 
+Refer the [section above](#Settings-files-location) to locate this file on your system.
  
    If you don't already have an LSL marker stream, you may use the example in [`EmotiBit/ofxLSL`](https://github.com/EmotiBit/ofxLSL#example-for-generating-marker-stream).
   For Example, an LSL marker stream with **name** `DataSyncMarker` and **source_id** `12345` can be specified in the `emotibitCommSettings.json` as shown below
@@ -272,6 +279,86 @@ source_id. To do so, follow the steps below:
   
   **Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has the **name** specified
   can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!**
+  </details>
+
+### EmotiBit Oscilloscope display settings
+Users can use the `ofxOscilloscopeSettings.json` file to change other Oscillocsope settings.
+Refer the [section above](#Settings-files-location) to locate this file on your system.
+
+- <details><summary>Using ofxOscilloscopeSettings.json file</summary>
+
+  Each datastream is a `plot` on a `scope panel`. The example below shows the settings available for each scope.
+  ```
+  <scope>
+      <samplingFrequency>25.000000000</samplingFrequency> ## represents the sampling rate of the signal
+      <timeWindow>10.000000000</timeWindow>               ## duration of time represented in the scope
+      <yMin>0.000000000</yMin>                            ## min. signal threshold for display
+      <yMax>0.000000000</yMax>                            ## max. signal threshold for display
+      <minYSpan>0.000000000</minYSpan>                    ## min. allowed (yMax-yMin)
+      <plot>
+          <plotId>0</plotId>                              ## Plot ID. !! DO not change this. It should always follow the information specified in inputSettings.xml
+          <plotName>PPG:RED</plotName>                    ## Plot name displayed on the screen
+          <plotColor>                                     ## Plot color in RGB channels
+              <r>255</r>               
+              <g>69</g>
+              <b>78</b>
+          </plotColor>
+      </plot>
+  </scope>
+  ```
+  Close any running Oscilloscope window. Change any setting in this file. Reopen EmotiBit Oscilloscope to see the changes take effect.
+  
+  As an example, if you are using the 100Hz PPG example, then the PPG plot settings look something like:
+  ```
+  <scope>
+        <samplingFrequency>100.000000000</samplingFrequency>
+        <timeWindow>10.000000000</timeWindow>
+        <yMin>0.000000000</yMin>
+        <yMax>0.000000000</yMax>
+        <minYSpan>0.000000000</minYSpan>
+        <plot>
+            <plotId>0</plotId>
+            <plotName>PPG:RED</plotName>
+            <plotColor>
+                <r>255</r>
+                <g>69</g>
+                <b>78</b>
+            </plotColor>
+        </plot>
+    </scope>
+	<scope>
+        <samplingFrequency>100.000000000</samplingFrequency>
+        <timeWindow>10.000000000</timeWindow>
+        <yMin>0.000000000</yMin>
+        <yMax>0.000000000</yMax>
+        <minYSpan>0.000000000</minYSpan>
+        <plot>
+            <plotId>1</plotId>
+            <plotName>PPG:IR</plotName>
+            <plotColor>
+                <r>128</r>
+                <g>75</g>
+                <b>181</b>
+            </plotColor>
+        </plot>
+    </scope>
+	<scope>
+        <samplingFrequency>100.000000000</samplingFrequency>
+        <timeWindow>10.000000000</timeWindow>
+        <yMin>0.000000000</yMin>
+        <yMax>0.000000000</yMax>
+        <minYSpan>0.000000000</minYSpan>
+        <plot>
+            <plotId>2</plotId>
+            <plotName>PPG:GRN</plotName>
+            <plotColor>
+                <r>120</r>
+                <g>209</g>
+                <b>192</b>
+            </plotColor>
+        </plot>
+    </scope>
+  ```
   </details>
 
 # EmotiBit DataParser
