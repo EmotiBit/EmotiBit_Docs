@@ -5,6 +5,7 @@
 - [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
   - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
   - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
+  - [Settings files location](#Settings-files-location)
   - [EmotiBit Oscilloscope network settings](#EmotiBit-Oscilloscope-network-settings)
   - [Using LSL with EmotiBit Oscilloscope](#Using-LSL-with-EmotiBit-Oscilloscope)
   - [EmotiBit Oscilloscope display settings](#EmotiBit-Oscilloscope-display-settings)
@@ -18,7 +19,7 @@
     - [Data type sampling rates](#Data-type-sampling-rates)
 - [Visualize parsed data](#Visualize-parsed-data)
   - [Visualization tools](#Visualization-tools)
-
+- [Next steps](#Next-steps)
 # Overview
 
 On this page, we will talk about using EmotiBit to record data. We will also talk about various functions available in the 
@@ -536,6 +537,12 @@ Visualization tools can often help answer some immediate questions and hence, ca
 - [EmotiBit python data viewer](https://github.com/EmotiBit/EmotiBit_Biometric_Lib/tree/master/py/examples/dataviewer_example)
   - A tool created for visualizing all data channels in one window. 
   - ![][EmotiBit-PythonDataViewer]
+
+# Next Steps
+
+- EmotiBit Firmware variants
+  - Once you are familiar with the EmotiBit data collection workflow, you may want to look at available firmware variants to adapt EmotiBit to your needs.
+  - A good example is the EmotiBit 100Hz PPG variant! Check out more details [here](./Learn_more_about_emotibit/EmotiBit_firmware.md#emotibit-firmware-variants).
 
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
