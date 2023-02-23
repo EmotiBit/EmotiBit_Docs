@@ -120,8 +120,7 @@ To start a record session, follow these steps:
     - We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
 
-  - <details><summary>Output List</summary>
-
+  - Output List
     - The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
     - Each output protocol uses settings specified in the unique file name, defined in the sections below.
     - Depending on your operating system, the settings file can be found in the locations listed below
@@ -176,8 +175,7 @@ To start a record session, follow these steps:
       - **EmotiBit Oscilloscope v1.7.1 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the UDP protocol.
       - To enable UDP, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `UDP`.
       - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `udpOutputSettings.xml` file.
-      - You can find the settings file in the path mentioned above.
-      - You can modify the contents of this file to control the behavior of the UDP output stream.
+      - You can find the settings file in the path mentioned above. You can modify the contents of this file to control the behavior of the UDP output stream.
       - A snippet of the default contents are shared below
       ```
       <patchboard>
@@ -197,7 +195,6 @@ To start a record session, follow these steps:
       ```
 
     </details>
-  </details>
 
 
 ### EmotiBit Oscilloscope network settings
