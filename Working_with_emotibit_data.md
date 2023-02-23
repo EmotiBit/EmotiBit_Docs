@@ -204,9 +204,17 @@ To start a record session, follow these steps:
 The software release `v1.4.11` adds the ability for users to tweak their network settings using the `emotibitCommSettings.json` file.
 - <details><summary><b>emotibitCommSettings.json</b></summary>
 
+  - `sendAdvertisingInterval_msec` allows users to specify how frequently (time in mS) they want the Oscilloscope to ping the network to find EmotiBit. The default setting should work in most cases and we recommend
+changing this setting only if it is required by your network admin.
+  - `checkAdvertisingInterval_msec` allows users to specify how frequently (time in mS) they want the Oscilloscope to search for EmotiBit responses on the network. 
+Again, we recommend changing this setting only if it is required by your network admin.
   - Users can now choose between broadcast vs unicast advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
     - are working with routers that block broadcast(ex: iPhone hotspot). Check out the note below for using the latest Oscilloscope(v1.4.11) with iPhone hotspot.
     - perform poorly with unicast. The oscilloscope now uses broadcast by default, so it should just work... and work better!
+  - Specifically in unicast mode there are 2 more options available. Most users will never have to change these settings, but if you are working
+in a constrained network environment, these settings may help to conform to network admin requirements.
+    - `nUnicastIpsPerLoop` specified the number of IPs you want to ping at time.
+    - `unicastMinLoopDelay_msec` specifies the min time to wait before trying to ping IPs on the network again.
   - Ability to exclude or include networks while looking for EmotiBits.
     - `excludeList`: If you don't want EmotiBit Oscilloscope to look for EmotiBit in a particular network, add it to the excludeList
     - `includeList`: If you want EmotiBit Oscilloscope to look for EmotiBits ins specific networks, add it to the includeList
@@ -230,26 +238,37 @@ The software release `v1.4.11` adds the ability for users to tweak their network
 
     The modified file should look like the snippet shown below.
 	```
-	    {
-		"wifi" : {
-		    "advertising" : {
-			"transmission" : {
-			    "broadcast" : {
-				"enabled" : false
-			    },
-			    "unicast" : {
-				"enabled" : true,
-				"ipMax" : 254,
-				"ipMin" : 2
-			    }
-			}
-		    },
-		    "network" : {
-			"excludeList" : [ "" ],
-			"includeList" : [ "*.*.*.*" ]
-		    }
-		}
-	    }
+    {
+      "wifi": {
+        "advertising": {
+          "sendAdvertisingInterval_msec": 1000,
+          "checkAdvertisingInterval_msec": 100,
+          "transmission": {
+            "broadcast": {
+              "enabled": true
+            },
+            "unicast": {
+              "enabled": true,
+              "ipMax": 254,
+              "ipMin": 2,
+              "nUnicastIpsPerLoop": 1,
+              "unicastMinLoopDelay_msec": 3
+            }
+          }
+        },
+        "network": {
+          "excludeList": [ "" ],
+          "includeList": [ "*.*.*.*" ]
+        }
+      },
+      "lsl": {
+        "marker": {
+          "name": "",
+          "sourceId": ""
+        }
+      }
+    }
+
 	```
   </details>
 
