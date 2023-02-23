@@ -122,15 +122,18 @@ To start a record session, follow these steps:
 
   - <details><summary>Output List</summary>
 
-    The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+    - The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+    - Each output protocol uses settings specified in the unique file name, defined in the sections below.
+    - Depending on your operating system, the settings file can be found in the locations listed below
+        - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
+        - macOS: `EmotiBitOscilloscope/Contents/resources/`
+        - Linux: `EmotiBit Oscilloscope/bin/data/`     - 
     - <details><summary>OSC</summary>
 
       - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
       - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
-      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. The file path depends on your operating system.
-        - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\oscOutputSettings.xml`
-        - macOS: `EmotiBitOscilloscope/Contents/resources/oscOutputSettings.xml`
-        - Linux: `EmotiBit Oscilloscope/bin/data/oscOutputSettings.xml`
+      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. 
+      - You can find the settings file in the path mentioned above
       - You can modify the contents of this file to control the behavior of the OSC output stream.
       - A snippet of the default contents are shared below
       ```
@@ -167,7 +170,35 @@ To start a record session, follow these steps:
         - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
       - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
     </details>
+    
+    - <details><summary>UDP</summary>
+      
+      - **EmotiBit Oscilloscope v1.7.1 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the UDP protocol.
+      - To enable UDP, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `UDP`.
+      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `udpOutputSettings.xml` file.
+      - You can find the settings file in the path mentioned above.
+      - You can modify the contents of this file to control the behavior of the UDP output stream.
+      - A snippet of the default contents are shared below
+      ```
+      <patchboard>
+	      <settings>
+		      <input>
+		       <type>EmotiBit</type>
+		      </input>
+		      <output>
+		       <type>UDP</type>
+		       <ipAddress>localhost</ipAddress>
+		       <port>12346</port>
+		      </output>
+	      </settings>
+        <patchcords>
+        </patchcords>
+      </patchboard>		
+      ```
+
+    </details>
   </details>
+
 
 ### EmotiBit Oscilloscope network settings
 The software release `v1.4.11` adds the ability for users to tweak their network settings using the `emotibitCommSettings.json` file.
