@@ -205,10 +205,10 @@ The software release `v1.4.11` adds the ability for users to tweak their network
 changing this setting only if it is required by your network admin.
   - `checkAdvertisingInterval_msec` allows users to specify how frequently (time in mS) they want the Oscilloscope to search for EmotiBit responses on the network. 
 Again, we recommend changing this setting only if it is required by your network admin.
-  - Users can now choose between broadcast vs unicast advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
+  - Users can now choose between `broadcast` vs `unicast` advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
     - are working with routers that block broadcast(ex: iPhone hotspot). Check out the note below for using the latest Oscilloscope(v1.4.11) with iPhone hotspot.
     - perform poorly with unicast. The oscilloscope now uses broadcast by default, so it should just work... and work better!
-  - Specifically in unicast mode there are 2 more options available. Most users will never have to change these settings, but if you are working
+  - Specifically in `unicast mode` there are 2 more options available. Most users will never have to change these settings, but if you are working
 in a constrained network environment, these settings may help to conform to network admin requirements.
     - `nUnicastIpsPerLoop` specified the number of IPs you want to ping at time.
     - `unicastMinLoopDelay_msec` specifies the min time to wait before trying to ping IPs on the network again.
