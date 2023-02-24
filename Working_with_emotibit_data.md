@@ -120,17 +120,19 @@ To start a record session, follow these steps:
     - We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
 
-  - <details><summary>Output List</summary>
-
-    The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+  - Output List
+    - The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+    - Each output protocol uses settings specified in the unique file name, defined in the sections below.
+    - Depending on your operating system, the settings file can be found in the locations listed below
+        - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
+        - macOS: `EmotiBitOscilloscope/Contents/resources/`
+        - Linux: `EmotiBit Oscilloscope/bin/data/`     - 
     - <details><summary>OSC</summary>
 
       - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
       - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
-      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. The file path depends on your operating system.
-        - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\oscOutputSettings.xml`
-        - macOS: `EmotiBitOscilloscope/Contents/resources/oscOutputSettings.xml`
-        - Linux: `EmotiBit Oscilloscope/bin/data/oscOutputSettings.xml`
+      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. 
+      - You can find the settings file in the path mentioned above
       - You can modify the contents of this file to control the behavior of the OSC output stream.
       - A snippet of the default contents are shared below
       ```
@@ -167,15 +169,49 @@ To start a record session, follow these steps:
         - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
       - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
     </details>
-  </details>
+    
+    - <details><summary>UDP</summary>
+      
+      - **EmotiBit Oscilloscope v1.7.1 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the UDP protocol.
+      - To enable UDP, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `UDP`.
+      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `udpOutputSettings.xml` file.
+      - You can find the settings file in the path mentioned above. You can modify the contents of this file to control the behavior of the UDP output stream.
+      - A snippet of the default contents are shared below
+      ```
+      <patchboard>
+	      <settings>
+		      <input>
+		       <type>EmotiBit</type>
+		      </input>
+		      <output>
+		       <type>UDP</type>
+		       <ipAddress>localhost</ipAddress>
+		       <port>12346</port>
+		      </output>
+	      </settings>
+        <patchcords>
+        </patchcords>
+      </patchboard>		
+      ```
+
+    </details>
+
 
 ### EmotiBit Oscilloscope network settings
 The software release `v1.4.11` adds the ability for users to tweak their network settings using the `emotibitCommSettings.json` file.
 - <details><summary><b>emotibitCommSettings.json</b></summary>
 
-  - Users can now choose between broadcast vs unicast advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
+  - `sendAdvertisingInterval_msec` allows users to specify how frequently (time in mS) they want the Oscilloscope to ping the network to find EmotiBit. The default setting should work in most cases and we recommend
+changing this setting only if it is required by your network admin.
+  - `checkAdvertisingInterval_msec` allows users to specify how frequently (time in mS) they want the Oscilloscope to search for EmotiBit responses on the network. 
+Again, we recommend changing this setting only if it is required by your network admin.
+  - Users can now choose between `broadcast` vs `unicast` advertising. You can also specify ip ranges to ping for unicast! This will be beneficial for users that: 
     - are working with routers that block broadcast(ex: iPhone hotspot). Check out the note below for using the latest Oscilloscope(v1.4.11) with iPhone hotspot.
     - perform poorly with unicast. The oscilloscope now uses broadcast by default, so it should just work... and work better!
+  - Specifically in `unicast mode` there are 2 more options available. Most users will never have to change these settings, but if you are working
+in a constrained network environment, these settings may help to conform to network admin requirements.
+    - `nUnicastIpsPerLoop` specified the number of IPs you want to ping at time.
+    - `unicastMinLoopDelay_msec` specifies the min time to wait before trying to ping IPs on the network again.
   - Ability to exclude or include networks while looking for EmotiBits.
     - `excludeList`: If you don't want EmotiBit Oscilloscope to look for EmotiBit in a particular network, add it to the excludeList
     - `includeList`: If you want EmotiBit Oscilloscope to look for EmotiBits ins specific networks, add it to the includeList
@@ -199,26 +235,37 @@ The software release `v1.4.11` adds the ability for users to tweak their network
 
     The modified file should look like the snippet shown below.
 	```
-	    {
-		"wifi" : {
-		    "advertising" : {
-			"transmission" : {
-			    "broadcast" : {
-				"enabled" : false
-			    },
-			    "unicast" : {
-				"enabled" : true,
-				"ipMax" : 254,
-				"ipMin" : 2
-			    }
-			}
-		    },
-		    "network" : {
-			"excludeList" : [ "" ],
-			"includeList" : [ "*.*.*.*" ]
-		    }
-		}
-	    }
+    {
+      "wifi": {
+        "advertising": {
+          "sendAdvertisingInterval_msec": 1000,
+          "checkAdvertisingInterval_msec": 100,
+          "transmission": {
+            "broadcast": {
+              "enabled": true
+            },
+            "unicast": {
+              "enabled": true,
+              "ipMax": 254,
+              "ipMin": 2,
+              "nUnicastIpsPerLoop": 1,
+              "unicastMinLoopDelay_msec": 3
+            }
+          }
+        },
+        "network": {
+          "excludeList": [ "" ],
+          "includeList": [ "*.*.*.*" ]
+        }
+      },
+      "lsl": {
+        "marker": {
+          "name": "",
+          "sourceId": ""
+        }
+      }
+    }
+
 	```
   </details>
 
