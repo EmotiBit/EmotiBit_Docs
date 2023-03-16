@@ -148,15 +148,15 @@ if you want version control.
 libraries
     |-- EmotiBit Feather Wing
     |   |-- EmotiBit_stock_firmware
-    |   |   |-- EmotiBit_stock_firmware.ino
-    |   |   |-- platformio.ini
+    |       |-- EmotiBit_stock_firmware.ino
+    |       |-- platformio.ini
     |   |-- EmotiBit_stock_firmware_100Hz_PPG
-    |   |   |-- platformio.ini
-    |   |-- EmotiBit MAX30101
-    |   |-- EmotiBit XPlat Utils
-    |   |-- EmotiBit BMI160
-    |   |-- [dep_lib1]
-    |   |-- [dep_lib2]
+    |       |-- platformio.ini
+    |-- EmotiBit MAX30101
+    |-- EmotiBit XPlat Utils
+    |-- EmotiBit BMI160
+    |-- [dep_lib1]
+    |-- [dep_lib2]
 ```
 
 #### Building a project
