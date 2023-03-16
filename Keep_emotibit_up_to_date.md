@@ -145,7 +145,7 @@ if you want version control.
 
 **Note**: Make sure that after the libraies have been installed, the following directory structure is maintained.
 ```
-libraries
+Arduino/libraries
     |-- EmotiBit Feather Wing
     |   |-- EmotiBit_stock_firmware
     |       |-- EmotiBit_stock_firmware.ino
