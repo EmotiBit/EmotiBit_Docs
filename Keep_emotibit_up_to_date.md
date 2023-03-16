@@ -122,19 +122,25 @@ and might get updates which require a different set of instructions to be follow
   - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 
   a feather purchased independently, check out the documentation on the [Adafruit website](https://learn.adafruit.com/adafruit-winc1500-wifi-shield-for-arduino/updating-firmware).
 
-## Building firmware using PlatformIO
+## [WIP] Building firmware using PlatformIO
 Note: This section is for advanced users, who have some experience with programming for
 embedded environemts. <br>
 
 ### Things you will need
 The EmotiBit firmware can be built using PlatformIO. To start using PlatformIO, you will need:
 1. PlatformIO development environment
-  - Get the platformIO development environment using instructions available on their [website](https://platformio.org/platformio-ide).
-  - We recommend starting with PlatformIO+VScode.
+    - Get the platformIO development environment using instructions available on their [website](https://platformio.org/platformio-ide).
+    - We recommend starting with PlatformIO+VScode.
 2. A platformIO `.ini` project file
-  - For EmotiBit source code, a `platformIO.ini` file is present inside the firmware variant directory (see directory structure below).
+    - For EmotiBit source code, a `platformIO.ini` file is present inside the firmware variant directory (see directory structure below).
 
 ### How to build a firmware variant
+
+#### [WIP] Board files for Feather M0
+- Use the details in [this issue](https://github.com/EmotiBit/EmotiBit_FeatherWing/issues/242) to get the correct board variant for feather M0.
+- ESP board should be downloaded when building the project for the first time.
+  - [ToDo]: Set the board version we are recommending to use.
+
 
 #### Downloading required dependencies
 1. You can download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
