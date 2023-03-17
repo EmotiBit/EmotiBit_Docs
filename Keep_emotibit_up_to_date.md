@@ -199,13 +199,13 @@ Arduino/libraries
 
 ```diff
 -- Note: Do not close or try to open the project immediately after opening it the first time. Opening the project takes some time.
-Trying to re-open a project before the first attempt is finished creates build issues leater on.
+Trying to re-open a project before the first attempt has finished creates build issues later (with "file not found" errors)
 Unfortunately, PIO does not show a "progress screen" while initializing the project.
-As a hack, you can try to switch between the PIO panes (on the left. `Project`, `Inspect`, `Libraries` etc.)
-If the initialization is complete, returning to `Projects` pane will show the new project you just started.
+As a hack, you can try to switch between the PIO panes (on the left. `Project`, `Inspect`, `Libraries` etc.) to check is project initialization is complete.
+If the initialization is complete, returning to `Projects` pane will show the new project you just opened.
 ```
-- Once the project is loaded in PIO, you can open it in your workspace.
-- The project has already been setup for use, so you can simply click on the build button to create the firmware binary.
+- Once the project is loaded in PIO, you can open the files in your workspace.
+- The project has already been setup, so you can simply click on the `build button` (check link below for more details) to create the firmware binary.
   - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) to learning more about build/upload/debug options. 
 
 
