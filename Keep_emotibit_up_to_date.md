@@ -163,7 +163,7 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
     - ![image](https://user-images.githubusercontent.com/31810812/213038179-a7ab0464-981e-430b-8a27-dcd52884b578.png)
 - Once the framework is added, you should be able to build from source using platformIO!
 
-- ESP board should be downloaded when building the project for the first time.
+- ESP board should be downloaded automatically when building the project for the first time.
   - [ToDo]: Set the board version we are recommending to use.
 
 
