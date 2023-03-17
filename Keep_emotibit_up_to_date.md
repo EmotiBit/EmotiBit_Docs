@@ -175,17 +175,17 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
 **Note**: Make sure that after the libraies have been downloaded, the following directory structure is maintained.
 ```
 Arduino/libraries
-    |-- EmotiBit Feather Wing
-    |   |-- EmotiBit_stock_firmware
-    |       |-- EmotiBit_stock_firmware.ino
-    |       |-- platformio.ini
-    |   |-- EmotiBit_stock_firmware_100Hz_PPG
-    |       |-- platformio.ini
-    |-- EmotiBit MAX30101
-    |-- EmotiBit XPlat Utils
-    |-- EmotiBit BMI160
-    |-- [dependency_library1]
-    |-- [dependency_library2]
+|-- EmotiBit Feather Wing
+|   |-- EmotiBit_stock_firmware
+|       |-- EmotiBit_stock_firmware.ino
+|       |-- platformio.ini
+|   |-- EmotiBit_stock_firmware_100Hz_PPG
+|       |-- platformio.ini
+|-- EmotiBit MAX30101
+|-- EmotiBit XPlat Utils
+|-- EmotiBit BMI160
+|-- [dependency_library1]
+|-- [dependency_library2]
 ```
 
 #### Building the project
