@@ -106,7 +106,7 @@ To start a record session, follow these steps:
     - **Sleep**: In sleep mode, EmotiBit stops any tasks it is performing and goes to sleep.
       - We recommend switching the EmotiBit into `Sleep mode` instead of un-plugging the EmotiBit battery when not in use for short periods.
       - If the EmotiBit is being left un-used for a long duration, it is best to flip the Hibernate Switch to `HIB`.
-      - Refer [EmotiBit LEDs and buttons section](./Learn_more_about_emotibit/EmotiBit_hardware.md#LEDs-and-Buttons) for more information on the Hibernate switch.
+      - Refer [EmotiBit LEDs and buttons section](./Learn_more_about_emotibit.md#LEDs-and-Buttons) for more information on the Hibernate switch.
     </details>
   
   - <details><summary>DC/DO counter</summary>
@@ -542,7 +542,7 @@ Visualization tools can often help answer some immediate questions and hence, ca
 
 - EmotiBit Firmware variants
   - Once you are familiar with the EmotiBit data collection workflow, you may want to look at available firmware variants to adapt EmotiBit to your needs.
-  - A good example is the EmotiBit 100Hz PPG variant! Check out more details [here](./Learn_more_about_emotibit/EmotiBit_firmware.md#emotibit-firmware-variants).
+  - A good example is the EmotiBit 100Hz PPG variant! Check out more details [here](./Learn_more_about_emotibit#EmotiBit_firmware.md#emotibit-firmware-variants).
 
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
