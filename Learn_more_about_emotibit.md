@@ -7,7 +7,7 @@
   - [Raw data packet architecture](#Raw-data-packet-architecture)
   - [TypeTag Character Codes](#TypeTag-Character-Codes)
   - [Sampling rates](#Sampling-rates)
-  - [EmotiBit firmware variants](EmotiBit-firmware-variants)
+  - [EmotiBit firmware variants](#EmotiBit-firmware-variants)
 - [EmotiBit SW](#EmotiBit-SW)
   - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
 - [Repositories](#Repositories)
