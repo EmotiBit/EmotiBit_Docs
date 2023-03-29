@@ -14,7 +14,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - [Building firmware using PlatformIO](#Building-firmware-using-PlatformIO)
   - [Requirements](#Requirements)
   - [Steps to build from source](#Steps-to-build-from-source)
-    - [Get the correct board version for Feather M0](#Get-the-correct-board-version-for-Feather-M0)
+    - [Install the correct board versions](#Install-the-correct-board-versions)
     - [Download required dependencies](#Download-required-dependencies)
     - [Building the project](#Building-the-project)
 
@@ -147,6 +147,7 @@ To start using PlatformIO, you will need:
 
 ### Steps to build from source
 
+#### Install the correct board versions
 - <details><summary>Get the correct board version for Feather M0</summary>
   
   - The latest firmware on EmotiBit uses an older `Adafruit SAMD board package (v1.5.1)`
@@ -161,7 +162,7 @@ To start using PlatformIO, you will need:
   ```
   - We need to explicitely specify the `atmelsam` version as `v3.8.1` because as per the release notes, that platformio version is parity 
 for adafruit samd board package v1.5.1. You can check this in the release notes for [`v3.8.0`](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.0)
-  - But, this version of the `platform` is only compatible with an earlier version of the `framework`([v4.3.0](https://github.com/platformio/platformio-pkg-framework-arduinosam)) which unfortunately has been marked as obsolete. As a consequence, when platformio is compiled with the enviroment set as above, the required framework is unable to be installed automatically.
+  - But, this version of the `platform` is only compatible with an earlier version of the `framework`([v4.3.0](https://github.com/platformio/platformio-pkg-framework-arduinosam)) which unfortunately has been marked as obsolete. As a consequence, when platformio is compiled with the enviroment set as above, the required framework fails to install automatically.
   - To solve this, you need to manually add this framework to the PIO core. 
     - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
     - Unzip the archive and place the unzipped folder in  your platformIO core folder. The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages` path on windows.
@@ -172,7 +173,7 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
 
 - <details><summary>Get the correct board version for Feather ESP32</summary>
 
-  - ESP board should be downloaded automatically when building the project for the first time.
+  - ESP board will be downloaded automatically when building the project for the first time.
     - [ToDo]: Set the board version we are recommending to use.
   </details>
 
