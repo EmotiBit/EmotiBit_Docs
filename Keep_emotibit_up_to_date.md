@@ -130,8 +130,7 @@ and might get updates which require a different set of instructions to be follow
 ## Building firmware using PlatformIO
 
 ```diff
-This section of the documentation is a work in progress. Complete support for platformIO will be added
-in a future release.
+-- This section of the documentation is a work in progress. Complete support for platformIO will be added in a future release.
 ```
 Note: This section is for advanced users who have experience with programming for
 embedded environemts. Using platformIO as a build tool is still being tested and this section will be imrpoved as
@@ -207,7 +206,7 @@ Arduino/libraries
   - Navigate to the platformIO ini file.
     - `Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_FeatherWing/EmotiBit_stock_firmware/platformio.ini `
 
-```diff
+``` diff
 -- Note: Do not close or try to open the project immediately after opening it the first time. Opening the project takes some time.
 Trying to re-open a project before the first attempt has finished creates build issues later (with "file not found" errors)
 Unfortunately, PIO does not show a "progress screen" while initializing the project.
