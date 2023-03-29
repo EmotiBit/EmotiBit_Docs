@@ -2,7 +2,7 @@
 
 ## Table of contents
 - [EmotiBit HW](#EmotiBit-HW)
-  - [LEDs nad Buttons](#LEDs-and-Buttons)
+  - [LEDs and Buttons](#LEDs-and-Buttons)
 - [EmotiBIt FW](#EmotiBit-FW)
   - [Raw data packet architecture](#Raw-data-packet-architecture)
   - [TypeTag Character Codes](#TypeTag-Character-Codes)
