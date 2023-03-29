@@ -176,8 +176,7 @@ To start a record session, follow these steps:
 
 ### Settings files location
 
-[ToDo: explain where to find the Oscilloscope settings file]
-Based on the operating system, users can find the settings files in the following locations, :
+Based on the operating system, users can find the settings files in the following locations:
 - For Windows users(Users will also need to give the file "write privileges". Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urp7dq/how_do_i_edit_files_installed_by_emotibit/) to learn how):
   - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
 - For mac users
