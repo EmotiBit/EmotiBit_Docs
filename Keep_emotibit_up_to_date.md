@@ -168,6 +168,9 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
     - After downloading and adding the extracted flder, the `packages` folder should look something like 
       - ![image](https://user-images.githubusercontent.com/31810812/213038179-a7ab0464-981e-430b-8a27-dcd52884b578.png)
   - Once the framework is added, you should be able to build from source using platformIO!
+  - **NOTE:** If your build fails, throwing an error stating `Error: Could not find the package with 'atmelsam @ 3.8.1' requirements ...`, it is most likely because that platform has been removed from auto-downloads for platformIO. To manually add that platform to your platformIO build,
+    - Get the platform from the [v3.8.1 release page](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.1). (Download the source code zip)
+    - Extract the zip and place the unzipped folder in your `platforms` directory in the platformIO core directory. The path should look something like : `Users\<user_name>\.platformio\platforms`
   </details>
 
 - <details><summary>Get the correct board version for Feather ESP32</summary>
