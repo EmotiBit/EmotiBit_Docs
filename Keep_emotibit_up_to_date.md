@@ -99,6 +99,7 @@ Follow the steps below to get started!
         - EmotiBit ADS1X15
         - EmotiBit XPlat Utils
         - EmotiBit EmojiLib
+        - EmotiBit ArduinoFilters
     </details>
     
 #### Close and re-open Arduino IDE
