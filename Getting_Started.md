@@ -107,7 +107,49 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 **Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> `{"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}`
 
-**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi and does not support enterprise networks (that require a login/password after connecting).** This is due to HW/FW limitations of the presently supported Adafruit Feather M0 WiFi.
+**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi and only supports enterprise networks (that require a login/password after connecting) if paired with the ESP32 Feather.** This is due to HW/FW limitations of the presently supported Adafruit Feather M0 WiFi.
+
+<details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
+  
+  ```diff
+  -- Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
+  ```
+  
+  - Enterprise WiFi network details are added to the config.txt file in the following format.
+    - If no `username` is provided, `userid` will be used as `username`
+  
+  ```
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1",
+      "username": "user1_name", 
+      "password": "prize1"
+    }
+  ```
+  
+  - A sample config.txt file could look like
+  ```
+  {
+  "WifiCredentials": [
+    {
+      "ssid": "personal-1",
+      "password": "pass1"
+    },
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1_id",
+      "username": "user1_name",
+      "password": "prize1"
+    }
+  ]
+  }
+  ```
+  
+  - Notes:
+    - ESP32 takes a substantially long time to connect to enterprise network (>10 secs as per our limited testing).
+    - Since the ESP core is still under heavy development, there are some unexplained behaviours with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart **after** 2 connection attempts have been made for each listed network in the config file.
+    - Unlike personal networks, Enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your emotibit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). We don't currently support discoverability on different subnets and if you end up in such a situation, the EmotiBit Oscilloscope will not be able to discover the EmotiBit on the network.
+</details> 
 
 ### Stack your EmotiBit!
 
