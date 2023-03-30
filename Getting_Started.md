@@ -324,7 +324,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 
 # EmotiBit: LEDs and Buttons
 
-Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
+Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md#LEDs-and-Buttons)
 
 
 # Next Steps

@@ -2,11 +2,12 @@
 
 ## Table of contents
 - [EmotiBit HW](#EmotiBit-HW)
-  - [LEDs nad Buttons](#LEDs-and-Buttons)
+  - [LEDs and Buttons](#LEDs-and-Buttons)
 - [EmotiBIt FW](#EmotiBit-FW)
   - [Raw data packet architecture](#Raw-data-packet-architecture)
   - [TypeTag Character Codes](#TypeTag-Character-Codes)
   - [Sampling rates](#Sampling-rates)
+  - [EmotiBit firmware variants](#EmotiBit-firmware-variants)
 - [EmotiBit SW](#EmotiBit-SW)
   - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
 - [Repositories](#Repositories)
@@ -68,6 +69,24 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
 |Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
 |EDA|`EA` `EL` `ER`|-|15|
 
+### EmotiBit firmware variants
+The official stock firmware for EmotiBit (EmotiBit_stock_firmware) unlocks all features of EmotiBit and is a great starting point
+for using EmotiBit! 
+
+Since EmotiBit is opensource, you can also tweak the [firmware](https://github.com/EmotiBit/EmotiBit_FeatherWing) and make changes as per your specific needs.
+As an exmaple, we have created a variant which runs the PPG sensor at 100Hz sampling rates (instead of the stock 25hz). You may choose to use this firmware
+if you are interested in derivatives metrics like HRV (Heart rate Variability), which benefits from a faster sampling rate.
+Also be sure to update the [EmotiBit Oscilloscope display settings](./Working_with_emotibit_data.md#EmotiBit-Oscilloscope-display-settings) with the higher PPG sampling rate to display the data correctly in the EmotiBit Oscillscope window.
+
+You can find the binary for this firmware in our [github repository](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases/latest).
+
+If you wish to tweak this firmware and compile it from source, follow the instructions to download and install platformIO (checkout the "Keeping EmotiBit up to date" document).
+
+**Developer note: This variant is based on the same source code and uses build flags to setup different sampling rates. As a result,
+it cannot be compiled on Arduino and needs a different embedded environment for development. We use PlatformIO for this purpose.**
+
+[ToDo:] Create a table that lists the variant information.
+
 ## EmotiBit SW
 ### How is Data Stored on the SD Card 
 - CSV: Experimental Data
@@ -78,7 +97,7 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
   - Information about the configuration of the hardware and firmware are written to a .json file also on the SD card
   - The file is named with the date-time that the recording started
     - 2019-01-30_11-57-13-492_info.json
-    
+
 ```
 [
 {"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},
@@ -124,7 +143,7 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
   - defined as {TSC(n) - TSC(n-1)} - {TSsender(n) - TSsender(n-1)}
 - **LC** periodicity is rather unreliable (>300ms)
   - Can be more accurate on same computer
-  
+
 #### LSL Packet Examples
 
 ```
@@ -145,6 +164,6 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
 - OpenFrameworks GUI
   - https://github.com/EmotiBit/ofxEmotiBit
   - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases/latest
-  
-  
+
+
   [LED]: assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"

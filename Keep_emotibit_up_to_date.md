@@ -11,6 +11,12 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
   - [Setup](#setup)
   - [Programming the Feather](#programming-the-feather)
   - [About the WiFi shield](#About-the-WiFi-shield)
+- [Building firmware using PlatformIO](#Building-firmware-using-PlatformIO)
+  - [Requirements](#Requirements)
+  - [Steps to build from source](#Steps-to-build-from-source)
+    - [Install the correct board versions](#Install-the-correct-board-versions)
+    - [Download required dependencies](#Download-required-dependencies)
+    - [Building the project](#Building-the-project)
 
 ## Update firmware using EmotiBit FirmwareInstaller
 Using the `EmotiBit FirmwareInstaller` is the easiest way to update EmotiBit firmware.
@@ -92,6 +98,8 @@ Follow the steps below to get started!
         - EmotiBit External EEPROM 
         - EmotiBit ADS1X15
         - EmotiBit XPlat Utils
+        - EmotiBit EmojiLib
+        - EmotiBit ArduinoFilters
     </details>
     
 #### Close and re-open Arduino IDE
@@ -118,7 +126,101 @@ Follow the steps below to get started!
 - Adafruit feather M0 works with the `ATWINC1500` for wireless communication. The `ATWINC` exists as a independent submodule to the feather
 and might get updates which require a different set of instructions to be followed. 
   - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 
-  a feather purchased independently, check out the documentation to [update the WiFi module](Learn_more_about_emotibit.md/#Update-Feather-WiFi-chip-firmware)  
+  a feather purchased independently, check out the documentation on the [Adafruit website](https://learn.adafruit.com/adafruit-winc1500-wifi-shield-for-arduino/updating-firmware).
+
+## Building firmware using PlatformIO
+
+```diff
+-- This section of the documentation is a work in progress. Complete support for platformIO will be added in a future release.
+```
+Note: This section is for advanced users who have experience with programming for
+embedded environemts. Using platformIO as a build tool is still being tested and this section will be imrpoved as
+we create our structure to use platformIO. <br>
+
+### Requirements
+To start using PlatformIO, you will need:
+1. PlatformIO development environment
+    - Get the platformIO development environment using instructions available on their [website](https://platformio.org/platformio-ide).
+    - We have tested this build process with `PlatformIO`+`VScode`.
+2. A platformIO `.ini` project file
+    - A `platformIO.ini` file has been included inside the firmware variant directory (see directory structure below).
+
+### Steps to build from source
+
+#### Install the correct board versions
+- <details><summary>Get the correct board version for Feather M0</summary>
+  
+  - The latest firmware on EmotiBit uses an older `Adafruit SAMD board package (v1.5.1)`
+    - A history of all versions can be found [here](https://github.com/adafruit/ArduinoCore-samd/releases)
+  - To get an environment set up in platformIO, we need to specify the `board`, `platform` and the `framework` in the `.ini` file.
+  - For our code, that looks something like
+  ```
+  [env:adafruit_feather_m0]
+  platform = atmelsam @3.8.1
+  board = adafruit_feather_m0 
+  framework = arduino
+  ```
+  - We need to explicitely specify the `atmelsam` version as `v3.8.1` because as per the release notes, that platformio version is parity 
+for adafruit samd board package v1.5.1. You can check this in the release notes for [`v3.8.0`](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.0)
+  - But, this version of the `platform` is only compatible with an earlier version of the `framework`([v4.3.0](https://github.com/platformio/platformio-pkg-framework-arduinosam)) which unfortunately has been marked as obsolete. As a consequence, when platformio is compiled with the enviroment set as above, the required framework fails to install automatically.
+  - To solve this, you need to manually add this framework to the PIO core. 
+    - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
+    - Unzip the archive and place the unzipped folder in  your platformIO core folder. The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages` path on windows.
+    - After downloading and adding the extracted flder, the `packages` folder should look something like 
+      - ![image](https://user-images.githubusercontent.com/31810812/213038179-a7ab0464-981e-430b-8a27-dcd52884b578.png)
+  - Once the framework is added, you should be able to build from source using platformIO!
+  - **NOTE:** If your build fails, throwing an error stating `Error: Could not find the package with 'atmelsam @ 3.8.1' requirements ...`, it is most likely because that platform has been removed from auto-downloads for platformIO. To manually add that platform to your platformIO build,
+    - Get the platform from the [v3.8.1 release page](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.1). (Download the source code zip)
+    - Extract the zip and place the unzipped folder in your `platforms` directory in the platformIO core directory. The path should look something like : `Users\<user_name>\.platformio\platforms`
+  </details>
+
+- <details><summary>Get the correct board version for Feather ESP32</summary>
+
+  - ESP board will be downloaded automatically when building the project for the first time.
+    - [ToDo]: Set the board version we are recommending to use.
+  </details>
+
+#### Download required dependencies
+1. You should download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
+(using Arduino IDE).
+2. All the libraries should be added to the `Documents/Arduino/libraries` folder.
+
+**Note**: Make sure that after the libraies have been downloaded, the following directory structure is maintained.
+```
+Arduino/libraries
+|-- EmotiBit Feather Wing
+|   |-- EmotiBit_stock_firmware
+|       |-- EmotiBit_stock_firmware.ino
+|       |-- platformio.ini
+|   |-- EmotiBit_stock_firmware_100Hz_PPG
+|       |-- platformio.ini
+|-- EmotiBit MAX30101
+|-- EmotiBit XPlat Utils
+|-- EmotiBit BMI160
+|-- [dependency_library1]
+|-- [dependency_library2]
+```
+
+#### Building the project
+- For detailed instructions, check out the [platformIO website](https://docs.platformio.org/en/latest/home/index.html) to open the PIO extension in VS-Code.
+- Brief instructions:
+  - Open Visual Studio Code and navigate to the PlatformIO home page.
+  - On the hokme page, click on `Open Project`.
+    - <img src="./assets/platformio_open_project.png" width="1000">
+  - Navigate to the platformIO ini file.
+    - `Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_FeatherWing/EmotiBit_stock_firmware/platformio.ini `
+
+``` diff
+-- Note: Do not close or try to open the project immediately after opening it the first time. Opening the project takes some time.
+Trying to re-open a project before the first attempt has finished creates build issues later (with "file not found" errors)
+Unfortunately, PIO does not show a "progress screen" while initializing the project.
+As a hack, you can try to switch between the PIO panes (on the left. `Project`, `Inspect`, `Libraries` etc.) to check is project initialization is complete.
+If the initialization is complete, returning to `Projects` pane will show the new project you just opened.
+```
+- Once the project is loaded in PIO, you can open the files in your workspace.
+- The project has already been setup, so you can simply click on the `build button` (check link below for more details) to create the firmware binary.
+  - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) to learning more about build/upload/debug options. 
+
 
 
 [comment]: <> (Add links to images below)
