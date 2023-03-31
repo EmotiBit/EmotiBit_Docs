@@ -147,7 +147,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   
   - Notes:
     - ESP32 takes a substantially long time to connect to enterprise network (>10 secs as per our limited testing).
-    - Since the ESP core is still under heavy development, there are some unexplained behaviours with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart **after** 2 connection attempts have been made for each listed network in the config file.
+    - Since the ESP core is still under heavy development, there are some unexplained behaviours with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart, if a network connection is not made within a set timeout.
     - Unlike personal networks, Enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your emotibit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). We don't currently support discoverability on different subnets and if you end up in such a situation, the EmotiBit Oscilloscope will not be able to discover the EmotiBit on the network.
 </details> 
 
