@@ -178,9 +178,13 @@ Arduino/libraries
 - <details><summary>Get the correct board version for Feather M0</summary>
   
   - Download the `framework v4.3.0` from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
-  - Unzip the archive and place the unzipped folder in  your platformIO core folder. 
-    - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages`.
-    - on Linux: 
+    - Unzip the archive and place the unzipped folder in the `packages` folder in your platformIO core directory. 
+      - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages`.
+      - on Linux: `/home/.platformio/packages`
+  - Download `platform v3.8.1`
+    - Unzip the archive and place the unzipped folder in the `platforms` folder in your platformIO core directory. 
+      - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\platforms`.
+      - on Linux: `/home/.platformio/p`platforms`  
   - <details><summary>Long explanation</summary>
   
     - The latest firmware on EmotiBit uses an older `Adafruit SAMD board package (v1.5.1)`
@@ -216,10 +220,9 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
 
 
 #### Building the project
-- For detailed instructions, check out the [platformIO website](https://docs.platformio.org/en/latest/home/index.html) to open the PIO extension in VS-Code.
 - Brief instructions:
   - Open Visual Studio Code and navigate to the PlatformIO home page.
-  - On the hokme page, click on `Open Project`.
+  - On the hokme page (`Quick Access` panel > `PIO Home` > `Open`), click on `Open Project`.
     - <img src="./assets/platformio_open_project.png" width="1000">
   - Navigate to the platformIO ini file.
     - `Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_FeatherWing/EmotiBit_stock_firmware/platformio.ini `
