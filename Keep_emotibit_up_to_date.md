@@ -156,28 +156,35 @@ To start using PlatformIO, you will need:
 #### Install the correct board versions
 - <details><summary>Get the correct board version for Feather M0</summary>
   
-  - The latest firmware on EmotiBit uses an older `Adafruit SAMD board package (v1.5.1)`
-    - A history of all versions can be found [here](https://github.com/adafruit/ArduinoCore-samd/releases)
-  - To get an environment set up in platformIO, we need to specify the `board`, `platform` and the `framework` in the `.ini` file.
-  - For our code, that looks something like
-  ```
-  [env:adafruit_feather_m0]
-  platform = atmelsam @3.8.1
-  board = adafruit_feather_m0 
-  framework = arduino
-  ```
-  - We need to explicitely specify the `atmelsam` version as `v3.8.1` because as per the release notes, that platformio version is parity 
+  - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
+  - Unzip the archive and place the unzipped folder in  your platformIO core folder. 
+    - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages`.
+    - on Linux: 
+  - <details><summary>Long explanation</summary>
+  
+    - The latest firmware on EmotiBit uses an older `Adafruit SAMD board package (v1.5.1)`
+      - A history of all versions can be found [here](https://github.com/adafruit/ArduinoCore-samd/releases)
+    - To get an environment set up in platformIO, we need to specify the `board`, `platform` and the `framework` in the `.ini` file.
+    - For our code, that looks something like
+    ```
+    [env:adafruit_feather_m0]
+    platform = atmelsam @3.8.1
+    board = adafruit_feather_m0 
+    framework = arduino
+    ```
+    - We need to explicitely specify the `atmelsam` version as `v3.8.1` because as per the release notes, that platformio version is parity 
 for adafruit samd board package v1.5.1. You can check this in the release notes for [`v3.8.0`](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.0)
-  - But, this version of the `platform` is only compatible with an earlier version of the `framework`([v4.3.0](https://github.com/platformio/platformio-pkg-framework-arduinosam)) which unfortunately has been marked as obsolete. As a consequence, when platformio is compiled with the enviroment set as above, the required framework fails to install automatically.
-  - To solve this, you need to manually add this framework to the PIO core. 
-    - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
-    - Unzip the archive and place the unzipped folder in  your platformIO core folder. The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages` path on windows.
-    - After downloading and adding the extracted flder, the `packages` folder should look something like 
-      - ![image](https://user-images.githubusercontent.com/31810812/213038179-a7ab0464-981e-430b-8a27-dcd52884b578.png)
-  - Once the framework is added, you should be able to build from source using platformIO!
-  - **NOTE:** If your build fails, throwing an error stating `Error: Could not find the package with 'atmelsam @ 3.8.1' requirements ...`, it is most likely because that platform has been removed from auto-downloads for platformIO. To manually add that platform to your platformIO build,
-    - Get the platform from the [v3.8.1 release page](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.1). (Download the source code zip)
-    - Extract the zip and place the unzipped folder in your `platforms` directory in the platformIO core directory. The path should look something like : `Users\<user_name>\.platformio\platforms`
+    - But, this version of the `platform` is only compatible with an earlier version of the `framework`([v4.3.0](https://github.com/platformio/platformio-pkg-framework-arduinosam)) which unfortunately has been marked as obsolete. As a consequence, when platformio is compiled with the enviroment set as above, the required framework fails to install automatically.
+    - To solve this, you need to manually add this framework to the PIO core. 
+      - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
+      - Unzip the archive and place the unzipped folder in  your platformIO core folder. The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages` path on windows.
+      - After downloading and adding the extracted flder, the `packages` folder should look something like 
+        - ![image](https://user-images.githubusercontent.com/31810812/213038179-a7ab0464-981e-430b-8a27-dcd52884b578.png)
+    - Once the framework is added, you should be able to build from source using platformIO!
+    - **NOTE:** If your build fails, throwing an error stating `Error: Could not find the package with 'atmelsam @ 3.8.1' requirements ...`, it is most likely because that platform has been removed from auto-downloads for platformIO. To manually add that platform to your platformIO build,
+      - Get the platform from the [v3.8.1 release page](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.1). (Download the source code zip)
+      - Extract the zip and place the unzipped folder in your `platforms` directory in the platformIO core directory. The path should look something like : `Users\<user_name>\.platformio\platforms`
+    </details>  
   </details>
 
 - <details><summary>Get the correct board version for Feather ESP32</summary>
