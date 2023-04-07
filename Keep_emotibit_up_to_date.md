@@ -236,7 +236,7 @@ As a hack, you can try to switch between the PIO panes (on the left. `Project`, 
 If the initialization is complete, returning to `Projects` pane will show the new project you just opened.
 ```
 - Once the project is loaded in PIO, you can open the files in your workspace.
-- The project has already been setup, so you can simply click on the `build button` (check link below for more details) to create the firmware binary.
+- Click on the `build button` (`check mark` icon on the status bar at the bottom) to create the firmware binary.
   - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) to learning more about build/upload/debug options. 
 
 
