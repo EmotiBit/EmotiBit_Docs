@@ -178,11 +178,13 @@ Arduino/libraries
 - <details><summary>Get the correct board version for Feather M0</summary>
   
   - Download the `framework v4.3.0` from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
-    - Unzip the archive and place the unzipped folder in the `packages` folder in your platformIO core directory. 
+    - Unzip the archive and place the unzipped folder in the `packages` folder in your platformIO core directory.
+      - If you are using platformIO for the first time, then the `packages` folder may not exist. In that case, just create the `packages` folder in `.platformio`.
       - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages`.
       - on Linux: `/home/.platformio/packages`
   - Download `platform v3.8.1` from the [link](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.1).
     - Unzip the archive and place the unzipped folder in the `platforms` folder in your platformIO core directory. 
+      - If you are using platformIO for the first time, then the `platforms` folder may not exist. In that case, just create the `platforms` folder in `.platformio`.
       - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\platforms`.
       - on Linux: `/home/.platformio/platforms`  
   - <details><summary>Long explanation</summary>
