@@ -147,16 +147,37 @@ To start using PlatformIO, you will need:
     - A `platformIO.ini` file has been included inside the firmware variant directory (see directory structure below).
 3. All required libraries to build EmotiBit firmware. 
     - If you have previously used Arduino to build EmotiBit firmware, all the required libraries should already be installed in the `Documents/Arduino/libraries` folder. 
-    - If you are building from source for the first time, you can either use Arduino IDE to download all the required dependencies OR just clone the required repositories from github.
-      - If you are cloning git repositories, then make sure the directory structure for the dependent libraries follows the pattern shown below.  
+    - If you are building from source for the first time, follow the steps in the section below. 
 
 
 ### Steps to build from source
 
+#### Download required dependencies
+1. You should download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
+(using Arduino IDE).
+2. All the libraries should be added to the `Documents/Arduino/libraries` folder.
+3. Alternatively, you can clone all the repositories from github. Just make sure the directory structure shown below is maintained. If not using Arduino, the root folder will be different from `Arduino/libraries`.
+
+**Note**: Make sure that after the libraies have been downloaded, the following directory structure is maintained.
+```
+Arduino/libraries
+|-- EmotiBit Feather Wing
+|   |-- EmotiBit_stock_firmware
+|       |-- EmotiBit_stock_firmware.ino
+|       |-- platformio.ini
+|   |-- EmotiBit_stock_firmware_100Hz_PPG
+|       |-- platformio.ini
+|-- EmotiBit MAX30101
+|-- EmotiBit XPlat Utils
+|-- EmotiBit BMI160
+|-- [dependency_library1]
+|-- [dependency_library2]
+```
+
 #### Install the correct board versions
 - <details><summary>Get the correct board version for Feather M0</summary>
   
-  - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
+  - Download the `framework v4.3.0` from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
   - Unzip the archive and place the unzipped folder in  your platformIO core folder. 
     - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages`.
     - on Linux: 
@@ -193,26 +214,6 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
     - [ToDo]: Set the board version we are recommending to use.
   </details>
 
-#### Download required dependencies
-1. You should download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
-(using Arduino IDE).
-2. All the libraries should be added to the `Documents/Arduino/libraries` folder.
-
-**Note**: Make sure that after the libraies have been downloaded, the following directory structure is maintained.
-```
-Arduino/libraries
-|-- EmotiBit Feather Wing
-|   |-- EmotiBit_stock_firmware
-|       |-- EmotiBit_stock_firmware.ino
-|       |-- platformio.ini
-|   |-- EmotiBit_stock_firmware_100Hz_PPG
-|       |-- platformio.ini
-|-- EmotiBit MAX30101
-|-- EmotiBit XPlat Utils
-|-- EmotiBit BMI160
-|-- [dependency_library1]
-|-- [dependency_library2]
-```
 
 #### Building the project
 - For detailed instructions, check out the [platformIO website](https://docs.platformio.org/en/latest/home/index.html) to open the PIO extension in VS-Code.
