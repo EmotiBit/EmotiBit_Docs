@@ -225,7 +225,8 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
   - On the hokme page (`Quick Access` panel > `PIO Home` > `Open`), click on `Open Project`.
     - <img src="./assets/platformio_open_project.png" width="1000">
   - Navigate to the platformIO ini file.
-    - `Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_FeatherWing/EmotiBit_stock_firmware/platformio.ini `
+    - `Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_FeatherWing/EmotiBit_stock_firmware`.
+    - Click on `Open EmotiBit_stock_firmware`.
 
 ``` diff
 -- Note: Do not close or try to open the project immediately after opening it the first time. Opening the project takes some time.
