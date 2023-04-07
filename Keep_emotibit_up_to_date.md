@@ -14,8 +14,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 - [Building firmware using PlatformIO](#Building-firmware-using-PlatformIO)
   - [Requirements](#Requirements)
   - [Steps to build from source](#Steps-to-build-from-source)
-    - [Install the correct board versions](#Install-the-correct-board-versions)
     - [Download required dependencies](#Download-required-dependencies)
+    - [Install the correct board versions](#Install-the-correct-board-versions)
     - [Building the project](#Building-the-project)
 
 ## Update firmware using EmotiBit FirmwareInstaller
