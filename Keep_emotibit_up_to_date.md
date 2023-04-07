@@ -140,10 +140,16 @@ we create our structure to use platformIO. <br>
 ### Requirements
 To start using PlatformIO, you will need:
 1. PlatformIO development environment
-    - Get the platformIO development environment using instructions available on their [website](https://platformio.org/platformio-ide).
-    - We have tested this build process with `PlatformIO`+`VScode`.
+    - We have tested this build process with `PlatformIO`+`VScode`. 
+    - If you do not have VS-Code already installed, go ahead and [download&install VS-Code](https://code.visualstudio.com/download). 
+    - PlatformIO on VS-Code is installed as a plug-in. Please visit their [website](https://platformio.org/platformio-ide) for instructions on downloading platformIO for VS-Code.
 2. A platformIO `.ini` project file
     - A `platformIO.ini` file has been included inside the firmware variant directory (see directory structure below).
+3. All required libraries to build EmotiBit firmware. 
+    - If you have previously used Arduino to build EmotiBit firmware, all the required libraries should already be installed in the `Documents/Arduino/libraries` folder. 
+    - If you are building from source for the first time, you can either use Arduino IDE to download all the required dependencies OR just clone the required repositories from github.
+      - If you are cloning git repositories, then make sure the directory structure for the dependent libraries follows the pattern shown below.  
+
 
 ### Steps to build from source
 
