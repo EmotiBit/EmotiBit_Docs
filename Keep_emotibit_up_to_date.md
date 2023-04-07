@@ -87,7 +87,7 @@ Follow the steps below to get started!
     - Arduino Low Power
       - RTCZero *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
     - Adafruit_IS31FL3731_Library
-      - Adafruit_GFX_Library *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
+      - Adafruit_GFX_Library *(should be automatically installed with Adafruit_IS31FL3731_Library. If not, then please manually search and install)*
     - EmotiBit FeatherWing
       - It will automatically install the following EmotiBit dependencies
         - EmotiBit BMI160
