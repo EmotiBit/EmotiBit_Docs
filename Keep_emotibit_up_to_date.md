@@ -85,9 +85,9 @@ Follow the steps below to get started!
     - SdFat *by Bill Greiman*
     - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
     - Arduino Low Power
-    - RTCZero
-    - Adafruit_GFX_Library
+      - RTCZero *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
     - Adafruit_IS31FL3731_Library
+      - Adafruit_GFX_Library *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
     - EmotiBit FeatherWing
       - It will automatically install the following EmotiBit dependencies
         - EmotiBit BMI160
