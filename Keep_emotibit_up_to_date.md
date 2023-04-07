@@ -241,6 +241,26 @@ If the initialization is complete, returning to `Projects` pane will show the ne
 - Click on the `build button` (`check mark` icon on the status bar at the bottom) to create the firmware binary.
   - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) to learning more about build/upload/debug options. 
 
+#### Importing a Arduino sketch into platformIO
+- Copy and paste the platformio.ini file from `EmotiBit_stock_firmware` folder into the project you are trying to import.
+- The stock exmaple ini file looks like 
+```
+[platformio]
+extra_configs = 
+    ../board_feather_m0.ini
+    ;../board_feather_esp32.ini
+src_dir = ./
+lib_dir = ../../
+
+
+[custom]
+variant_flags = -DSTOCK_FIRMWARE
+
+[env]
+lib_ldf_mode = deep+
+```
+- When importing, make sure the `lib_dir` flag is pointing to `Arduino/libraries` as a relative path from your new project `.ino` file.
+- After the change has been made, try building the project!
 
 
 [comment]: <> (Add links to images below)
