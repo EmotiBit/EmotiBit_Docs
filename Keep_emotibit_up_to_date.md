@@ -260,12 +260,14 @@ variant_flags = -DSTOCK_FIRMWARE
 [env]
 lib_ldf_mode = deep+
 ```
+- After copying the file, Open the project from `PIO Home` > `Open` > navigate to the project and click on Open.
+- After the project has been opened in PlatformIO, make the following changes to the `platformio.ini` file.
 - Changes to be made:
   - Mke sure the `lib_dir` flag is pointing to `Arduino/libraries` as a relative path from the `.ini.` file.
   - Also make sure to include the line `#include <Arduino.h>` in the `.ino` file. This is important for building in platformIO.
   - You will also need to modify the path to `board_feather_m0.ini` and `board_feather_esp32.ini` relative to `.ini`.
   - Finally, keep the variant flag as `-DSTOCK_FIRMWARE` for PPG 25hz and `-DEMOTIBIT_PPG_100HZ` for PPG 100Hz.
-  - After the change has been made, try building the project!
+- After the change has been made, try building the project!
 
 
 [comment]: <> (Add links to images below)
