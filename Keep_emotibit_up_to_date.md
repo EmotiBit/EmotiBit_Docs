@@ -241,6 +241,7 @@ If the initialization is complete, returning to `Projects` pane will show the ne
 - Once the project is loaded in PIO, you can open the files in your workspace.
 - Click on the `build button` (`check mark` icon on the status bar at the bottom) to create the firmware binary.
   - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) to learning more about build/upload/debug options. 
+- The binaries are created at `project_folder/.pio/build/<board_name>/EmotiBit_stock_firmware.<board_name>.bin`.
 
 ## Importing an Arduino sketch into platformIO
 - Copy and paste the platformio.ini file from `EmotiBit_stock_firmware` folder into the project you are trying to import.
