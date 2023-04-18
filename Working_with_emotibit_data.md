@@ -175,15 +175,15 @@ To start a record session, follow these steps:
       ```
       <patch>
 		<input>SA</input>
-		<output>/EmotiBit/0/SA</output>
+		<output>/EmotiBit/0/SCR:AMP</output>
       </patch>
       <patch>
 		<input>SR</input>
-		<output>/EmotiBit/0/SR</output>
+		<output>/EmotiBit/0/SCR:RIS</output>
       </patch>
       <patch>
 		<input>SF</input>
-		<output>/EmotiBit/0/SF</output>
+		<output>/EmotiBit/0/SCR:FREQ</output>
       </patch>
       ```   
       - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
