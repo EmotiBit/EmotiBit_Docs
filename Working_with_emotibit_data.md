@@ -168,8 +168,24 @@ To start a record session, follow these steps:
       ```
       - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
       - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
-      - A `patch` connects an input stream to an output stream. 
-        - As an example, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`. 
+      - A `patch` connects an input stream to an output stream. In the snippet above, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`
+        - The `<input>` tag should contain the Typetag of the data you want to relay. The available typetags can be found in the [section below](#EmotiBit-data-types).
+        - The `<output>` tag should contain the name of the OSC stream you want to relay the data as.
+      - For example, to add SCR (Skin conductance response) metrics to OSC, you would add the following lines to the relevant section of the `oscOutputSettings.xml` file.
+      ```
+      <patch>
+		<input>SA</input>
+		<output>/EmotiBit/0/SA</output>
+      </patch>
+      <patch>
+		<input>SR</input>
+		<output>/EmotiBit/0/SR</output>
+      </patch>
+      <patch>
+		<input>SF</input>
+		<output>/EmotiBit/0/SF</output>
+      </patch>
+      ```   
       - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
     </details>
     
