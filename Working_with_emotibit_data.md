@@ -604,7 +604,7 @@ Visualization tools can often help answer some immediate questions and hence, ca
 
 - EmotiBit Firmware variants
   - Once you are familiar with the EmotiBit data collection workflow, you may want to look at available firmware variants to adapt EmotiBit to your needs.
-  - A good example is the EmotiBit 100Hz PPG variant! Check out more details [here](./Learn_more_about_emotibit.md#emotibit-firmware-variants).
+  - A good example is the EmotiBit 100Hz PPG variant! Check out more details [here](./Learn_more_about_emotibit.md/#emotibit-firmware-variants).
 
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
