@@ -78,7 +78,7 @@ As an exmaple, we have created a variant which runs the PPG sensor at 100Hz samp
 if you are interested in derivatives metrics like HRV (Heart rate Variability), which benefits from a faster sampling rate.
 Also be sure to update the [EmotiBit Oscilloscope display settings](./Working_with_emotibit_data.md#EmotiBit-Oscilloscope-display-settings) with the higher PPG sampling rate to display the data correctly in the EmotiBit Oscillscope window. You can find the binary for this firmware in our [github repository](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases/latest).
 
-If you wish to tweak this firmware and compile it from source, follow the instructions to download and install platformIO (checkout the [Keeping EmotiBit up to date](./Keep_emotibit_up_to_date.md/#Building-firmware-using-PlatformIO) document).
+If you wish to tweak this firmware and compile it from source, follow the instructions to download and install platformIO (checkout the [Keeping EmotiBit up to date](./Keep_emotibit_up_to_date.md#Building-firmware-using-PlatformIO) document).
 
 **Developer note: This variant is based on the same source code and uses build flags to setup different sampling rates. As a result,
 it cannot be compiled on Arduino and needs a different embedded environment for development. We use PlatformIO for this purpose.**
