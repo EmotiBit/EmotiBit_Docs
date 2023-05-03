@@ -158,9 +158,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 - <details><summary><b>Installation Instructions For Linux Users</b></summary>
     
-  - Download `EmotiBitSoftware-linux.zip` from the release page.
-  - Move the downloaded zip file to a folder location you desire. Extract the zipped download.
-  - Follow the instructions in the ReadMe file inside the extracted folder.
+  - Follow the instructions on the release page.
   </details>    
 
 ## Running EmotiBit software
