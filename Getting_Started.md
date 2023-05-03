@@ -245,6 +245,21 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - Screengrab from `EmotiBitFirmwareInstaller`
   - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
+- <details><summary> Installing custom firmware</summary>
+
+  - The `EmotiBit FirmwareInstaller` installs the stock firmware provided in the software bundle.
+    - Each software release bundles specific firmware version that can be found in the [software release notes](https://github.com/emotibit/ofxemotibit/releases/latest). 
+  - If you wish to install a custom firmware or an older firmware release, you can do so using the "Load" provision in the Firmware Installer.
+  - To do so, 
+    - Press `L` on the first screen on the Firmware Installer (You may also notice that the Firmware Installer has a footnote with the same prompt)
+    - Choose the file (`.bin`) you want to install on EmotiBit
+    - After selecting the file, you will return to the original Firmware Installer screen
+    - Continue with normal installation process
+  - For example, you may grab an earlier release from the [EmotiBit firmware release page](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases), and install that firmware using the `Load` function in the EmotiBit Installer.
+  - Alternatively, you can write your own custom firmware and create a binary. You can then use the Firmware Installer to install that binary.
+  - **WARNING**: Make sure that the firmware you are trying to install has been written for the correct board version. 
+Installing incompatible firmware may lead to un-expected behavior, or worse, may brick your device.
+  </details>
 
 ## For Linux and Advanced Users
 - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
