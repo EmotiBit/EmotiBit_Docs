@@ -289,6 +289,7 @@ Installing incompatible firmware may lead to un-expected behavior, or worse, may
 ## For Linux and Advanced Users
 - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
+  - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
   - The FirmwareInstaller essentaily performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
     2. Updates the WINC WiFi module FW to version 19.6.1
@@ -323,6 +324,8 @@ Installing incompatible firmware may lead to un-expected behavior, or worse, may
 
 - <details><summary> Installing Emotibit Firmware on Feather ESP32 Huzzah</summary>
   
+  - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so,
+  right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
   - The FirmwareInstaller essentaily uploads the latest EmotiBit FW onto the Feather
   - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
   - There are 2 requirements to run esptool
