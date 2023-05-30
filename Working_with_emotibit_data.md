@@ -520,7 +520,8 @@ For a quick look at the available data types, you can check out the table below.
   |PI     |PPG Infrared          |
   |PR     |PPG Red               |
   |PG     |PPG Green             |
-  |T0     |Temperature          |
+  |T0     |Temperature (only on EmotiBit Alpha/Beta V1, V2, V3)         |
+  |T1     |Temperature          |
   |TH     |Temperature via Medical-grade Thermopile (only on EmotiBit MD)   |
   |AX     |Accelerometer X       |
   |AY     |Accelerometer Y       |
