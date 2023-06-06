@@ -70,7 +70,7 @@ The following sections explain the contents of each item available for purchase 
 ### Essentials Kit
 
 The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find:
-- **Adafruit Feather M0 WiFi**
+- **Adafruit Feather M0 WiFi** or **Adafruit Feather ESP32 Huzzah**
 - **400mAh Lithium ion battery**
 - **High-speed microSD card**
 - **MicroSD card reader**
