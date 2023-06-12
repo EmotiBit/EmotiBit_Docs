@@ -444,7 +444,7 @@ The steps below describe how you can use the DataParser to parse the raw data fi
 
 ![][EmotiBit-DataParser]
 
-For more deatils on the file types check out the section [below]().
+For more details on the file types check out the section [below]().
 
 ### Parsing EmotiBit timestamps to LSL time
 
