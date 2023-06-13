@@ -183,11 +183,13 @@ Arduino/libraries
       - If you are using platformIO for the first time, then the `packages` folder may not exist. In that case, just create the `packages` folder in `.platformio`.
       - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages`.
       - on Linux: `/home/.platformio/packages`
+      - on Mac: `/Users/<user_name>/.platformio/packages`
   - Download `platform v3.8.1` zip (source code zip) from the [link](https://github.com/platformio/platform-atmelsam/releases/tag/v3.8.1).
     - Unzip the archive and place the unzipped folder in the `platforms` folder in your platformIO core directory. 
       - If you are using platformIO for the first time, then the `platforms` folder may not exist. In that case, just create the `platforms` folder in `.platformio`.
       - on Windows: The location should be equivalent to  `C:\Users\<user_name>\.platformio\platforms`.
       - on Linux: `/home/.platformio/platforms`  
+      - on Mac: `/Users/<user_name>/.platformio/platforms`
   - <details><summary>Long explanation</summary>
   
     - The latest firmware on EmotiBit uses an older `Adafruit SAMD board package (v1.5.1)`
