@@ -84,7 +84,7 @@ Follow the steps below to get started!
     
     - WiFi101 *by Arduino*
     - SdFat *by Bill Greiman*
-    - ArduinoJson _**(version 5.13.5, not v6.x.x)**_
+    - ArduinoJson _**(version 6.21.2)**_
     - Arduino Low Power
       - RTCZero *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
     - Adafruit_IS31FL3731_Library
