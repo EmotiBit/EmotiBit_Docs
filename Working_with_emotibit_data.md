@@ -14,6 +14,7 @@
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
     - [Parse raw data file](#Parse-raw-data-file)
     - [Parsing EmotiBit timestamps to LSL time](#Parsing-EmotiBit-timestamps-to-LSL-time)
+    - [Batch Parsing](#Batch-parsing)
   - [EmotiBit file types](#EmotiBit-file-types)
   - [EmotiBit data types](#EmotiBit-data-types) 
     - [Data type sampling rates](#Data-type-sampling-rates)
@@ -484,6 +485,14 @@ marker source generator system.
   ```
   When **addToOutput** is set to `true`, an additional column is added to the parsed output, with the column header set as the `columnHeader` specified in the file above.
   </details>
+### Batch parsing
+- The parser can currently be run from the command line with the filename (to be parsed) passed as an argument.
+- We have created a [shell script](https://github.com/EmotiBit/ofxEmotiBit/blob/master/EmotiBitDataParser/bin/EmotiBitDataParser.sh) to leverage this functionality and "batch parse" multiple files in 1 go.
+  - Just grab the script from the repository and run it with the correct arguments.
+- As an example, you can place all your raw files in a folder, let's say `data`.
+  - Then you can run the script as `./EmotiBitDataParser.sh -x "C:\\Program Files\\EmotiBit\\EmotiBit DataParser\\EmotiBitDataParser.exe" -d "path\\to\\data"`
+  - The parser will then parse all the files present in the data folder.
+- We plan to further bake this into the software by making this a part of the GUI and it will be rolled out in a future release.
 
 ## EmotiBit file types
 There are 3 types of files associated with EmotiBit
