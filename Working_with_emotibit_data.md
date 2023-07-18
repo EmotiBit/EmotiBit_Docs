@@ -13,6 +13,7 @@
   - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
     - [Parse raw data file](#Parse-raw-data-file)
+    - [Parsed data file format](#Parsed-data-file-format)
     - [Parsing EmotiBit timestamps to LSL time](#Parsing-EmotiBit-timestamps-to-LSL-time)
     - [Batch Parsing](#Batch-parsing)
   - [EmotiBit file types](#EmotiBit-file-types)
@@ -447,6 +448,15 @@ The steps below describe how you can use the DataParser to parse the raw data fi
 
 For more details on the file types check out the section [below]().
 
+### Parsed data file format
+- The parsed data is stored in the following format
+
+|LocalTimestamp | EmotiBitTimestamp | PacketNumber | DataLength | TypeTag | ProtocolVersion | DataReliability | Data | 
+|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
+|Epoch time in seconds | EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted) | Packet number the data point was extracted from (sequentially increases) | Number of data points in the packet | TypeTag of the data (see below) | Reserved for future extensibility | Reserved for future extensibility | Data points |
+
+- Check out [this part of the documentation for more information on raw data file structure](./Learn_more_about_emotibit.md#raw-data-packet-architecture).
+
 ### Parsing EmotiBit timestamps to LSL time
 
 - <details><summary>Parsing EmotiBit data using LSL timestamps</summary>
@@ -485,6 +495,7 @@ marker source generator system.
   ```
   When **addToOutput** is set to `true`, an additional column is added to the parsed output, with the column header set as the `columnHeader` specified in the file above.
   </details>
+
 ### Batch parsing
 - The parser can currently be run from the command line with the filename (to be parsed) passed as an argument.
 - We have created a [shell script](https://github.com/EmotiBit/ofxEmotiBit/blob/master/EmotiBitDataParser/bin/EmotiBitDataParser.sh) to leverage this functionality and "batch parse" multiple files in 1 go.
