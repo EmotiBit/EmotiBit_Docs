@@ -172,9 +172,8 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Applications in the extracted folder.
   
-  > **Note1: The EmotiBit software is tested on all operating systems except macOS Ventura. (However, user reports suggest it works on Ventura, even though not officially tested.**
+  > **Note1: The EmotiBit software is tested on all operating systems except macOS Ventura. (However, user reports suggest it works on Ventura, even though not officially tested.)**
   
-  > **Note2: Due to a driver compatibility issues with new Apple silicon macs, there are some currently un-resolved issues with the EmotiBit Firmware Installer and Feather-ESP32. More details can be found in this [forum post](https://www.reddit.com/r/EmotiBit/comments/13kcxvm/help_us_add_support_for_m1_macbooks/). If you are using an Apple Silicon mac, you can still install the firmware using Arduino IDE ([check documentation](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Keep_emotibit_up_to_date.md#Update-firmware-using-Arduino-IDE)) and still be able to use other EmotiBit softwares to record and parse data.**
   - <details><summary>Check your Operating System version</summary>
     
     - You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
