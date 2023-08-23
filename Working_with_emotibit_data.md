@@ -528,7 +528,7 @@ There are 3 types of files associated with EmotiBit
 ## EmotiBit data types
 Each data type represents a unique signal captured by EmotiBit and is represented by a unique `TypeTag`. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
 
-For a quick look at the available data types, you can check out the table below. We periodically update this table as the EmotiBit firmware grows.
+For a quick look at the available data types, you can check out the table below. We periodically update this table as the EmotiBit firmware grows. **Additional details about the data stream (units, sampling rate, data format, averaging etc can be found in the `info` file created with each recording session.**
 
 - <details open><summary><b>Biometric TypeTags</b></summary>
 
