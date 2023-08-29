@@ -100,9 +100,32 @@ Follow the steps below to get started!
         - EmotiBit ADS1X15
         - EmotiBit XPlat Utils
         - EmotiBit EmojiLib
-        - EmotiBit ArduinoFilters
+        - EmotiBit ArduinoFilters 
     </details>
-    
+  - <details>
+    <summary>Script to clone EmotiBit libraries</summary>
+    <br>
+
+    - The following script may be run from a bash shell within your openFrameworks/addons/ directory to install ofxEmotiBit and all 
+    dependencies. 
+    - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+    ```
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    git clone git@github.com:EmotiBit/EmotiBit_EmojiLib.git
+    git clone git@github.com:EmotiBit/EmotiBit_NCP5623.git
+    git clone git@github.com:EmotiBit/EmotiBit_FeatherWing.git
+    git clone git@github.com:EmotiBit/EmotiBit_XPlat_Utils.git
+    git clone git@github.com:EmotiBit/EmotiBit_ArduinoFilters.git
+    git clone git@github.com:EmotiBit/EmotiBit_SI7013.git
+    git clone git@github.com:EmotiBit/EmotiBit_MLX90632.git
+    git clone git@github.com:EmotiBit/EmotiBit_BMI160.git
+    git clone git@github.com:EmotiBit/EmotiBit_ADS1X15.git
+    git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
+    git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
+    ```
+
 #### Close and re-open Arduino IDE
   - After installing boards or libraries you should close and re-open the Arduino Application to make sure the changes take effect.
 
