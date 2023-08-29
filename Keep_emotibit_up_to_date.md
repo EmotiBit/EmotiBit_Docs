@@ -145,7 +145,7 @@ To start using PlatformIO, you will need:
     - If you do not have VS-Code already installed, go ahead and [download&install VS-Code](https://code.visualstudio.com/download). 
     - PlatformIO on VS-Code is installed as a plug-in. Please visit their [website](https://platformio.org/platformio-ide) for instructions on downloading platformIO for VS-Code.
 2. A platformIO `.ini` project file
-    - A `platformIO.ini` file has been included inside the firmware variant directory (see directory structure below).
+    - A `platformIO.ini` file has been included inside each stock firmware directory (Ex: `EmotiBit FeatherWing/EmotiBit_stock_firmware`).
 3. All required libraries to build EmotiBit firmware. 
     - If you have previously used Arduino to build EmotiBit firmware, all the required libraries should already be installed in the `Documents/Arduino/libraries` folder. 
     - If you are building from source for the first time, follow the steps in the section below. 
@@ -157,7 +157,7 @@ To start using PlatformIO, you will need:
 1. You should download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
 (using Arduino IDE).
 2. All the libraries should be added to the `Documents/Arduino/libraries` folder.
-3. Alternatively, you can clone all the repositories from github. Just make sure the directory structure shown below is maintained. If not using Arduino, the root folder will be different from `Arduino/libraries`.
+3. Alternatively, you can clone all the repositories from github. Just make sure the directory structure shown below is maintained. If not using Arduino, the root folder will be different from `Arduino/libraries` (the  `lib_dir` project environment variable will have to be updated accordingly).
 
 **Note**: Make sure that after the libraies have been downloaded, the following directory structure is maintained.
 ```
