@@ -106,8 +106,8 @@ Follow the steps below to get started!
     <summary>Script to clone EmotiBit libraries</summary>
     <br>
 
-    - The following script may be run from a bash shell within your openFrameworks/addons/ directory to install ofxEmotiBit and all 
-    dependencies. 
+    - The following script may be run from a bash shell within your Arduino/libraries/ directory to install all dependencies from EmotiBit.
+    - Note: You will still need to install all other non-EmotiBit libraries using Arduino IDE. (Find a list in the above section)
     - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
     ```
