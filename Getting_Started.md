@@ -132,6 +132,49 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   ```
   </details>
 
+- <details><summary>Adding credentials using Serial monitor</summary>
+
+  - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
+  - Open Arduino IDE. Under `Tools > Port` notice the ports avaiable, if any.
+  - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
+  - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
+  - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup.
+    - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
+  - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Seial monitor immediately after.
+  - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
+    - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
+  - Type `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
+    - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
+  - If you timed is right, you will see the following response in the serial monitor. You are now in `WiFi credential edit mode`. 
+    - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
+  - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right on the `C`.
+  - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
+  - **Adding a Credential**
+    - To add a credential, you will need to use the keyword `WA`.
+    - In the serial monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
+    - Replace `SSSS` with the network name and `PPPP` with the network password.
+    - Once the Name and password uare update, hit `Send`.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
+    - You shuold see the following response on the Serial Monitor.
+  - **View existing credentials**
+    - To view existing credentials, you will need to use the keyword `LS`.
+    - In the serial monitor input type `@LS,~`. Hit `Send`.
+    - The existing credentials, along with their passwrods will be printed as a list.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiList.png" width="600">
+  - **Delete a credential**
+    - To delete an existing credentials, you will need to use the keyword `WD`.
+    - Use the `LS` keword as mentioned above to get the list of existing credentials.
+    - Note the number of the credential you want to delete.
+    - In the serial monitor input type `@WD,<network_number>`. Replace network number with a number on the list output in the previous step. For example, `@WD,1`. Hit `Send`.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
+    - The credential will be deleted and you will see the following output.
+  - **Reset**
+    - Once you have completed the edits to the credentials, type `@RS,~` in the Serial Monitor input. Hit `Send`.
+    - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
+      - <img src="./assets/SerialMonitorWifiCreds_Restart.png" width="600">
+  </details>
+
+
 **Note: Currently EmotiBit only supports the 2.4GHz band for WiFi and does not support enterprise networks (that require a login/password after connecting).** This is due to HW/FW limitations of the presently supported Adafruit Feather M0 WiFi.
 
 ### Stack your EmotiBit!
