@@ -323,7 +323,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
     - Press `L` on the first screen on the Firmware Installer (You may also notice that the Firmware Installer has a footnote with the same prompt)
     - Choose the file (`.bin`) you want to install on EmotiBit
     - After selecting the file, you will return to the original Firmware Installer screen
-    - Continue with normal installation process
+    - Continue with normal installation process (instructions on the screen)
   - For example, you may grab an earlier release from the [EmotiBit firmware release page](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases), and install that firmware using the `Load` function in the EmotiBit Installer.
   - Alternatively, you can write your own custom firmware and create a binary. You can then use the Firmware Installer to install that binary.
   - **WARNING**: Make sure that the firmware you are trying to install has been written for the correct board version. 
