@@ -347,10 +347,10 @@ Refer the [section above](#Settings-files-location) to locate this file on your 
   </details>
 
 ### EmotiBit Oscilloscope display settings
-Users can use the `ofxOscilloscopeSettings.json` file to change other Oscillocsope settings.
+Users can use the `ofxOscilloscopeSettings.xml` file to change other Oscillocsope settings.
 Refer the [section above](#Settings-files-location) to locate this file on your system.
 
-- <details><summary>Using ofxOscilloscopeSettings.json file</summary>
+- <details><summary>Using ofxOscilloscopeSettings.xml file</summary>
 
   Each datastream is a `plot` on a `scope panel`. The example below shows the settings available for each scope.
   ```
