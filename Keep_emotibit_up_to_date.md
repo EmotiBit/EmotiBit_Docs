@@ -267,7 +267,9 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
     - The core version is specified in the `.ini` file.
   </details>
 
-
+#### For Linux users
+- You will need to make a minor modification by commenting out a couple of `#include`s. we are working on resolving this issue in the best way.
+- Check out [this issue](https://github.com/EmotiBit/EmotiBit_FeatherWing/issues/290) for more information.
 #### Building the project
 - Brief instructions:
   - Open Visual Studio Code and navigate to the PlatformIO home page.
