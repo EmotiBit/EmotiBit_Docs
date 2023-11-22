@@ -82,13 +82,14 @@ Follow the steps below to get started!
     <summary><b>Library List</b></summary>
     <br>
     
-    - WiFi101 *by Arduino*
-    - SdFat *by Bill Greiman*
-    - ArduinoJson _**(version 6.21.2)**_
-    - Arduino Low Power
-      - RTCZero *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
-    - Adafruit_IS31FL3731_Library
-      - Adafruit_GFX_Library *(should be automatically installed with Adafruit_IS31FL3731_Library. If not, then please manually search and install)*
+    - WiFi101 *by Arduino* (`git@github.com:arduino-libraries/WiFi101.git`)
+    - SdFat *by Bill Greiman* (`git@github.com:greiman/SdFat.git`)
+    - ArduinoJson _**(version 6.21.2)**_ (`git@github.com:bblanchon/ArduinoJson.git`)
+    - Arduino Low Power (`git@github.com:arduino-libraries/ArduinoLowPower.git`)
+      - RTCZero (`git@github.com:arduino-libraries/RTCZero.git`) *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
+    - Adafruit_IS31FL3731_Library (`git@github.com:adafruit/Adafruit_IS31FL3731.git`)
+      - Adafruit_GFX_Library (`git@github.com:adafruit/Adafruit-GFX-Library.git`) *(should be automatically installed with Adafruit_IS31FL3731_Library. If not, then please manually search and install)*
+      - Adafruit BusIO (`git@github.com:adafruit/Adafruit_BusIO.git`) *(should be automatically installed with Adafruit_IS31FL3731_Library. If not, then please manually search and install)*
     - EmotiBit FeatherWing
       - It will automatically install the following EmotiBit dependencies
         - EmotiBit BMI160
@@ -125,6 +126,26 @@ Follow the steps below to get started!
     git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
     git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
     ```
+    </details>
+  - <details>
+    <summary>Script to clone non-EmotiBit libraries</summary>
+    <br>
+    
+    - Use the following script to install non-EmotiBit released libraries if not using Arduino Library manager.
+
+    ```
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    git clone git@github.com:arduino-libraries/WiFi101.git
+    git clone git@github.com:greiman/SdFat.git
+    git clone git@github.com:bblanchon/ArduinoJson.git
+    git clonr git@github.com:arduino-libraries/ArduinoLowPower.git
+    git clone git@github.com:arduino-libraries/RTCZero.git
+    git clone git@github.com:adafruit/Adafruit_IS31FL3731.git
+    git clone git@github.com:adafruit/Adafruit-GFX-Library.git
+    git clone git@github.com:adafruit/Adafruit_BusIO.git
+    ```
+    </details>
 
 #### Close and re-open Arduino IDE
   - After installing boards or libraries you should close and re-open the Arduino Application to make sure the changes take effect.
@@ -243,7 +264,7 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
 - <details><summary>Get the correct board version for Feather ESP32</summary>
 
   - ESP board will be downloaded automatically when building the project for the first time.
-    - [ToDo]: Set the board version we are recommending to use.
+    - The core version is specified in the `.ini` file.
   </details>
 
 
