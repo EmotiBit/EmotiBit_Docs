@@ -46,7 +46,7 @@ Follow the steps below to get started!
     
     - `Tools > Board: [...] > Boards Manager...`
     - Search for `ESP32`
-      - Install `esp32` *by Espressif Systems* **version 2.0.3**
+      - Install `esp32` *by Espressif Systems* **version 2.0.7**
     </details>
 
 - For Feather M0 WiFi boards
