@@ -156,7 +156,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - <details><summary><b>Installation Instructions For Windows Users</b></summary>
  
     - _**Note:** EmotiBit software is supported only for Windows 10+._
-    - After you download `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
+    - After you download `EmotiBitSoftware-Windows.zip`, you need to `extract` the zip file. You can extract it by `Right-Click > Extract All...`.
     - You will find an `.msi` installer inside the extracted folder. Run the installer by double-clicking.
       - If the Windows Defender SmartScreen pops up, click on `More Info`.
       - Then click on `Run Anyway`.
@@ -247,9 +247,9 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 
   - <details><summary> On Windows 11 </summary>
 
-    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Please make sure you have extracted the downloaded zip file `EmotiBitSoftware-Windows.zip`. To extract, `Right-click > Extract All...`.
     - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
-    - Right click on `silabser.inf` > `Show more options` > `Install`.
+    - Right click on `silabser.inf` > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
     - Depending on your firewall/antivirus settings you will likely need to grant permissions for the installation.
     - Once completed, the required the drivers should be installed on your Windows 11 machine.
     </details>
