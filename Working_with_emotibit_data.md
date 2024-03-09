@@ -434,8 +434,26 @@ you may refer to the instructions on the [Getting Started](./Getting_Started.md/
 ## Parse raw data using EmotiBit DataParser
 
 ### Transfer file from SD-Card to computer
-The data recorded using EmotiBit is stored on the SD-Card. To parse the raw data, 
-copy both the **raw data file** and the **info file**(`_info.json`) from the SD-Card to the computer(You may use the provided SD-Card reader to do so!).
+The data recorded using EmotiBit is stored on the SD-Card. You can transfer the data from the EmotiBit to the computer in 2 ways.
+1. Using provided SD card reader
+    - Remove the SD card from the EmotiBit.
+    - Plug it into the provided SD-Card reader.
+    - Plug the SD card reader into the computer. Once the Card is detected on the computer, you can simply copy the files to a location on your computer.
+2. Using a FTP server on EmotiBit
+    - With the EmotiBit switched on and running, plug it into the computer using the provided USB cable.
+    - Make sure the EmotiBit is not recording data.
+    - Open a Arduino Serial monitor. For more details, check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/vmtz6w/how_i_use_the_arduino_serial_monitor_with_emotibit/).
+    - Select `baud rate`=2000000 and `No line ending` from the dropdown options.
+    - Type `F` into the input message bar and press Enter.
+    - You will see that the EmotiBit will enter FTP mode.
+    - <img src="./assets/emotibit-start-ftp-server.png" width="400">
+    - You you can trasnfer the files from EmotiBit using an FTP client.
+    - Download and install [Filezilla Client](https://filezilla-project.org/), if you do not already have it.
+    - Open Filezilla and follow the connection setup instructions as shown in this [link](https://mischianti.org/simple-ftp-server-library-now-with-support-for-wio-terminal-and-sd/#Configure_client)
+      - The `Host` IP address will be printed on the serial monitor.
+      - The default **user name** is `ftp` and the default **password** is `ftp`. You can change these values in the firmware. In the future, these credentials will be accessible using the `config` file.
+    - Once you connect to the FTP server, you can then drag any file from EmotiBit to any location on your computer (inside the FileZilla interface), and it will we copied over the WiFi!
+    - <img src="./assets/emotibit-ftp-file-transfer.png" width="400">
 
 ### Parse raw data file
  
