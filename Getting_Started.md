@@ -144,7 +144,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Seial monitor immediately after.
   - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
     - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
-  - Type `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
+  - Type capital `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
     - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
   - If you timed is right, you will see the following response in the serial monitor. You are now in `WiFi credential edit mode`. 
     - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
