@@ -159,7 +159,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
       - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
   - **View existing credentials**
     - To view existing credentials, you will need to use the keyword `LS`.
-    - In the serial monitor input type `@LS,~`. Hit `Send`.
+    - In the serial monitor input type `@LS~`. Hit `Send`.
     - The existing credentials, along with their passwrods will be printed as a list.
       - <img src="./assets/SerialMonitorWifiCreds_WiFiList.png" width="600">
   - **Delete a credential**
@@ -171,7 +171,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
       - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
 
   - **Reset**
-    - Once you have completed the edits to the credentials, type `@RS,~` in the Serial Monitor input. Hit `Send`.
+    - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
     - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
       - <img src="./assets/SerialMonitorWifiCreds_Restart.png" width="600">
   </details>
