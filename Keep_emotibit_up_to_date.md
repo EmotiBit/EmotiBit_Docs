@@ -126,6 +126,7 @@ Follow the steps below to get started!
     git clone git@github.com:EmotiBit/EmotiBit_ADS1X15.git
     git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
     git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
+    git clone git@github.com:EmotiBit/EmotiBit_SimpleFTPServer.git
     ```
     </details>
   - <details>
