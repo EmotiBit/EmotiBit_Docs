@@ -73,15 +73,15 @@ Follow the steps below to get started!
     </details>
     
 #### Install firmware libraries
-  - Open the Arduino IDE and go to `Tools > Manage Libraries...`
-  - Search for and install the following Libraries.
-```diff
--- Be sure to install the correct version when specified for any library below --
-```
   - <details>
-    <summary><b>Library List</b></summary>
+    <summary><b>Using Arduino IDE</b></summary>
     <br>
     
+    - Open the Arduino IDE and go to `Tools > Manage Libraries...`
+    - Search for and install the following Libraries.
+    ```diff
+    -- Be sure to install the correct version when specified for any library below --
+    ```
     - WiFi101 *by Arduino* (`git@github.com:arduino-libraries/WiFi101.git`)
     - SdFat *by Bill Greiman* (`git@github.com:greiman/SdFat.git`)
     - ArduinoJson _**(version 6.21.2)**_ (`git@github.com:bblanchon/ArduinoJson.git`)
@@ -105,10 +105,10 @@ Follow the steps below to get started!
         - EmotiBit SimpleFTPServer
     </details>
   - <details>
-    <summary>Script to clone EmotiBit libraries</summary>
+    <summary>Using git</summary>
     <br>
 
-    - The following script may be run from a bash shell within your Arduino/libraries/ directory to install all dependencies from EmotiBit.
+    - The following script may be run from a bash shell within your `Arduino/libraries/` directory to install all dependencies from EmotiBit.
     - Note: You will still need to install all other non-EmotiBit libraries using Arduino IDE. (Find a list in the above section)
     - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
@@ -127,21 +127,10 @@ Follow the steps below to get started!
     git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
     git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
     git clone git@github.com:EmotiBit/EmotiBit_SimpleFTPServer.git
-    ```
-    </details>
-  - <details>
-    <summary>Script to clone non-EmotiBit libraries</summary>
-    <br>
-    
-    - Use the following script to install non-EmotiBit released libraries if not using Arduino Library manager.
-
-    ```
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519
     git clone git@github.com:arduino-libraries/WiFi101.git
     git clone git@github.com:greiman/SdFat.git
     git clone git@github.com:bblanchon/ArduinoJson.git
-    git clonr git@github.com:arduino-libraries/ArduinoLowPower.git
+    git clone git@github.com:arduino-libraries/ArduinoLowPower.git
     git clone git@github.com:arduino-libraries/RTCZero.git
     git clone git@github.com:adafruit/Adafruit_IS31FL3731.git
     git clone git@github.com:adafruit/Adafruit-GFX-Library.git
