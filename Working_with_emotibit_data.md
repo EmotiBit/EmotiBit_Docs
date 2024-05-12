@@ -433,7 +433,7 @@ you may refer to the instructions on the [Getting Started](./Getting_Started.md/
 
 ## Parse raw data using EmotiBit DataParser
 
-### Transfer file from EmotiBit to computer
+### Transfer file from SD-Card to computer
 The data recorded using EmotiBit is stored on the SD-Card. You can transfer the data from the EmotiBit to the computer in 2 ways.
 1. **Using SD card reader**
     - Remove the SD card from the EmotiBit.
