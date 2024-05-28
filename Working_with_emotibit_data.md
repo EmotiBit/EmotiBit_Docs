@@ -623,10 +623,10 @@ The following table shows the sampling rates at which the sensors operate with t
 
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
 |----------|---------|-----------|--------------|
-| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
-|PPG |`PI` `PG` `PR`| MAX30101|25|
-|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
-|EDA|`EA` `EL` `ER`|ADS1113|15|
+| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|[BMI160](https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi160/)+[BMI150](https://www.bosch-sensortec.com/products/motion-sensors/magnetometers/bmm150/)|25|
+|PPG |`PI` `PG` `PR`| [MAX30101](https://www.analog.com/en/products/max30101.html)|25|
+|Temperature |`T0` / `TH`|[MAX30101](https://www.analog.com/en/products/max30101.html) / [MLX90632](https://www.melexis.com/en/product/MLX90632/Miniature-SMD-Infrared-Thermometer-IC) |7.5|
+|EDA|`EA` `EL` `ER`|[ADS1114](https://www.ti.com/product/ADS1114)|15|
 
 # Visualize parsed data
 Visualization tools can often help answer some immediate questions and hence, can be very useful when working with time-series data. Below we have outlined a number of tools that we think can be very successful.
