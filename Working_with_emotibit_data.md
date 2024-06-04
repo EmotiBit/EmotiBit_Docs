@@ -16,6 +16,7 @@
     - [Parsed data file format](#Parsed-data-file-format)
     - [Parsing EmotiBit timestamps to LSL time](#Parsing-EmotiBit-timestamps-to-LSL-time)
     - [Batch Parsing](#Batch-parsing)
+    - [A note on Timesyncs](#A-note-on-Timesyncs)
   - [EmotiBit file types](#EmotiBit-file-types)
   - [EmotiBit data types](#EmotiBit-data-types) 
     - [Data type sampling rates](#Data-type-sampling-rates)
@@ -525,7 +526,7 @@ marker source generator system.
   - The parser will then parse all the files present in the data folder.
 - We plan to further bake this into the software by making this a part of the GUI and it will be rolled out in a future release.
 
-### Note on Timesyncs
+### A note on Timesyncs
 - We use periodic timesyncs from the EmotiBit Oscilloscope to improve the accuracy of the data timestamps on EmotiBit.The time syncing mechanism helps in correcting for any drift that may be introduced by the microcontroller clock.
 - Timesync pulses are transmitted to Emotibit periodically, as long as the EmotiBit Oscilloscope is connected to EmotiBit. These timesyncs are written with the raw data on the SD-Card to help the DataParser with time calibration.
 - The DataParser uses the timesyncs with the shortest Round-Trip-Times(RTT) to calibrate timestamps. The calibration works best if the raw data contains multiple timesyncs spaced throughout the recording. At minimum, the calibration requires 2 timesyncs.
