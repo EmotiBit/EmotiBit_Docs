@@ -525,7 +525,15 @@ marker source generator system.
   - The parser will then parse all the files present in the data folder.
 - We plan to further bake this into the software by making this a part of the GUI and it will be rolled out in a future release.
 
-## EmotiBit file types
+### Note on Timesyncs
+- We use periodic timesyncs from the EmotiBit Oscilloscope to improve the accuracy of the data timestamps on EmotiBit.The time syncing mechanism helps in correcting for any drift that may be introduced by the microcontroller clock.
+- Timesync pulses are transmitted to Emotibit periodically, as long as the EmotiBit Oscilloscope is connected to EmotiBit. These timesyncs are written with the raw data on the SD-Card to help the DataParser with time calibration.
+- The DataParser uses the timesyncs with the shortest Round-Trip-Times(RTT) to calibrate timestamps. The calibration works best if the raw data contains multiple timesyncs spaced throughout the recording. At minimum, the calibration requires 2 timesyncs.
+- However, since timesyncs are only recorded while the EmotiBit is connected to the Oscilloscope, it is possible that the recorded data has fewer than 2 timesyncs. A scenario where the Oscilloscope was closed immediately after starting a recording session can lead to this situation.
+- In cases where the EmotiBit DataParser finds fewer than 2 timesyncs, a warning will be displayed to the user after the file is parsed making them aware of the effect of having fewer than 2 timesyncs on the timestamp accuracy.
+  - <img src="./assets/EmotiBit-DataParser-warning.png" width="900">
+
+# EmotiBit file types
 There are 3 types of files associated with EmotiBit
 - Raw data file(**csv**)
   - Every recording sessions generates 1 raw data file.
