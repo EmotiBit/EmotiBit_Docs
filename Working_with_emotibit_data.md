@@ -8,6 +8,8 @@
   - [Settings files location](#Settings-files-location)
   - [EmotiBit Oscilloscope network settings](#EmotiBit-Oscilloscope-network-settings)
   - [Using LSL with EmotiBit Oscilloscope](#Using-LSL-with-EmotiBit-Oscilloscope)
+    - [LSL output](#LSL-output)
+    - [Timesync with LSL using marker stream](#Timesync-with-LSL-using-marker-stream)
   - [EmotiBit Oscilloscope display settings](#EmotiBit-Oscilloscope-display-settings)
 - [EmotiBit DataParser](#EmotiBit-DataParser)
   - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
@@ -126,98 +128,104 @@ To start a record session, follow these steps:
     - We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
 
-  - Output List
-    - The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
-    - Each output protocol uses settings specified in the unique file name, defined in the sections below.
-    - Depending on your operating system, the settings file can be found in the locations listed below
-        - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
-        - macOS: `EmotiBitOscilloscope/Contents/resources/`
-        - Linux: `EmotiBit Oscilloscope/bin/data/`     - 
-    - <details><summary>OSC</summary>
+### Output List
+- The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
+- Each output protocol uses settings specified in the unique file name, defined in the sections below.
+- Depending on your operating system, the settings file can be found in the locations listed below
+      - Windows: `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
+      - macOS: `EmotiBitOscilloscope/Contents/resources/`
+      - Linux: `EmotiBit Oscilloscope/bin/data/`     - 
+- <details><summary>OSC</summary>
 
-      - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
-      - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
-      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. 
-      - You can find the settings file in the path mentioned above
-      - You can modify the contents of this file to control the behavior of the OSC output stream.
-      - A snippet of the default contents are shared below
-      ```
-      <patchboard>
-	      <settings>
-		      <input>
-			      <type>EmotiBit</type>
-		      </input>
-		      <output>
-			      <type>OSC</type>
-			      <ipAddress>localhost</ipAddress>
-			      <port>12345</port>
-		      </output>
-	      </settings>
-	      <patchcords>
-		      <patch>
-			      <input>PR</input>
-			      <output>/EmotiBit/0/PPG:RED</output>
-		      </patch>		
-              <patch>
-			      <input>PI</input>
-			      <output>/EmotiBit/0/PPG:IR</output>
-		      </patch>	
-		      <patch>
-			      <input>PG</input>
-			      <output>/EmotiBit/0/PPG:GRN</output>
-		      </patch>
-	      </patchcords>
-      </patchboard>	
-      ```
-      - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
-      - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
-      - A `patch` connects an input stream to an output stream. In the snippet above, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`
-        - The `<input>` tag should contain the Typetag of the data you want to relay. The available typetags can be found in the [section below](#EmotiBit-data-types).
-        - The `<output>` tag should contain the name of the OSC stream you want to relay the data as.
-      - For example, to add SCR (Skin conductance response) metrics to OSC, you would add the following lines to the relevant section of the `oscOutputSettings.xml` file.
-      ```
-      <patch>
-		<input>SA</input>
-		<output>/EmotiBit/0/SCR:AMP</output>
+  - **EmotiBit Oscilloscope v1.2.0 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the OSC protocol.
+  - To enable OSC, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `OSC`.
+  - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `oscOutputSettings.xml` file. 
+  - You can find the settings file in the path mentioned above.
+  - You can modify the contents of this file to control the behavior of the OSC output stream.
+  - A snippet of the default contents are shared below
+    ```
+    <patchboard>
+      <settings>
+        <input>
+          <type>EmotiBit</type>
+        </input>
+        <output>
+          <type>OSC</type>
+          <ipAddress>localhost</ipAddress>
+          <port>12345</port>
+        </output>
+      </settings>
+      <patchcords>
+        <patch>
+          <input>PR</input>
+          <output>/EmotiBit/0/PPG:RED</output>
+        </patch>		
+            <patch>
+          <input>PI</input>
+          <output>/EmotiBit/0/PPG:IR</output>
+        </patch>	
+        <patch>
+          <input>PG</input>
+          <output>/EmotiBit/0/PPG:GRN</output>
+        </patch>
+      </patchcords>
+    </patchboard>	
+    ```
+  - As you can see, the `input` is set to an EmotiBit, which is streaming data to the oscilloscope.
+  - The Oscilloscope takes this data and relays it over the IP-Address and Port specified. 
+  - A `patch` connects an input stream to an output stream. In the snippet above, the input `PR` (PPG Red channel) stream is patched to the output stream called `/EmotiBit/0/PPG:IR`
+    - The `<input>` tag should contain the Typetag of the data you want to relay. The available typetags can be found in the [section below](#EmotiBit-data-types).
+    - The `<output>` tag should contain the name of the OSC stream you want to relay the data as.
+  - For example, to add SCR (Skin conductance response) metrics to OSC, you would add the following lines to the relevant section of the `oscOutputSettings.xml` file.
+    ```
+    <patch>
+    <input>SA</input>
+    <output>/EmotiBit/0/SCR:AMP</output>
       </patch>
       <patch>
-		<input>SR</input>
-		<output>/EmotiBit/0/SCR:RIS</output>
+    <input>SR</input>
+    <output>/EmotiBit/0/SCR:RIS</output>
       </patch>
       <patch>
-		<input>SF</input>
-		<output>/EmotiBit/0/SCR:FREQ</output>
-      </patch>
-      ```   
-      - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
-    </details>
+    <input>SF</input>
+    <output>/EmotiBit/0/SCR:FREQ</output>
+    </patch>
+    ```   
+  - When using the OSC protocol, at the receiver, you must use the same IP-Address, Port number, and label name you used as the output label here. To get started, check out this example of [OSC Oscilloscope as a receiver](https://github.com/produceconsumerobot/ofxOscilloscope/tree/master/oscOscilloscopeExample). If you have enabled OSC data transmission on the Emotibit Oscilloscope, you can run the example in the above link to plot the data being relayed by the EmotiBit oscilloscope.
+  </details>
     
-    - <details><summary>UDP</summary>
-      
-      - **EmotiBit Oscilloscope v1.7.1 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the UDP protocol.
-      - To enable UDP, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `UDP`.
-      - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `udpOutputSettings.xml` file.
-      - You can find the settings file in the path mentioned above. You can modify the contents of this file to control the behavior of the UDP output stream.
-      - A snippet of the default contents are shared below
-      ```
-      <patchboard>
-	      <settings>
-		      <input>
-		       <type>EmotiBit</type>
-		      </input>
-		      <output>
-		       <type>UDP</type>
-		       <ipAddress>localhost</ipAddress>
-		       <port>12346</port>
-		      </output>
-	      </settings>
-        <patchcords>
-        </patchcords>
-      </patchboard>		
-      ```
+- <details><summary>UDP</summary>
+  
+  - **EmotiBit Oscilloscope v1.7.1 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined output channel using the UDP protocol.
+  - To enable UDP, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `UDP`.
+  - The EmotiBit Oscilloscope reads in and transmits out the data according to the specifications provided in the `udpOutputSettings.xml` file.
+  - You can find the settings file in the path mentioned above. You can modify the contents of this file to control the behavior of the UDP output stream.
+  - A snippet of the default contents are shared below
+  ```
+  <patchboard>
+    <settings>
+      <input>
+        <type>EmotiBit</type>
+      </input>
+      <output>
+        <type>UDP</type>
+        <ipAddress>localhost</ipAddress>
+        <port>12346</port>
+      </output>
+    </settings>
+    <patchcords>
+    </patchcords>
+  </patchboard>		
+  ```
+  </details>
 
-    </details>
+- <details><summary>LSL</summary>
 
+  - **EmotiBit Oscilloscope v1.11.1 and up** support the ability to transmit incoming data from an EmotiBit to a user-defined LSL stream.
+  - To enable UDP, just click on the `Output List` dropdown in the EmotiBit Oscilloscope and enable `LSL`.
+  - The LSL stream details are provided in the `lslOutputSettings.json` file. You can find this settings file in the operating-system-specific location mentioned above. Modifying the contents on this file updates the LSL stream details being transmitted by the EmotiBit.
+  - The **patchcords** section in the documentation ties the input EmotiBit stream to the name of the output LSL stream. A complete list of EmotiBit data typetags can be found [here](#EmotiBit-data-types). 
+  </details>
 
 ## EmotiBit Oscilloscope settings
 
@@ -298,16 +306,20 @@ in a constrained network environment, these settings may help to conform to netw
   </details>
 
 ### Using LSL with EmotiBit Oscilloscope
-You can use the EmotiBit oscillosocpe to ingest an LSL marker stream and use that stream to timestamp
-EmotiBit data to LSL time. To start receiving LSL stream, you need to specify the LSL stream name and
-source_id. To do so, follow the steps below:
+#### LSL output
+You can use the EmotiBit Oscilloscope to relay incoming EmotiBit data to output LSL streams. Check out the [output list section](#Output-List) aboce for more details.
+
+#### Timesync with LSL using marker stream
+EmotiBit oscillosocpe can ingest an LSL marker stream and use that stream to timestamp
+EmotiBit data being recorded to LSL time. A marker stream is specified by a `name` and `sourceId`. By default the EmotiBit Oscilloscope searches for a LSL marker stream with the name `DataSyncMarker` and sourceId `12345`. You can create this stream by referring this [example](https://github.com/EmotiBit/ofxLSL/#example-for-generating-marker-stream).
+
+If you want the Oscilloscope to search for a different marker stream, please refer the steps below.
 
 - <details><summary>Specifying LSL marker stream for EmotiBit Oscilloscope</summary>
 
   You need to specify the marker stream information in the `emotibitCommSettings.json` file. 
 Refer the [section above](#Settings-files-location) to locate this file on your system.
  
-   If you don't already have an LSL marker stream, you may use the example in [`EmotiBit/ofxLSL`](https://github.com/EmotiBit/ofxLSL#example-for-generating-marker-stream).
   For Example, an LSL marker stream with **name** `DataSyncMarker` and **source_id** `12345` can be specified in the `emotibitCommSettings.json` as shown below
   ```
     {
