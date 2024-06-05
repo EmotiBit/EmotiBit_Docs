@@ -566,7 +566,7 @@ There are 3 types of files associated with EmotiBit
 ![][EmotiBit-File-Types]
 
 
-## EmotiBit data types
+# EmotiBit data types
 Each data type represents a unique signal captured by EmotiBit and is represented by a unique `TypeTag`. The most up-to-date list of TypeTags can be found in https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp
 
 For a quick look at the available data types, you can check out the table below. We periodically update this table as the EmotiBit firmware grows. **Additional details about the data stream (*units, sampling rate, data format, averaging etc*) can be found in the `_info.json` file created with each recording session.**
@@ -636,6 +636,17 @@ For a quick look at the available data types, you can check out the table below.
   |UN     |User Note                          |
   |MH     |Mode Hibernate                     |
   |HE     |Hello EmotiBit, used to establish communication  |
+
+  </details>
+
+- <details><summary><b>Payload labels</b></summary>
+
+  |TypeTag    | Description                       |
+  |:-----:|:----------------------------------|
+  |LM     |LSL_MARKER_SRC_TIMESTAMP - The LSL time in the marker generator system |
+  |LR     |LSL_MARKER_RX_TIMESTAMP - The LSL time in the receiver system. This is a calculated value derived from LM and time correction (a constant created by the LSL architecture)  |
+  |LD     |LSL_MARKER_DATA - the data stored by the LSL marker|
+  |LC     |LSL_LOCAL_CLOCK_TIMESTAMP - The LSL time on the local computer the EmotiBit Oscilloscope is running on|
 
   </details>
 
