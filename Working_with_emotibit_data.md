@@ -354,7 +354,9 @@ Refer the [section above](#Settings-files-location) to locate this file on your 
 
   Once detected, the EmotiBit starts receiving markers from the stream and displays a `markers received` count on the status bar. You need at least 2 markers during the recording to generate LSL timestamps.
   <img src="./assets/EmotiBitOscilloscope_LslMarkerStream_Received.png" width="1000">
-  
+
+  Check out this [section](#Parsing-EmotiBit-timestamps-to-LSL-time) to enable the DataParser to add LSL timestamps in the parsed data.
+
   **Note: Please make sure that your marker stream has both a **name** and a **source_id**. Connecting to a stream that only has the **name** specified
   can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!**
   </details>
