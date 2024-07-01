@@ -34,7 +34,7 @@
     - Short Press- Switch between WiFi modes. In future will support mapping to different functionality.
   - `Reset button`:
     - resets the microncontroller board. All current operations are halted and EmotiBit restarts.
-  - `Hibernate Switch`(**Only Available on V4**):
+  - `Hibernate Switch`(**Only Available on V4 and above**):
     - The Hibernate Switch kills power to both the Feather and the EmotiBit. It is recommended to toggle the switch to `HIB` if leaving the EmotiBit unused for long durations.
 
 - Check out EmotiBit [hardware files](./hardware_files/README.md) for more information
