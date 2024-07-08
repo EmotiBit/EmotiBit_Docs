@@ -15,6 +15,7 @@
   - [Parse raw data using EmotiBit DataParser](#Parse-raw-data-using-EmotiBit-DataParser)
     - [Transfer file from SD-Card to computer](#Transfer-file-from-SD-Card-to-computer)
     - [Parse raw data file](#Parse-raw-data-file)
+    - [Raw data format](#Raw-data-format)
     - [Parsed data file format](#Parsed-data-file-format)
     - [Parsing EmotiBit timestamps to LSL time](#Parsing-EmotiBit-timestamps-to-LSL-time)
     - [Batch Parsing](#Batch-parsing)
@@ -472,8 +473,20 @@ The data recorded using EmotiBit is stored on the SD-Card. You can transfer the 
     - <img src="./assets/emotibit-ftp-file-transfer.png" width="600">
     </details>
 
+### Raw data format
+The raw data is stored in the following format. The following steps discuss using the EmotiBit DataParser to parse raw data files.<br>
+
+`EMOTIBIT_TIMESTAMP`,`PACKET#`,`NUM_DATAPOINTS`,`TYPETAG`,`VERSION`,`RELIABILITY`,`PAYLOAD`
+- **EMOTIBIT_TIMESTAMP:** milliseconds since EmotiBit bootup
+- **PACKET#:** sequentially increasing packet count
+- **NUM_DATAPOINTS:** Number of data points in the payload
+- **TYPETAG:** [type of data](#motibit-data-types) being sent
+- **VERSION:** packet protocol version
+- **RELIABILITY:** data reliability score out of 100 (for future use)
+- **PAYLOAD:** data points
+
 ### Parse raw data file
- 
+
 The steps below describe how you can use the DataParser to parse the raw data file to generate individual parsed data files.
 - Click on the `Load file` button to open a file browser. Navigate to the raw data(**csv**) file which you want to parse and select that file.
 - The parser will show the progress as it parses the data. The DataParser quits automatically on completion.
