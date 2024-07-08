@@ -4,9 +4,6 @@
 - [EmotiBit HW](#EmotiBit-HW)
   - [LEDs and Buttons](#LEDs-and-Buttons)
 - [EmotiBIt FW](#EmotiBit-FW)
-  - [Raw data packet architecture](#Raw-data-packet-architecture)
-  - [TypeTag Character Codes](#TypeTag-Character-Codes)
-  - [Sampling rates](#Sampling-rates)
   - [EmotiBit firmware variants](#EmotiBit-firmware-variants)
 - [EmotiBit SW](#EmotiBit-SW)
   - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
@@ -40,24 +37,6 @@
 - Check out EmotiBit [hardware files](./hardware_files/README.md) for more information
 
 ## EmotiBit FW
-
-### Raw data packet architecture
-
-- `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
-  - **Timestamp:** milliseconds since start of EmotiBit
-  - **Packet Number:** packet count since start of EmotiBit
-  - **Number of Datapoints:** Number of data points in the payload
-  - **TypeTag:** type of data being sent
-  - **Version:** version of packet protocol
-  - **Reliability:** data reliability score out of 100, currently always 100
-  - **Payload:** data to send
-
-- Example packets:
-
-![alt text][Pack]
-
-
-For more details about Emotibit data streams, go to [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types).
 
 ### EmotiBit firmware variants
 The official stock firmware for EmotiBit (EmotiBit_stock_firmware) unlocks all features of EmotiBit and is a great starting point
