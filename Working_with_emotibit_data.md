@@ -4,6 +4,7 @@
 - [Overview](#Overview)
 - [EmotiBit Oscilloscope](#EmotiBit-Oscilloscope)
   - [Using EmotiBit Oscilloscope to Record Data](#Using-EmotiBit-Oscilloscope-to-Record-Data)
+    - [Active recording session indicator](#Active-recording-session-indicator)
   - [EmotiBit Oscilloscope features](#EmotiBit-Oscilloscope-features)
   - [Settings files location](#Settings-files-location)
   - [EmotiBit Oscilloscope network settings](#EmotiBit-Oscilloscope-network-settings)
@@ -58,11 +59,17 @@ To start a record session, follow these steps:
 - Once an EmotiBit is selected, the Oscilloscope starts streaming data.
 - Click on the `Record Button` on the top console on the Oscillscope.
 - Once a recording session has been started, the `Record Button` section becomes red.
-- You will notice that the EmotiBit RED LED starts blinking.
-- The name of the file being recorded appears below the `Record Button` on the Oscilloscope.
-- You can end the recording session by pressing the `Record Button` again.
-  - Once ended, the EmotiBit RED LED stops blinking.
-- You now have a raw data files on the SD-Card!
+- To end a recording, toggle the Recording button by clicking on it again.
+
+### Active recording session indicator
+You can check if a recording session is currently active by either checking the EmotiBit or the EmotiBit Oscilloscope.
+- **Indication on the EmotiBit**
+  - You will notice that the EmotiBit RED LED starts blinking if a recording session is active.
+  - The EmotiBit RED LED will continue to blink till the active recording session has been stopped using the EmmotiBit Oscillosocpe.
+- **Indication on the EmotiBit Oscilloscope**
+  - When you open the Oscilloscope, all available EmotiBits on the network will be listed under the `device list`. Select the EmotiBit you are interested in from the device list.
+  - If a recording session is currently active, the name of the file being recorded appears below the `Record Button`. This name indicates the time when the recording was started.
+    - *Pro-tip: You can check the length of active recording by subtracting the current time from the time displayed in the `Recording section` on the Oscillosocpe.*
 
 [Click here to learn how to use the DataParser](#Parse-raw-data-using-EmotiBit-DataParser) to convert the raw data into parsed data files.
 <br> If you want to learn about all the features offered by the EmotiBit Oscilloscope, check out the section [below](#EmotiBit-Oscilloscope-features).
