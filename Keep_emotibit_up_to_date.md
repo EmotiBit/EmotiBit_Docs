@@ -83,7 +83,7 @@ Follow the steps below to get started!
     -- Be sure to install the correct version when specified for any library below --
     ```
     - WiFi101 *by Arduino* (`git@github.com:arduino-libraries/WiFi101.git`)
-    - SdFat *by Bill Greiman* _**(v2.0.0)**_ (`git@github.com:greiman/SdFat.git`)
+    - SdFat *by Bill Greiman* _**(v2.2.0)**_ (`git@github.com:greiman/SdFat.git`)
     - ArduinoJson _**(v6.21.2)**_ (`git@github.com:bblanchon/ArduinoJson.git`)
     - Arduino Low Power (`git@github.com:arduino-libraries/ArduinoLowPower.git`)
       - RTCZero (`git@github.com:arduino-libraries/RTCZero.git`) *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
