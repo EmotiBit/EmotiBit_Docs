@@ -2,11 +2,9 @@
 
 ## Table of contents
 - [EmotiBit HW](#EmotiBit-HW)
-  - [LEDs nad Buttons](#LEDs-and-Buttons)
+  - [LEDs and Buttons](#LEDs-and-Buttons)
 - [EmotiBIt FW](#EmotiBit-FW)
-  - [Raw data packet architecture](#Raw-data-packet-architecture)
-  - [TypeTag Character Codes](#TypeTag-Character-Codes)
-  - [Sampling rates](#Sampling-rates)
+  - [EmotiBit firmware variants](#EmotiBit-firmware-variants)
 - [EmotiBit SW](#EmotiBit-SW)
   - [How is Data Stored on the SD Card](#How-is-Data-Stored-on-the-SD-Card)
 - [Repositories](#Repositories)
@@ -33,40 +31,28 @@
     - Short Press- Switch between WiFi modes. In future will support mapping to different functionality.
   - `Reset button`:
     - resets the microncontroller board. All current operations are halted and EmotiBit restarts.
-  - `Hibernate Switch`(**Only Available on V4**):
+  - `Hibernate Switch`(**Only Available on V4 and above**):
     - The Hibernate Switch kills power to both the Feather and the EmotiBit. It is recommended to toggle the switch to `HIB` if leaving the EmotiBit unused for long durations.
 
 - Check out EmotiBit [hardware files](./hardware_files/README.md) for more information
 
 ## EmotiBit FW
 
-### Raw data packet architecture
+### EmotiBit firmware variants
+The official stock firmware for EmotiBit (EmotiBit_stock_firmware) unlocks all features of EmotiBit and is a great starting point
+for using EmotiBit! 
 
-- `TIMESTAMP`-`PACKET#`-`#DATAPOINTS`-`TYPETAG`-`VERSION`-`RELIABILITY`-`PAYLOAD`
-  - **Timestamp:** milliseconds since start of EmotiBit
-  - **Packet Number:** packet count since start of EmotiBit
-  - **Number of Datapoints:** Number of data points in the payload
-  - **TypeTag:** type of data being sent
-  - **Version:** version of packet protocol
-  - **Reliability:** data reliability score out of 100, currently always 100
-  - **Payload:** data to send
+Since EmotiBit is opensource, you can also tweak the [firmware](https://github.com/EmotiBit/EmotiBit_FeatherWing) and make changes as per your specific needs.
+As an exmaple, we have created a variant which runs the PPG sensor at 100Hz sampling rates (instead of the stock 25hz). You may choose to use this firmware
+if you are interested in derivatives metrics like HRV (Heart rate Variability), which benefits from a faster sampling rate.
+Also be sure to update the [EmotiBit Oscilloscope display settings](./Working_with_emotibit_data.md#EmotiBit-Oscilloscope-display-settings) with the higher PPG sampling rate to display the data correctly in the EmotiBit Oscillscope window. You can find the binary for this firmware in our [github repository](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases/latest).
 
-- Example packets:
+If you wish to tweak this firmware and compile it from source, follow the instructions to download and install platformIO (checkout the [Keeping EmotiBit up to date](./Keep_emotibit_up_to_date.md#Building-firmware-using-PlatformIO) document).
 
-![alt text][Pack]
+**Developer note: This variant is based on the same source code and uses build flags to setup different sampling rates. As a result,
+it cannot be compiled on Arduino and needs a different embedded environment for development. We use PlatformIO for this purpose.**
 
-
-For more details about Emotibit data streams, go to [EmotiBit Data Types](./Working_with_emotibit_data.md#emotibit-data-types).
-
-### Sampling rates
-- The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware.
-
-| Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
-|----------|---------|-----------|--------------|
-| Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|BMI160+BMI150|25|
-|PPG |`PI` `PG` `PR`| MAX30101|25|
-|Temperature |`T0` / `TH`|MAX30101 / MLX90632 |7.5|
-|EDA|`EA` `EL` `ER`|-|15|
+[ToDo:] Create a table that lists the variant information.
 
 ## EmotiBit SW
 ### How is Data Stored on the SD Card 
@@ -78,7 +64,7 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
   - Information about the configuration of the hardware and firmware are written to a .json file also on the SD card
   - The file is named with the date-time that the recording started
     - 2019-01-30_11-57-13-492_info.json
-    
+
 ```
 [
 {"info":{"name":"Accelerometer","type":"Accelerometer","typeTags":["AX","AY","AZ"],"channel_count":3,"nominal_srate":60,"channel_format":"float","units":"G/second","source_id":"EmotiBit FeatherWing","hardware_version":0,"feather_version":"Adafruit Feather M0 WiFi","firmware_version":"0.4.3","created_at":"2019-07-17_14-38-30-914939","setup":{"range":8}}},
@@ -96,44 +82,6 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
 [GPS]: https://developer.android.com/reference/android/location/Location
 [Pack]: assets/PacketExample.png "Example Packets"
 
-### A Note on LSL
-
-- EmotiBit is currently able to recieve a single multichannel LSL stream via communication with [ofxEmotiBit](https://github.com/EmotiBit/ofxEmotiBit/releases)
-- ofxEmotiBit makes use of the openFrameworks addon [ofxLSL](https://github.com/badfishblues/ofxLSL) which has further documentation and examples in its own git repository
-- The resolve stream argument is currently hardcoded in the main of ofxEmotiBit to **"name = 'CFL'"**, which means that the outlet stream that is being sent must have this name, or the GUI will not be able to find it
-- While running ofxEmotiBit, the terminal window will display updates on when a connection to the stream occurred
-```
-[notice ] ofxLSL::update()
-[notice ] ofxLSL::connect()
-[notice ] Connecting to CFL at 0 hz 
-```
-- Each LSL marker has 3 timestamps associated with it:
-  - **timestamp (TS):** _lsl_clock()_ time associated with the tag on the computer that sent the tag
-  - **timestampLocal (TSC):** _timestamp + inlet->time_correction(1)_, an estimation of the _lsl_clock()_ time on the recieving computer equivalent to the TS
-  - **localClock (LC):** _lsl_clock()_ after the _pull_sample()_
-- LD is the payload of an LM and can be multiple channels
-- LSL times are not unix times, but rather in seconds since your computer was turned on
-- Crosstimes (TX) for LSL include a TL and an LC at the given instance
-  - LC is an _lsl_clock()_ call at the time of the TX
-  - Note that any conversion from the LSL time system to an external system could seriously hamper the accuracy and effectiveness of LSL
-#### Accuracy
-
-- **TS** is 100% accurate
-- **TSC** periodicity is at worst accurate to 1.8ms
-  - _average:_ 19 microseconds
-  - defined as {TSC(n) - TSC(n-1)} - {TSsender(n) - TSsender(n-1)}
-- **LC** periodicity is rather unreliable (>300ms)
-  - Can be more accurate on same computer
-  
-#### LSL Packet Examples
-
-```
-127214,21942,1,TX,1,100,TL,2019-07-17_14-40-01-804897,LC,189690.2055982
-249054,45373,1,LM,1,100,TSC,264448.0612918,TS,264448.0607235,LC,264448.0676169,LD,Hello
-250555,45660,1,LM,1,100,TSC,264449.5732830,TS,264449.5727040,LC,264449.5778914,LD,World
-```
-
-
 ## Repositories
 - Parent Github
   - https://github.com/EmotiBit/
@@ -145,6 +93,6 @@ For more details about Emotibit data streams, go to [EmotiBit Data Types](./Work
 - OpenFrameworks GUI
   - https://github.com/EmotiBit/ofxEmotiBit
   - Latest release: https://github.com/EmotiBit/ofxEmotiBit/releases/latest
-  
-  
+
+
   [LED]: assets/M0_WiFi_LED_Indicators_01.png "Feather LED's"

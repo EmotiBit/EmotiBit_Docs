@@ -70,7 +70,7 @@ The following sections explain the contents of each item available for purchase 
 ### Essentials Kit
 
 The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find:
-- **Adafruit Feather M0 WiFi**
+- **Adafruit Feather M0 WiFi** or **Adafruit Feather ESP32 Huzzah**
 - **400mAh Lithium ion battery**
 - **High-speed microSD card**
 - **MicroSD card reader**
@@ -101,11 +101,79 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - Plug in the USB card reader loaded with the SD-Card into the computer.
 - Download the config file from https://www.emotibit.com/files/config.
 - Open the config file in any text editor (e.g. Notepad on Windows or text edit on macOS).
-- Add your WiFi credentials by changing `myWifiNetwork` to the name of your WiFi network and change `myPassword`to the password for your WiFi network. 
+- Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network. 
   - <img src="./assets/config-file-example.png" width="550">
 - Save the file onto your microSD card. Eject the SD-Card from your computer. 
+- **Note: Currently EmotiBit only supports the 2.4GHz band for WiFi and does not support enterprise networks (that require a login/password after connecting).** This is due to HW/FW limitations of the presently supported Adafruit Feather M0 WiFi.
 
-**Pro tip**: If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> `{"WifiCredentials": [{"ssid": "myWifiNetwork1", "password" : "myPassword1"},{"ssid": "myWifiNetwork2", "password" : "myPassword2"}]}`
+- <details><summary>Multiple WiFi credentials</summary>
+
+  - If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> 
+  ```
+  {
+    "WifiCredentials": [
+      {
+        "ssid": "wifi_1",
+        "password": "password1"
+      },
+      {
+        "ssid": "wifi_2",
+        "password": "password2"
+      },
+      {
+        "ssid": "wifi_3",
+        "password": "password3"
+      },
+      {
+        "ssid": "wifi_4",
+        "password": "password4"
+      },
+    ]
+  }
+  ```
+  </details>
+
+- <details><summary>Adding credentials using Serial Monitor</summary>
+
+  - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
+  - Open Arduino IDE. Under `Tools > Port` notice the ports avaiable, if any.
+  - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
+  - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
+  - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
+    - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
+  - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Seial monitor immediately after.
+  - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
+    - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
+  - Type capital `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
+    - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
+  - If you timed is right, you will see the following response in the serial monitor. You are now in `WiFi credential edit mode`. 
+    - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
+  - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
+  - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
+  - **Adding a Credential**
+    - To add a credential, you will need to use the keyword `WA`.
+    - In the serial monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
+    - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
+    - Once the Name and password uare update, hit `Send`.
+    - You shuold see the following response on the Serial Monitor.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
+  - **View existing credentials**
+    - To view existing credentials, you will need to use the keyword `LS`.
+    - In the serial monitor input type `@LS~`. Hit `Send`.
+    - The existing credentials, along with their passwrods will be printed as a list.
+  - **Delete a credential**
+    - To delete an existing credentials, you will need to use the keyword `WD`.
+    - Use the `LS` keword as mentioned above to get the list of existing credentials.
+    - Note the number of the credential you want to delete.
+    - In the serial monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
+    - The credential will be deleted and you will see the following output.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
+
+  - **Reset**
+    - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
+    - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
+  </details>
+
 
 **Note: Currently EmotiBit only supports the 2.4GHz band for WiFi.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several arduino libraries to unlock different features, for example, establishing and mainting a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
@@ -173,7 +241,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - <details><summary><b>Installation Instructions For Windows Users</b></summary>
  
     - _**Note:** EmotiBit software is supported only for Windows 10+._
-    - After you download `EmotiBitSoftware-Windows.zip`, go ahead and extract it.
+    - After you download `EmotiBitSoftware-Windows.zip`, you need to `extract` the zip file. You can extract it by `Right-Click > Extract All...`.
     - You will find an `.msi` installer inside the extracted folder. Run the installer by double-clicking.
       - If the Windows Defender SmartScreen pops up, click on `More Info`.
       - Then click on `Run Anyway`.
@@ -189,7 +257,8 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Applications in the extracted folder.
   
-  > **Note that the Software is currently supported only for macOS-Mojave[version 10.14] and macOS-Catalina[version 10.15]. (Monterey mostly works, but has some issues with the DataParser that we're working on)**
+  > **Note1: The EmotiBit software is tested on all operating systems except macOS Ventura. (However, user reports suggest it works on Ventura, even though not officially tested.)**
+  
   - <details><summary>Check your Operating System version</summary>
     
     - You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
@@ -200,9 +269,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 - <details><summary><b>Installation Instructions For Linux Users</b></summary>
     
-  - Download `EmotiBitSoftware-linux.zip` from the release page.
-  - Move the downloaded zip file to a folder location you desire. Extract the zipped download.
-  - Follow the instructions in the ReadMe file inside the extracted folder.
+  - Follow the instructions on the release page.
   </details>    
 
 ## Running EmotiBit software
@@ -247,7 +314,7 @@ Build the application from source. You can find instructions in the `ReadMe` pro
 # Installing EmotiBit Firmware
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
 - If you did not order an Essentials-Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to 
-get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3405) from the Adafruit online store.
+get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3619) from the Adafruit online store.
 
 ## Using the EmotiBit Firmware Installer
 
@@ -265,9 +332,9 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 
   - <details><summary> On Windows 11 </summary>
 
-    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Please make sure you have extracted the downloaded zip file `EmotiBitSoftware-Windows.zip`. To extract, `Right-click > Extract All...`.
     - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
-    - Right click on `silabser.inf` > `Show more options` > `Install`.
+    - Right click on `silabser.inf` > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
     - Depending on your firewall/antivirus settings you will likely need to grant permissions for the installation.
     - Once completed, the required the drivers should be installed on your Windows 11 machine.
     </details>
@@ -289,10 +356,26 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
 - Screengrab from `EmotiBitFirmwareInstaller`
   - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
+- <details><summary> Installing custom firmware</summary>
+
+  - The `EmotiBit FirmwareInstaller` installs the stock firmware provided in the software bundle.
+    - Each software release bundles specific firmware version that can be found in the [software release notes](https://github.com/emotibit/ofxemotibit/releases/latest). 
+  - If you wish to install a custom firmware or an older firmware release, you can do so using the "Load" provision in the Firmware Installer.
+  - To do so, 
+    - Press `L` on the first screen on the Firmware Installer (You may also notice that the Firmware Installer has a footnote with the same prompt)
+    - Choose the file (`.bin`) you want to install on EmotiBit
+    - After selecting the file, you will return to the original Firmware Installer screen
+    - Continue with normal installation process (instructions on the screen)
+  - For example, you may grab an earlier release from the [EmotiBit firmware release page](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases), and install that firmware using the `Load` function in the EmotiBit Installer.
+  - Alternatively, you can write your own custom firmware and create a binary. You can then use the Firmware Installer to install that binary.
+  - **WARNING**: Make sure that the firmware you are trying to install has been written for the correct board version. 
+Installing incompatible firmware may lead to un-expected behavior, or worse, may brick your device.
+  </details>
 
 ## For Linux and Advanced Users
 - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
+  - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
   - The FirmwareInstaller essentaily performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
     2. Updates the WINC WiFi module FW to version 19.6.1
@@ -327,6 +410,8 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 
 - <details><summary> Installing Emotibit Firmware on Feather ESP32 Huzzah</summary>
   
+  - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so,
+  right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
   - The FirmwareInstaller essentaily uploads the latest EmotiBit FW onto the Feather
   - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
   - There are 2 requirements to run esptool
@@ -344,7 +429,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
         - On `mac/linux`: You may find the COM port by running the terminal command `ls -la /dev/tty*`
         - Pro-tip for linux: the Feather may likely show up as `/dev/ttyUSB0`
     - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
-    - Upload the EmotiBit FW using
+    - replace **YOUR_FEATHER_PORT** with the COM port you detected in the previous step in the following command and run it to upload the firmware.
       - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
         - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
         - [For Windows] replace `./exec/linux/esptool` with `.\exec\win\esptool.exe`. You will also need to change all file paths to `.\esp32\name-of-file`
@@ -357,7 +442,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |--|--------------|---------|
 |Feather RED LED ON|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Write a post describing your steps on http://forum.emotibit.com/ |
 |Feather RED LED turns ON for a few seconds and then stays OFF|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD-Card is correctly inserted|
-|EmotiBit RED LED ON|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD-Card|
+|EmotiBit RED LED ON|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD-Card <br> AND <br> config file is formatted correctly (A missing `"` or missing bracket `{}`,`[]` can cause a parsing failure.)|
 |EmotiBit BLUE LED solid ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#Adding-WiFi-credentials))|
 |EmotiBit BLUE LED BLINKING|<img src="./assets/EmotiBit-bootup-stage-4.gif" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
@@ -366,7 +451,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 
 # EmotiBit: LEDs and Buttons
 
-Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md/#LEDs-and-Buttons)
+Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md#LEDs-and-Buttons)
 
 
 # Next Steps
