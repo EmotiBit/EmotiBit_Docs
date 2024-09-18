@@ -104,7 +104,6 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network. 
   - <img src="./assets/config-file-example.png" width="550">
 - Save the file onto your microSD card. Eject the SD-Card from your computer. 
-- **Note: Currently EmotiBit only supports the 2.4GHz band for WiFi and does not support enterprise networks (that require a login/password after connecting).** This is due to HW/FW limitations of the presently supported Adafruit Feather M0 WiFi.
 
 - <details><summary>Multiple WiFi credentials</summary>
 
