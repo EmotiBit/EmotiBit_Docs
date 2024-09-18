@@ -175,6 +175,50 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   </details>
 
 
+**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several arduino libraries to unlock different features, for example, establishing and mainting a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+
+<details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
+  
+  ```diff
+  -- Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
+  ```
+  
+  - Enterprise WiFi network details are added to the config.txt file in the following format.
+    - If no `username` is provided, `userid` will be used as `username`
+  
+  ```
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1",
+      "username": "user1_name", 
+      "password": "prize1"
+    }
+  ```
+  
+  - A sample config.txt file could look like
+  ```
+  {
+  "WifiCredentials": [
+    {
+      "ssid": "personal-1",
+      "password": "pass1"
+    },
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1_id",
+      "username": "user1_name",
+      "password": "prize1"
+    }
+  ]
+  }
+  ```
+  
+  - **Notes**:
+    - ESP32 takes a substantially long time to connect to enterprise network (>10 secs as per our limited testing).
+    - Since the ESP core is still under heavy development, there are some unexplained behaviours with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart, if a network connection is not made within a set timeout.
+    - Unlike personal networks, Enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your emotibit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). We don't currently support discoverability on different subnets and if you end up in such a situation, the EmotiBit Oscilloscope will not be able to discover the EmotiBit on the network. If you are using enterprise WiFi and your EmotiBit is connected to the network, yet cannot be detected by the Oscilloscope, you can validate this situation by checking the IP address of your computer and IP address of the EmotiBit (See this [FAQ](https://www.reddit.com/r/EmotiBit/comments/13shcse/how_can_i_get_basic_device_information_from/)). 
+</details> 
+
 ### Stack your EmotiBit!
 
 - On the EmotiBit
