@@ -492,6 +492,32 @@ The raw data is stored in the following format. The following steps discuss usin
 - **RELIABILITY:** data reliability score out of 100 (for future use)
 - **PAYLOAD:** data points
 
+A sample of the raw data file is shown below.
+- <details><summary>Sample raw data file</summary>
+
+  ```
+  531386,17296,1,RB,1,100,2024-09-18_22-59-45-827135
+  531388,17297,4,EM,1,100,RS,RB,2024-09-18_22-59-45-827135.csv,PS,MN
+  531473,17298,3,PI,1,100,112870,112866,112867
+  531473,17299,3,PR,1,100,26870,26855,26857
+  531473,17300,3,PG,1,100,3720,3704,3717
+  531459,17301,2,EA,1,100,0.030269,0.030269
+  531459,17302,2,EL,1,100,26425.000000,26425.000000
+  531452,17303,1,T1,1,100,33.037
+  531467,17304,1,TH,1,100,29.770
+  531473,17305,3,AX,1,100,-0.436,-0.434,-0.433
+  531473,17306,3,AY,1,100,-0.015,-0.015,-0.015
+  531473,17307,3,AZ,1,100,0.967,0.968,0.970
+  531473,17308,3,GX,1,100,-0.275,-0.244,-0.275
+  531473,17309,3,GY,1,100,0.732,0.793,0.732
+  531473,17310,3,GZ,1,100,-0.061,-0.061,-0.092
+  531473,17311,3,MX,1,100,37,38,37
+  531473,17312,3,MY,1,100,-56,-57,-56
+  531473,17313,3,MZ,1,100,-56,-56,-57
+  ```
+  </details>
+
+
 ### Parse raw data file
 
 The steps below describe how you can use the DataParser to parse the raw data file to generate individual parsed data files.
@@ -510,7 +536,38 @@ For more details on the file types check out the section [below]().
 |---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
 |Epoch time in seconds | EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted) | Packet number the data point was extracted from (sequentially increases) | Number of data points in the packet | TypeTag of the data (see below) | Reserved for future extensibility | Reserved for future extensibility | Data points |
 
-- Check out [this part of the documentation for more information on raw data file structure](./Learn_more_about_emotibit.md#raw-data-packet-architecture).
+See below for a sample of the a parsed file of typetag AX (Accelerometer X axis)
+- <details><summary>Parsed data file example</summary>
+  
+  ```
+  LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion,DataReliability,AX
+  1726714786.598369,531473.000,17305,3,AX,1,100,-0.436
+  1726714786.598369,531473.000,17305,3,AX,1,100,-0.434
+  1726714786.598369,531473.000,17305,3,AX,1,100,-0.433
+  1726714786.638383,531513.000,17322,3,AX,1,100,-0.434
+  1726714786.678397,531553.000,17322,3,AX,1,100,-0.433
+  1726714786.718411,531593.000,17322,3,AX,1,100,-0.434
+  1726714786.758425,531633.000,17337,2,AX,1,100,-0.437
+  1726714786.798439,531673.000,17337,2,AX,1,100,-0.436
+  1726714786.838453,531713.000,17354,3,AX,1,100,-0.432
+  1726714786.878467,531753.000,17354,3,AX,1,100,-0.434
+  1726714786.918481,531793.000,17354,3,AX,1,100,-0.435
+  1726714786.958495,531833.000,17370,2,AX,1,100,-0.432
+  1726714786.998509,531873.000,17370,2,AX,1,100,-0.435
+  1726714787.038523,531913.000,17388,3,AX,1,100,-0.434
+  1726714787.078537,531953.000,17388,3,AX,1,100,-0.436
+  1726714787.118551,531993.000,17388,3,AX,1,100,-0.434
+  1726714787.158565,532033.000,17402,2,AX,1,100,-0.434
+  1726714787.198579,532073.000,17402,2,AX,1,100,-0.433
+  1726714787.238593,532113.000,17419,3,AX,1,100,-0.435
+  1726714787.278607,532153.000,17419,3,AX,1,100,-0.432
+  1726714787.318621,532193.000,17419,3,AX,1,100,-0.434
+  1726714787.358635,532233.000,17435,2,AX,1,100,-0.435
+  1726714787.398649,532273.000,17435,2,AX,1,100,-0.433
+  1726714787.438663,532313.000,17455,3,AX,1,100,-0.435
+  1726714787.478677,532353.000,17455,3,AX,1,100,-0.434
+  ```
+  </details>
 
 ### Parsing EmotiBit timestamps to LSL time
 
