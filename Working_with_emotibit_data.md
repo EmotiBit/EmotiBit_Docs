@@ -624,6 +624,14 @@ marker source generator system.
 - However, since timesyncs are only recorded while the EmotiBit is connected to the Oscilloscope, it is possible that the recorded data has fewer than 2 timesyncs. A scenario where the Oscilloscope was closed immediately after starting a recording session can lead to this situation.
 - In cases where the EmotiBit DataParser finds fewer than 2 timesyncs, a warning will be displayed to the user after the file is parsed making them aware of the effect of having fewer than 2 timesyncs on the timestamp accuracy.
   - <img src="./assets/EmotiBit-DataParser-warning.png" width="900">
+- <details><summary>What to expect when you have 0 timesyncs</summary>
+  
+  something goes here.
+  </details>
+- <details><summary>What to expect when you have 1 timesyncs</summary>
+
+  something goes here.
+  </details>
 
 # EmotiBit file types
 There are 3 types of files associated with EmotiBit
