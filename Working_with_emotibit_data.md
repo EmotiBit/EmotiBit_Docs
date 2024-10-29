@@ -112,11 +112,11 @@ You can check if a recording session is currently active by either checking the 
     The EmotiBit has 4 power modes. All modes can be accessed using the EmotiBit Oscilloscope.
     - **Normal Mode**: In normal mode, the EmotiBit works with complete functionality, being able to record and transmit data.
     - **Low Power Mode**: In Low power mode, the EmotiBit can record but cannot transmit data in real-time. It, however, continues to get the time-sync pulses.
-    - **WiFi Off**: The onboard WiFi shield is shut down in this mode. This saves power and enables longer recording sessions.
-      - However, since the WiFi shield is Off, the EmotiBit cannot get time-sync pulses, which can lead to less accurate time stamping. 
-      - A `long press` of the EmotiBit button toggles `normal mode` and `WiFi off mode`.
-      - If using the EmotiBit in `WiFi off` mode, we recommend leaving the EmotiBit running for a few minutes towards the end of the record session in `normal mode`.
+    - **WiFi Off**: The onboard WiFi shield is shut down in this mode. This saves power and enables longer recording sessions. 
+      - A `short press` of the [EmotiBit button](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Getting_Started.md#emotibit-leds-and-buttons) toggles `normal mode` and `WiFi off mode`.
+      - If using the EmotiBit in `WiFi off` mode, we recommend toggling the EmotiBit to `normal mode` (short EmotiBit Button press) towards the end of the recording. Once in `normal mode` you can reconnect to the EmotiBit using the EmotiBit Oscilloscope and stream data for ~30 seconds to collect timesync pulses towards the end of the recording.
     - **Sleep**: In sleep mode, EmotiBit stops any tasks it is performing and goes to sleep.
+      - A `long press` of the [EmotiBit button](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Getting_Started.md#emotibit-leds-and-buttons) can activate the sleep mode.
       - We recommend switching the EmotiBit into `Sleep mode` instead of un-plugging the EmotiBit battery when not in use for short periods.
       - If the EmotiBit is being left un-used for a long duration, it is best to flip the Hibernate Switch to `HIB`.
       - Refer [EmotiBit LEDs and buttons section](./Learn_more_about_emotibit.md#LEDs-and-Buttons) for more information on the Hibernate switch.
