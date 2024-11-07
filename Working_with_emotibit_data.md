@@ -536,6 +536,47 @@ For more details on the file types check out the section [below]().
 |---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
 |Epoch time in seconds | EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted) | Packet number the data point was extracted from (sequentially increases) | Number of data points in the packet | TypeTag of the data (see below) | Reserved for future extensibility | Reserved for future extensibility | Data points |
 
+- The format of the parsed data file can be changed by modifying the `parsedDataFormat.json` file. 
+  - <details><summary>parsedDataFormat.json file location</summary>
+  
+    - On Windows: `C:\Program Files\EmotiBit\EmotiBit DataParser\data`
+    - On macOS: `EmotiBitSoftware-macOS/EmotiBitDataParser.app/Contents/Resources`
+    - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitDataParser/bin/data`
+    </details>
+  - **Note: If this file is erroneously modified, for example, the modified file does not conform to JSON standard (a missing `,` or `[` or `{`), the EmotiBitDataparser will skip loading this file. The parsed output, in this case, will be missing the `LocalTimestamp` column.**
+
+- <details><summary>Adding LSL timestamp column by modifying parsedDataFormat</summary>
+  
+  To include the appropriate LSL time in the parsed output, just set the **addToOutput** to `true` in the `parsedDataFormat.json` file. 
+  Note: LSL timestamps are only relevant if you are using a [LSL marker stream with EmotiBit Oscillosocpe](#timesync-with-lsl-using-marker-stream).
+  - Setting **LslLocalTimestamp** to `true` adds timestamps acording to the time on the local LSL clock of the system.
+  - Setting **LslMarkerSourceTimestamp** to `true` adds timestamps according to the time set on the 
+marker source generator system.
+  For example, if you want to add the timestamps as per your local LSL clock (the clock on the system running the EmotiBit Oscilloscope), the file should look like as shown below.
+  ```
+  {
+    "timestampColumns": [
+      {
+        "identifier": "TL",
+        "columnHeader": "LocalTimestamp",
+        "addToOutput": true
+      },
+      {
+        "identifier": "LC",
+        "columnHeader": "LslLocalTimestamp",
+        "addToOutput": true
+      },
+      {
+        "identifier": "LM",
+        "columnHeader": "LslMarkerSourceTimestamp",
+        "addToOutput": false
+      }
+    ]
+  }
+  ```
+  When **addToOutput** is set to `true`, an additional column is added to the parsed output, with the column header set as the `columnHeader` specified in the file above.
+  </details>
+
 See below for a sample of the a parsed file of typetag AX (Accelerometer X axis)
 - <details><summary>Parsed data file example</summary>
   
@@ -567,45 +608,6 @@ See below for a sample of the a parsed file of typetag AX (Accelerometer X axis)
   1726714787.438663,532313.000,17455,3,AX,1,100,-0.435
   1726714787.478677,532353.000,17455,3,AX,1,100,-0.434
   ```
-  </details>
-
-### Parsing EmotiBit timestamps to LSL time
-
-- <details><summary>Parsing EmotiBit data using LSL timestamps</summary>
-  
-  To do so, you will need to use the `parsedDataFormat.json` file. You can find the file:
-  - On Windows: `C:\Program Files\EmotiBit\EmotiBit DataParser\data`
-  - On macOS: `EmotiBitSoftware-macOS/EmotiBitDataParser.app/Contents/Resources`
-  - On Linux: `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitDataParser/bin/data`
-
-  
-  To include the appropriate LSL time in the parsed output, just set the **addToOutput** to `true` in the `parsedDataFormat.json` file.
-  - Setting **LslLocalTimestamp** to `true` adds timestamps acording to the time on the local LSL clock of the system.
-  - Setting **LslMarkerSourceTimestamp** to `true` adds timestamps according to the time set on the 
-marker source generator system.
-  For example, if you want to add the timestamps as per your local LSL clock (the clock on the system running the EmotiBit Oscilloscope), the file should look like as shown below.
-  ```
-  {
-    "timestampColumns": [
-      {
-        "identifier": "TL",
-        "columnHeader": "LocalTimestamp",
-        "addToOutput": true
-      },
-      {
-        "identifier": "LC",
-        "columnHeader": "LslLocalTimestamp",
-        "addToOutput": true
-      },
-      {
-        "identifier": "LM",
-        "columnHeader": "LslMarkerSourceTimestamp",
-        "addToOutput": false
-      }
-    ]
-  }
-  ```
-  When **addToOutput** is set to `true`, an additional column is added to the parsed output, with the column header set as the `columnHeader` specified in the file above.
   </details>
 
 ### Batch parsing
