@@ -15,8 +15,7 @@
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
-    - [Prerequisites](#Prerequisites)
-    - [Run EmotiBit](#Run-EmotiBit-Firmware-Installer) 
+    - [Install drivers](#Install-drivers)
   - [Running EmotiBit Software](#Running-EmotiBit-software)
     - [On Windows](#On-Windows)
     - [On macOS](#On-macOS)
@@ -269,7 +268,36 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - <details><summary><b>Installation Instructions For Linux Users</b></summary>
     
   - Follow the instructions on the release page.
-  </details>    
+  </details>
+
+### Install drivers
+Install the drivers provided with the downloaded EmotiBitSoftware bundle.
+
+  - <details><summary> On Windows 10 </summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
+    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+    - Double click to run `CP210xVCPInstaller_x64.exe`
+    - Follow the on-screen instructions to complete driver installation.
+    </details>
+
+  - <details><summary> On Windows 11 </summary>
+
+    - Please make sure you have extracted the downloaded zip file `EmotiBitSoftware-Windows.zip`. To extract, `Right-click > Extract All...`.
+    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
+    - Right click on `silabser.inf` > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
+    - Depending on your firewall/antivirus settings you will likely need to grant permissions for the installation.
+    - Once completed, the required the drivers should be installed on your Windows 11 machine.
+    </details>
+
+  - <details><summary>On macOS</summary>
+
+    - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
+    - Navigate to `EmotiBitSoftware-macOS` > `CP210X VCP Mac OSX driver`.
+    - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
+    - Double click on `Install CP210x VCP driver` to run the installer.
+    - Follow the on-screen instructions to complete the driver installation.
+    </details>
 
 ## Running EmotiBit software
 Based on your operating system, follow the steps below:
@@ -318,34 +346,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 ## Using the EmotiBit Firmware Installer
 
 ### Prerequisites
-
-- **Drivers**: Install the drivers provided with the downloaded EmotiBitSoftware bundle.
-
-  - <details><summary> On Windows 10 </summary>
-
-    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
-    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
-    - Double click to run `CP210xVCPInstaller_x64.exe`
-    - Follow the on-screen instructions to complete driver installation.
-    </details>
-
-  - <details><summary> On Windows 11 </summary>
-
-    - Please make sure you have extracted the downloaded zip file `EmotiBitSoftware-Windows.zip`. To extract, `Right-click > Extract All...`.
-    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
-    - Right click on `silabser.inf` > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
-    - Depending on your firewall/antivirus settings you will likely need to grant permissions for the installation.
-    - Once completed, the required the drivers should be installed on your Windows 11 machine.
-    </details>
-
-  - <details><summary>On macOS</summary>
-
-    - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
-    - Navigate to `EmotiBitSoftware-macOS` > `CP210X VCP Mac OSX driver`.
-    - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
-    - Double click on `Install CP210x VCP driver` to run the installer.
-    - Follow the on-screen instructions to complete the driver installation.
-    </details>
+- Install required drivers are explained in the [section above](#Install-drivers)
 
 ### Run EmotiBit Firmware Installer
 - You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
