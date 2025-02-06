@@ -1,4 +1,5 @@
 # Description
+The EmotiBit hardware version is printed on the EmotiBit board at the top right, next to the Sd-Card slot. Alternatively, each EmotiBit has a unique code attached to the back that shows the hardware version.
 Check out the links below to learn more about EmotiBit hardware.
 
 # Schematics
