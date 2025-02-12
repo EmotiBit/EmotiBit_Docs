@@ -125,7 +125,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
       {
         "ssid": "wifi_4",
         "password": "password4"
-      },
+      }
     ]
   }
   ```
