@@ -103,6 +103,7 @@ Follow the steps below to get started!
         - EmotiBit EmojiLib
         - EmotiBit ArduinoFilters
         - EmotiBit SimpleFTPServer
+        - EmotiBit KTD2026
     </details>
   - <details>
     <summary>Using git</summary>
@@ -135,6 +136,7 @@ Follow the steps below to get started!
     git clone git@github.com:adafruit/Adafruit_IS31FL3731.git
     git clone git@github.com:adafruit/Adafruit-GFX-Library.git
     git clone git@github.com:adafruit/Adafruit_BusIO.git
+    git@github.com:EmotiBit/EmotiBit_KTD2026.git
     ```
     </details>
 
