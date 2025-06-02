@@ -244,6 +244,7 @@ Based on the operating system, users can find the settings files in the followin
   - `C:\Program Files\EmotiBit\EmotiBit Oscilloscope\data\`
 - For mac users
   - `EmotiBitSoftware-macOS/EmotiBitOscilloscope.app/Contents/Resources/`
+  - Note: Users need to right-click the `EmotiBitOscilloscope` application (*inside the software bundle just downloaded*) and click on `Show Package Contents`. You can then find the files in `Contents > Resources`
 - For linux users
   - `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitOscilloscope/bin/data/`
 
