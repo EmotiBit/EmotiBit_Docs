@@ -228,7 +228,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   <img src="./assets/Feather_M0_WiFi.png" height="300">
 </p>
 
-- ⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
+  - ⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
 
 - On the EmotiBit
   - Insert the SD-Card into the EmotiBit.
