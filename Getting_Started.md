@@ -12,9 +12,9 @@
     - [Electrode Kit](#Electrode-Kit)
     - [All-in-one-bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
-    - [Compatible Feather Modules](#Compatible-Feather-Modules)
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
+    - [Compatible Feather Modules](#Compatible-Feather-Modules)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
     - [Install drivers](#Install-drivers)
   - [Running EmotiBit Software](#Running-EmotiBit-software)
@@ -95,14 +95,6 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 ------------------
 ## Assembling your EmotiBit
-### Compatible Feather Modules
-- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
-<p align="center">
-  <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
-  <img src="./assets/Feather_M0_WiFi.png" height="300">
-</p>
-
-- ⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
 
 ### Adding WiFi credentials
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
@@ -228,6 +220,15 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 </details> 
 
 ### Stack your EmotiBit!
+
+#### Compatible Feather Modules
+- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
+<p align="center">
+  <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
+  <img src="./assets/Feather_M0_WiFi.png" height="300">
+</p>
+
+- ⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
 
 - On the EmotiBit
   - Insert the SD-Card into the EmotiBit.
