@@ -12,6 +12,7 @@
     - [Electrode Kit](#Electrode-Kit)
     - [All-in-one-bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
+    - [Compatible Feather Modules](#Compatible-Feather-Modules)
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
