@@ -3,12 +3,12 @@ This guide provides curated answers and solutions for common EmotiBit issues bas
 
 # Typical EmotiBit Getting started flow
 
-- Note: The getting started steps are sequencial. The sequential nature of the steps makes it imposible to get stuck an a step if the previous step has not been successfully completed. For example, EmotiBit cannot be stuck on trying to connect to a WiFi network, is step 1 of Firmware installation was not completed.
+- Note: The getting started steps are sequential. The sequential nature of the steps makes it impossible to get stuck on a step if the previous step has not been successfully completed. For example, EmotiBit cannot be stuck on trying to connect to a WiFi network is step 1 of Firmware installation was not completed.
 
-## Issue Missing Package Contents
-- Affected customers should resch out to us via email. Please provide the order number in the email.
-   - If you placed the order on the OpenBCI website, please reach out at support@opencbci.com.
-   - If you placed the order on the EmotiBit wensite, please reach out at support@emotibit.com.
+## Missing Package Contents
+- Affected customers should reach out to us via email. Please provide the order number in the email.
+   - If you placed the order on the OpenBCI website, please reach out to support@opencbci.com.
+   - If you placed the order on the EmotiBit website, please reach out to support@emotibit.com.
 ---
 ## Issue Getting Started  Config Txt
 
@@ -29,7 +29,7 @@ This category highlights various problems users face when attempting to install 
 
 ### Indication of this Error
 - Error messages stating "Feather not detected" or "Firmware installation failed".
-  - If the firmware installation has failed, you may see a blinking red LED on the Feather board (**NOT THE RED EMOTIBIT RECORDING LED**) on the Feather ESP32 Huzzah. This is because the Feather is shipped with that default program and it persists if new firmware was not programmed on the Feather.
+  - If the firmware installation has failed, you may see a blinking red LED on the Feather board (**NOT THE RED EMOTIBIT RECORDING LED**) on the Feather ESP32 Huzzah. This is because the Feather is shipped with that default program, and it persists if new firmware is not programmed on the Feather.
 
 ### Solution Steps
 1. **Check USB cable**: Ensure you are using a data-capable USB cable. Charge-only cables will lead to detection failures.
@@ -52,7 +52,7 @@ This category highlights various problems users face when attempting to install 
 **Definition:** This category highlights the issue of EmotiBit not being able to detect the SD Card.
 
 ### Indication of this Error:
-   - The red LED turning ON and then OFF during startup, indicating SD card failure. **A blinking RED LED does not fall under this category**. See documentation for EmotiBit LEDs.
+   - The red LED turns ON and then OFF during startup, indicating SD card failure. **A blinking RED LED does not fall under this category**. See documentation for EmotiBit LEDs.
 
 ### How to confirm this error**
    - "Setup failed: SD-Card not detected" message logged on the Arduino IDE Serial Monitor. See this [FAQ](https://www.reddit.com/r/EmotiBit/comments/vmtz6w/how_i_use_the_arduino_serial_monitor_with_emotibit/) for more information on using the Arduino Serial monitor.
@@ -60,7 +60,7 @@ This category highlights various problems users face when attempting to install 
 ### Solutions or Troubleshooting Steps Provided:
 - **Verify Hardware Connections:** Ensure that the pins of the Feather board and EmotiBit are properly aligned and seated (no floating pins). Users may clean contact points to improve connection quality.
 - **Battery Checks:** Confirm that the battery is connected and properly charged. **SD Card will not get detected if the battery is not plugged in.**
-- **Replace or Test SD Cards:** Trying different branded or sized SD cards (32GB recommended).
+- **Replace or Test SD Cards:** Try different branded or sized SD cards (32GB recommended).
 - **Verify SD Card Format:** Ensure that the SD card is formatted as FAT32. *If you received the SD Card as a part of the EmotiBit All-in-one bundle or the Essentials Kit, then it is already in the correct format.*
 - **Check Firmware Version (Only for users who programmed the feather using Arduino or PlatformIO):** Ensure the Adafruit SAMD Boards are at version 1.5.1 and confirm the [SD-Fat library version](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Keep_emotibit_up_to_date.md#install-firmware-libraries).
 
@@ -99,11 +99,11 @@ This category highlights various problems users face when attempting to install 
 - A **solid blue LED** indicates the EmotiBit is trying to connect to the designated Wi-Fi but is unsuccessful.
 
 ### How to confirm this error
-- The serial monitor will show repeated un-successful attempts, trying to connect to the WiFi network(s) listed in the config file. See this [FAQ](https://www.reddit.com/r/EmotiBit/comments/vmtz6w/how_i_use_the_arduino_serial_monitor_with_emotibit/) for more information on using the Arduino Serial monitor.
+- The serial monitor will show repeated unsuccessful attempts, trying to connect to the WiFi network(s) listed in the config file. See this [FAQ](https://www.reddit.com/r/EmotiBit/comments/vmtz6w/how_i_use_the_arduino_serial_monitor_with_emotibit/) for more information on using the Arduino Serial monitor.
 
 ### Solutions or Troubleshooting Steps Provided:
 - **Verify Wi-Fi Credentials:** Check that the SSID and password in the `config.txt` file on the SD card are correct. 
-- **Network Checks:** Check that router is set to a single band (2.4GHz) for compatibility.
+- **Network Checks:** Check that rthe outer is set to a single band (2.4GHz) for compatibility.
 - **Testing Environment:** Test with a known good network (e.g., mobile hotspot) to isolate the problem.
 - **Check for network restrictions:** Proactively check for any network restrictions or requirements that may prevent connection attempts, such as MAC filtering or captive portals.
 - **Caution against Enterprise networks:** If you are using an Enterprise network, try connecting to a home network to verify EmotiBit functionality. If it works on a home network, then the issue may be with the Enterprise network.
@@ -116,22 +116,22 @@ This category highlights various problems users face when attempting to install 
 
 ---
 
-## EmotiBit Oscilloscope Not Detecting Emotibit
+## EmotiBit Oscilloscope Not Detecting EmotiBit
 
 **Definition:** 
 You can be stuck here **ONLY IF**
 1. You have installed the EmotiBit firmware successfully.
 2. The EmotiBit has successfully completed the bootup.
 3. EmotiBit is connected to the network, as indicated by the blinking blue LED.
-**IF YOU DO NOT SEE A BLINKING BLUE LED, PLEASE REFER THE ISSUES ABOVE.**
+**IF YOU DO NOT SEE A BLINKING BLUE LED, PLEASE REFER TO THE ISSUES ABOVE**
 
-Once the EmotiBit has completed setup and connected to the WiFi, as confirmed by the BLUE LED blinking, the EmotiBit Oscillosocpe should be able to detect it. If the Oscillosocpe fails to detect the EmotiBit, even when the EmotiBit is connected to the WiFi, it falls in this category.
+Once the EmotiBit has completed setup and connected to the WiFi, as confirmed by the BLUE LED blinking, the EmotiBit Oscilloscope should be able to detect it. If the Oscilloscope fails to detect the EmotiBit, even when the EmotiBit is connected to the WiFi, it falls in this category.
 
 ### Indication of this error
-- EmotiBit hasa blinking BLUE led, but is not visible on the EmotiBit Oscilloscope.
+- EmotiBit has a blinking BLUE LED, but it is not visible on the EmotiBit Oscilloscope.
 
 ### How to confirm this error
-- ToDo: Add a positive confirmation for this isseue.
+- ToDo: Add a positive confirmation for this issue.
 ### Solutions or Troubleshooting Steps Provided:
 
 1. **Confirm Network Compatibility**:
@@ -155,8 +155,8 @@ Once the EmotiBit has completed setup and connected to the WiFi, as confirmed by
 2. **[EmotiBit Oscilloscope is not detecting EmotiBits connected to the WiFi network!](https://www.reddit.com/r/EmotiBit/comments/v75gsq/emotibit_oscilloscope_is_not_detecting_emotibits/)**
 
 ### Engaged activities
-- Use EmotiBit IP Address to ping the EmotiBit
-- Using Arduino Serial monitor to check logs. An `HE` (Hello EmotiBit) message is printed on the Serial.
+- Use the EmotiBit IP Address to ping the EmotiBit (ToDo: Add more details)
+- Using Arduino Serial monitor to check logs. An `HE` (Hello EmotiBit) message is printed on the Serial. (ToDo: Add more details)
 
 ---
 
@@ -166,8 +166,8 @@ Once the EmotiBit has completed setup and connected to the WiFi, as confirmed by
 
 ### Common Symptoms
 - Missing files or libraries resulting in compilation errors (e.g., `fatal error: String.h: No such file or directory`).
-  - SD card detection failures preventing successful firmware installations or uploads.
-- Users trying to upload the compiled binary for the wrong MCU.
+  - SD card detection failures are preventing successful firmware installations or uploads.
+- Users are trying to upload the compiled binary for the wrong MCU.
 
 ### Solution Steps
 1. **Issue: Missing Package Contents**
