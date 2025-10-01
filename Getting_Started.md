@@ -476,9 +476,9 @@ By this point, you're ready to be an EmotiBit rockstar!! However, we at CFL beli
 - [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
 
 # Troubleshooting
-- Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/collection/27921349-c38f-4df4-b708-99346979039f).
+- To troubleshoot any `Getting Started` issues, check out this [troubleshooting guide](./Troubleshooting.md). It lists all possible issues you may face while getting the EmotiBit setup and also offers suggestions on how to solve that issue.
+- Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/?f=flair_name%3A%22FAQ%22).
 - FAQs did not help out? Post on the [EmotiBit Forum](http://forum.emotibit.com)
-  - Having trouble connecting to network? check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/tsiu7j/how_do_i_add_my_wifi_credentials_to_connect_to_a/)
 
 
 [ButtonsAndSwitches]: ./assets/EmotiBit-buttonsAndSwitches.jpg "EmotiBit Buttons and Switches"
