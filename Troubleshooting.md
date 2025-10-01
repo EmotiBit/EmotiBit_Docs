@@ -35,7 +35,7 @@ This category highlights various problems users face when attempting to install 
 1. **Check USB cable**: Ensure you are using a data-capable USB cable. Charge-only cables will lead to detection failures.
 2. **Verify HIB Switch Position**: Confirm that the HIB switch on the Feather board is set to "On" (not in HIB).
 3. **Install Correct Drivers**:
-  - Make sure the SiLabs USB drivers are installed. See our [documentation](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Getting_Started.md#prerequisites).
+    - Make sure the SiLabs USB drivers are installed. See our [documentation](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Getting_Started.md#prerequisites).
 4. **Retry Firmware Installation**: Follow the installation instructions again after confirming all checks above. Repeat the process a couple of times if necessary.
 5. **Community Engagement**: If problems persist, document and share detailed errors with the community on the support [forum](https://forum.emotibit.com), as collaborative troubleshooting can yield results.
 
