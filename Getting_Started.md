@@ -221,15 +221,6 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 ### Stack your EmotiBit!
 
-#### Compatible Feather Modules
-- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
-<p align="center">
-  <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
-  <img src="./assets/Feather_M0_WiFi.png" height="300">
-</p>
-
-  - ⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
-
 - On the EmotiBit
   - Insert the SD-Card into the EmotiBit.
   - Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4)*.
@@ -243,6 +234,15 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - Stack the Feather with EmotiBit (*12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket*)
 
 ![][EmotiBit-stackup]
+
+#### Compatible Feather Modules
+- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
+<p align="center">
+  <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
+  <img src="./assets/Feather_M0_WiFi.png" height="300">
+</p>
+  
+⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
 
 ## Installing EmotiBit Software
 
