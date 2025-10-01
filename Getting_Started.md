@@ -94,6 +94,16 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 ------------------
 ## Assembling your EmotiBit
+### Compatible Feather Modules
+- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
+- Feather ESP32 Huzzah
+  - ![Feather_ESP32_Huzzah]
+- Feather M0 WiFi
+  - ![Feather_M0_WiFi]
+
+```diff
+- If you are not using your EmotiBit with a Feather not included as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**
+```
 ### Adding WiFi credentials
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
@@ -482,3 +492,5 @@ By this point, you're ready to be an EmotiBit rockstar!! However, we at CFL beli
 [EmotiBit-stackup]: ./assets/EmotiBit_stack_boards.gif ""
 [EmotiBit-box-contents]: ./assets/EmotiBit-box-contents.jpg ""
 [Electrode Kit]: ./assets/Electrode-Kit.jpg ""
+[Feather_ESP32_Huzzah]: ./assets/Feather_ESP32_Huzzah.png
+[Feather_M0_WiFi]: ./assets/Feather_M0_WiFi.png
