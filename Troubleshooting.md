@@ -4,51 +4,7 @@ This guide provides solutions to common EmotiBit issues. The content is curated 
 ## Troubleshooting Flow Overview
 The diagram below illustrates the sequential troubleshooting process for EmotiBit. Each step must be successfully completed before proceeding to the next. Use this flow to quickly identify where in the setup process you may be experiencing issues.
 
-### Quick Reference Flow (ASCII)
-```
-EmotiBit Troubleshooting Flow
-══════════════════════════════════════════════════════════════
-
-START
-  │
-  ├─► 1. Missing Package Contents?
-  │       └─► Contact Support
-  │
-  ├─► 2. Configure config.txt
-  │       └─► Add WiFi credentials
-  │
-  ├─► 3. Install Firmware
-  │       └─► FAIL? Check USB/Drivers/HIB switch
-  │
-  │   ┌────────────────────────────────┐
-  │   │    BOOTUP SEQUENCE             │
-  │   └────────────────────────────────┘
-  │
-  ├─► 4. SD Card Detection
-  │       └─► Red LED ON→OFF? Check battery/pins/format
-  │
-  ├─► 5. Config File Parse
-  │       └─► Solid Red LED? Check file exists/JSON valid
-  │
-  ├─► 6. WiFi Connection
-  │       └─► Solid Blue LED? Check credentials/network
-  │
-  │   ┌────────────────────────────────┐
-  │   │    BOOTUP COMPLETE             │
-  │   │    Blinking Blue LED ✓         │
-  │   └────────────────────────────────┘
-  │
-  ├─► 7. Oscilloscope Detection
-  │       └─► Not visible? Check same network/firewall
-  │
-  ▼
-SUCCESS - Ready to Record
-
-
-ADVANCED: 8. Compile from Source (Optional)
-```
-
-### Detailed Flow Diagram (Mermaid)
+### Detailed Flow Diagram
 ```mermaid
 flowchart TD
     Start([Start: EmotiBit Setup]) --> Step1[1. Missing Package Contents?]
