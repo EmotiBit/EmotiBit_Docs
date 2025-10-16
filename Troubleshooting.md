@@ -7,26 +7,22 @@ The diagram below illustrates the sequential troubleshooting process for EmotiBi
 ### Detailed Flow Diagram
 ```mermaid
 flowchart TD
-    Start([Start: EmotiBit Setup]) --> Step1[1. Missing Package Contents?]
-    Step1 --> |Issues| Contact[Contact Support]
+    Start([Getting Started]) --> Step1[1. Missing Package Contents?]
+    Step1 --> |Issues| Contact[Contact Support. Review section below.]
     Step1 --> |Complete| Step2[2. Configure config.txt]
 
     Step2 --> Step3[3. Install Firmware]
-    Step3 --> |Failed| Fix3[Check USB/Drivers/HIB Switch]
-    Fix3 --> Step3
+    Step3 --> |Failed| Fix3[Review section below]
     Step3 --> |Success| Bootup1[BOOTUP SEQUENCE STARTS]
 
     Bootup1 --> Step4[4. SD Card Detection]
-    Step4 --> |Red LED ON→OFF| Fix4[Check Battery/Pins/Format]
-    Fix4 --> Step4
-    Step4 --> |Detected| Step5[5. Config File Parse]
+    Step4 --> |Red LED ON→OFF| Fix4[Review section below]
+    Step4 --> |Detected| Step5[5. config.txt File Parse]
 
-    Step5 --> |Solid Red LED| Fix5[Check File Exists/JSON Valid]
-    Fix5 --> Step5
+    Step5 --> |Solid Red LED| Fix5[Review section below]
     Step5 --> |Parsed| Step6[6. WiFi Connection]
 
-    Step6 --> |Solid Blue LED| Fix6[Check Credentials/Network/2.4GHz]
-    Fix6 --> Step6
+    Step6 --> |Solid Blue LED| Fix6[Review section below]
     Step6 --> |Connected| Bootup2[BOOTUP COMPLETE<br/>Blinking Blue LED ✓]
 
     Bootup2 --> Step7[7. Oscilloscope Detection]
