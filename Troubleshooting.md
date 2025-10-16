@@ -74,17 +74,12 @@ flowchart TD
     Step6 --> |Connected| Bootup2[BOOTUP COMPLETE<br/>Blinking Blue LED ✓]
 
     Bootup2 --> Step7[7. Oscilloscope Detection]
-    Step7 --> |Not Visible| Fix7[Check Same Network/Firewall]
-    Fix7 --> Step7
+    Step7 --> |Not Visible| Fix7[Review solutions in trouble shooting section below]
     Step7 --> |Detected| Success([SUCCESS: Ready to Record])
 
-    Step8[8. Compile from Source<br/>Advanced/Optional] -.-> Step3
+    Step8[8. Compile from Source<br/>Advanced/Optional] -.-> Bootup1
 
-    style Bootup1 fill:#e1f5ff
-    style Bootup2 fill:#c8e6c9
-    style Success fill:#4caf50,color:#fff
     style Start fill:#2196f3,color:#fff
-    style Step8 fill:#fff9c4
 ```
 
 # Typical EmotiBit Getting Started Flow
