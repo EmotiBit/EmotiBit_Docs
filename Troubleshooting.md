@@ -1,6 +1,92 @@
 # EmotiBit Troubleshooting Guide
 This guide provides solutions to common EmotiBit issues. The content is curated from community discussions and support inquiries.
 
+## Troubleshooting Flow Overview
+The diagram below illustrates the sequential troubleshooting process for EmotiBit. Each step must be successfully completed before proceeding to the next. Use this flow to quickly identify where in the setup process you may be experiencing issues.
+
+### Quick Reference Flow (ASCII)
+```
+EmotiBit Troubleshooting Flow
+══════════════════════════════════════════════════════════════
+
+START
+  │
+  ├─► 1. Missing Package Contents?
+  │       └─► Contact Support
+  │
+  ├─► 2. Configure config.txt
+  │       └─► Add WiFi credentials
+  │
+  ├─► 3. Install Firmware
+  │       └─► FAIL? Check USB/Drivers/HIB switch
+  │
+  │   ┌────────────────────────────────┐
+  │   │    BOOTUP SEQUENCE             │
+  │   └────────────────────────────────┘
+  │
+  ├─► 4. SD Card Detection
+  │       └─► Red LED ON→OFF? Check battery/pins/format
+  │
+  ├─► 5. Config File Parse
+  │       └─► Solid Red LED? Check file exists/JSON valid
+  │
+  ├─► 6. WiFi Connection
+  │       └─► Solid Blue LED? Check credentials/network
+  │
+  │   ┌────────────────────────────────┐
+  │   │    BOOTUP COMPLETE             │
+  │   │    Blinking Blue LED ✓         │
+  │   └────────────────────────────────┘
+  │
+  ├─► 7. Oscilloscope Detection
+  │       └─► Not visible? Check same network/firewall
+  │
+  ▼
+SUCCESS - Ready to Record
+
+
+ADVANCED: 8. Compile from Source (Optional)
+```
+
+### Detailed Flow Diagram (Mermaid)
+```mermaid
+flowchart TD
+    Start([Start: EmotiBit Setup]) --> Step1[1. Missing Package Contents?]
+    Step1 --> |Issues| Contact[Contact Support]
+    Step1 --> |Complete| Step2[2. Configure config.txt]
+
+    Step2 --> Step3[3. Install Firmware]
+    Step3 --> |Failed| Fix3[Check USB/Drivers/HIB Switch]
+    Fix3 --> Step3
+    Step3 --> |Success| Bootup1[BOOTUP SEQUENCE STARTS]
+
+    Bootup1 --> Step4[4. SD Card Detection]
+    Step4 --> |Red LED ON→OFF| Fix4[Check Battery/Pins/Format]
+    Fix4 --> Step4
+    Step4 --> |Detected| Step5[5. Config File Parse]
+
+    Step5 --> |Solid Red LED| Fix5[Check File Exists/JSON Valid]
+    Fix5 --> Step5
+    Step5 --> |Parsed| Step6[6. WiFi Connection]
+
+    Step6 --> |Solid Blue LED| Fix6[Check Credentials/Network/2.4GHz]
+    Fix6 --> Step6
+    Step6 --> |Connected| Bootup2[BOOTUP COMPLETE<br/>Blinking Blue LED ✓]
+
+    Bootup2 --> Step7[7. Oscilloscope Detection]
+    Step7 --> |Not Visible| Fix7[Check Same Network/Firewall]
+    Fix7 --> Step7
+    Step7 --> |Detected| Success([SUCCESS: Ready to Record])
+
+    Step8[8. Compile from Source<br/>Advanced/Optional] -.-> Step3
+
+    style Bootup1 fill:#e1f5ff
+    style Bootup2 fill:#c8e6c9
+    style Success fill:#4caf50,color:#fff
+    style Start fill:#2196f3,color:#fff
+    style Step8 fill:#fff9c4
+```
+
 # Typical EmotiBit Getting Started Flow
 
 - Note: The Getting Started steps are sequential. You cannot proceed to a step if the previous step has not been successfully completed. For example, if firmware installation (step 1) fails, the EmotiBit will not attempt to connect to a WiFi network.
