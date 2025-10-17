@@ -7,17 +7,18 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 
 ## Table of Contents
 - [(Recommended option) Update firmware using EmotiBit FirmwareInstaller](#(Recommended-option)-Update-firmware-using-EmotiBit-FirmwareInstaller)
-- [Update firmware using Arduino IDE](#Update-firmware-using-Arduino-IDE)
-  - [Setup](#setup)
-  - [Programming the Feather](#programming-the-feather)
-  - [About the WiFi shield](#About-the-WiFi-shield)
-- [Building firmware using PlatformIO](#Building-firmware-using-PlatformIO)
-  - [Requirements](#Requirements)
-  - [Steps to build from source](#Steps-to-build-from-source)
-    - [Download required dependencies](#Download-required-dependencies)
-    - [Install the correct board versions](#Install-the-correct-board-versions)
-    - [Building the project](#Building-the-project)
-    - [Importing an Arduino sketch into platformIO](#Importing-an-Arduino-sketch-into-platformIO)
+- [Building from source](#Building-from-source)
+  - [Option A: Update firmware using Arduino IDE](#Option-A:-Update-firmware-using-Arduino-IDE)
+    - [Setup](#setup)
+    - [Programming the Feather](#programming-the-feather)
+    - [About the WiFi shield](#About-the-WiFi-shield)
+  - [Option B: Building firmware using PlatformIO](#Option-B:-Building-firmware-using-PlatformIO)
+    - [Requirements](#Requirements)
+    - [Steps to build from source](#Steps-to-build-from-source)
+      - [Download required dependencies](#Download-required-dependencies)
+      - [Install the correct board versions](#Install-the-correct-board-versions)
+      - [Building the project](#Building-the-project)
+      - [Importing an Arduino sketch into platformIO](#Importing-an-Arduino-sketch-into-platformIO)
 
 ## (Recommended option) Update firmware using EmotiBit FirmwareInstaller
 Using the `EmotiBit FirmwareInstaller` is the easiest way to update EmotiBit firmware.
