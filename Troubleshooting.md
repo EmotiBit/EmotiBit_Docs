@@ -136,7 +136,7 @@ If you find something is missing from your order, please contact us via email wi
 
 ### Solution Steps
 - **Verify WiFi Credentials:** Check that the SSID and password in the `config.txt` file on the SD Card are correct.
-- **Network Checks:** Ensure that the router is set to a single band (2.4GHz) for compatibility.
+- **Network Checks:** Ensure that you are on a 2.4GHz WiFI network.
 - **Testing Environment:** Test with a known good network (e.g., mobile hotspot) to isolate the problem.
 - **Check for Network Restrictions:** Check for any network restrictions or requirements that may prevent connection attempts, such as MAC filtering or captive portals.
 - **Enterprise Network Limitations:** If you are using an Enterprise network, try connecting to a home network to verify EmotiBit functionality. If it works on a home network, the issue may be with the Enterprise network configuration.
@@ -165,8 +165,7 @@ Once the EmotiBit has completed setup and connected to WiFi (confirmed by a blin
 - The EmotiBit has a blinking blue LED, but it is not visible in the EmotiBit Oscilloscope.
 
 ### How to Confirm this Issue
-- Use the Arduino Serial Monitor and press "i" to print device information. The device information contains the IP address of the EmotiBit, confirming it is on the network.
-- ToDo: Add a positive confirmation for this issue.
+- Use the Arduino Serial Monitor and press "i" to print device information. The device information contains the IP address of the EmotiBit, confirming it is on the network. See this [FAQ](https://www.reddit.com/r/EmotiBit/comments/vmtz6w/how_i_use_the_arduino_serial_monitor_with_emotibit/) for more information on using the Arduino Serial Monitor.
 
 ### Solution Steps
 
