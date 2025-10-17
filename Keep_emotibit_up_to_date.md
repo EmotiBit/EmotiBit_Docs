@@ -14,12 +14,12 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - [3. Ready to go!](#3-Ready-to-go)
     - [4. About the WiFi shield](#4-About-the-WiFi-shield)
   - [Option B: Building firmware using PlatformIO](#Option-B-Building-firmware-using-PlatformIO)
-    - [Requirements](#Requirements)
-    - [Steps to build from source](#Steps-to-build-from-source)
-      - [Download required dependencies](#Download-required-dependencies)
-      - [Install the correct board versions](#Install-the-correct-board-versions)
-      - [Building the project](#Building-the-project)
-      - [Importing an Arduino sketch into platformIO](#Importing-an-Arduino-sketch-into-platformIO)
+    - [1. Requirements](#1-Requirements)
+    - [2. Steps to build from source](#2-Steps-to-build-from-source)
+      - [2.1 Download required dependencies](#21-Download-required-dependencies)
+      - [2.2 Install the correct board versions](#22-Install-the-correct-board-versions)
+      - [2.3 Building the project](#23-Building-the-project)
+    - [3 Importing an Arduino sketch into platformIO](#3-Importing-an-Arduino-sketch-into-platformIO)
 
 ## (Recommended option) Update firmware using EmotiBit FirmwareInstaller
 Using the `EmotiBit FirmwareInstaller` is the easiest way to update EmotiBit firmware.
@@ -287,7 +287,7 @@ If the initialization is complete, returning to `Projects` pane will show the ne
   - Check out the [platformIO documentation](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html#compiling-and-uploading-the-firmware) to learning more about build/upload/debug options. 
 - The binaries are created at `project_folder/.pio/build/<board_name>/EmotiBit_stock_firmware.<board_name>.bin`.
 
-## Importing an Arduino sketch into platformIO
+## 3. Importing an Arduino sketch into platformIO
 - Copy and paste the platformio.ini file from `EmotiBit_stock_firmware` folder into the project you are trying to import.
 - The stock exmaple `.ini` file looks like 
 ```
