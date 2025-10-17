@@ -115,35 +115,35 @@ Follow the steps below to get started!
     ```diff
     -- Be sure to install the correct version when specified for any library below --
     ```
-    - The following script may be run from a bash shell within your `Arduino/libraries/` directory to install all dependencies from EmotiBit.
-    - Note: You will still need to install all other non-EmotiBit libraries using Arduino IDE. (Find a list in the above section)
-    - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+    - (**option 1**) Clone [EmotiBit_FeatherWing](https://github.com/EmotiBit/EmotiBit_FeatherWing) repository. Then run the `download_dependencies.sh` script found inside the EmotiBit_FeatherWing repository.
+    - (**option 2**) The following script may be run from a bash shell within your `Arduino/libraries/` directory to install all dependencies from EmotiBit.
+      - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-    ```
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519
-    git clone git@github.com:EmotiBit/EmotiBit_EmojiLib.git
-    git clone git@github.com:EmotiBit/EmotiBit_NCP5623.git
-    git clone git@github.com:EmotiBit/EmotiBit_FeatherWing.git
-    git clone git@github.com:EmotiBit/EmotiBit_XPlat_Utils.git
-    git clone git@github.com:EmotiBit/EmotiBit_ArduinoFilters.git
-    git clone git@github.com:EmotiBit/EmotiBit_SI7013.git
-    git clone git@github.com:EmotiBit/EmotiBit_MLX90632.git
-    git clone git@github.com:EmotiBit/EmotiBit_BMI160.git
-    git clone git@github.com:EmotiBit/EmotiBit_ADS1X15.git
-    git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
-    git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
-    git clone git@github.com:EmotiBit/EmotiBit_SimpleFTPServer.git
-    git clone git@github.com:arduino-libraries/WiFi101.git
-    git clone git@github.com:greiman/SdFat.git
-    git clone git@github.com:bblanchon/ArduinoJson.git
-    git clone git@github.com:arduino-libraries/ArduinoLowPower.git
-    git clone git@github.com:arduino-libraries/RTCZero.git
-    git clone git@github.com:adafruit/Adafruit_IS31FL3731.git
-    git clone git@github.com:adafruit/Adafruit-GFX-Library.git
-    git clone git@github.com:adafruit/Adafruit_BusIO.git
-    git clone git@github.com:EmotiBit/EmotiBit_KTD2026.git
-    ```
+      ```
+      eval "$(ssh-agent -s)"
+      ssh-add ~/.ssh/id_ed25519
+      git clone git@github.com:EmotiBit/EmotiBit_EmojiLib.git
+      git clone git@github.com:EmotiBit/EmotiBit_NCP5623.git
+      git clone git@github.com:EmotiBit/EmotiBit_FeatherWing.git
+      git clone git@github.com:EmotiBit/EmotiBit_XPlat_Utils.git
+      git clone git@github.com:EmotiBit/EmotiBit_ArduinoFilters.git
+      git clone git@github.com:EmotiBit/EmotiBit_SI7013.git
+      git clone git@github.com:EmotiBit/EmotiBit_MLX90632.git
+      git clone git@github.com:EmotiBit/EmotiBit_BMI160.git
+      git clone git@github.com:EmotiBit/EmotiBit_ADS1X15.git
+      git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
+      git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
+      git clone git@github.com:EmotiBit/EmotiBit_SimpleFTPServer.git
+      git clone git@github.com:arduino-libraries/WiFi101.git
+      git clone git@github.com:greiman/SdFat.git
+      git clone git@github.com:bblanchon/ArduinoJson.git
+      git clone git@github.com:arduino-libraries/ArduinoLowPower.git
+      git clone git@github.com:arduino-libraries/RTCZero.git
+      git clone git@github.com:adafruit/Adafruit_IS31FL3731.git
+      git clone git@github.com:adafruit/Adafruit-GFX-Library.git
+      git clone git@github.com:adafruit/Adafruit_BusIO.git
+      git clone git@github.com:EmotiBit/EmotiBit_KTD2026.git
+      ```
     </details>
 
 #### 1.4. Close and re-open Arduino IDE
