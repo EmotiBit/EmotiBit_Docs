@@ -8,7 +8,7 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
 ## Table of Contents
 - [(Recommended option) Update firmware using EmotiBit FirmwareInstaller](#(Recommended-option)-Update-firmware-using-EmotiBit-FirmwareInstaller)
 - [Building from source](#Building-from-source)
-  - [Option A: Update firmware using Arduino IDE](#Option-A:-Update-firmware-using-Arduino-IDE)
+  - [Option A: Update firmware using Arduino IDE](#Option-A-Update-firmware-using-Arduino-IDE)
     - [Setup](#setup)
     - [Programming the Feather](#programming-the-feather)
     - [About the WiFi shield](#About-the-WiFi-shield)
