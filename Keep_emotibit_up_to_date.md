@@ -86,36 +86,35 @@ Follow the steps below to get started!
     
     - Open the Arduino IDE and go to `Tools > Manage Libraries...`
     - Search for and install the following Libraries.
-    ```diff
-    -- Be sure to install the correct version when specified for any library below --
-    ```
-    - WiFi101 *by Arduino* (`git@github.com:arduino-libraries/WiFi101.git`)
-    - SdFat *by Bill Greiman* _**(v2.2.0)**_ (`git@github.com:greiman/SdFat.git`)
-    - ArduinoJson _**(v6.21.2)**_ (`git@github.com:bblanchon/ArduinoJson.git`)
-    - Arduino Low Power (`git@github.com:arduino-libraries/ArduinoLowPower.git`)
-      - RTCZero (`git@github.com:arduino-libraries/RTCZero.git`) *(should be automatically installed with Arduino Low Power. If not, then please manually search and install)*
-    - Adafruit_IS31FL3731_Library (`git@github.com:adafruit/Adafruit_IS31FL3731.git`)
-      - Adafruit_GFX_Library (`git@github.com:adafruit/Adafruit-GFX-Library.git`) *(should be automatically installed with Adafruit_IS31FL3731_Library. If not, then please manually search and install)*
-      - Adafruit BusIO (`git@github.com:adafruit/Adafruit_BusIO.git`) *(should be automatically installed with Adafruit_IS31FL3731_Library. If not, then please manually search and install)*
-    - EmotiBit FeatherWing
-      - It will automatically install the following EmotiBit dependencies
-        - EmotiBit BMI160
-        - EmotiBit MAX30101
-        - EmotiBit MLX90632
-        - EmotiBit NCP5632
-        - EmotiBit SI7013
-        - EmotiBit External EEPROM 
-        - EmotiBit ADS1X15
-        - EmotiBit XPlat Utils
-        - EmotiBit EmojiLib
-        - EmotiBit ArduinoFilters
-        - EmotiBit SimpleFTPServer
-        - EmotiBit KTD2026
+    - EmotiBit FeatherWing (*It will automatically install the following EmotiBit dependencies*)
+      - EmotiBit BMI160
+      - EmotiBit MAX30101
+      - EmotiBit MLX90632
+      - EmotiBit NCP5632
+      - EmotiBit SI7013
+      - EmotiBit External EEPROM 
+      - EmotiBit ADS1X15
+      - EmotiBit XPlat Utils
+      - EmotiBit EmojiLib
+      - EmotiBit ArduinoFilters
+      - EmotiBit SimpleFTPServer
+      - EmotiBit KTD2026
+      - WiFi101 *by Arduino*
+      - SdFat *by Bill Greiman* _**(v2.2.0)**_
+      - ArduinoJson _**(v6.21.2)**_
+      - Arduino Low Power
+      - RTCZero
+      - Adafruit_IS31FL3731_Library
+      - Adafruit_GFX_Library
+      - Adafruit BusIO
     </details>
   - <details>
     <summary>Using git</summary>
     <br>
 
+    ```diff
+    -- Be sure to install the correct version when specified for any library below --
+    ```
     - The following script may be run from a bash shell within your `Arduino/libraries/` directory to install all dependencies from EmotiBit.
     - Note: You will still need to install all other non-EmotiBit libraries using Arduino IDE. (Find a list in the above section)
     - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
