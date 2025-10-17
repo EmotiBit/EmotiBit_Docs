@@ -6,7 +6,7 @@ If you just received your EmotiBit, please checkout our [EmotiBit Getting Starte
 Trying to update EmotiBit Firmware? You are at the right place! **Lets get started!!!**
 
 ## Table of Contents
-- [Update firmware using EmotiBit FirmwareInstaller](#Update-firmware-using-EmotiBit-FirmwareInstaller)
+- [(Recommended option) Update firmware using EmotiBit FirmwareInstaller](#(Recommended-option)-Update-firmware-using-EmotiBit-FirmwareInstaller)
 - [Update firmware using Arduino IDE](#Update-firmware-using-Arduino-IDE)
   - [Setup](#setup)
   - [Programming the Feather](#programming-the-feather)
@@ -19,18 +19,19 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - [Building the project](#Building-the-project)
     - [Importing an Arduino sketch into platformIO](#Importing-an-Arduino-sketch-into-platformIO)
 
-## Update firmware using EmotiBit FirmwareInstaller
+## (Recommended option) Update firmware using EmotiBit FirmwareInstaller
 Using the `EmotiBit FirmwareInstaller` is the easiest way to update EmotiBit firmware.
 Just follow the steps listed in the [Installing EmotiBit Firmware](./Getting_Started.md/#Installing-EmotiBit-Firmware) section on the **Getting Started** page.
 <br>
 If you want to build EmotiBit firmware from source, check out the section below.
-## Update firmware using Arduino IDE
+# Building from source
+## Option A: Update firmware using Arduino IDE
 Setting up and using the Arduino IDE is recommended if you want to build EmotiBit firmware from source. 
 Follow the steps below to get started!
-### Setup
-#### Download and install the Arduino IDE
+### 1. Setup
+#### 1.1. Download and install the Arduino IDE
   - https://www.arduino.cc/en/main/software#download
-#### Add Adafruit Feather boards to Arduino IDE
+#### 1.2. Add Adafruit Feather boards to Arduino IDE
 
 - For Feather ESP32 huzzah boards
   - <details><summary><b>Add URL for ESP boards</b></summary>
@@ -72,7 +73,7 @@ Follow the steps below to get started!
       - If you're on Windows 7  or 8, the above link also has driver installation instructions (note, however, that EmotiBit software is not officially supported on Windows versions prior to Windows 10)
     </details>
     
-#### Install firmware libraries
+#### 1.3. Install firmware libraries
   - <details>
     <summary><b>Using Arduino IDE</b></summary>
     <br>
@@ -140,10 +141,10 @@ Follow the steps below to get started!
     ```
     </details>
 
-#### Close and re-open Arduino IDE
+#### 1.4. Close and re-open Arduino IDE
   - After installing boards or libraries you should close and re-open the Arduino Application to make sure the changes take effect.
 
-### Programming the Feather
+### 2. Programming the Feather
 - In the Arduino program (IDE), open `File > Examples > EmotiBit FeatherWing > EmotiBit Example`
   - <img src="./assets/arduino-choose_emotibit_example.png" width="450">
   - Alternatively you can double click the `EmotiBit_Example.ino` file presenst at the location:`Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_stock_firmware/EmotiBit_stock_firmware.ino` 
@@ -157,16 +158,16 @@ Follow the steps below to get started!
 - Click “Upload” button.
   - <img src="./assets/Arduino_upload_button.png" width="350">
 
-### Ready to go!
+### 2.1. Ready to go!
 - Once your feather is successfully uploaded, you are ready to go! [Start working with your data](./Working_with_emotibit_data.md/#Real-Time-Streaming)
 
-### About the WiFi shield
+### 2.2 About the WiFi shield
 - Adafruit feather M0 works with the `ATWINC1500` for wireless communication. The `ATWINC` exists as a independent submodule to the feather
 and might get updates which require a different set of instructions to be followed. 
   - If you are using the feather you received with the EmotiBit, everything is upto data. If you are using 
   a feather purchased independently, check out the documentation on the [Adafruit website](https://learn.adafruit.com/adafruit-winc1500-wifi-shield-for-arduino/updating-firmware).
 
-## Building firmware using PlatformIO
+## Option B: Building firmware using PlatformIO
 
 ```diff
 -- This section of the documentation is a work in progress. Complete support for platformIO will be added in a future release.
@@ -175,7 +176,7 @@ Note: This section is for advanced users who have experience with programming fo
 embedded environemts. Using platformIO as a build tool is still being tested and this section will be imrpoved as
 we create our structure to use platformIO. <br>
 
-### Requirements
+### 1. Requirements
 To start using PlatformIO, you will need:
 1. PlatformIO development environment
     - We have tested this build process with `PlatformIO`+`VScode`. 
@@ -188,9 +189,9 @@ To start using PlatformIO, you will need:
     - If you are building from source for the first time, follow the steps in the section below. 
 
 
-### Steps to build from source
+### 2. Steps to build from source
 
-#### Download required dependencies
+#### 2.1 Download required dependencies
 1. You should download all the required libraries using the steps [mentioned above](#install-firmware-libraries)
 (using Arduino IDE).
 2. All the libraries should be added to the `Documents/Arduino/libraries` folder.
@@ -212,7 +213,7 @@ Arduino/libraries
 |-- [dependency_library2]
 ```
 
-#### Install the correct board versions
+#### 2.2 Install the correct board versions
 - <details><summary>Get the correct board version for Feather M0</summary>
   
   - Download the `framework v4.3.0` zip (source code zip) from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
@@ -260,10 +261,10 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
     - The core version is specified in the `.ini` file.
   </details>
 
-#### For Linux users
+#### 2.3. For Linux users
 - You will need to make a minor modification by commenting out a couple of `#include`s. we are working on resolving this issue in the best way.
 - Check out [this issue](https://github.com/EmotiBit/EmotiBit_FeatherWing/issues/290) for more information.
-#### Building the project
+#### 2.4. Building the project
 - Brief instructions:
   - Open Visual Studio Code and navigate to the PlatformIO home page.
   - On the hokme page (`Quick Access` panel > `PIO Home` > `Open`), click on `Open Project`.
