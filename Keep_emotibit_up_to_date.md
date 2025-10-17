@@ -118,6 +118,7 @@ Follow the steps below to get started!
     - (**option 1**) Clone [EmotiBit_FeatherWing](https://github.com/EmotiBit/EmotiBit_FeatherWing) repository. Then run the `download_dependencies.sh` script found inside the EmotiBit_FeatherWing repository.
     - (**option 2**) The following script may be run from a bash shell within your `Arduino/libraries/` directory to install all dependencies from EmotiBit.
       - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+      - Check out the `ArduinoJson` and `SdFat` libraries to the **required versions** specified in the "Using Arduino IDE" dropdown above.
 
       ```
       eval "$(ssh-agent -s)"
