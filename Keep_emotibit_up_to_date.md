@@ -6,13 +6,13 @@ If you just received your EmotiBit, please checkout our [EmotiBit Getting Starte
 Trying to update EmotiBit Firmware? You are at the right place! **Lets get started!!!**
 
 ## Table of Contents
-- [(Recommended option) Update firmware using EmotiBit FirmwareInstaller](#(Recommended-option)-Update-firmware-using-EmotiBit-FirmwareInstaller)
+- [(Recommended option) Update firmware using EmotiBit FirmwareInstaller](#Recommended-option-Update-firmware-using-EmotiBit-FirmwareInstaller)
 - [Building from source](#Building-from-source)
   - [Option A: Update firmware using Arduino IDE](#Option-A-Update-firmware-using-Arduino-IDE)
     - [Setup](#setup)
     - [Programming the Feather](#programming-the-feather)
     - [About the WiFi shield](#About-the-WiFi-shield)
-  - [Option B: Building firmware using PlatformIO](#Option-B:-Building-firmware-using-PlatformIO)
+  - [Option B: Building firmware using PlatformIO](#Option-B-Building-firmware-using-PlatformIO)
     - [Requirements](#Requirements)
     - [Steps to build from source](#Steps-to-build-from-source)
       - [Download required dependencies](#Download-required-dependencies)
