@@ -120,8 +120,6 @@ If you find something is missing from your order, please contact us via email wi
 - **Troubleshoot config.txt File:**
    - Ensure JSON formatting is correct. Avoid trailing commas and validate the JSON structure to prevent errors. You can use an [online JSON format checker](https://jsonlint.com/) to validate that your config file is in the correct format.
 
-### FAQs
-- ToDo: Consider adding FAQs for this issue.
 ---
 
 ## 6. Bootup Failure: WiFi Connection Issues
