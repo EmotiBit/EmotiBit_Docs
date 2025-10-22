@@ -304,7 +304,7 @@ Based on your operating system, follow the steps below:
 ### On Windows
 You can click on the start menu and search for the name of the application you want to run, e.g.`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
 <br>
-- <details><summary>Windows Security Alert pop-up</summary>
+- <details><summary>Windows Security Alert pop-up (Windows Defender Firewall)</summary>
   
   - If a `Windows Security Alert` pop-up appears, **allow private network access**. 
 If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant EmotiBit software
