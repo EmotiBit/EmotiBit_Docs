@@ -31,7 +31,7 @@
   - [2. Granting Network Permissions (Crucial Step)](#2-granting-network-permissions-crucial-step)
     - [2.1 Permissions on Windows](#21-permissions-on-windows)
     - [2.2 Permissions on macOS](#22-permissions-on-mscos)
-- # After connecting to emotibit and recording data
+- [After connecting to emotibit and recording data](#after-connecting-to-emotibit-and-recording-data)
 - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
 - [EmotiBit: LEDs and Buttons](#EmotiBit-LEDs-and-Buttons)
 - [Next Steps](#Next-Steps)
