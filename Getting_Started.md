@@ -429,7 +429,7 @@ Action Required: **You must grant the appropriate network permissions when promp
 ⚠️ ATTENTION: Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
 The sections that follow provide a visual guide on how to navigate the permissions screen for your specific operating system.
  
-### 2.1 Permissions on Windows
+#### 2.1 Permissions on Windows
 - When you open the EmotiBit Oscilloscope, the following pop-up will be displayed on your screen.
 - <details><summary>Windows Security Alert pop-up (Windows Defender Firewall)</summary>
   
@@ -447,7 +447,7 @@ network access.
     - <img src="./assets/windows-defender-AllowedApps.png" width="600"> 
   </details>
 
-### 2.2 Permissions on macOS
+#### 2.2 Permissions on macOS
 - <details><summary>Opening Software in mscOS Catalina and newer</summary>
   
     - Right-click on the application you want to run. Choose **Open**. 
