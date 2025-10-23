@@ -293,36 +293,9 @@ Install the drivers provided with the downloaded EmotiBitSoftware bundle.
 Based on your operating system, follow the steps below:
 ### On Windows
 You can click on the start menu and search for the name of the application you want to run, e.g.`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
-<br>
-- <details><summary>Windows Security Alert pop-up (Windows Defender Firewall)</summary>
-  
-  - If a `Windows Security Alert` pop-up appears, **allow private network access**. 
-If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant EmotiBit software
-network access.
-  - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="800">
-  </details>
-
 
 ### On macOS
 You can find the EmotiBit applications in the folder you just extracted (*as mentioned in the steps in the previous section*)
-- <details><summary>Opening Software in mojave</summary>
-        
-    - Right click on the application you want to run. Choose **Open**. 
-    - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
-    - You will see the EmotiBit Application start.
-  </details>
-- <details><summary>Opening Software in Catalina</summary>
-  
-    - Right click on the application you want to run. Choose **Open**. 
-    - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:<br>
-            ![][macOs-Catalina-Initial_Oscilloscope_Error]
-    - Click on the `Apple Logo` > `Syatem Preferences` > `Security and Privacy`.
-            ![][macOS-Catalina-sys_pref]
-    - You will find a request from the applicaiton at the bottom of this window. Click on `Open Anyways`. 
-            ![][macOS-Catalina-System_pref_Security&options]
-    - Click on `Allow` on the dialog box that appears.This will open the application.
-            ![][macOS-Catalina-Allow_emotibit]
-  </details>
 
 ### On Linux
 Build the application from source. You can find instructions in the `ReadMe` provided with the zip file downloaded in the previous step..
@@ -444,8 +417,55 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md#LEDs-and-Buttons)
 
 
-# Next Steps
-By this point, you're ready to be an EmotiBit rockstar!! However, we at CFL believe in empowering the user. Below are listed topics, which we feel will help you understand and ultimately **master working with EmotiBit**.
+# Next Steps: Connecting to EmotiBit and Recording EmotiBit Data
+This section outlines the procedure for connecting to, streaming, and recording data from your EmotiBit using the EmotiBit Oscilloscope application.
+
+### 1. EmotiBit Oscilloscope Network Connection
+The EmotiBit Oscilloscope communicates with the EmotiBit device over a WiFi network connection. For this communication to function, the Oscilloscope requires permission from your computer's operating system to access and use the local network.
+
+### 2. Granting Network Permissions (Crucial Step)
+The very first time you launch the EmotiBit Oscilloscope on your computer, your operating system (Windows or macOS) will prompt you to grant network access permissions to the application.
+
+Action Required: **You must grant the appropriate network permissions when prompted.**
+
+⚠️ ATTENTION: Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
+The sections that follow provide a visual guide on how to navigate the permissions screen for your specific operating system.
+ 
+### 2.1 Permissions on Windows
+- When you open the EmotiBit Oscilloscope, the following pop-up will be displayed on your screen.
+- <details><summary>Windows Security Alert pop-up (Windows Defender Firewall)</summary>
+  
+  - When the `Windows Security Alert` pop-up appears, **allow private network access**. You must also allow access on public networks if you plan to use the EmotiBit on a public network.
+If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant the EmotiBit Oscilloscope.
+network access.
+  - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="800">
+  </details>
+- You can update the Windows Defender Firewall settings at any time. In your Start menu, search for "Allow an app through firewall".
+- Open the Setting that shows up on the Start menu.
+- Make sure both `Public` and `Private` are selected for `emotibitoscilloscope`. 
+
+### 2.2 Permissions on macOS
+- <details><summary>Opening Software in mscOS Catalina and newer</summary>
+  
+    - Right-click on the application you want to run. Choose **Open**. 
+    - A dialog box will appear with options `Move to Trash` or `Cancel`. Click `Cancel`. You will have to allow the application to run in the `Security and Privacy` center. To do so:<br>
+            ![][macOs-Catalina-Initial_Oscilloscope_Error]
+    - Click on the `Apple Logo` > `System Preferences` > `Security and Privacy`.
+            ![][macOS-Catalina-sys_pref]
+    - You will find a request from the application at the bottom of this window. Click on `Open Anyways`. 
+            ![][macOS-Catalina-System_pref_Security&options]
+    - Click on `Allow` on the dialog box that appears. This will open the application.
+            ![][macOS-Catalina-Allow_emotibit]
+  </details>
+- <details><summary>Opening Software in mojave</summary>
+        
+    - Right-click on the application you want to run. Choose **Open**. 
+    - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
+    - You will see the EmotiBit Application start.
+  </details>
+
+# After connecting to emotibit and recording data
+By this point, you're ready to be an EmotiBit rockstar!! Check out the following links to learn more about EmotiBit!
 - EmotiBit Oscilloscope
   - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#EmotiBit-Oscilloscope)
 - Working with your data
