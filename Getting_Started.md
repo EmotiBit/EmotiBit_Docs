@@ -409,14 +409,6 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |EmotiBit BLUE LED solid ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#Adding-WiFi-credentials))|
 |EmotiBit BLUE LED BLINKING|<img src="./assets/EmotiBit-bootup-stage-4.gif" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
-# Using EmotiBit Oscilloscope
-[Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#EmotiBit-Oscilloscope)
-
-# EmotiBit: LEDs and Buttons
-
-Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md#LEDs-and-Buttons)
-
-
 # Next Steps: Connecting to EmotiBit and Recording EmotiBit Data
 This section outlines the procedure for connecting to, streaming, and recording data from your EmotiBit using the EmotiBit Oscilloscope application.
 
@@ -474,6 +466,10 @@ By this point, you're ready to be an EmotiBit rockstar!! Check out the following
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
 - [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
+
+# EmotiBit: LEDs and Buttons
+Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md#LEDs-and-Buttons)
+
 
 # Troubleshooting
 - Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/collection/27921349-c38f-4df4-b708-99346979039f).
