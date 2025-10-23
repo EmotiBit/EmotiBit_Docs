@@ -433,8 +433,13 @@ network access.
   - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="800">
   </details>
 - You can update the Windows Defender Firewall settings at any time. In your Start menu, search for "Allow an app through firewall".
-- Open the Setting that shows up on the Start menu.
-- Make sure both `Public` and `Private` are selected for `emotibitoscilloscope`. 
+
+  - <details>
+  - Open the Setting that shows up on the Start menu.
+  - <img src="./assets/windows-defender-StartMenuSearch.png" width="800"> 
+  - Make sure both `Public` and `Private` are selected for `emotibitoscilloscope`.
+  - <img src="./assets/windows-defender-AllowedApps.png" width="800"> 
+  </details>
 
 ### 2.2 Permissions on macOS
 - <details><summary>Opening Software in mscOS Catalina and newer</summary>
