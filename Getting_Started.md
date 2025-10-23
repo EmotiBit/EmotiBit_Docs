@@ -26,6 +26,12 @@
     - [Run EmotiBit Firmware Installer](#Run-EmotiBit-Firmware-Installer)
   - [For Linux and Advanced Users](#For-Linux-and-Advanced-Users)
 - [EmotiBit Bootup](#EmotiBit-Bootup)
+- [Next Steps: Connecting to EmotiBit and Recording EmotiBit Data](#next-steps-connecting-to-emotibit-and-recording-emotibit-data)
+  - [1. EmotiBit Oscilloscope Network Connection](#1-emotibit-oscilloscope-network-connection)
+  - [2. Granting Network Permissions (Crucial Step)](#2-granting-network-permissions-crucial-step)
+    - [2.1 Permissions on Windows](#21-permissions-on-windows)
+    - [2.2 Permissions on macOS](#22-permissions-on-mscos)
+- # After connecting to emotibit and recording data
 - [Using EmotiBit Oscilloscope](#Using-EmotiBit-Oscilloscope)
 - [EmotiBit: LEDs and Buttons](#EmotiBit-LEDs-and-Buttons)
 - [Next Steps](#Next-Steps)
