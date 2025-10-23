@@ -254,16 +254,6 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - Download `EmotiBitSoftware-macOS.zip` from the release page.
   - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
   - You will find the Applications in the extracted folder.
-  
-  > **Note1: The EmotiBit software is tested on all operating systems except macOS Ventura. (However, user reports suggest it works on Ventura, even though not officially tested.)**
-  
-  - <details><summary>Check your Operating System version</summary>
-    
-    - You can find your macOS version by clicking on the `Apple Logo`(on the top left of your screen) > `About This Mac`.
-    
-    <img src="./assets/macOS-Catalina-OS_version.png" width="800">
-    </details>
-  </details> 
 
 - <details><summary><b>Installation Instructions For Linux Users</b></summary>
     
