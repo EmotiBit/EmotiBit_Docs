@@ -470,7 +470,7 @@ The data recorded using EmotiBit is stored on the SD-Card. You can transfer the 
     - Open a Arduino Serial monitor. For more details, check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/vmtz6w/how_i_use_the_arduino_serial_monitor_with_emotibit/).
     - Select `baud rate`=2000000 and `No line ending` from the dropdown options.
     - Type `F` into the input message bar and press Enter.
-    - You will see that the EmotiBit will enter FTP mode.
+    - You will see that the EmotiBit will enter FTP mode (red, blue, and yellow LEDs light up on EmotiBit).
     - <img src="./assets/emotibit-start-ftp-server.png" width="600">
     - You you can trasnfer the files from EmotiBit using an FTP client.
     - Download and install [Filezilla Client](https://filezilla-project.org/), if you do not already have it.
@@ -479,6 +479,7 @@ The data recorded using EmotiBit is stored on the SD-Card. You can transfer the 
       - The default **user name** is `ftp` and the default **password** is `ftp`. You can change these values in the firmware. In the future, these credentials will be accessible using the `config` file.
     - Once you connect to the FTP server, you can then drag any file from EmotiBit to any location on your computer (inside the FileZilla interface), and it will we copied over the WiFi!
     - <img src="./assets/emotibit-ftp-file-transfer.png" width="600">
+	- Reset the EmotiBit to exit the FTP mode and enter normal operation.
     </details>
 
 ### Raw data format
