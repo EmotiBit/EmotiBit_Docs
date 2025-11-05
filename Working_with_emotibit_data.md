@@ -463,7 +463,7 @@ The data recorded using EmotiBit is stored on the SD-Card. You can transfer the 
     - Remove the SD card from the EmotiBit.
     - Plug it into the provided SD-Card reader provided with the Essentials kit or All-in-one-bundle.
     - Plug the SD card reader into the computer. Once the Card is detected on the computer, you can simply copy the files to a location on your computer.
-2. <details><summary><b>Using a FTP server on EmotiBit</b></summary>
+2. <details><summary><b>Using a FTP server on EmotiBit (**only available on ESP32 Feather Huzzah**)</b></summary>
 
     - With the EmotiBit switched on and running, plug it into the computer using the provided USB cable.
     - Make sure the EmotiBit is not recording data.
