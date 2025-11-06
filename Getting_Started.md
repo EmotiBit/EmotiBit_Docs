@@ -14,6 +14,7 @@
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
+    - [Compatible Feather Modules](#Compatible-Feather-Modules)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
     - [Install drivers](#Install-drivers)
   - [Running EmotiBit Software](#Running-EmotiBit-software)
@@ -100,6 +101,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 ------------------
 ## Assembling your EmotiBit
+
 ### Adding WiFi credentials
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
@@ -238,6 +240,15 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - Stack the Feather with EmotiBit (*12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket*)
 
 ![][EmotiBit-stackup]
+
+#### Compatible Feather Modules
+- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
+<p align="center">
+  <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
+  <img src="./assets/Feather_M0_WiFi.png" height="300">
+</p>
+  
+⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
 
 ## Installing EmotiBit Software
 
@@ -483,9 +494,9 @@ Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.
 
 
 # Troubleshooting
-- Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/collection/27921349-c38f-4df4-b708-99346979039f).
+- To troubleshoot any `Getting Started` issues, check out this [troubleshooting guide](./Troubleshooting.md). It lists all possible issues you may face while getting the EmotiBit setup and also offers suggestions on how to solve that issue.
+- Checkout the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/?f=flair_name%3A%22FAQ%22).
 - FAQs did not help out? Post on the [EmotiBit Forum](http://forum.emotibit.com)
-  - Having trouble connecting to network? check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/tsiu7j/how_do_i_add_my_wifi_credentials_to_connect_to_a/)
 
 
 [ButtonsAndSwitches]: ./assets/EmotiBit-buttonsAndSwitches.jpg "EmotiBit Buttons and Switches"
@@ -499,3 +510,5 @@ Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.
 [EmotiBit-stackup]: ./assets/EmotiBit_stack_boards.gif ""
 [EmotiBit-box-contents]: ./assets/EmotiBit-box-contents.jpg ""
 [Electrode Kit]: ./assets/Electrode-Kit.jpg ""
+[Feather_ESP32_Huzzah]: ./assets/Feather_ESP32_Huzzah.png
+[Feather_M0_WiFi]: ./assets/Feather_M0_WiFi.png
