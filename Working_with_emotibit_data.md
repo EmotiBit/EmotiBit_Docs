@@ -651,6 +651,180 @@ There are 3 types of files associated with EmotiBit
   - Along with the raw data file, each recording session generates 1 `info` file.
   - It contains information like sampling rates and other important settings for each sensor/stream.
   - It shares the name of the raw file. For example, the `info` file for the above raw file will be named `2019-01-30_11-57-13-492_info.json`
+  - <details><summary>sample _info.json file</summary>
+
+    ```
+    [{
+    "info": {
+        "name": "EmotiBitData",
+        "type": "Multimodal",
+        "source_id": "EmotiBit FeatherWing",
+        "hardware_version": "V05c",
+        "sku": "MD",
+        "device_id": "MD-V5-0000410",
+        "feather_version": "Adafruit Feather HUZZAH32",
+        "feather_wifi_mac_addr": "54:66:cc:7e:dc:0c",
+        "firmware_version": "1.12.1",
+        "firmware_variant": "EmotiBit_stock_firmware",
+        "created_at": "2024-11-14_11-54-36-135729"
+    }
+    }, {
+    "info": {
+        "name": "Accelerometer",
+        "type": "Accelerometer",
+        "typeTags": ["AX", "AY", "AZ"],
+        "channel_count": 3,
+        "nominal_srate": 25,
+        "channel_format": "float",
+        "units": "g",
+        "setup": {
+            "range": 8,
+            "acc_bwp": 2,
+            "acc_us": 2
+        }
+    }
+    }, {
+    "info": {
+        "name": "Gyroscope",
+        "type": "Gyroscope",
+        "typeTags": ["GX", "GY", "GZ"],
+        "channel_count": 3,
+        "nominal_srate": 25,
+        "channel_format": "float",
+        "units": "degrees/second",
+        "setup": {
+            "range": 1000,
+            "gyr_bwp": 2,
+            "gyr_us": 2
+        }
+    }
+    }, {
+    "info": {
+        "name": "Magnetometer",
+        "type": "Magnetometer",
+        "typeTags": ["MX", "MY", "MZ"],
+        "channel_count": 3,
+        "nominal_srate": 25,
+        "channel_format": "float",
+        "units": "microhenries",
+        "setup": {}
+    }
+    }, {
+    "info": {
+        "name": "ElectrodermalActivity",
+        "type": "ElectrodermalActivity",
+        "typeTags": ["EA"],
+        "channel_count": 1,
+        "nominal_srate": 15,
+        "channel_format": "float",
+        "units": "microsiemens",
+        "setup": {
+            "eda_series_resistance": 0,
+            "adc_bits": 16,
+            "enable_digital_filter": false,
+            "samples_averaged": 5,
+            "oversampling_rate": 75,
+            "eda_transform_slope": 722.0528564,
+            "eda_transform_intercept": 1.4121972e7
+        }
+    }
+    }, {
+    "info": {
+        "name": "SkinConductanceResponseAmplitude",
+        "type": "ElectrodermalActivity",
+        "typeTags": ["SA"],
+        "channel_count": 1,
+        "channel_format": "float",
+        "units": "microsiemens"
+    }
+    }, {
+    "info": {
+        "name": "SkinConductanceResponseFrequency",
+        "type": "ElectrodermalActivity",
+        "typeTags": ["SF"],
+        "channel_count": 1,
+        "nominal_srate": 3,
+        "channel_format": "float",
+        "units": "count/min"
+    }
+    }, {
+    "info": {
+        "name": "SkinConductanceResponseRiseTime",
+        "type": "ElectrodermalActivity",
+        "typeTags": ["SR"],
+        "channel_count": 1,
+        "channel_format": "float",
+        "units": "secs"
+    }
+    }, {
+    "info": {
+        "name": "Temperature1",
+        "type": "Temperature",
+        "typeTags": ["T1"],
+        "channel_count": 1,
+        "nominal_srate": 7.5,
+        "channel_format": "float",
+        "units": "degrees celcius",
+        "sensor_part_number": "MAX30101",
+        "setup": {
+            "samples_averaged": 1,
+            "oversampling_rate": 7.5
+        }
+    }
+    }, {
+    "info": {
+        "name": "Thermopile",
+        "type": "Temperature",
+        "typeTags": ["TH"],
+        "channel_count": 1,
+        "nominal_srate": 7.5,
+        "channel_format": "float",
+        "units": "degrees celcius",
+        "setup": {
+            "samples_averaged": 1,
+            "oversampling_rate": 7.5
+        }
+    }
+    }, {
+    "info": {
+        "name": "PPG",
+        "type": "PPG",
+        "typeTags": ["PI", "PR", "PG"],
+        "channel_count": 3,
+        "nominal_srate": 25,
+        "channel_format": "float",
+        "units": "raw units",
+        "setup": {
+            "LED_power_level": 47,
+            "samples_averaged": 16,
+            "LED_mode": 3,
+            "oversampling_rate": 400,
+            "pulse_width": 215,
+            "ADC_range": 4096
+        }
+    }
+    }, {
+    "info": {
+        "name": "HeartRate",
+        "type": "PPG",
+        "typeTags": ["HR"],
+        "channel_count": 1,
+        "channel_format": "int",
+        "units": "bpm"
+    }
+    }, {
+    "info": {
+        "name": "InterBeatInterval",
+        "type": "PPG",
+        "typeTags": ["BI"],
+        "channel_count": 1,
+        "channel_format": "float",
+        "units": "mS"
+    }
+    }]
+    ```
+    </details>
+	
 - Parsed data files(**csv**)
   - the raw file is converted to parsed files by running the DataParser.
   - Each parsed file contains data for a specific data type.
