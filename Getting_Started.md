@@ -455,7 +455,7 @@ network access.
     - Open the Setting that shows up on the Start menu.
     - <img src="./assets/windows-defender-StartMenuSearch.png" width="300"> 
     - Make sure both `Public` and `Private` are selected for `emotibitoscilloscope`.
-    - <img src="./assets/windows-defender-AllowedApps.png" width="600"> 
+    - <img src="./assets/windows-defender-AllowedApps.png" width="400"> 
   </details>
 
 #### 2.2 Permissions on macOS
