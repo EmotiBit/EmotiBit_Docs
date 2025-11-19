@@ -447,7 +447,7 @@ The sections that follow provide a visual guide on how to navigate the permissio
   - When the `Windows Security Alert` pop-up appears, **allow private network access**. You must also allow access on public networks if you plan to use the EmotiBit on a public network.
 If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant the EmotiBit Oscilloscope.
 network access.
-  - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="800">
+  - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="600">
   </details>
 - You can update the Windows Defender Firewall settings at any time. In your Start menu, search for "Allow an app through firewall".
   - <details><summary>Update Windows Defender permissions (Windows Defender Firewall)</summary>
@@ -455,7 +455,7 @@ network access.
     - Open the Setting that shows up on the Start menu.
     - <img src="./assets/windows-defender-StartMenuSearch.png" width="300"> 
     - Make sure both `Public` and `Private` are selected for `emotibitoscilloscope`.
-    - <img src="./assets/windows-defender-AllowedApps.png" width="400"> 
+    - <img src="./assets/windows-defender-AllowedApps.png" width="600"> 
   </details>
 
 #### 2.2 Permissions on macOS
