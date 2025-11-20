@@ -179,7 +179,7 @@ and might get updates which require a different set of instructions to be follow
 -- This section of the documentation is a work in progress. Complete support for platformIO will be added in a future release.
 ```
 Note: This section is for advanced users who have experience with programming for
-embedded environemts. Using platformIO as a build tool is still being tested and this section will be imrpoved as
+embedded environemts. Using platformIO as a build tool is still being tested and this section will be improved as
 we create our structure to use platformIO. <br>
 
 ### 1. Requirements
@@ -203,7 +203,7 @@ To start using PlatformIO, you will need:
 2. All the libraries should be added to the `Documents/Arduino/libraries` folder.
 3. Alternatively, you can clone all the repositories from github. Just make sure the directory structure shown below is maintained. If not using Arduino, the root folder will be different from `Arduino/libraries` (the  `lib_dir` project environment variable will have to be updated accordingly).
 
-**Note**: Make sure that after the libraies have been downloaded, the following directory structure is maintained.
+**Note**: Make sure that after the libraries have been downloaded, the following directory structure is maintained.
 ```
 Arduino/libraries
 |-- EmotiBit Feather Wing
@@ -252,7 +252,7 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
     - To solve this, you need to manually add this framework to the PIO core. 
       - Download the zip from the [link](https://github.com/platformio/platformio-pkg-framework-arduinosam/releases/tag/v4.3.190711).
       - Unzip the archive and place the unzipped folder in  your platformIO core folder. The location should be equivalent to  `C:\Users\<user_name>\.platformio\packages` path on windows.
-      - After downloading and adding the extracted flder, the `packages` folder should look something like 
+      - After downloading and adding the extracted folder, the `packages` folder should look something like 
         - ![image](https://user-images.githubusercontent.com/31810812/213038179-a7ab0464-981e-430b-8a27-dcd52884b578.png)
     - Once the framework is added, you should be able to build from source using platformIO!
     - **NOTE:** If your build fails, throwing an error stating `Error: Could not find the package with 'atmelsam @ 3.8.1' requirements ...`, it is most likely because that platform has been removed from auto-downloads for platformIO. To manually add that platform to your platformIO build,
@@ -273,7 +273,7 @@ for adafruit samd board package v1.5.1. You can check this in the release notes 
 #### 2.4. Building the project
 - Brief instructions:
   - Open Visual Studio Code and navigate to the PlatformIO home page.
-  - On the hokme page (`Quick Access` panel > `PIO Home` > `Open`), click on `Open Project`.
+  - On the home page (`Quick Access` panel > `PIO Home` > `Open`), click on `Open Project`.
     - <img src="./assets/platformio_open_project.png" width="1000">
   - Navigate to the platformIO ini file.
     - `Documents/Arduino/libraries/EmotiBit_FeatherWing/EmotiBit_FeatherWing/EmotiBit_stock_firmware`.
