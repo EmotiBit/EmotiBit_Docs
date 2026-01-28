@@ -229,7 +229,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 
 - On the EmotiBit
   - Insert the SD-Card into the EmotiBit.
-  - Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4)*.
+  - Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+)*.
     - ```diff
       - CAUTION: Excessive force can break the HIB switch. Handle with care! -
       ```
