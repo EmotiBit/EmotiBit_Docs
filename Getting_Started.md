@@ -105,7 +105,7 @@ If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBi
 ### Adding WiFi credentials
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
-- Plug in the USB card reader loaded with the SD card into the computer.
+- Plug in the MicroSD card reader loaded with the SD card into the computer.
 - Download the config file from https://www.emotibit.com/files/config.
 - Open the config file in any text editor (e.g. Notepad on Windows or text edit on macOS).
 - Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network. 
