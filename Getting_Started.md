@@ -152,7 +152,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
     - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
   - Type capital `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
     - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
-  - If you timed is right, you will see the following response in the serial monitor. You are now in `WiFi credential edit mode`. 
+  - If your timing is right, you will see the following response in the serial monitor. You are now in `WiFi credential edit mode`. 
     - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
   - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
   - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
