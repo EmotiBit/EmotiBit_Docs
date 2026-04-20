@@ -408,7 +408,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
         - On `Windows`: The device appears with a name similar to `COM X` (where `X` is a number)
         - On `mac/linux`: You may find the COM port by running the terminal command `ls -la /dev/tty*`
         - Pro-tip for linux: the Feather may likely show up as `/dev/ttyUSB0`
-    - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
+    - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IS IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
     - replace **YOUR_FEATHER_PORT** with the COM port you detected in the previous step in the following command and run it to upload the firmware.
       - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
         - [For linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
