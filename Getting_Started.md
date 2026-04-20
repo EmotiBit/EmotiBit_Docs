@@ -81,7 +81,7 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 - **High-speed microSD card**
 - **MicroSD card reader**
 - **Micro USB cable**
-- **3x Emoti-stretch straps** of different lengths to wear EmotiBit nearly anywhere on the body, ranging from a child’s wrist to an adult head
+- **3x Emoti-stretch straps** of different lengths to wear EmotiBit nearly anywhere on the body, ranging from a child’s wrist to an adult's head
 - **Plastic spudger** -- used to easily toggle the hibernate switch and EmotiBit button
 
 <img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
