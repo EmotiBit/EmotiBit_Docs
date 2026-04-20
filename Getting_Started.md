@@ -10,7 +10,7 @@
     - [EmotiBit](#EmotiBit)
     - [Essentials Kit](#Essentials-Kit)
     - [Electrodes Kit](#Electrode-Kit)
-    - [All-in-One-Bundle](#All-in-one-bundle)
+    - [All-in-One Bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
@@ -96,8 +96,8 @@ The electrodes kit has been designed for users who use multiple EmotiBits for re
 <img src="./assets/Electrode-kit.jpg" width="300">
 
 ---------------------------
-### All-in-One-Bundle
-If you purchased the All-in-One-Bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
+### All-in-One Bundle
+If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
 
 ------------------
 ## Assembling your EmotiBit
