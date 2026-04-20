@@ -160,8 +160,8 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
     - To add a credential, you will need to use the keyword `WA`.
     - In the serial monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
     - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
-    - Once the Name and password uare update, hit `Send`.
-    - You shuold see the following response on the Serial Monitor.
+    - Once the Name and password are updated, hit `Send`.
+    - You should see the following response on the Serial Monitor.
       - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
   - **View existing credentials**
     - To view existing credentials, you will need to use the keyword `LS`.
