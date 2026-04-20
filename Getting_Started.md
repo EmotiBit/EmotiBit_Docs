@@ -263,7 +263,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
       - <img src="./assets/windows-smart-screen-more-info.png" width="250">
     - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
     - You will notice that shortcuts to `EmotiBit Oscilloscope`, `EmotiBit DataParser` and `EmotiBit FirmwareInstaller` have been created in the start menu and on the desktop.
-    - **Note: The EmotiBit Software installation process is sometimes blocked by any anti-virus tool you might have installed on your system. If you face any issues with installation, make sure to check that the appropriate settings are enabled on your anti-virus software to allow a third-party installs. You will likely also need to allow firewall permissions to allow streaming data on your WiFi networks.**
+    - **Note: The EmotiBit Software installation process is sometimes blocked by any anti-virus tool you might have installed on your system. If you face any issues with installation, make sure to check that the appropriate settings are enabled on your anti-virus software to allow third-party installs. You will likely also need to allow firewall permissions to allow streaming data on your WiFi networks.**
   </details>
 
 - <details><summary><b>Installation Instructions For Mac Users</b></summary>
