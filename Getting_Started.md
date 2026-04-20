@@ -10,7 +10,7 @@
     - [EmotiBit](#EmotiBit)
     - [Essentials Kit](#Essentials-Kit)
     - [Electrodes Kit](#Electrode-Kit)
-    - [All-in-one-bundle](#All-in-one-bundle)
+    - [All-in-One-Bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
     - [Stack your EmotiBit!](#Stack-your-EmotiBit)
@@ -96,8 +96,8 @@ The electrodes kit has been designed for users who use multiple EmotiBits for re
 <img src="./assets/Electrode-kit.jpg" width="300">
 
 ---------------------------
-### All-in-one-bundle
-If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
+### All-in-One-Bundle
+If you purchased the All-in-One-Bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
 
 ------------------
 ## Assembling your EmotiBit
@@ -248,7 +248,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   <img src="./assets/Feather_M0_WiFi.png" height="300">
 </p>
   
-⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-one bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
+⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
 
 ## Installing EmotiBit Software
 
