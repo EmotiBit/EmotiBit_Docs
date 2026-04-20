@@ -292,7 +292,7 @@ Install the drivers provided with the downloaded EmotiBitSoftware bundle.
 
     - Please make sure you have extracted the downloaded zip file `EmotiBitSoftware-Windows.zip`. To extract, `Right-click > Extract All...`.
     - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
-    - Right click on `silabser.inf` > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
+    - Right click on `silabser.inf` (Setup Information) > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
     - Depending on your firewall/antivirus settings you will likely need to grant permissions for the installation.
     - Once completed, the required drivers should be installed on your Windows 11 machine.
     </details>
