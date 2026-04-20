@@ -392,7 +392,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
   
   - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so,
   right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
-  - The FirmwareInstaller essentaily uploads the latest EmotiBit FW onto the Feather
+  - The FirmwareInstaller essentailly uploads the latest EmotiBit FW onto the Feather
   - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
   - There are 2 requirements to run esptool
     - COM port on which the Feather is detected
