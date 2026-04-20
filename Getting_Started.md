@@ -405,7 +405,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
     - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
     - Connect the Feather to the computer using a data-capable USB cable.
       - The Feather should show up as a COM port on the system.
-        - On `Windows`: The device appears with a same similiar to `COM X` (where `X` is a number)
+        - On `Windows`: The device appears with a name similar to `COM X` (where `X` is a number)
         - On `mac/linux`: You may find the COM port by running the terminal command `ls -la /dev/tty*`
         - Pro-tip for linux: the Feather may likely show up as `/dev/ttyUSB0`
     - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
