@@ -150,28 +150,28 @@ If you purchased the All-in-One-Bundle, you will receive the [EmotiBit](#EmotiBi
   - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Serial Monitor immediately after.
   - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
     - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
-  - Type capital `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
+  - Type capital `C` in the `input field`. Wait for the Serial Monitor to print the message shown below and press `Send` / hit enter to send the character.
     - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
-  - If your timing is right, you will see the following response in the serial monitor. You are now in `WiFi credential edit mode`. 
+  - If your timing is right, you will see the following response in the Serial Monitor. You are now in `WiFi credential edit mode`. 
     - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
   - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
   - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
   - **Adding a Credential**
     - To add a credential, you will need to use the keyword `WA`.
-    - In the serial monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
+    - In the Serial Monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
     - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
     - Once the Name and password are updated, hit `Send`.
     - You should see the following response on the Serial Monitor.
       - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
   - **View existing credentials**
     - To view existing credentials, you will need to use the keyword `LS`.
-    - In the serial monitor input type `@LS~`. Hit `Send`.
+    - In the Serial Monitor input type `@LS~`. Hit `Send`.
     - The existing credentials, along with their passwords will be printed as a list.
   - **Delete a credential**
     - To delete existing credentials, you will need to use the keyword `WD`.
     - Use the `LS` keyword as mentioned above to get the list of existing credentials.
     - Note the number of the credential you want to delete.
-    - In the serial monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
+    - In the Serial Monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
     - The credential will be deleted, and you will see the following output.
       - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
 
