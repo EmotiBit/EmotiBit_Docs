@@ -356,7 +356,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
 - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
   - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
-  - The FirmwareInstaller essentaily performs 3 actions:
+  - The FirmwareInstaller essentailly performs 3 actions:
     1. Uploads the firmware updater sketch to prep the Feather for WINC updater
     2. Updates the WINC WiFi module FW to version 19.6.1
     3. Uploads the latest EmotiBit FW onto the Feather, after the WINC has been updated
@@ -365,7 +365,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
     - COM port on which the Feather is detected
     - The bin file (*provided in the software release*). If your flavor of Linux doesn't work with the provided bin file, you'll have to download/compile `bossac` yourself, but ***WARNING: THAR BE DRAGONS***
       - Check out these [instructions on installing bossac](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/uf2-bootloader-details#running-bossac-on-the-command-line-2929769-30). ***PLEASE NOTE*** that with bossac version 1.9 or later, you must give an --offset parameter on the command line to specify where to start writing the firmware in flash memory. ***FAILING TO DO SO WILL BRICK YOUR FEATHER!***
-  - To perform the operations manually, the follow the below listed steps:
+  - To perform the operations manually, follow the listed steps below:
     - Navigate to the `data` folder located inside the EmotiBit software directory.
       - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
       - On MacOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
