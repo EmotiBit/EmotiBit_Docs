@@ -147,7 +147,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
   - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
     - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
-  - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Seial monitor immediately after.
+  - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Serial Monitor immediately after.
   - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
     - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
   - Type capital `C` in the `input field`. Wait for the Serial monitor to print the message shown below and press `Send` / hit enter to send the character.
