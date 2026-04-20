@@ -88,7 +88,7 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 
 -------------------------
 ### Electrode Kit
-The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. the electrode kit includes
+The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrode kit includes
 - **10x EDA electrodes (Ag/AgCl)**
 - **4x solder-cup snaps** (to add your own EDA leads)
 - **5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)
