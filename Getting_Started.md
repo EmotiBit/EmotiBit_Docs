@@ -9,7 +9,7 @@
   - [Unboxing](#Unboxing)
     - [EmotiBit](#EmotiBit)
     - [Essentials Kit](#Essentials-Kit)
-    - [Electrode Kit](#Electrode-Kit)
+    - [Electrodes Kit](#Electrode-Kit)
     - [All-in-one-bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
     - [Adding WiFi credentials](#Adding-WiFi-credentials)
@@ -87,8 +87,8 @@ The Essentials kit contains everything you will need to get started with EmotiBi
 <img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
 
 -------------------------
-### Electrode Kit
-The electrode kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrode kit includes:
+### Electrodes Kit
+The electrodes kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrodes kit includes:
 - **10x EDA electrodes (Ag/AgCl)**
 - **4x solder-cup snaps** (to add your own EDA leads)
 - **5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)
@@ -97,7 +97,7 @@ The electrode kit has been designed for users who use multiple EmotiBits for res
 
 ---------------------------
 ### All-in-one-bundle
-If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrode Kit](#Electrode-Kit).
+If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
 
 ------------------
 ## Assembling your EmotiBit
