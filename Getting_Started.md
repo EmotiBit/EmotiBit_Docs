@@ -142,7 +142,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
 - <details><summary>Adding credentials using Serial Monitor</summary>
 
   - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
-  - Open Arduino IDE. Under `Tools > Port` notice the ports avaiable, if any.
+  - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
   - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
   - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
   - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
