@@ -397,7 +397,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
   - There are 2 requirements to run esptool
     - COM port on which the Feather is detected
     - The esptool bin file (*provided in the software release*).
-  - To perform the operations manually, the follow the below listed steps:
+  - To perform the operations manually, follow the listed steps below:
     - Navigate to the `data` folder located inside the EmotiBit software directory.
       - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
       - On MacOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
