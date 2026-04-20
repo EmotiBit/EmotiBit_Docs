@@ -326,7 +326,7 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 ## Using the EmotiBit Firmware Installer
 
 ### Prerequisites
-- Install required drivers are explained in the [section above](#Install-drivers)
+- Install required drivers, as explained in the [section above](#Install-drivers).
 
 ### Run EmotiBit Firmware Installer
 - You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
