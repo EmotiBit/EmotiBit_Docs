@@ -312,10 +312,10 @@ Based on your operating system, follow the steps below:
 You can click on the start menu and search for the name of the application you want to run, e.g.`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
 
 ### On macOS
-You can find the EmotiBit applications in the folder you just extracted (*as mentioned in the steps in the previous section*)
+You can find the EmotiBit applications in the folder you just extracted (*as mentioned in the steps in the previous section*).
 
 ### On Linux
-Build the application from source. You can find instructions in the `ReadMe` provided with the zip file downloaded in the previous step..
+Build the application from source. You can find instructions in the `ReadMe` provided with the zip file downloaded in the previous step.
 
 
 # Installing EmotiBit Firmware
