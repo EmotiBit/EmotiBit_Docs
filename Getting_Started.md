@@ -166,13 +166,13 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   - **View existing credentials**
     - To view existing credentials, you will need to use the keyword `LS`.
     - In the serial monitor input type `@LS~`. Hit `Send`.
-    - The existing credentials, along with their passwrods will be printed as a list.
+    - The existing credentials, along with their passwords will be printed as a list.
   - **Delete a credential**
-    - To delete an existing credentials, you will need to use the keyword `WD`.
-    - Use the `LS` keword as mentioned above to get the list of existing credentials.
+    - To delete existing credentials, you will need to use the keyword `WD`.
+    - Use the `LS` keyword as mentioned above to get the list of existing credentials.
     - Note the number of the credential you want to delete.
     - In the serial monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
-    - The credential will be deleted and you will see the following output.
+    - The credential will be deleted, and you will see the following output.
       - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
 
   - **Reset**
