@@ -300,7 +300,7 @@ Install the drivers provided with the downloaded EmotiBitSoftware bundle.
   - <details><summary>On macOS</summary>
 
     - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
-    - Navigate to `EmotiBitSoftware-macOS` > `CP210X VCP Mac OSX driver`.
+    - Navigate to `EmotiBitSoftware-macOS`.
     - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
     - Double click on `Install CP210x VCP driver` to run the installer.
     - Follow the on-screen instructions to complete the driver installation.
