@@ -181,7 +181,7 @@ If you purchased the All-in-one-bundle, you will receive the [EmotiBit](#EmotiBi
   </details>
 
 
-**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several arduino libraries to unlock different features, for example, establishing and mainting a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
 <details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
   
