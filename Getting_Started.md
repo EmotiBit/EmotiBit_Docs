@@ -445,8 +445,7 @@ The sections that follow provide a visual guide on how to navigate the permissio
 - <details><summary>Windows Security Alert pop-up (Windows Defender Firewall)</summary>
   
   - When the `Windows Security Alert` pop-up appears, **allow private network access**. You must also allow access on public networks if you plan to use the EmotiBit on a public network.
-If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant the EmotiBit Oscilloscope.
-network access.
+If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant the EmotiBit Oscilloscope network access.
   - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="600">
   </details>
 - You can update the Windows Defender Firewall settings at any time. In your Start menu, search for "Allow an app through firewall".
