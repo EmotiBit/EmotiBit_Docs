@@ -106,13 +106,13 @@ If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBi
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
 - We first need to add the WiFi credentials to the SD card. EmotiBit needs a WiFi network to get started and connect to the EmotiBit Oscilloscope. See this [FAQ for more details](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
+- Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/) to see some available network options to choose from.
 - Plug in the MicroSD card reader loaded with the SD card into the computer.
 - Download the config file from https://www.emotibit.com/files/config.
 - Open the config file in any text editor (e.g. Notepad on Windows or text edit on macOS).
 - Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network.
   - <img src="./assets/config-file-example.png" width="550">
 - Save the file onto your microSD card. Eject the SD card from your computer. 
-- Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/) to see some available network options to choose from.
 
 - <details><summary>Multiple WiFi credentials</summary>
 
