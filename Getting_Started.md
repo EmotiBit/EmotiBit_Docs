@@ -12,9 +12,9 @@
     - [Electrodes Kit](#Electrode-Kit)
     - [All-in-One Bundle](#All-in-one-bundle)
   - [Assembling your EmotiBit](#Assembling-your-EmotiBit)
-    - [Adding WiFi credentials](#Adding-WiFi-credentials)
-    - [Stack your EmotiBit!](#Stack-your-EmotiBit)
-    - [Compatible Feather Modules](#Compatible-Feather-Modules)
+    - [Assembly step-1: Adding WiFi credentials](#Assembly-step-1-Adding-WiFi-credentials)
+    - [Assembly step-2: Stack your EmotiBit!](#Assembly-step-2-Stack-your-EmotiBit)
+      - [Compatible Feather Modules](#Compatible-Feather-Modules)
   - [Installing EmotiBit Software](#Installing-EmotiBit-Software)
     - [Install drivers](#Install-drivers)
   - [Running EmotiBit Software](#Running-EmotiBit-software)
@@ -55,7 +55,7 @@ EmotiBit should NEVER be worn while electrically connected to any device that's 
 The [EmotiBit forum](http://forum.emotibit.com) is a great place to get answers to all things EmotiBit!<br>
 - Find answers to questions you may have about using EmotiBit.
 - Share your experience working with EmotiBit or the latest signal processing tools.
-- Take a glance at the [EmotiBit FAQ](https://www.reddit.com/r/EmotiBit/collection/27921349-c38f-4df4-b708-99346979039f). *Great minds think alike! If you have a question, the FAQ page probably has an answer.*
+- Take a glance at the [EmotiBit FAQ](https://www.reddit.com/mod/EmotiBit/wiki/index/faqs). *Great minds think alike! If you have a question, the FAQ page probably has an answer.*
 - Share your latest publication with the community or start a discussion about the future of biometric sensing!
 
 ## Unboxing
@@ -102,13 +102,15 @@ If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBi
 ------------------
 ## Assembling your EmotiBit
 
-### Adding WiFi credentials
+### Assembly step-1: Adding WiFi credentials
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
+- We first need to add the WiFi credentials to the SD card. EmotiBit needs a WiFi network to get started and connect to the EmotiBit Oscilloscope. See this [FAQ for more details](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
+- Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/) to see some available network options to choose from.
 - Plug in the MicroSD card reader loaded with the SD card into the computer.
 - Download the config file from https://www.emotibit.com/files/config.
 - Open the config file in any text editor (e.g. Notepad on Windows or text edit on macOS).
-- Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network. 
+- Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network.
   - <img src="./assets/config-file-example.png" width="550">
 - Save the file onto your microSD card. Eject the SD card from your computer. 
 
@@ -181,7 +183,7 @@ If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBi
   </details>
 
 
-**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
 <details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
   
@@ -225,11 +227,11 @@ If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBi
     - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
 </details> 
 
-### Stack your EmotiBit!
+### Assembly step-2: Stack your EmotiBit!
 
 - On the EmotiBit
   - Insert the SD card into the EmotiBit.
-  - Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+)*.
+  - Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+. The version is listed on the unique EmotiBit serial number attached to the back of EmotiBit.)*.
     - ```diff
       - CAUTION: Excessive force can break the HIB switch. Handle with care! -
       ```
@@ -242,7 +244,7 @@ If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBi
 ![][EmotiBit-stackup]
 
 #### Compatible Feather Modules
-- Currently EmotiBit supports 2 Adafruit Feathers, the F[eather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
+- Currently EmotiBit supports 2 Adafruit Feathers, the [Feather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
 <p align="center">
   <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
   <img src="./assets/Feather_M0_WiFi.png" height="300">
