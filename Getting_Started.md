@@ -206,7 +206,7 @@ EmotiBit supports local data logging via a microSD card.
 
 > ℹ️ *Note: Currently EmotiBit only supports the 2.4GHz band for WiFi. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
-* <details><summary>**2.3.1.3 Multiple WiFi credentials**</summary>
+* <details><summary><b></v>2.3.1.3 Multiple WiFi credentials</b></summary>
 
   - If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> 
   ```
