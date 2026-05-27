@@ -58,8 +58,6 @@ The following sections explain the contents of each item available for purchase 
 | **Electrodes Kit** | The electrodes kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrodes kit includes:<br><br><ul><li>**10x EDA electrodes (Ag/AgCl)**</li><li>**4x solder-cup snaps** (to add your own EDA leads)</li><li>**5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)</li></ul> | <img src="./assets/Electrode-kit.jpg" width="600"> |
 | **All-in-One Bundle** | If you purchased the All-in-One Bundle, you will receive the **EmotiBit**, **Essentials Kit**, and **Electrodes Kit** components detailed above. | *(Includes all items pictured above)* |
 
----
-
 ## Understanding the Hardware: EmotiBit vs. Feather
 
 To get the most out of your device, it helps to understand how the two core boards work together as a team:
@@ -68,7 +66,7 @@ To get the most out of your device, it helps to understand how the two core boar
 ┌──────────────────────────────────────┐
 │        EmotiBit Sensor Board         │  ◄── Captures physiological data
 ├──────────────────────────────────────┤
-│         Adafruit Feather             │  ◄── Handles processing, WiFi, and SD logging
+│         Adafruit Feather             │  ◄── Handles processing, WiFi and data logging
 └──────────────────────────────────────┘
 ```
 * **The EmotiBit** is the sensor module. It contains the dedicated biometric circuitry, specialized analog-to-digital converters, and high-fidelity sensors. It also features its own dedicated status LEDs and control buttons.
@@ -83,7 +81,8 @@ EmotiBit is designed for real-time wireless data streaming, requiring an establi
 2.  **The Network Bridge:** The EmotiBit device transmits this data wirelessly over the local WiFi network.
 3.  **The EmotiBit Oscilloscope:** Your computer runs the **EmotiBit Oscilloscope** software. The Oscilloscope listens to the network, automatically detects the EmotiBit host, and streams the biometric data onto your screen in real time.
 
-> ⚠️ **Important Network Dependence:** Because the data passes through your local network, both your computer (running the Oscilloscope) and the EmotiBit must be connected to the exact same WiFi network. If your network has security settings that block device-to-device communication (common on enterprise or university networks), the data will not reach the screen. Don't worry—we will walk you through configuring and troubleshooting this during the setup phase!
+> [!WARNING]
+> **Important Network Dependence:** Because the data passes through your local network, both your computer (running the EmotiBit Oscilloscope) and the EmotiBit must be connected to the exact same WiFi network. If your network has security settings that block device-to-device communication (common on enterprise or university networks), the data will not reach the screen. Don't worry—we will walk you through configuring and troubleshooting this during the setup phase!
 
 ---
 
@@ -126,7 +125,8 @@ The software utilities required to interface with EmotiBit are distributed as a 
 
 ### 2.2 Install Drivers
 
-You must install the Virtual COM Port (VCP) drivers included in the software bundle to enable serial communication with the hardware via USB.
+> [!IMPORTANT]
+> You must install the Virtual COM Port (VCP) drivers included in the software bundle to enable serial communication with the hardware via USB.
 
 * **2.2.1 OS-Specific Driver Installation:**
 
@@ -176,7 +176,8 @@ EmotiBit supports local data logging via a microSD card.
      * <img src="./assets/config-file-example.png" width="550">
   5. Save the file onto your microSD card. Then safely eject the card from your computer.
 
-> ℹ️ *Note: Currently EmotiBit only supports the 2.4GHz band for WiFi. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+> [!NOTE]
+> **EmotiBit only supports the 2.4GHz band for WiFi**. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
 * <details><summary><b></v>2.3.1.3 Multiple WiFi credentials</b></summary>
 
