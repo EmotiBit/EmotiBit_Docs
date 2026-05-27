@@ -159,7 +159,6 @@ The software utilities required to interface with EmotiBit are distributed as a 
 ### 3. Prepare the SD Card
 
 EmotiBit supports local data logging via a microSD card.
-<img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
 #### 3.1 Adding WiFi credentials
 
@@ -167,6 +166,8 @@ EmotiBit supports local data logging via a microSD card.
   * For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
   * For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
 * **3.1.2 Standard Configuration Procedure:**
+<img src="./assets/SD-CardInReader.jpg" align="right" width="250">
+
   1. Insert the microSD card into the provided reader and connect it to your computer.
   2. Download the default configuration file from [emotibit.com/files/config](https://www.emotibit.com/files/config).
   3. Open the downloaded configuration file using a standard text editor (e.g., Notepad on Windows or TextEdit on macOS).
@@ -291,13 +292,13 @@ EmotiBit supports local data logging via a microSD card.
 ### 4. Stack your EmotiBit!
 
 ### 4.1 Pre-Assembly Configuration
+<img src="./assets/correctHibernateSwitch.jpg" align="right" width="250" hspace="15" vspace="15">
+
 1. Insert the SD card into the EmotiBit.
 2. Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+. The version is listed on the unique EmotiBit serial number attached to the back of EmotiBit.)*.
 
 > [!IMPORTANT]
-> If the HIB switch is left in the OFF position prior to stacking, the physical power rails between the processing layer and the sensor layer remain disconnected. The device will fail to boot, cannot be programmed, and will not initialize status indicators even when connected to an external USB power supply.
-
-<img src="./assets/correctHibernateSwitch.jpg" width="250">
+> If the HIB switch is left in the OFF position, the device programming will fail in the next steps!
 
 > [!CAUTION]
 > Excessive force can break the HIB switch. Handle with care!
@@ -313,14 +314,16 @@ EmotiBit supports local data logging via a microSD card.
 
 ![](./assets/EmotiBit-stack-LED.png)
 
-#### Compatible Feather Modules
-- Currently EmotiBit supports 2 Adafruit Feathers, the [Feather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
-<p align="center">
-  <img src="./assets/Feather_ESP32_Huzzah.png" height="300">
-  <img src="./assets/Feather_M0_WiFi.png" height="300">
-</p>
+### 4.4 Compatible Feather Modules
+
+EmotiBit officially supports two Adafruit Feather modules. Use the matrix below to identify your board.
+
+| Adafruit Feather ESP32 Huzzah | Adafruit Feather M0 WiFi |
+| :---: | :---: |
+| <img src="./assets/Feather_ESP32_Huzzah.png" height="250" alt="Feather ESP32 Huzzah"> | <img src="./assets/Feather_M0_WiFi.png" height="250" alt="Feather M0 WiFi"> |
   
-⚠️ If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.** ⚠️
+> [!WARNING]
+> If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**
 
 ## Installing EmotiBit Software
 
