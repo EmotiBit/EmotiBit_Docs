@@ -281,9 +281,7 @@ EmotiBit supports local data logging via a microSD card.
 * **2.3.1.4 Adding Enterprise WiFi credentials**
   - <details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
       
-      ```diff
-      -- Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
-      ```
+      > ⚠️ Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
       
       - Enterprise WiFi network details are added to the config.txt file in the following format.
         - If no `username` is provided, `userid` will be used as `username`
