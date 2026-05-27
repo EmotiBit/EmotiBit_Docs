@@ -45,7 +45,7 @@ Follow these steps in order to validate that your hardware is working perfectly.
 > **EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power.** Connecting EmotiBit USB or any other pin to another device can be a shock risk hazard and should ONLY be done when EmotiBit is NOT in physical contact with the body.
 
 
-# 1. Learn About
+# Learn About EmotiBit
 
 ## What's in the Box? (Unboxing Component Guide)
 Before you begin, make sure you have all the components included in your EmotiBit package:
@@ -86,15 +86,15 @@ EmotiBit is designed for real-time wireless data streaming, requiring an establi
 
 ---
 
-## 2. Setup Steps
+## Setup Steps
 
-### 2.1 Download and Install the Software Bundle
+### 1. Download and Install the Software Bundle
 
 The software utilities required to interface with EmotiBit are distributed as a unified release bundle.
 
-* **2.1.1** Navigate to the [EmotiBit GitHub Releases Page](https://github.com/EmotiBit/ofxEmotiBit/releases/latest) and download the asset bundle compatible with your operating system.
+* **1.1** Navigate to the [EmotiBit GitHub Releases Page](https://github.com/EmotiBit/ofxEmotiBit/releases/latest) and download the asset bundle compatible with your operating system.
 
-* **2.1.2 OS-Specific Installation Instructions:**
+* **1.2 OS-Specific Installation Instructions:**
 
 - <details><summary><b>Installation Instructions For Windows Users</b></summary>
   
@@ -121,14 +121,13 @@ The software utilities required to interface with EmotiBit are distributed as a 
   * Follow the dedicated installation instructions provided directly on the GitHub release page.
 </details>
 
----
 
-### 2.2 Install Drivers
+### 2. Install Drivers
 
 > [!IMPORTANT]
 > You must install the Virtual COM Port (VCP) drivers included in the software bundle to enable serial communication with the hardware via USB.
 
-* **2.2.1 OS-Specific Driver Installation:**
+* **2.1 OS-Specific Driver Installation:**
 
 - <details><summary> On Windows 10 </summary>
 
@@ -156,19 +155,18 @@ The software utilities required to interface with EmotiBit are distributed as a 
   * Follow the on-screen prompts to complete the installation.
 </details>
 
----
 
-### 2.3 Prepare the SD Card
+### 3. Prepare the SD Card
 
 EmotiBit supports local data logging via a microSD card.
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
-#### 2.3.1 Adding WiFi credentials
+#### 3.1 Adding WiFi credentials
 
-* **2.3.1.1** EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit.
+* **3.1.1** EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit.
   * For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
   * For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
-* **2.3.1.2 Standard Configuration Procedure:**
+* **3.1.2 Standard Configuration Procedure:**
   1. Insert the microSD card into the provided reader and connect it to your computer.
   2. Download the default configuration file from [emotibit.com/files/config](https://www.emotibit.com/files/config).
   3. Open the downloaded configuration file using a standard text editor (e.g., Notepad on Windows or TextEdit on macOS).
@@ -179,7 +177,7 @@ EmotiBit supports local data logging via a microSD card.
 > [!NOTE]
 > **EmotiBit only supports the 2.4GHz band for WiFi**. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
-* <details><summary><b></v>2.3.1.3 Multiple WiFi credentials</b></summary>
+* <details><summary><b>3.1.3 Multiple WiFi credentials</b></summary>
 
   - If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> 
   ```
@@ -206,7 +204,7 @@ EmotiBit supports local data logging via a microSD card.
   ```
   </details>
 
-* <details><summary><b>2.3.1.4 Adding credentials using Serial</b></summary>
+* <details><summary><b>3.1.4 Adding credentials using Serial</b></summary>
 
   - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
   - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
@@ -248,8 +246,6 @@ EmotiBit supports local data logging via a microSD card.
   </details>
 
 * <details><summary><b>2.3.1.4 Adding Enterprise WiFi credentials</b></summary>
-      
-  > ⚠️ Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
   
   - Enterprise WiFi network details are added to the config.txt file in the following format.
     - If no `username` is provided, `userid` will be used as `username`
@@ -285,9 +281,14 @@ EmotiBit supports local data logging via a microSD card.
     - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
     - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
     - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
-</details> 
+</details>
 
-### Assembly step-2: Stack your EmotiBit!
+> [!WARNING]
+> Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
+
+---
+
+### 4. Stack your EmotiBit!
 
 - On the EmotiBit
   - Insert the SD card into the EmotiBit.
