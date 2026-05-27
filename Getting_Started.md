@@ -40,8 +40,9 @@ Follow these steps in order to validate that your hardware is working perfectly.
 - [Troubleshooting](#Troubleshooting)
 
 
-# ELECTRICAL SHOCK WARNING
-EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power. Connecting EmotiBit USB or any other pin to another device can be a shock risk hazard and should ONLY be done when EmotiBit is NOT in physical contact with the body.
+> [!CAUTION]
+> **ELECTRICAL SHOCK WARNING**<br>
+> **EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power.** Connecting EmotiBit USB or any other pin to another device can be a shock risk hazard and should ONLY be done when EmotiBit is NOT in physical contact with the body.
 
 
 # 1. Learn About
