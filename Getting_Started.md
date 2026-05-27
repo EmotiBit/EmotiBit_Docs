@@ -50,41 +50,12 @@ EmotiBit should NEVER be worn while electrically connected to any device that's 
 Before you begin, make sure you have all the components included in your EmotiBit package:
 The following sections explain the contents of each item available for purchase at the [shop.EmotiBit.com](http://shop.emotibit.com/):
 
-### EmotiBit 
-<img src="./assets/image_7588c8.png" align="right" width="300" style="margin-left: 15px; margin-bottom: 15px;">
-- **1x EmotiBit** with finger loop Emoti-stretch strap
-  - Depending on your purchase, you may either have an EmotiBit MD or an EmotiBit EMO
-- **1x Emoti-genic barrier** (provides an additional hygienic layer and sweat protection)
-- **2x EDA electrodes (Ag/AgCl)** attached to the EmotiBit
-- **2x EmotiBit stickers**
-
--------------------------------
-
-### Essentials Kit
-
-The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find:
-- **Adafruit Feather M0 WiFi** or **Adafruit Feather ESP32 Huzzah**
-- **400mAh Lithium ion battery**
-- **High-speed microSD card**
-- **MicroSD card reader**
-- **Micro USB cable**
-- **3x Emoti-stretch straps** of different lengths (to wear EmotiBit nearly anywhere on the body, ranging from a child’s wrist to an adult's head)
-- **Plastic spudger** (used to easily toggle the hibernate switch and EmotiBit button)
-
-<img src="./assets/EmotiBit-EssentialsKit.jpg" width="400">
-
--------------------------
-### Electrodes Kit
-The electrodes kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrodes kit includes:
-- **10x EDA electrodes (Ag/AgCl)**
-- **4x solder-cup snaps** (to add your own EDA leads)
-- **5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)
-
-<img src="./assets/Electrode-kit.jpg" width="300">
-
----------------------------
-### All-in-One Bundle
-If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
+| Item | Contents | Image |
+| :---: | :--- | :---: |
+| **EmotiBit** | <ul><li>**1x EmotiBit** with finger loop Emoti-stretch strap<ul><li>Depending on your purchase, you may either have an EmotiBit MD or an EmotiBit EMO</li></ul></li><li>**1x Emoti-genic barrier** (provides an additional hygienic layer and sweat protection)</li><li>**2x EDA electrodes (Ag/AgCl)** attached to the EmotiBit</li><li>**2x EmotiBit stickers**</li></ul> | <img src="./assets/EmotiBit-box-contents.jpg" width="600"> |
+| **Essentials Kit** | The Essentials kit contains everything you will need to get started with EmotiBit! In the box you will find:<br><br><ul><li>**Adafruit Feather M0 WiFi** or **Adafruit Feather ESP32 Huzzah**</li><li>**400mAh Lithium ion battery**</li><li>**High-speed microSD card**</li><li>**MicroSD card reader**</li><li>**Micro USB cable**</li><li>**3x Emoti-stretch straps** of different lengths (to wear EmotiBit nearly anywhere on the body, ranging from a child’s wrist to an adult's head)</li><li>**Plastic spudger** (used to easily toggle the hibernate switch and EmotiBit button)</li></ul> | <img src="./assets/EmotiBit-EssentialsKit.jpg" width="600"> |
+| **Electrodes Kit** | The electrodes kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrodes kit includes:<br><br><ul><li>**10x EDA electrodes (Ag/AgCl)**</li><li>**4x solder-cup snaps** (to add your own EDA leads)</li><li>**5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)</li></ul> | <img src="./assets/Electrode-kit.jpg" width="600"> |
+| **All-in-One Bundle** | If you purchased the All-in-One Bundle, you will receive the **EmotiBit**, **Essentials Kit**, and **Electrodes Kit** components detailed above. | *(Includes all items pictured above)* |
 
 ---
 
