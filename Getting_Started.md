@@ -290,19 +290,28 @@ EmotiBit supports local data logging via a microSD card.
 
 ### 4. Stack your EmotiBit!
 
-- On the EmotiBit
-  - Insert the SD card into the EmotiBit.
-  - Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+. The version is listed on the unique EmotiBit serial number attached to the back of EmotiBit.)*.
-    - ```diff
-      - CAUTION: Excessive force can break the HIB switch. Handle with care! -
-      ```
-    - <img src="./assets/correctHibernateSwitch.jpg" width="250">
+### 4.1 Pre-Assembly Configuration
+1. Insert the SD card into the EmotiBit.
+2. Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+. The version is listed on the unique EmotiBit serial number attached to the back of EmotiBit.)*.
+
+> [!IMPORTANT]
+> If the HIB switch is left in the OFF position prior to stacking, the physical power rails between the processing layer and the sensor layer remain disconnected. The device will fail to boot, cannot be programmed, and will not initialize status indicators even when connected to an external USB power supply.
+
+<img src="./assets/correctHibernateSwitch.jpg" width="250">
+
+> [!CAUTION]
+> Excessive force can break the HIB switch. Handle with care!
 
 
-- Plug the battery into the Feather (**ensure the connector is firmly pushed all the way into the Feather connector**)
-- Stack the Feather with EmotiBit (*12 pin connector goes into the 12 pin socket and the 16 pin connector goes into the 16 pin socket*)
+### 4.2 Mating the Boards
+1. Align the male header pins of the EmotiBit board with the female headers on the Adafruit Feather.
+2. Gently press the boards together until the pins are fully seated.(**ensure the connector is firmly pushed all the way into the Feather connector**)
 
 ![][EmotiBit-stackup]
+
+### 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
+
+![](./assets/EmotiBit-stack-LED.png)
 
 #### Compatible Feather Modules
 - Currently EmotiBit supports 2 Adafruit Feathers, the [Feather ESP32 Huzzah](https://www.adafruit.com/product/3619) and the [Feather M0 WiFi](https://www.adafruit.com/product/3044). 
