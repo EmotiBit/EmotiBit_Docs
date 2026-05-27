@@ -233,89 +233,86 @@ EmotiBit supports local data logging via a microSD card.
   ```
   </details>
 
-* **2.3.1.4 Adding credentials using Serial**
+* <details><summary><b>2.3.1.4 Adding credentials using Serial</b></summary>
 
-  - <details><summary>Adding credentials using Serial Monitor</summary>
+  - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
+  - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
+  - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
+  - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
+  - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
+    - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
+  - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Serial Monitor immediately after.
+  - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
+    - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
+  - Type capital `C` in the `input field`. Wait for the Serial Monitor to print the message shown below and press `Send` / hit enter to send the character.
+    - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
+  - If your timing is right, you will see the following response in the Serial Monitor. You are now in `WiFi credential edit mode`. 
+    - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
+  - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
+  - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
+  - **Adding a Credential**
+    - To add a credential, you will need to use the keyword `WA`.
+    - In the Serial Monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
+    - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
+    - Once the Name and password are updated, hit `Send`.
+    - You should see the following response on the Serial Monitor.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
+  - **View existing credentials**
+    - To view existing credentials, you will need to use the keyword `LS`.
+    - In the Serial Monitor input type `@LS~`. Hit `Send`.
+    - The existing credentials, along with their passwords will be printed as a list.
+  - **Delete a credential**
+    - To delete existing credentials, you will need to use the keyword `WD`.
+    - Use the `LS` keyword as mentioned above to get the list of existing credentials.
+    - Note the number of the credential you want to delete.
+    - In the Serial Monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
+    - The credential will be deleted, and you will see the following output.
+      - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
 
-      - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
-      - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
-      - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
-      - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
-      - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
-        - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
-      - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Serial Monitor immediately after.
-      - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
-        - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
-      - Type capital `C` in the `input field`. Wait for the Serial Monitor to print the message shown below and press `Send` / hit enter to send the character.
-        - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
-      - If your timing is right, you will see the following response in the Serial Monitor. You are now in `WiFi credential edit mode`. 
-        - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
-      - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
-      - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
-      - **Adding a Credential**
-        - To add a credential, you will need to use the keyword `WA`.
-        - In the Serial Monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
-        - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
-        - Once the Name and password are updated, hit `Send`.
-        - You should see the following response on the Serial Monitor.
-          - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
-      - **View existing credentials**
-        - To view existing credentials, you will need to use the keyword `LS`.
-        - In the Serial Monitor input type `@LS~`. Hit `Send`.
-        - The existing credentials, along with their passwords will be printed as a list.
-      - **Delete a credential**
-        - To delete existing credentials, you will need to use the keyword `WD`.
-        - Use the `LS` keyword as mentioned above to get the list of existing credentials.
-        - Note the number of the credential you want to delete.
-        - In the Serial Monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
-        - The credential will be deleted, and you will see the following output.
-          - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
+  - **Reset**
+    - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
+    - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
+  </details>
 
-      - **Reset**
-        - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
-        - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
-      </details>
-
-* **2.3.1.4 Adding Enterprise WiFi credentials**
-  - <details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
+* <details><summary><b>2.3.1.4 Adding Enterprise WiFi credentials</b></summary>
       
-      > ⚠️ Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
-      
-      - Enterprise WiFi network details are added to the config.txt file in the following format.
-        - If no `username` is provided, `userid` will be used as `username`
-      
-      ```
-        {
-          "ssid": "enterprise-1",
-          "userid": "user1",
-          "username": "user1_name", 
-          "password": "prize1"
-        }
-      ```
-      
-      - A sample config.txt file could look like
-      ```
-      {
-      "WifiCredentials": [
-        {
-          "ssid": "personal-1",
-          "password": "pass1"
-        },
-        {
-          "ssid": "enterprise-1",
-          "userid": "user1_id",
-          "username": "user1_name",
-          "password": "prize1"
-        }
-      ]
-      }
-      ```
-      
-      - **Notes**:
-        - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
-        - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
-        - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
-    </details> 
+  > ⚠️ Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
+  
+  - Enterprise WiFi network details are added to the config.txt file in the following format.
+    - If no `username` is provided, `userid` will be used as `username`
+  
+  ```
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1",
+      "username": "user1_name", 
+      "password": "prize1"
+    }
+  ```
+  
+  - A sample config.txt file could look like
+  ```
+  {
+  "WifiCredentials": [
+    {
+      "ssid": "personal-1",
+      "password": "pass1"
+    },
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1_id",
+      "username": "user1_name",
+      "password": "prize1"
+    }
+  ]
+  }
+  ```
+  
+  - **Notes**:
+    - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
+    - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
+    - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
+</details> 
 
 ### Assembly step-2: Stack your EmotiBit!
 
