@@ -204,6 +204,8 @@ EmotiBit supports local data logging via a microSD card.
      * <img src="./assets/config-file-example.png" width="550">
   5. Save the file onto your microSD card. Then safely eject the card from your computer.
 
+> ℹ️ *Note: Currently EmotiBit only supports the 2.4GHz band for WiFi. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+
 * **2.3.1.3 Multiple WiFi credentials**
 
     - <details><summary>Multiple WiFi credentials</summary>
@@ -276,50 +278,48 @@ EmotiBit supports local data logging via a microSD card.
         - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
       </details>
 
-
-**Note: Currently EmotiBit only supports the 2.4GHz band for WiFi. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
-
-<details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
-  
-  ```diff
-  -- Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
-  ```
-  
-  - Enterprise WiFi network details are added to the config.txt file in the following format.
-    - If no `username` is provided, `userid` will be used as `username`
-  
-  ```
-    {
-      "ssid": "enterprise-1",
-      "userid": "user1",
-      "username": "user1_name", 
-      "password": "prize1"
-    }
-  ```
-  
-  - A sample config.txt file could look like
-  ```
-  {
-  "WifiCredentials": [
-    {
-      "ssid": "personal-1",
-      "password": "pass1"
-    },
-    {
-      "ssid": "enterprise-1",
-      "userid": "user1_id",
-      "username": "user1_name",
-      "password": "prize1"
-    }
-  ]
-  }
-  ```
-  
-  - **Notes**:
-    - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
-    - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
-    - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
-</details> 
+* **2.3.1.4 Adding Enterprise WiFi credentials**
+  - <details><summary>Adding Enterprise WiFi credentials (only supported for ESP32 Feather)</summary>
+      
+      ```diff
+      -- Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
+      ```
+      
+      - Enterprise WiFi network details are added to the config.txt file in the following format.
+        - If no `username` is provided, `userid` will be used as `username`
+      
+      ```
+        {
+          "ssid": "enterprise-1",
+          "userid": "user1",
+          "username": "user1_name", 
+          "password": "prize1"
+        }
+      ```
+      
+      - A sample config.txt file could look like
+      ```
+      {
+      "WifiCredentials": [
+        {
+          "ssid": "personal-1",
+          "password": "pass1"
+        },
+        {
+          "ssid": "enterprise-1",
+          "userid": "user1_id",
+          "username": "user1_name",
+          "password": "prize1"
+        }
+      ]
+      }
+      ```
+      
+      - **Notes**:
+        - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
+        - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
+        - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
+    </details> 
 
 ### Assembly step-2: Stack your EmotiBit!
 
