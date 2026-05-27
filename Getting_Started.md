@@ -96,30 +96,30 @@ The software utilities required to interface with EmotiBit are distributed as a 
 
 * **1.2 OS-Specific Installation Instructions:**
 
-- <details><summary><b>Installation Instructions For Windows Users</b></summary>
-  
-  * **Note:** EmotiBit software is supported only on Windows 10+.
-  * After downloading `EmotiBitSoftware-Windows.zip`, extract the zip file by right-clicking the file and selecting **Extract All...**.
-  * Open the extracted folder and double-click the `.exe` installer to run it.
-    * If the Windows Defender SmartScreen warning appears, click on **More Info**.
-    * Click **Run Anyway**.
-    * <img src="./assets/windows-smart-screen-more-info.png" width="250">
-  * Follow the setup wizard prompts. Click **Close** once the installation is complete.
-  * Shortcuts for `EmotiBit Oscilloscope`, `EmotiBit DataParser`, and `EmotiBit FirmwareInstaller` will be created in your Start Menu .
-  * **Note:** The installation process may be blocked by active anti-virus software. If you encounter issues, verify your anti-virus settings permit third-party installations. You will also need to grant firewall permissions later to allow data streaming over your Wi-Fi network.
-</details>
+    - <details><summary><b>Installation Instructions For Windows Users</b></summary>
+      
+      * **Note:** EmotiBit software is supported only on Windows 10+.
+      * After downloading `EmotiBitSoftware-Windows.zip`, extract the zip file by right-clicking the file and selecting **Extract All...**.
+      * Open the extracted folder and double-click the `.exe` installer to run it.
+        * If the Windows Defender SmartScreen warning appears, click on **More Info**.
+        * Click **Run Anyway**.
+        * <img src="./assets/windows-smart-screen-more-info.png" width="250">
+      * Follow the setup wizard prompts. Click **Close** once the installation is complete.
+      * Shortcuts for `EmotiBit Oscilloscope`, `EmotiBit DataParser`, and `EmotiBit FirmwareInstaller` will be created in your Start Menu .
+      * **Note:** The installation process may be blocked by active anti-virus software. If you encounter issues, verify your anti-virus settings permit third-party installations. You will also need to grant firewall permissions later to allow data streaming over your Wi-Fi network.
+    </details>
 
-- <details><summary><b>Installation Instructions For Mac Users</b></summary>
-    
-  * Download `EmotiBitSoftware-macOS.zip` from the release page.
-  * Move the downloaded zip file to your preferred directory. Double-click the `.zip` file to extract it.
-  * The applications are located directly inside the extracted folder.
-</details>
+    - <details><summary><b>Installation Instructions For Mac Users</b></summary>
+        
+      * Download `EmotiBitSoftware-macOS.zip` from the release page.
+      * Move the downloaded zip file to your preferred directory. Double-click the `.zip` file to extract it.
+      * The applications are located directly inside the extracted folder.
+    </details>
 
-- <details><summary><b>Installation Instructions For Linux Users</b></summary>
-    
-  * Follow the dedicated installation instructions provided directly on the GitHub release page.
-</details>
+    - <details><summary><b>Installation Instructions For Linux Users</b></summary>
+        
+      * Follow the dedicated installation instructions provided directly on the GitHub release page.
+    </details>
 
 
 ### 2. Install Drivers
@@ -129,31 +129,31 @@ The software utilities required to interface with EmotiBit are distributed as a 
 
 * **2.1 OS-Specific Driver Installation:**
 
-- <details><summary> On Windows 10 </summary>
+    - <details><summary> On Windows 10 </summary>
 
-  * Ensure you have extracted `EmotiBitSoftware-Windows.zip`.
-  * Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
-  * Double-click to execute `CP210xVCPInstaller_x64.exe`.
-  * Follow the on-screen instructions to complete the driver installation.
-</details>
+      * Ensure you have extracted `EmotiBitSoftware-Windows.zip`.
+      * Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+      * Double-click to execute `CP210xVCPInstaller_x64.exe`.
+      * Follow the on-screen instructions to complete the driver installation.
+    </details>
 
-- <details><summary> On Windows 11 </summary>
+    - <details><summary> On Windows 11 </summary>
 
-  * Ensure you have extracted `EmotiBitSoftware-Windows.zip` (`Right-click > Extract All...`).
-  * Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
-  * Right-click on `silabser.inf` (Setup Information file) and select **Show more options** > **Install**. *(Note: If the install option is missing, verify the zip file was fully extracted).*
-  * Grant any requested administrative or firewall permissions required by your system configurations.
-  * Once the process completes, the required drivers are installed.
-</details>
+      * Ensure you have extracted `EmotiBitSoftware-Windows.zip` (`Right-click > Extract All...`).
+      * Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
+      * Right-click on `silabser.inf` (Setup Information file) and select **Show more options** > **Install**. *(Note: If the install option is missing, verify the zip file was fully extracted).*
+      * Grant any requested administrative or firewall permissions required by your system configurations.
+      * Once the process completes, the required drivers are installed.
+    </details>
 
-- <details><summary>On macOS</summary>
+    - <details><summary>On macOS</summary>
 
-  * Ensure you have extracted `EmotiBitSoftware-macOS.zip`.
-  * Navigate to the `EmotiBitSoftware-macOS` folder.
-  * Double-click `SiLabsUSBDriverDisk.dmg` to mount the disk image in Finder.
-  * Double-click `Install CP210x VCP driver` to launch the installer.
-  * Follow the on-screen prompts to complete the installation.
-</details>
+      * Ensure you have extracted `EmotiBitSoftware-macOS.zip`.
+      * Navigate to the `EmotiBitSoftware-macOS` folder.
+      * Double-click `SiLabsUSBDriverDisk.dmg` to mount the disk image in Finder.
+      * Double-click `Install CP210x VCP driver` to launch the installer.
+      * Follow the on-screen prompts to complete the installation.
+    </details>
 
 
 ### 3. Prepare the SD Card
@@ -325,92 +325,34 @@ EmotiBit officially supports two Adafruit Feather modules. Use the matrix below 
 > [!WARNING]
 > If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**
 
-## Installing EmotiBit Software
-
-[Download the EmotiBit Software](https://github.com/EmotiBit/ofxEmotiBit/releases/latest).
-- <details><summary><b>Installation Instructions For Windows Users</b></summary>
- 
-    - _**Note:** EmotiBit software is supported only for Windows 10+._
-    - After you download `EmotiBitSoftware-Windows.zip`, you need to `extract` the zip file. You can extract it by `Right-Click > Extract All...`.
-    - You will find an `.msi` installer inside the extracted folder. Run the installer by double-clicking.
-      - If the Windows Defender SmartScreen pops up, click on `More Info`.
-      - Then click on `Run Anyway`.
-      - <img src="./assets/windows-smart-screen-more-info.png" width="250">
-    - Follow through the setup. Click on `Close` once the setup is complete and the EmotiBit Software has been installed.
-    - You will notice that shortcuts to `EmotiBit Oscilloscope`, `EmotiBit DataParser` and `EmotiBit FirmwareInstaller` have been created in the start menu and on the desktop.
-    - **Note: The EmotiBit Software installation process is sometimes blocked by any anti-virus tool you might have installed on your system. If you face any issues with installation, make sure to check that the appropriate settings are enabled on your anti-virus software to allow third-party installs. You will likely also need to allow firewall permissions to allow streaming data on your WiFi networks.**
-  </details>
-
-- <details><summary><b>Installation Instructions For Mac Users</b></summary>
-    
-  - Download `EmotiBitSoftware-macOS.zip` from the release page.
-  - Move the downloaded zip file to a folder location you desire. Double click on the .zip file to extract it.
-  - You will find the Applications in the extracted folder.
-
-- <details><summary><b>Installation Instructions For Linux Users</b></summary>
-    
-  - Follow the instructions on the release page.
-  </details>
-
-### Install drivers
-Install the drivers provided with the downloaded EmotiBitSoftware bundle.
-
-  - <details><summary> On Windows 10 </summary>
-
-    - If you have not done so already, extract the `EmotiBitSoftware-Windows.zip`.
-    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
-    - Double click to run `CP210xVCPInstaller_x64.exe`
-    - Follow the on-screen instructions to complete driver installation.
-    </details>
-
-  - <details><summary> On Windows 11 </summary>
-
-    - Please make sure you have extracted the downloaded zip file `EmotiBitSoftware-Windows.zip`. To extract, `Right-click > Extract All...`.
-    - Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
-    - Right click on `silabser.inf` (Setup Information) > `Show more options` > `Install`. (If you did not see this option, make sure you extracted the downloaded zip file).
-    - Depending on your firewall/antivirus settings you will likely need to grant permissions for the installation.
-    - Once completed, the required drivers should be installed on your Windows 11 machine.
-    </details>
-
-  - <details><summary>On macOS</summary>
-
-    - If you have not done so already, extract the `EmotiBitSoftware-macOS.zip`.
-    - Navigate to `EmotiBitSoftware-macOS`.
-    - Double click on the `SiLabsUSBDriverDisk.dmg`. The contents will open in a new finder window.
-    - Double click on `Install CP210x VCP driver` to run the installer.
-    - Follow the on-screen instructions to complete the driver installation.
-    </details>
-
-## Running EmotiBit software
-Based on your operating system, follow the steps below:
-### On Windows
-You can click on the start menu and search for the name of the application you want to run, e.g.`EmotiBitFirmwareInstaller`. The application should pop up in the search. Double-click on the application to run it!
-
-### On macOS
-You can find the EmotiBit applications in the folder you just extracted (*as mentioned in the steps in the previous section*).
-
-### On Linux
-Build the application from source. You can find instructions in the `ReadMe` provided with the zip file downloaded in the previous step.
-
+--- 
 
 # Installing EmotiBit Firmware
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
-- If you did not order an Essentials Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to 
-get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3619) from the Adafruit online store.
 
-## Using the EmotiBit Firmware Installer
+> [!IMPORTANT]
+> If you did not order an Essentials Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3619) from the Adafruit online store.
 
-### Prerequisites
-- Install required drivers, as explained in the [section above](#Install-drivers).
 
-### Run EmotiBit Firmware Installer
-- You will need the `EmotiBit FirmwareInstaller`, which comes with the EmotiBit software bundle.
-  - If you have not done so already, follow [these steps to grab the latest EmotiBit software](#Installing-EmotiBit-Software). 
-- Open the `EmotiBit FirmwareInstaller`. 
-  - Follow the instructions mentioned in the [section above](#Running-EmotiBit-software) to start using `EmotiBit FirmwareInstaller`
+### 5. Installing EmotiBit firmware
+
+> [!IMPORTANT]
+> **Prerequisites**
+> Install required drivers, as explained in the [section above](#Install-drivers).
+
+#### 5.1 Run EmotiBit Firmware Installer
+
+<img src="./assets/EmotiBitFirmwareInstaller-step1.png" align="right" width="600">
+
+- Open the `EmotiBit FirmwareInstaller` (downloaded as a part of the software bundle above). 
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
-- Screengrab from `EmotiBitFirmwareInstaller`
-  - <img src="./assets/EmotiBitFirmwareInstaller-step1.png" width="600">
+
+> [!TIP]
+> If your firmware installation fails, confirm the following 3 are as expected
+> 1. The ESP32 Drivers are installed as described in the section above.
+> 2. Ensure you are using a data-capable USB cable. Charge-only cables will cause detection failures. The cable provided in that bundle is tested to be data capable.
+> 3. Confirm that the HIB switch on the EmotiBit board is set to 'On' (not in HIB).
+
 - <details><summary> Installing custom firmware</summary>
 
   - The `EmotiBit FirmwareInstaller` installs the stock firmware provided in the software bundle.
@@ -427,7 +369,9 @@ get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adaf
 Installing incompatible firmware may lead to unexpected behavior, or worse, may brick your device.
   </details>
 
-## For Linux and Advanced Users
+> [!Note]
+> For Linux and Advanced Users, follow the installation instructions below
+
 - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
   - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
@@ -490,7 +434,11 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
         - [For Windows] replace `./exec/linux/esptool` with `.\exec\win\esptool.exe`. You will also need to change all file paths to `.\esp32\name-of-file`
         - [For macOS] replace `./exec/linux/esptool` with `./exec/mac/esptool`.
   </details> 
+
 # EmotiBit Bootup
+> [!IMPORTANT]
+> The EmotiBit bootup sequence can only be followed IF the firmware was successfully installed in the previous step.
+
 When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
 
 |LED State|**LED Indicator**|**What to do?**|
@@ -501,7 +449,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |EmotiBit BLUE LED solid ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#Adding-WiFi-credentials))|
 |EmotiBit BLUE LED BLINKING|<img src="./assets/EmotiBit-bootup-stage-4.gif" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
-# Next Steps: Connecting to EmotiBit and Recording EmotiBit Data
+# Next Steps: Connecting to EmotiBit and Streaming EmotiBit Data
 This section outlines the procedure for connecting to, streaming, and recording data from your EmotiBit using the EmotiBit Oscilloscope application.
 
 ### 1. EmotiBit Oscilloscope Network Connection
@@ -510,10 +458,10 @@ The EmotiBit Oscilloscope communicates with the EmotiBit device over a WiFi netw
 ### 2. Granting Network Permissions (Crucial Step)
 The very first time you launch the EmotiBit Oscilloscope on your computer, your operating system (Windows or macOS) will prompt you to grant network access permissions to the application.
 
-Action Required: **You must grant the appropriate network permissions when prompted.**
-
-⚠️ ATTENTION: Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
-The sections that follow provide a visual guide on how to navigate the permissions screen for your specific operating system.
+> [!IMPORTANT] 
+> Action Required: **You must grant the appropriate network permissions when prompted.**
+> ATTENTION: Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
+> The sections that follow provide a visual guide on how to navigate the permissions screen for your specific operating system.
  
 #### 2.1 Permissions on Windows
 - When you open the EmotiBit Oscilloscope, the following pop-up will be displayed on your screen.
@@ -552,7 +500,7 @@ If you have an Antivirus program installed, make sure the appropriate settings a
     - You will see the EmotiBit Application start.
   </details>
 
-# After connecting to emotibit and recording data
+# After connecting to emotibit and streaming data
 By this point, you're ready to be an EmotiBit rockstar!! Check out the following links to learn more about EmotiBit!
 - EmotiBit Oscilloscope
   - [Learn more about streaming and recording data using the EmotiBit Oscilloscope](./Working_with_emotibit_data.md/#EmotiBit-Oscilloscope)
@@ -562,9 +510,6 @@ By this point, you're ready to be an EmotiBit rockstar!! Check out the following
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
 - [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
-
-# EmotiBit: LEDs and Buttons
-Learn [More about the LEDs and buttons on EmotiBit](./Learn_more_about_emotibit.md#LEDs-and-Buttons)
 
 
 # Troubleshooting
