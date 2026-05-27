@@ -1,6 +1,7 @@
 # Getting Started with EmotiBit
-[comment]: <> ([alt text][SideView])
+Welcome to EmotiBit! This guide will walk you through unboxing, setting up your hardware, and visualizing data for the first time. 
 
+Follow these steps in order to validate that your hardware is working perfectly. Even if you don't plan to use the Oscilloscope or record data immediately for your specific project, completing this walkthrough ensures your entire ecosystem is fully functional.
 
 # Table of Contents
 - [ELECTRICAL SHOCK WARNING](#ELECTRICAL-SHOCK-WARNING)
@@ -43,22 +44,10 @@
 EmotiBit should NEVER be worn while electrically connected to any device that's attached to A/C wall power. Connecting EmotiBit USB or any other pin to another device can be a shock risk hazard and should ONLY be done when EmotiBit is NOT in physical contact with the body.
 
 
-# Stack, Sense and Stream
+# 1. Learn About
 
-<img src="./assets/StackSenseStream.png" width="1000">
-
-- Follow the steps below for more information on downloading EmotiBit software and connecting to WiFi.
-
-## EmotiBit Forum
-<img src="./assets/EmotiBit-forum.png" align="right" width="300">
-
-The [EmotiBit forum](http://forum.emotibit.com) is a great place to get answers to all things EmotiBit!<br>
-- Find answers to questions you may have about using EmotiBit.
-- Share your experience working with EmotiBit or the latest signal processing tools.
-- Take a glance at the [EmotiBit FAQ](https://www.reddit.com/mod/EmotiBit/wiki/index/faqs). *Great minds think alike! If you have a question, the FAQ page probably has an answer.*
-- Share your latest publication with the community or start a discussion about the future of biometric sensing!
-
-## Unboxing
+## What's in the Box? (Unboxing Component Guide)
+Before you begin, make sure you have all the components included in your EmotiBit package:
 The following sections explain the contents of each item available for purchase at the [shop.EmotiBit.com](http://shop.emotibit.com/):
 
 ### EmotiBit 
@@ -99,88 +88,193 @@ The electrodes kit has been designed for users who use multiple EmotiBits for re
 ### All-in-One Bundle
 If you purchased the All-in-One Bundle, you will receive the [EmotiBit](#EmotiBit), [Essentials Kit](#Essentials-Kit) **and** [Electrodes Kit](#Electrode-Kit).
 
-------------------
-## Assembling your EmotiBit
+---
 
-### Assembly step-1: Adding WiFi credentials
+## Understanding the Hardware: EmotiBit vs. Feather
+
+To get the most out of your device, it helps to understand how the two core boards work together as a team:
+
+```
+┌──────────────────────────────────────┐
+│        EmotiBit Sensor Board         │  ◄── Captures physiological data
+├──────────────────────────────────────┤
+│         Adafruit Feather             │  ◄── Handles processing, WiFi, and SD logging
+└──────────────────────────────────────┘
+```
+* **The EmotiBit** is the sensor module. It contains the dedicated biometric circuitry, specialized analog-to-digital converters, and high-fidelity sensors. It also features its own dedicated status LEDs and control buttons.
+* **The Adafruit Feather** is the controller (MCU). It provides the main microprocessor, handles the software firmware execution, and manages the wireless network communication (WiFi) or local storage. It also has its own onboard LEDs and buttons distinct from the EmotiBit.
+Combining these two components creates a **stacked EmotiBit**.
+
+---
+
+### How EmotiBit Works & Communicates
+EmotiBit is designed for real-time wireless data streaming, requiring an established local network connection between the hardware and the software host to function.
+
+1.  **The EmotiBit Device:** The firmware running on the Feather board (stacked EmotiBit) processes raw sensor data from the EmotiBit and packages it.
+2.  **The Network Bridge:** The EmotiBit device transmits this data wirelessly over the local WiFi network.
+3.  **The EmotiBit Oscilloscope:** Your computer runs the **EmotiBit Oscilloscope** software. The Oscilloscope listens to the network, automatically detects the EmotiBit host, and streams the biometric data onto your screen in real time.
+
+> ⚠️ **Important Network Dependence:** Because the data passes through your local network, both your computer (running the Oscilloscope) and the EmotiBit must be connected to the exact same WiFi network. If your network has security settings that block device-to-device communication (common on enterprise or university networks), the data will not reach the screen. Don't worry—we will walk you through configuring and troubleshooting this during the setup phase!
+## 2. Setup Steps
+
+### 2.1 Download and Install the Software Bundle
+
+The software utilities required to interface with EmotiBit are distributed as a unified release bundle.
+
+* **2.1.1** Navigate to the [EmotiBit GitHub Releases Page](https://github.com/EmotiBit/ofxEmotiBit/releases/latest) and download the asset bundle compatible with your operating system.
+
+* **2.1.2 OS-Specific Installation Instructions:**
+
+- <details><summary><b>Installation Instructions For Windows Users</b></summary>
+  
+  * **Note:** EmotiBit software is supported only on Windows 10+.
+  * After downloading `EmotiBitSoftware-Windows.zip`, extract the zip file by right-clicking the file and selecting **Extract All...**.
+  * Open the extracted folder and double-click the `.exe` installer to run it.
+    * If the Windows Defender SmartScreen warning appears, click on **More Info**.
+    * Click **Run Anyway**.
+    * <img src="./assets/windows-smart-screen-more-info.png" width="250">
+  * Follow the setup wizard prompts. Click **Close** once the installation is complete.
+  * Shortcuts for `EmotiBit Oscilloscope`, `EmotiBit DataParser`, and `EmotiBit FirmwareInstaller` will be created in your Start Menu .
+  * **Note:** The installation process may be blocked by active anti-virus software. If you encounter issues, verify your anti-virus settings permit third-party installations. You will also need to grant firewall permissions later to allow data streaming over your Wi-Fi network.
+</details>
+
+- <details><summary><b>Installation Instructions For Mac Users</b></summary>
+    
+  * Download `EmotiBitSoftware-macOS.zip` from the release page.
+  * Move the downloaded zip file to your preferred directory. Double-click the `.zip` file to extract it.
+  * The applications are located directly inside the extracted folder.
+</details>
+
+- <details><summary><b>Installation Instructions For Linux Users</b></summary>
+    
+  * Follow the dedicated installation instructions provided directly on the GitHub release page.
+</details>
+
+---
+
+### 2.2 Install Drivers
+
+You must install the Virtual COM Port (VCP) drivers included in the software bundle to enable serial communication with the hardware via USB.
+
+* **2.2.1 OS-Specific Driver Installation:**
+
+- <details><summary> On Windows 10 </summary>
+
+  * Ensure you have extracted `EmotiBitSoftware-Windows.zip`.
+  * Navigate to `EmotiBitSoftware-Windows` > `CP210x_Windows_Drivers`.
+  * Double-click to execute `CP210xVCPInstaller_x64.exe`.
+  * Follow the on-screen instructions to complete the driver installation.
+</details>
+
+- <details><summary> On Windows 11 </summary>
+
+  * Ensure you have extracted `EmotiBitSoftware-Windows.zip` (`Right-click > Extract All...`).
+  * Navigate to `EmotiBitSoftware-Windows` > `CP210x_Universal_Windows_Driver`.
+  * Right-click on `silabser.inf` (Setup Information file) and select **Show more options** > **Install**. *(Note: If the install option is missing, verify the zip file was fully extracted).*
+  * Grant any requested administrative or firewall permissions required by your system configurations.
+  * Once the process completes, the required drivers are installed.
+</details>
+
+- <details><summary>On macOS</summary>
+
+  * Ensure you have extracted `EmotiBitSoftware-macOS.zip`.
+  * Navigate to the `EmotiBitSoftware-macOS` folder.
+  * Double-click `SiLabsUSBDriverDisk.dmg` to mount the disk image in Finder.
+  * Double-click `Install CP210x VCP driver` to launch the installer.
+  * Follow the on-screen prompts to complete the installation.
+</details>
+
+---
+
+### 2.3 Prepare the SD Card
+
+EmotiBit supports local data logging via a microSD card.
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
-- We first need to add the WiFi credentials to the SD card. EmotiBit needs a WiFi network to get started and connect to the EmotiBit Oscilloscope. See this [FAQ for more details](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
-- Check out this [FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/) to see some available network options to choose from.
-- Plug in the MicroSD card reader loaded with the SD card into the computer.
-- Download the config file from https://www.emotibit.com/files/config.
-- Open the config file in any text editor (e.g. Notepad on Windows or text edit on macOS).
-- Add your WiFi credentials by replacing `YOUR_WIFI_NAME_GOES_HERE` to the name of your WiFi network and change `YOUR_WIFI_PASSWORD_GOES_HERE`to the password for your WiFi network.
-  - <img src="./assets/config-file-example.png" width="550">
-- Save the file onto your microSD card. Eject the SD card from your computer. 
+#### 2.3.1 Adding WiFi credentials
 
-- <details><summary>Multiple WiFi credentials</summary>
+* **2.3.1.1** EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit.
+  * For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
+  * For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
+* **2.3.1.2 Standard Configuration Procedure:**
+  1. Insert the microSD card into the provided reader and connect it to your computer.
+  2. Download the default configuration file from [emotibit.com/files/config](https://www.emotibit.com/files/config).
+  3. Open the downloaded configuration file using a standard text editor (e.g., Notepad on Windows or TextEdit on macOS).
+  4. Locate the placeholder entries and replace `YOUR_WIFI_NAME_GOES_HERE` with your exact Wi-Fi network SSID and `YOUR_WIFI_PASSWORD_GOES_HERE` with your network password.
+     * <img src="./assets/config-file-example.png" width="550">
+  5. Save the file onto your microSD card. Then safely eject the card from your computer.
 
-  - If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> 
-  ```
-  {
-    "WifiCredentials": [
+* **2.3.1.3 Multiple WiFi credentials**
+
+    - <details><summary>Multiple WiFi credentials</summary>
+
+      - If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> 
+      ```
       {
-        "ssid": "wifi_1",
-        "password": "password1"
-      },
-      {
-        "ssid": "wifi_2",
-        "password": "password2"
-      },
-      {
-        "ssid": "wifi_3",
-        "password": "password3"
-      },
-      {
-        "ssid": "wifi_4",
-        "password": "password4"
+        "WifiCredentials": [
+          {
+            "ssid": "wifi_1",
+            "password": "password1"
+          },
+          {
+            "ssid": "wifi_2",
+            "password": "password2"
+          },
+          {
+            "ssid": "wifi_3",
+            "password": "password3"
+          },
+          {
+            "ssid": "wifi_4",
+            "password": "password4"
+          }
+        ]
       }
-    ]
-  }
-  ```
-  </details>
+      ```
+      </details>
 
-- <details><summary>Adding credentials using Serial Monitor</summary>
+* **2.3.1.4 Adding credentials using Serial**
 
-  - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
-  - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
-  - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
-  - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
-  - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
-    - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
-  - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Serial Monitor immediately after.
-  - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
-    - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
-  - Type capital `C` in the `input field`. Wait for the Serial Monitor to print the message shown below and press `Send` / hit enter to send the character.
-    - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
-  - If your timing is right, you will see the following response in the Serial Monitor. You are now in `WiFi credential edit mode`. 
-    - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
-  - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
-  - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
-  - **Adding a Credential**
-    - To add a credential, you will need to use the keyword `WA`.
-    - In the Serial Monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
-    - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
-    - Once the Name and password are updated, hit `Send`.
-    - You should see the following response on the Serial Monitor.
-      - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
-  - **View existing credentials**
-    - To view existing credentials, you will need to use the keyword `LS`.
-    - In the Serial Monitor input type `@LS~`. Hit `Send`.
-    - The existing credentials, along with their passwords will be printed as a list.
-  - **Delete a credential**
-    - To delete existing credentials, you will need to use the keyword `WD`.
-    - Use the `LS` keyword as mentioned above to get the list of existing credentials.
-    - Note the number of the credential you want to delete.
-    - In the Serial Monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
-    - The credential will be deleted, and you will see the following output.
-      - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
+  - <details><summary>Adding credentials using Serial Monitor</summary>
 
-  - **Reset**
-    - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
-    - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
-  </details>
+      - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
+      - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
+      - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
+      - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
+      - Click on `Tools > Serial Monitor` to open a Serial Monitor on that port. A Serial Monitor should open, but may not output anything if EmotiBit is past setup. **Make sure `No line Ending` and `2000000 baud` is selected as the settings at the bottom.**
+        - <img src="./assets/SerialMonitorWifiCreds_OpenSerialMonitor.png" width="600">
+      - Close the Serial Monitor. Reset the EmotiBit (by pressing the reset button) and open the Serial Monitor immediately after.
+      - You will see setup messages being displayed. In setup, the EmotiBit waits for a few seconds to accept an input. 
+        - <img src="./assets/SerialMonitorWifiCreds_FirmwareWaitsForUser.png" width="600">
+      - Type capital `C` in the `input field`. Wait for the Serial Monitor to print the message shown below and press `Send` / hit enter to send the character.
+        - <img src="./assets/SerialMonitorWifiCreds_PressC.png" width="600">
+      - If your timing is right, you will see the following response in the Serial Monitor. You are now in `WiFi credential edit mode`. 
+        - <img src="./assets/SerialMonitorWifiCreds_EnterEditMode.png" width="600">
+      - If the EmotiBit continues setup, then you need to reset the EmotiBit, close and reopen the Serial Monitor and try and get the timing right so that the firmware registers the serial input.
+      - Once in the `WiFi credential edit mode`, you can `Add`, `Delete` or `View` credentials in the config.txt file.
+      - **Adding a Credential**
+        - To add a credential, you will need to use the keyword `WA`.
+        - In the Serial Monitor input type `@WA,{"ssid":"SSSS","password" : "PPPP"}~`
+        - Replace `SSSS` with the **network name** and `PPPP` with the **network password**.
+        - Once the Name and password are updated, hit `Send`.
+        - You should see the following response on the Serial Monitor.
+          - <img src="./assets/SerialMonitorWifiCreds_WiFiAdd.png" width="600">
+      - **View existing credentials**
+        - To view existing credentials, you will need to use the keyword `LS`.
+        - In the Serial Monitor input type `@LS~`. Hit `Send`.
+        - The existing credentials, along with their passwords will be printed as a list.
+      - **Delete a credential**
+        - To delete existing credentials, you will need to use the keyword `WD`.
+        - Use the `LS` keyword as mentioned above to get the list of existing credentials.
+        - Note the number of the credential you want to delete.
+        - In the Serial Monitor input type `@WD,<network_number>~`. Replace network number with a number on the list output in the previous step. For example, `@WD,1~`. Hit `Send`.
+        - The credential will be deleted, and you will see the following output.
+          - <img src="./assets/SerialMonitorWifiCreds_WiFiDelete.png" width="600">
+
+      - **Reset**
+        - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
+        - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
+      </details>
 
 
 **Note: Currently EmotiBit only supports the 2.4GHz band for WiFi. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
