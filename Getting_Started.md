@@ -49,6 +49,20 @@ The following sections explain the contents of each item available for purchase 
 | **Electrodes Kit** | The electrodes kit has been designed for users who use multiple EmotiBits for research and intend to frequently swap out the electrodes. The electrodes kit includes:<br><br><ul><li>**10x EDA electrodes (Ag/AgCl)**</li><li>**4x solder-cup snaps** (to add your own EDA leads)</li><li>**5x Emoti-genic barriers** (provides an additional hygienic layer and sweat protection)</li></ul> | <img src="./assets/Electrode-kit.jpg" width="600"> |
 | **All-in-One Bundle** | If you purchased the All-in-One Bundle, you will receive the **EmotiBit**, **Essentials Kit**, and **Electrodes Kit** components detailed above. | *(Includes all items pictured above)* |
 
+#### Compatible Feather Modules
+
+> [!WARNING]
+> If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**
+
+- <details><summary><b>Click this drop-down to see the compatible feathers</b></summary>
+
+    | Adafruit Feather ESP32 Huzzah | Adafruit Feather M0 WiFi |
+    | :---: | :---: |
+    | <img src="./assets/Feather_ESP32_Huzzah.png" height="250" alt="Feather ESP32 Huzzah"> | <img src="./assets/Feather_M0_WiFi.png" height="250" alt="Feather M0 WiFi"> |
+
+  </details>
+
+
 ## Understanding the Hardware: EmotiBit vs. Feather
 
 To get the most out of your device, it helps to understand how the two core boards work together as a team:
@@ -319,17 +333,6 @@ EmotiBit supports local data logging via a microSD card.
 ## 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
 
 ![](./assets/EmotiBit-stack-LED.png)
-
-## 4.4 Compatible Feather Modules
-
-EmotiBit officially supports two Adafruit Feather modules. Use the matrix below to identify your board.
-
-| Adafruit Feather ESP32 Huzzah | Adafruit Feather M0 WiFi |
-| :---: | :---: |
-| <img src="./assets/Feather_ESP32_Huzzah.png" height="250" alt="Feather ESP32 Huzzah"> | <img src="./assets/Feather_M0_WiFi.png" height="250" alt="Feather M0 WiFi"> |
-  
-> [!WARNING]
-> If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**
 
 --- 
 
