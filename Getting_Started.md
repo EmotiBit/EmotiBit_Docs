@@ -450,8 +450,8 @@ The EmotiBit Oscilloscope communicates with the EmotiBit device over a WiFi netw
 The very first time you launch the EmotiBit Oscilloscope on your computer, your operating system (Windows or macOS) will prompt you to grant network access permissions to the application.
 
 > [!IMPORTANT] 
-> Action Required: **You must grant the appropriate network permissions when prompted.**
-> ATTENTION: Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
+> Action Required: **You must grant the appropriate network permissions when prompted.**<br>
+> Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
 > The sections that follow provide a visual guide on how to navigate the permissions screen for your specific operating system.
  
 #### 2.1 Permissions on Windows
