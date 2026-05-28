@@ -365,6 +365,10 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
 > 2. Ensure you are using a data-capable USB cable. Charge-only cables will cause detection failures. The cable provided in that bundle is tested to be data capable.
 > 3. Confirm that the HIB switch on the EmotiBit board is set to 'On' (not in HIB).
 
+<br>
+<br>
+<br>
+
 - <details><summary> Installing custom firmware</summary>
 
   - The `EmotiBit FirmwareInstaller` installs the stock firmware provided in the software bundle.
@@ -380,9 +384,6 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
   - **WARNING**: Make sure that the firmware you are trying to install has been written for the correct board version. 
 Installing incompatible firmware may lead to unexpected behavior, or worse, may brick your device.
   </details>
-
-> [!Note]
-> For Linux and Advanced Users, follow the installation instructions below
 
 - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
   
