@@ -512,6 +512,12 @@ If you have an Antivirus program installed, make sure the appropriate settings a
             ![][macOS-Catalina-Allow_emotibit]
   </details>
 
+> [!TIP]
+> **Check out the following FAQs if you cannot stream EmotiBit data to the EmotiBit Oscilloscope**
+> - [Help! I'm having trouble connecting to EmotiBit!](https://www.reddit.com/r/EmotiBit/comments/11hbme1/help_im_having_trouble_connecting_to_emotibit/)
+> - [What are the available network options to use with EmotiBit?](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/)
+> - [Why isn't my EmotiBit connecting to my phone's WiFi hotspot?](https://www.reddit.com/r/EmotiBit/comments/t4hchv/why_isnt_my_emotibit_connecting_to_my_phones_wifi/)
+
 # After connecting to emotibit and streaming data
 By this point, you're ready to be an EmotiBit rockstar!! Check out the following links to learn more about EmotiBit!
 - EmotiBit Oscilloscope
