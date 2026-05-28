@@ -362,7 +362,7 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
 > [!TIP]
 > If your firmware installation fails, confirm the following 3 are as expected
 > 1. The ESP32 Drivers are installed as described in the [section above](#2-install-drivers).
-> 2. Ensure you are using a data-capable USB cable. Charge-only cables will cause detection failures. The cable provided in that bundle is tested to be data capable.
+> 2. Ensure you are using a data-capable USB cable. Charge-only cables will cause detection failures. The cable included in the EmotiBit bundles is tested to be data-capable.
 > 3. Confirm that the HIB switch on the EmotiBit board is set to 'On' (not in HIB).
 
 <br>
