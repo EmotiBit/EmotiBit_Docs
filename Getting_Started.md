@@ -468,20 +468,16 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |EmotiBit BLUE LED BLINKING|<img src="./assets/EmotiBit-bootup-stage-4.gif" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
 # Next Steps: Connecting to EmotiBit and Streaming EmotiBit Data
-This section outlines the procedure for connecting to, streaming, and recording data from your EmotiBit using the EmotiBit Oscilloscope application.
 
-### 1. EmotiBit Oscilloscope Network Connection
-The EmotiBit Oscilloscope communicates with the EmotiBit device over a WiFi network connection. For this communication to function, the Oscilloscope requires permission from your computer's operating system to access and use the local network.
-
-### 2. Granting Network Permissions (Crucial Step)
-The very first time you launch the EmotiBit Oscilloscope on your computer, your operating system (Windows or macOS) will prompt you to grant network access permissions to the application.
+- The EmotiBit Oscilloscope communicates with the EmotiBit device over a WiFi network connection. For this communication to function, the Oscilloscope requires permission from your computer's operating system to access and use the local network.
+- The very first time you launch the EmotiBit Oscilloscope on your computer, your operating system (Windows or macOS) will prompt you to grant network access permissions to the application.
 
 > [!IMPORTANT] 
 > Action Required: **You must grant the appropriate network permissions when prompted.**<br>
 > Without these explicit permissions, the EmotiBit Oscilloscope cannot detect or communicate with the EmotiBit connected to your network. Data streaming will fail.
 > The sections that follow provide a visual guide on how to navigate the permissions screen for your specific operating system.
  
-#### 2.1 Permissions on Windows
+#### Permissions on Windows
 - When you open the EmotiBit Oscilloscope, the following pop-up will be displayed on your screen.
 - <details><summary>Windows Security Alert pop-up (Windows Defender Firewall)</summary>
   
@@ -498,7 +494,7 @@ If you have an Antivirus program installed, make sure the appropriate settings a
     - <img src="./assets/windows-defender-AllowedApps.png" width="600"> 
   </details>
 
-#### 2.2 Permissions on macOS
+#### Permissions on macOS
 - <details><summary>Opening Software in mscOS Catalina and newer</summary>
   
     - Right-click on the application you want to run. Choose **Open**. 
