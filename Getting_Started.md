@@ -24,8 +24,8 @@ Follow these steps in order to validate that your hardware is working perfectly.
       - [5.1 Run EmotiBit Firmware Installer](#51-run-emotibit-firmware-installer)
 - [EmotiBit Bootup](#emotibit-bootup)
 - [Next Steps: Connecting to EmotiBit and Streaming EmotiBit Data](#next-steps-connecting-to-emotibit-and-streaming-emotibit-data)
-  - [Permissions on Windows](#21-permissions-on-windows)
-  - [Permissions on macOS](#22-permissions-on-macos)
+  - [Permissions on Windows](#permissions-on-windows)
+  - [Permissions on macOS](#permissions-on-macos)
 - [After connecting to emotibit and streaming data](#after-connecting-to-emotibit-and-streaming-data)
 - [Troubleshooting](#troubleshooting)
 
