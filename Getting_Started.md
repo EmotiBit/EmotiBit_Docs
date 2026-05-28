@@ -66,14 +66,6 @@ The following sections explain the contents of each item available for purchase 
 ## Understanding the Hardware: EmotiBit vs. Feather
 
 To get the most out of your device, it helps to understand how the two core boards work together as a team:
-
-```
-┌──────────────────────────────────────┐
-│            Adafruit Feather          │  ◄── Handles processing, WiFi and data logging
-├──────────────────────────────────────┤
-│         EmotiBit Sensor Board        │  ◄── Captures physiological data
-└──────────────────────────────────────┘
-```
 * **The EmotiBit** is the sensor module. It contains the dedicated biometric circuitry, specialized analog-to-digital converters, and high-fidelity sensors. It also features its own dedicated status LEDs and control buttons.
 * **The Adafruit Feather** is the controller (MCU). It provides the main microprocessor, handles the software firmware execution, and manages the wireless network communication (WiFi) or local storage. It also has its own onboard LEDs and buttons distinct from the EmotiBit.
 Combining these two components creates a **stacked EmotiBit**.
