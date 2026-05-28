@@ -20,10 +20,10 @@ Follow these steps in order to validate that your hardware is working perfectly.
       - [4.2 Mating the Boards](#42-mating-the-boards)
       - [4.3 Understanding the LEDs and buttons on EmotiBit and the Feather](#43-understanding-the-leds-and-buttons-on-emotibit-and-the-feather)
       - [4.4 Compatible Feather Modules](#44-compatible-feather-modules)
-- [Installing EmotiBit Firmware](#installing-emotibit-firmware)
-  - [5. Installing EmotiBit firmware](#5-installing-emotibit-firmware)
-    - [5.1 Run EmotiBit Firmware Installer](#51-run-emotibit-firmware-installer)
+    - [5. Installing EmotiBit firmware](#5-installing-emotibit-firmware)
+      - [5.1 Run EmotiBit Firmware Installer](#51-run-emotibit-firmware-installer)
 - [EmotiBit Bootup](#emotibit-bootup)
+- 
 
 > [!CAUTION]
 > **ELECTRICAL SHOCK WARNING**<br>
