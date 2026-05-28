@@ -312,14 +312,14 @@ EmotiBit officially supports two Adafruit Feather modules. Use the matrix below 
 
 --- 
 
-# Installing EmotiBit Firmware
+
+
+### 5. Installing EmotiBit firmware
+
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
 
 > [!IMPORTANT]
 > If you did not order an Essentials Kit, Basic-Kit (*Kickstarter*) or Research-Kit (*Kickstarter*), you will need to get one to start using EmotiBit. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3619) from the Adafruit online store.
-
-
-### 5. Installing EmotiBit firmware
 
 > [!IMPORTANT]
 > **Prerequisites**
