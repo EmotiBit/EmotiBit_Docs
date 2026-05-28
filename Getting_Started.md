@@ -516,12 +516,6 @@ If you have an Antivirus program installed, make sure the appropriate settings a
     - Click on `Allow` on the dialog box that appears. This will open the application.
             ![][macOS-Catalina-Allow_emotibit]
   </details>
-- <details><summary>Opening Software in mojave</summary>
-        
-    - Right-click on the application you want to run. Choose **Open**. 
-    - If this is the first time you are using this application, a dialog box might appear asking you to `Allow` this application. Click on `Allow`. 
-    - You will see the EmotiBit Application start.
-  </details>
 
 # After connecting to emotibit and streaming data
 By this point, you're ready to be an EmotiBit rockstar!! Check out the following links to learn more about EmotiBit!
