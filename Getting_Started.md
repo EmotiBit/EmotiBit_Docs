@@ -17,7 +17,7 @@ Follow these steps in order to validate that your hardware is working perfectly.
       - [3.1 Adding WiFi credentials](#31-adding-wifi-credentials)
     - [4. Stack your EmotiBit!](#4-stack-your-emotibit)
       - [4.1 Pre-Assembly Configuration](#41-pre-assembly-configuration)
-      - [4.2 Mating the Boards](#42-mating-the-boards)
+      - [4.2 Stacking the Boards](#42-stacking-the-boards)
       - [4.3 Understanding the LEDs and buttons on EmotiBit and the Feather](#43-understanding-the-leds-and-buttons-on-emotibit-and-the-feather)
       - [4.4 Compatible Feather Modules](#44-compatible-feather-modules)
     - [5. Installing EmotiBit firmware](#5-installing-emotibit-firmware)
@@ -297,7 +297,7 @@ EmotiBit supports local data logging via a microSD card.
 > Excessive force can break the HIB switch. Handle with care!
 
 
-## 4.2 Mating the Boards
+## 4.2 Stacking the Boards
 1. Align the male header pins of the EmotiBit board with the female headers on the Adafruit Feather.
 2. Gently press the boards together until the pins are fully seated.(**ensure the connector is firmly pushed all the way into the Feather connector**)
 
