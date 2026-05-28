@@ -385,68 +385,69 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
 Installing incompatible firmware may lead to unexpected behavior, or worse, may brick your device.
   </details>
 
-- <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
-  
-  - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
-  - The FirmwareInstaller essentailly performs 3 actions:
-    1. Uploads the firmware updater sketch to prep the Feather for WINC updater
-    2. Updates the WINC WiFi module FW to version 19.6.1
-    3. Uploads the latest EmotiBit FW onto the Feather, after the WINC has been updated
-  - We use the [`bossac`](http://manpages.ubuntu.com/manpages/bionic/man1/bossac.1.html) command line tool to upload binary files to the feather.
-  - There are 2 requirements to run bossac
-    - COM port on which the Feather is detected
-    - The bin file (*provided in the software release*). If your flavor of Linux doesn't work with the provided bin file, you'll have to download/compile `bossac` yourself, but ***WARNING: THAR BE DRAGONS***
-      - Check out these [instructions on installing bossac](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/uf2-bootloader-details#running-bossac-on-the-command-line-2929769-30). ***PLEASE NOTE*** that with bossac version 1.9 or later, you must give an --offset parameter on the command line to specify where to start writing the firmware in flash memory. ***FAILING TO DO SO WILL BRICK YOUR FEATHER!***
-  - To perform the operations manually, follow the listed steps below:
-    - Navigate to the `data` folder located inside the EmotiBit software directory.
-      - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
-      - On macOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
-      - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
-    - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
-    - Connect the Feather to the computer using a data-capable USB cable
-      - **The Feather should NOT be stacked with EmotiBit** (to enable the programmer mode LED)
-    - Double-press the reset button to set the Feather in programmer mode.
-      - You should see the RED LED on the Feather pulsating!
-        - [ToDo: add gif]
-    - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IS IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
-    - Upload the firmware updater sketch by running the following command (*use .\bossac.exe for Windows*, *use ./bossac for macOS*)
-      - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v ./WINC/FirmwareUpdater.ino.feather_m0.bin -R`
-        - [For Linux] If you get a `permission denied` error, run the command `chmod u+x ./bossac_linux`, to make the file executable.
-    - Update the WINC by running (*use .\FirmwareUploader.exe for Windows*, *use ./FirmwareUploader for macOS*)
-      - `./WINC/FirmwareUploader_linux -port YOUR_FEATHER_COM_PORT -firmware ./WINC/m2m_aio_3a0.bin`
-        - [For Linux] If you get a `permission denied` error, run the command `chmod u+x ./WINC/FirmwareUploader_linux` , to make the file executable.
-    - ONLY AFTER the FirmwareUploader command completes, double-press the reset button to set the Feather in programmer mode again
-    - Upload the EmotiBit FW using (*use .\bossac.exe for Windows*, *use ./bossac for macOS*)
-      - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
-  </details> 
+- **Linux and Advanced Users**
+    - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
+      
+      - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
+      - The FirmwareInstaller essentailly performs 3 actions:
+        1. Uploads the firmware updater sketch to prep the Feather for WINC updater
+        2. Updates the WINC WiFi module FW to version 19.6.1
+        3. Uploads the latest EmotiBit FW onto the Feather, after the WINC has been updated
+      - We use the [`bossac`](http://manpages.ubuntu.com/manpages/bionic/man1/bossac.1.html) command line tool to upload binary files to the feather.
+      - There are 2 requirements to run bossac
+        - COM port on which the Feather is detected
+        - The bin file (*provided in the software release*). If your flavor of Linux doesn't work with the provided bin file, you'll have to download/compile `bossac` yourself, but ***WARNING: THAR BE DRAGONS***
+          - Check out these [instructions on installing bossac](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/uf2-bootloader-details#running-bossac-on-the-command-line-2929769-30). ***PLEASE NOTE*** that with bossac version 1.9 or later, you must give an --offset parameter on the command line to specify where to start writing the firmware in flash memory. ***FAILING TO DO SO WILL BRICK YOUR FEATHER!***
+      - To perform the operations manually, follow the listed steps below:
+        - Navigate to the `data` folder located inside the EmotiBit software directory.
+          - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+          - On macOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
+          - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
+        - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
+        - Connect the Feather to the computer using a data-capable USB cable
+          - **The Feather should NOT be stacked with EmotiBit** (to enable the programmer mode LED)
+        - Double-press the reset button to set the Feather in programmer mode.
+          - You should see the RED LED on the Feather pulsating!
+            - [ToDo: add gif]
+        - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IS IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
+        - Upload the firmware updater sketch by running the following command (*use .\bossac.exe for Windows*, *use ./bossac for macOS*)
+          - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v ./WINC/FirmwareUpdater.ino.feather_m0.bin -R`
+            - [For Linux] If you get a `permission denied` error, run the command `chmod u+x ./bossac_linux`, to make the file executable.
+        - Update the WINC by running (*use .\FirmwareUploader.exe for Windows*, *use ./FirmwareUploader for macOS*)
+          - `./WINC/FirmwareUploader_linux -port YOUR_FEATHER_COM_PORT -firmware ./WINC/m2m_aio_3a0.bin`
+            - [For Linux] If you get a `permission denied` error, run the command `chmod u+x ./WINC/FirmwareUploader_linux` , to make the file executable.
+        - ONLY AFTER the FirmwareUploader command completes, double-press the reset button to set the Feather in programmer mode again
+        - Upload the EmotiBit FW using (*use .\bossac.exe for Windows*, *use ./bossac for macOS*)
+          - `./bossac_linux -i -d --port=YOUR_FEATHER_COM_PORT -U true -i -e -w -v EmotiBit_stock_firmware.ino.feather_m0.bin -R`
+      </details> 
 
-- <details><summary> Installing Emotibit Firmware on Feather ESP32 Huzzah</summary>
-  
-  - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so,
-  right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
-  - The FirmwareInstaller essentailly uploads the latest EmotiBit FW onto the Feather
-  - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
-  - There are 2 requirements to run esptool
-    - COM port on which the Feather is detected
-    - The esptool bin file (*provided in the software release*).
-  - To perform the operations manually, follow the listed steps below:
-    - Navigate to the `data` folder located inside the EmotiBit software directory.
-      - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
-      - On macOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
-      - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
-    - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
-    - Connect the Feather to the computer using a data-capable USB cable.
-      - The Feather should show up as a COM port on the system.
-        - On `Windows`: The device appears with a name similar to `COM X` (where `X` is a number)
-        - On `Mac/Linux`: You may find the COM port by running the terminal command `ls -la /dev/tty*`
-        - Pro-tip for Linux: the Feather may likely show up as `/dev/ttyUSB0`
-    - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IS IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
-    - replace **YOUR_FEATHER_PORT** with the COM port you detected in the previous step in the following command and run it to upload the firmware.
-      - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
-        - [For Linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
-        - [For Windows] replace `./exec/linux/esptool` with `.\exec\win\esptool.exe`. You will also need to change all file paths to `.\esp32\name-of-file`
-        - [For macOS] replace `./exec/linux/esptool` with `./exec/mac/esptool`.
-  </details> 
+    - <details><summary> Installing Emotibit Firmware on Feather ESP32 Huzzah</summary>
+      
+      - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so,
+      right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
+      - The FirmwareInstaller essentailly uploads the latest EmotiBit FW onto the Feather
+      - We use the [`esptool`](https://github.com/espressif/esptool/releases/tag/v3.3) command line tool to upload binary files to the feather.
+      - There are 2 requirements to run esptool
+        - COM port on which the Feather is detected
+        - The esptool bin file (*provided in the software release*).
+      - To perform the operations manually, follow the listed steps below:
+        - Navigate to the `data` folder located inside the EmotiBit software directory.
+          - On Linux the path to the data folder should look like `EmotiBitSoftware-linux/ofxEmotiBit/EmotiBitFirmwareInstaller/bin/data`
+          - On macOS the path should look like `EmotiBitSoftware-macOS/EmotiBitFirmwareInstaller.app/Contents/Resources`
+          - On Windows the path will be `C:\Program Files\EmotiBit\EmotiBit FirmwareInstaller\data`
+        - Open a `cmd prompt` window for Windows or `terminal` for Linux/Mac at this location
+        - Connect the Feather to the computer using a data-capable USB cable.
+          - The Feather should show up as a COM port on the system.
+            - On `Windows`: The device appears with a name similar to `COM X` (where `X` is a number)
+            - On `Mac/Linux`: You may find the COM port by running the terminal command `ls -la /dev/tty*`
+            - Pro-tip for Linux: the Feather may likely show up as `/dev/ttyUSB0`
+        - **WARNING: DO NOT UNPLUG OR RESET FEATHER WHILE UPLOAD/UPDATE IS IN PROGRESS. YOU COULD BRICK YOUR FEATHER!**
+        - replace **YOUR_FEATHER_PORT** with the COM port you detected in the previous step in the following command and run it to upload the firmware.
+          - `./exec/linux/esptool --chip esp32 --port YOUR_FEATHER_PORT --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size 4MB 0x1000 ./esp32/EmotiBit_stock_firmware.ino.bootloader.bin 0x8000 ./esp32/EmotiBit_stock_firmware.partitions.bin 0xe000 ./esp32/boot_app0.bin 0x10000 ./EmotiBit_stock_firmware.ino.feather_esp32.bin`
+            - [For Linux] If you get a `permission denied` error, run the command `chmod u+x ./exec/esptool`, to make the file executable.
+            - [For Windows] replace `./exec/linux/esptool` with `.\exec\win\esptool.exe`. You will also need to change all file paths to `.\esp32\name-of-file`
+            - [For macOS] replace `./exec/linux/esptool` with `./exec/mac/esptool`.
+      </details> 
 
 # EmotiBit Bootup
 > [!IMPORTANT]
