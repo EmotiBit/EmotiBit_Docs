@@ -19,7 +19,7 @@ Follow these steps in order to validate that your hardware is working perfectly.
     - [4. Stack your EmotiBit!](#4-stack-your-emotibit)
       - [4.1 Pre-Assembly Configuration](#41-pre-assembly-configuration)
       - [4.2 Stacking the Boards](#42-stacking-the-boards)
-      - [4.3 Understanding the LEDs and buttons on EmotiBit and the Feather](#43-understanding-the-leds-and-buttons-on-emotibit-and-the-feather)
+      - [Understanding the LEDs and buttons on EmotiBit and the Feather](#understanding-the-leds-and-buttons-on-emotibit-and-the-feather)
     - [5. Installing EmotiBit firmware](#5-installing-emotibit-firmware)
       - [5.1 Run EmotiBit Firmware Installer](#51-run-emotibit-firmware-installer)
 - [EmotiBit Bootup](#emotibit-bootup)
@@ -317,7 +317,9 @@ The software utilities required to interface with EmotiBit are distributed as a 
 <br>
 <br>
 
-## 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
+---
+
+### Understanding the LEDs and buttons on EmotiBit and the Feather
 <img src="./assets/EmotiBit-stack-LED.png" align="left" width="600">
 
 > [!NOTE]
