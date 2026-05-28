@@ -163,14 +163,12 @@ The software utilities required to interface with EmotiBit are distributed as a 
 
 ## 3. Prepare the SD Card
 
-EmotiBit supports local data logging via a microSD card.
-
 ### 3.1 Adding WiFi credentials
 
 > [!IMPORTANT]
 >  EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit. See the following FAQs for more details.
-> - For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
 > - For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
+> - For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
 
 * **3.1.1 Standard Configuration Procedure:**
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
@@ -331,8 +329,24 @@ EmotiBit supports local data logging via a microSD card.
 <br>
 
 ## 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
+<img src="./assets/EmotiBit-stack-LED.png" align="left" width="600">
 
-![](./assets/EmotiBit-stack-LED.png)
+> [!NOTE]
+> This image is for reference only. Status LEDs illuminate independently and at different stages during normal hardware operation.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 --- 
 
