@@ -289,7 +289,7 @@ EmotiBit supports local data logging via a microSD card.
 2. Make sure the sliding switch (*Hibernate switch*) is set to the active (not HIB) position as shown *(Available on only EmotiBit version V4+. The version is listed on the unique EmotiBit serial number attached to the back of EmotiBit.)*.
 
 > [!IMPORTANT]
-> If the HIB switch is left in the OFF position, the device programming will fail in the next steps!
+> If the HIB switch is left in the HIB position, the device programming will fail in the next steps!
 
 > [!CAUTION]
 > Excessive force can break the HIB switch. Handle with care!
