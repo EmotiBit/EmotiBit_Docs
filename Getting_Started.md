@@ -198,7 +198,7 @@ EmotiBit supports local data logging via a microSD card.
 
 * <details><summary><b>3.1.4 Adding credentials using Serial</b></summary>
 
-  - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
+  - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#4-stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#5-installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
   - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
   - Make sure you have a stacked EmtotiBit and connect the Feather to the computer using the provided USB cable.
   - Once connected, check `Tools > Port` again in Arduino IDE. A new port will have appeared. Select that port.
@@ -329,7 +329,7 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
 
 > [!IMPORTANT]
 > **Prerequisites**
-> Install required drivers, as explained in the [section above](#Install-drivers).
+> Install required drivers, as explained in the [section above](#5-installing-emotibit-firmware).
 
 #### 5.1 Run EmotiBit Firmware Installer
 
@@ -437,7 +437,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 |Feather RED LED ON|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Write a post describing your steps on http://forum.emotibit.com/ |
 |Feather RED LED turns ON for a few seconds and then stays OFF|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD card is correctly inserted|
 |EmotiBit RED LED ON|<img src="./assets/EmotiBit-bootup-stage-2.jpg" width="300">|Check if config file is present on the SD card <br> AND <br> config file is formatted correctly (A missing `"` or missing bracket `{}`,`[]` can cause a parsing failure.)|
-|EmotiBit BLUE LED solid ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#Adding-WiFi-credentials))|
+|EmotiBit BLUE LED solid ON|<img src="./assets/EmotiBit-bootup-stage-3.jpg" width="300">|Verify correct WiFi credentials in config file (see [Adding WiFi credentials](#31-adding-wifi-credentials))|
 |EmotiBit BLUE LED BLINKING|<img src="./assets/EmotiBit-bootup-stage-4.gif" width="300">|Huzzah! EmotiBit is connected to your WiFi! Open EmotiBit Oscilloscope to start streaming biometric data!|
 
 # Next Steps: Connecting to EmotiBit and Streaming EmotiBit Data
@@ -500,7 +500,6 @@ By this point, you're ready to be an EmotiBit rockstar!! Check out the following
   - [Visualizing  Data](./Working_with_emotibit_data.md/#Visualize-parsed-data)
 - [Keep EmotiBit up to date](./Keep_emotibit_up_to_date.md)
 - [Contributing to the EmotiBit Community](./Contributing_to_emotibit_community)
-- [Learn more about EmotiBit](./Learn_more_about_emotibit.md)
 
 
 # Troubleshooting
