@@ -69,9 +69,9 @@ To get the most out of your device, it helps to understand how the two core boar
 
 ```
 ┌──────────────────────────────────────┐
-│        EmotiBit Sensor Board         │  ◄── Captures physiological data
+│            Adafruit Feather          │  ◄── Handles processing, WiFi and data logging
 ├──────────────────────────────────────┤
-│         Adafruit Feather             │  ◄── Handles processing, WiFi and data logging
+│         EmotiBit Sensor Board        │  ◄── Captures physiological data
 └──────────────────────────────────────┘
 ```
 * **The EmotiBit** is the sensor module. It contains the dedicated biometric circuitry, specialized analog-to-digital converters, and high-fidelity sensors. It also features its own dedicated status LEDs and control buttons.
