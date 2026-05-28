@@ -323,7 +323,7 @@ The software utilities required to interface with EmotiBit are distributed as a 
 <img src="./assets/EmotiBit-stack-LED.png" align="left" width="600">
 
 > [!NOTE]
-> This image is for reference only. Status LEDs illuminate independently and at different stages during normal hardware operation.
+> This image is for reference only. Status LEDs illuminate independently and at different stages during normal operation.
 
 <br>
 <br>
