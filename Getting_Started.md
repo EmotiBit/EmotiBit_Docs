@@ -10,7 +10,7 @@ Follow these steps in order to validate that your hardware is working perfectly.
   - [What's in the Box? (Unboxing Component Guide)](#whats-in-the-box-unboxing-component-guide)
   - [Understanding the Hardware: EmotiBit vs. Feather](#understanding-the-hardware-emotibit-vs-feather)
     - [How EmotiBit Works & Communicates](#how-emotibit-works--communicates)
-  - [Setup Steps](#setup-steps)
+- [Setup Steps](#setup-steps)
     - [1. Download and Install the Software Bundle](#1-download-and-install-the-software-bundle)
     - [2. Install Drivers](#2-install-drivers)
     - [3. Prepare the SD Card](#3-prepare-the-sd-card)
@@ -77,9 +77,9 @@ EmotiBit is designed for real-time wireless data streaming, requiring an establi
 
 ---
 
-## Setup Steps
+# Setup Steps
 
-### 1. Download and Install the Software Bundle
+## 1. Download and Install the Software Bundle
 
 The software utilities required to interface with EmotiBit are distributed as a unified release bundle.
 
@@ -113,7 +113,7 @@ The software utilities required to interface with EmotiBit are distributed as a 
     </details>
 
 
-### 2. Install Drivers
+## 2. Install Drivers
 
 > [!IMPORTANT]
 > You must install the Virtual COM Port (VCP) drivers included in the software bundle to enable serial communication with the hardware via USB.
@@ -147,11 +147,11 @@ The software utilities required to interface with EmotiBit are distributed as a 
     </details>
 
 
-### 3. Prepare the SD Card
+## 3. Prepare the SD Card
 
 EmotiBit supports local data logging via a microSD card.
 
-#### 3.1 Adding WiFi credentials
+### 3.1 Adding WiFi credentials
 
 * **3.1.1** EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit.
   * For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
@@ -280,9 +280,9 @@ EmotiBit supports local data logging via a microSD card.
 
 ---
 
-### 4. Stack your EmotiBit!
+## 4. Stack your EmotiBit!
 
-### 4.1 Pre-Assembly Configuration
+## 4.1 Pre-Assembly Configuration
 <img src="./assets/correctHibernateSwitch.jpg" align="right" width="250" hspace="15" vspace="15">
 
 1. Insert the SD card into the EmotiBit.
@@ -295,17 +295,17 @@ EmotiBit supports local data logging via a microSD card.
 > Excessive force can break the HIB switch. Handle with care!
 
 
-### 4.2 Mating the Boards
+## 4.2 Mating the Boards
 1. Align the male header pins of the EmotiBit board with the female headers on the Adafruit Feather.
 2. Gently press the boards together until the pins are fully seated.(**ensure the connector is firmly pushed all the way into the Feather connector**)
 
 ![][EmotiBit-stackup]
 
-### 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
+## 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
 
 ![](./assets/EmotiBit-stack-LED.png)
 
-### 4.4 Compatible Feather Modules
+## 4.4 Compatible Feather Modules
 
 EmotiBit officially supports two Adafruit Feather modules. Use the matrix below to identify your board.
 
@@ -320,7 +320,7 @@ EmotiBit officially supports two Adafruit Feather modules. Use the matrix below 
 
 
 
-### 5. Installing EmotiBit firmware
+## 5. Installing EmotiBit firmware
 
 To start using EmotiBit, you will first need to install the latest EmotiBit firmware on the Feather.
 
@@ -331,7 +331,7 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
 > **Prerequisites**
 > Install required drivers, as explained in the [section above](#5-installing-emotibit-firmware).
 
-#### 5.1 Run EmotiBit Firmware Installer
+### 5.1 Run EmotiBit Firmware Installer
 
 <img src="./assets/EmotiBitFirmwareInstaller-step1.png" align="right" width="600">
 
