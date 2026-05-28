@@ -153,10 +153,12 @@ EmotiBit supports local data logging via a microSD card.
 
 ### 3.1 Adding WiFi credentials
 
-* **3.1.1** EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit.
-  * For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
-  * For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
-* **3.1.2 Standard Configuration Procedure:**
+> [!IMPORTANT]
+>  EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit. See the following FAQs for more details.
+> - For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
+> - For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
+
+* **3.1.1 Standard Configuration Procedure:**
 <img src="./assets/SD-CardInReader.jpg" align="right" width="250">
 
   1. Insert the microSD card into the provided reader and connect it to your computer.
@@ -169,7 +171,7 @@ EmotiBit supports local data logging via a microSD card.
 > [!NOTE]
 > **EmotiBit only supports the 2.4GHz band for WiFi**. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
-* <details><summary><b>3.1.3 Multiple WiFi credentials</b></summary>
+* <details><summary><b>3.1.2 Multiple WiFi credentials</b></summary>
 
   - If you use multiple WiFi networks and want your EmotiBit to automatically connect to whichever one is in range, simply add both networks to the WifiCredentials array in the config file like this:<br> 
   ```
@@ -196,7 +198,7 @@ EmotiBit supports local data logging via a microSD card.
   ```
   </details>
 
-* <details><summary><b>3.1.4 Adding credentials using Serial</b></summary>
+* <details><summary><b>3.1.3 Adding credentials using Serial</b></summary>
 
   - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#4-stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#5-installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
   - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
@@ -237,7 +239,7 @@ EmotiBit supports local data logging via a microSD card.
     - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
   </details>
 
-* <details><summary><b>2.3.1.4 Adding Enterprise WiFi credentials</b></summary>
+* <details><summary><b>3.1.4 Adding Enterprise WiFi credentials</b></summary>
   
   - Enterprise WiFi network details are added to the config.txt file in the following format.
     - If no `username` is provided, `userid` will be used as `username`
