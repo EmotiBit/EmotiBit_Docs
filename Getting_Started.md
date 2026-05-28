@@ -78,8 +78,8 @@ EmotiBit is designed for real-time wireless data streaming, requiring an establi
 2.  **The Network Bridge:** The EmotiBit device transmits this data wirelessly over the local WiFi network.
 3.  **The EmotiBit Oscilloscope:** Your computer runs the **EmotiBit Oscilloscope** software. The Oscilloscope listens to the network, automatically detects the EmotiBit host, and streams the biometric data onto your screen in real time.
 
-> [!WARNING]
-> **Important Network Dependence:** Because the data passes through your local network, both your computer (running the EmotiBit Oscilloscope) and the EmotiBit must be connected to the exact same WiFi network. If your network has security settings that block device-to-device communication (common on enterprise or university networks), the data will not reach the screen. Don't worry—we will walk you through configuring and troubleshooting this during the setup phase!
+> [!IMPORTANT]
+> **Network Dependence:** Because the data passes through your local network, both your computer (running the EmotiBit Oscilloscope) and the EmotiBit must be connected to the exact same WiFi network. If your network has security settings that block device-to-device communication (common on enterprise or university networks), the data will not reach the screen. Don't worry—we will walk you through configuring and troubleshooting this during the setup phase!
 
 ---
 
