@@ -181,7 +181,7 @@ The software utilities required to interface with EmotiBit are distributed as a 
   5. Save the file onto your microSD card. Then safely eject the card from your computer.
 
 > [!NOTE]
-> **EmotiBit only supports the 2.4GHz band for WiFi**. Both the host computer and the EmotiBit need to be on the same 2.4GHz network.** Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+> **EmotiBit only supports the 2.4GHz band for WiFi**. Both the host computer and the EmotiBit need to be on the same 2.4GHz network. Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
 * <details><summary><b>3.1.2 Multiple WiFi credentials</b></summary>
 
@@ -288,9 +288,6 @@ The software utilities required to interface with EmotiBit are distributed as a 
     - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
     - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
 </details>
-
-> [!WARNING]
-> Support for ENTERPRISE WIFI is still experimental. Connectivity and usability will vary and depend on your network conditions and rules.
 
 ---
 
