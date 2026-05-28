@@ -298,10 +298,23 @@ EmotiBit supports local data logging via a microSD card.
 
 
 ## 4.2 Stacking the Boards
-1. Align the male header pins of the EmotiBit board with the female headers on the Adafruit Feather.
-2. Gently press the boards together until the pins are fully seated.(**ensure the connector is firmly pushed all the way into the Feather connector**)
 
-![][EmotiBit-stackup]
+<img src="./assets/EmotiBit_stack_boards.gif" align="right" width="400">
+
+1. Align the female header pins of the EmotiBit board with the male headers on the Adafruit Feather.
+2. Gently press the boards together until the pins are fully seated.
+3. **Ensure the connector is firmly pushed all the way into the Feather connector**
+
+> [!IMPORTANT]
+> At this point, the following checklist **must** be complete
+> - [x] EmotiBit has the configured sd card inserted
+> - [x] The HIB switch is not on "HIB"
+> - [x] The battery is inserted into the Feather
+> - [x] The EmotiBit and Feather have a secure fit
+ 
+<br>
+<br>
+<br>
 
 ## 4.3 Understanding the LEDs and buttons on EmotiBit and the Feather
 
