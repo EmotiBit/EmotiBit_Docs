@@ -365,7 +365,7 @@ To start using EmotiBit, you will first need to install the latest EmotiBit firm
 
 ### 5.1 Run EmotiBit Firmware Installer
 
-<img src="./assets/EmotiBitFirmwareInstaller-step1.png" align="right" width="600">
+<img src="./assets/EmotiBitFirmwareInstaller.gif" align="right" width="600">
 
 - Open the `EmotiBit FirmwareInstaller` (downloaded as a part of the software bundle above). 
 - After you start the application, follow the on-screen instructions to complete installing the firmware.
