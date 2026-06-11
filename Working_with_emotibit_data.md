@@ -53,9 +53,6 @@ Once the EmotiBit is secured, look at the live stream in the EmotiBit Oscillosco
 
 ## The Data Ecosystem
 
-Understanding the relationship between the physical sensors, the signals they generate, and what those signals mean is key to successfully analyzing EmotiBit data.
-## The Data Ecosystem
-
 Understanding the relationship between the physical sensors, the signals they generate, and how they are structured is key to successfully analyzing EmotiBit data.
 
 ### Sensors and Signals
@@ -64,7 +61,8 @@ Each data type represents a unique signal captured by EmotiBit and is represente
 
 Below is a quick reference guide for the available data types. This table is updated periodically as the EmotiBit firmware grows. 
 
-> **Note:** Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
+> [!TIP]
+>  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
 | TypeTag | Signal & Description | How a Good Signal Looks | How a Bad Signal Looks |
 | :---: | :--- | :--- | :--- |
@@ -90,21 +88,24 @@ The following table shows the sampling rates at which the sensors operate with t
 
 ### Expected Data Format
 
-When working with EmotiBit, data files are saved in structured, plain-text formats designed for easy parsing and maximum compatibility across analytical tools. 
-
-#### Raw Data Format
-The raw data is stored in the following format.
+#### Data Format when saving to the SD Card
+```
+531386,17296,1,RB,1,100,2024-09-18_22-59-45-827135
+531388,17297,4,EM,1,100,RS,RB,2024-09-18_22-59-45-827135.csv,PS,MN
+531473,17298,3,PI,1,100,112870,112866,112867
+531473,17299,3,PR,1,100,26870,26855,26857
+531473,17300,3,PG,1,100,3720,3704,3717
+```
 
 `EMOTIBIT_TIMESTAMP`,`PACKET#`,`NUM_DATAPOINTS`,`TYPETAG`,`VERSION`,`RELIABILITY`,`PAYLOAD`
 
-- **EMOTIBIT_TIMESTAMP:** milliseconds since EmotiBit bootup
-- **PACKET#:** sequentially increasing packet count
-- **NUM_DATAPOINTS:** Number of data points in the payload
-- **TYPETAG:** [type of data](#sensors-and-signals) being sent
-- **VERSION:** packet protocol version
-- **RELIABILITY:** data reliability score out of 100 (for future use)
-- **PAYLOAD:** data points
-
+- `EMOTIBIT_TIMESTAMP`: milliseconds since EmotiBit bootup
+- `PACKET#`: sequentially increasing packet count
+- `NUM_DATAPOINTS`: Number of data points in the payload
+- `TYPETAG`: [type of data](#sensors-and-signals) being sent
+- `VERSION`: packet protocol version
+- `RELIABILITY`: data reliability score out of 100 (for future use)
+- `PAYLOAD`: data points
 - <details><summary><b>Sample raw data file</b></summary>
     
     ```
