@@ -192,6 +192,13 @@ To start a record session, follow these steps:
   - UDP
   - LSL
 
+
+
+# Next steps
+- To learn more about the EmotiBit software, checkout the following reference manuals
+  - [EmotiBit Oscilloscope]()
+  - [EmotiBit DataParser]()
+
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
 [EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"

@@ -398,3 +398,4 @@ Refer the [section above](#Settings-files-location) to locate this file on your 
   ```
   </details>
 
+[EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
