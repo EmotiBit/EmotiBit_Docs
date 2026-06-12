@@ -45,15 +45,15 @@ Below is a quick reference guide for the available data types. This table is upd
 
 | TypeTag | Signal & Description | How a Good Signal Looks | How a Bad Signal Looks |
 | :---: | :--- | :--- | :--- |
-| **EA** | **EDA** - Electrodermal Activity | | |
-| **PI**<br>**PR**<br>**PG** | **PPG Infrared**<br>**PPG Red**<br>**PPG Green** | | |
+| **EA** | **EDA** - Electrodermal Activity |![][Good-data-EDA] | |
+| **PI**<br>**PR**<br>**PG** | **PPG Infrared**<br>**PPG Red**<br>**PPG Green** |![][Good-data-PPG] | |
 | **T1** | **Temperature** | | |
 | **TH** | **Temperature via Medical-grade Thermopile** *(EmotiBit MD only)* | | |
 | **AX, AY, AZ** | **Accelerometer** (X, Y, Z axes) | | |
 | **GX, GY, GZ** | **Gyroscope** (X, Y, Z axes) | | |
 | **MX, MY, MZ** | **Magnetometer** (X, Y, Z axes) | | |
-| **SA**<br>**SR**<br>**SF** | **SCR Amplitude** (Skin Conductance Response)<br>**SCR Rise Time**<br>**SCR Frequency** | | |
-| **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | | |
+| **SA**<br>**SR**<br>**SF** | **SCR Amplitude** (Skin Conductance Response)<br>**SCR Rise Time**<br>**SCR Frequency** | ![][Good-data-eda-derivatives]| |
+| **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | ![][Good-data-PPG]| |
 > [!TIP]
 >  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
@@ -201,3 +201,7 @@ To start a record session, follow these steps:
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
 [EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"
 [EmotiBit-PythonDataViewer]: ./assets/PythonDataViewer.jpg "EmotiBit-PythonDataViewer"
+[Good-data-PPG]: ./assets/Good-data-ppg.png "Good-data-PPG"
+[Good-data-EDA]: ./assets/Good-data-ppg.png "Good-data-EDA"
+[Good-data-HR]: ./assets/Good-data-ppg.png "Good-data-HR"
+[Good-data-eda-derivatives]: ./assets/Good-data-ppg.png "Good-data-eda-derivatives"
