@@ -28,17 +28,15 @@
   - [Visualization tools](#Visualization-tools)
 - [Next steps](#Next-steps)
 
-
-## Confirmation of Successful Hardware Validation
-
-If you are reading this page, it means you have already successfully streamed data from your EmotiBit hardware to the EmotiBit Oscilloscope. 
+> [!IMPORTANT]
+> If you are reading this page, it means you have already successfully streamed data from your EmotiBit hardware to the EmotiBit Oscilloscope. 
 If you have not yet successfully streamed data or if you need help with the initial setup, please head back to the [**Getting Started**](./Getting_Started.md) page before proceeding with this document.
 
-## How to Use EmotiBit
+# How to Use EmotiBit
 
 Getting reliable biometric data depends heavily on how the EmotiBit is positioned and secured.
 
-### Placement on the Body
+## Placement on the Body
 
 For optimal data collection, position the EmotiBit on the body according to these guidelines:
 * Check out this blog post: https://www.emotibit.com/sensing-bio-metrics-from-anywhere-on-the-body/
@@ -47,15 +45,15 @@ For optimal data collection, position the EmotiBit on the body according to thes
 > [!TIP]
 > The EmotiBit has slots for straps on all 4 sides. This enables you to strap the EmotiBit in both orientations.
 
-### How to Verify a Good Placement
+## How to Verify a Good Placement
 
 Once the EmotiBit is secured, look at the live stream in the EmotiBit Oscilloscope to verify that the placement is correct and yielding high-quality data.
 
-## The Data Ecosystem
+# The Data Ecosystem
 
 Understanding the relationship between the physical sensors, the signals they generate, and how they are structured is key to successfully analyzing EmotiBit data.
 
-### Sensors and Signals
+## Sensors and Signals
 
 Each data type represents a unique signal captured by EmotiBit and is represented by a unique `TypeTag`. The most up-to-date list of TypeTags can always be found in the [EmotiBit Packet Repository](https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp).
 
@@ -76,7 +74,7 @@ Below is a quick reference guide for the available data types. This table is upd
 | **SA**<br>**SR**<br>**SF** | **SCR Amplitude** (Skin Conductance Response)<br>**SCR Rise Time**<br>**SCR Frequency** | | |
 | **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | | |
 
-### Data type sampling rates
+## Data type sampling rates
 The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware. You can also find a link to each sensor datasheet.
 
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
@@ -86,9 +84,9 @@ The following table shows the sampling rates at which the sensors operate with t
 |Temperature |`T0` / `TH`|[MAX30101](https://www.analog.com/en/products/max30101.html) / [MLX90632](https://www.melexis.com/en/product/MLX90632/Miniature-SMD-Infrared-Thermometer-IC) |7.5|
 |EDA|`EA` `EL` `ER`|[ADS1114](https://www.ti.com/product/ADS1114)|15|
 
-### Expected Data Format
+## Expected Data Format
 
-#### Data Format when saving to the SD Card
+### Data Format when saving to the SD Card
 ```
 531386,17296,1,RB,1,100,2024-09-18_22-59-45-827135
 531388,17297,4,EM,1,100,RS,RB,2024-09-18_22-59-45-827135.csv,PS,MN
@@ -130,14 +128,28 @@ The following table shows the sampling rates at which the sensors operate with t
     ```
   </details>
 
-#### Parsed Data File Format
-The parsed data is stored in the following format:
+### Parsed Data File Format
+```
+LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion,DataReliability,PI
+1781122022.609306,565464.000,24431,3,PI,1,100,169093
+1781122022.609306,565464.000,24431,3,PI,1,100,169120
+1781122022.609306,565464.000,24431,3,PI,1,100,169140
+1781122022.649304,565504.000,24448,3,PI,1,100,169136
+1781122022.689303,565544.000,24448,3,PI,1,100,169175
+1781122022.729301,565584.000,24448,3,PI,1,100,169176
+1781122022.769299,565624.000,24464,2,PI,1,100,169205
+1781122022.809297,565664.000,24464,2,PI,1,100,169207
+1781122022.849295,565704.000,24480,3,PI,1,100,169217
+```
+* `LocalTimestamp`: Epoch time in seconds
+* `EmotiBitTimestamp`: EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted)
+* `PacketNumber`: Packet number the data point was extracted from (sequentially increases)
+* `DataLength`: Number of data points in the packet
+* `TypeTag`: TypeTag of the data (see table above)
+* `ProtocolVersion`: Reserved for future extensibility
+* `DataReliability`: Reserved for future extensibility
+* `Data`: Sinlge data-point
 
-| LocalTimestamp | EmotiBitTimestamp | PacketNumber | DataLength | TypeTag | ProtocolVersion | DataReliability | Data | 
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Epoch time in seconds | EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted) | Packet number the data point was extracted from (sequentially increases) | Number of data points in the packet | TypeTag of the data (see table above) | Reserved for future extensibility | Reserved for future extensibility | Data points |
-
-> **Note:** Additional details about the data stream (*such as units, sampling rate, data format, averaging etc*) can be found in the `_info.json` file created with each recording session.
 
 > [!IMPORTANT]
 > You need to run the EmotiBit Data Parser to convert raw data recordings into parsed files. See the DataParser section to learn more about how to use the EmotiBit Data Parser.
