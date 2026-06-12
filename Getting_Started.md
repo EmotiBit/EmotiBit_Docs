@@ -293,7 +293,9 @@ The software utilities required to interface with EmotiBit are distributed as a 
 > If the HIB switch is left in the HIB position, the device programming will fail in the next steps!
 
 > [!CAUTION]
-> Excessive force can break the HIB switch. Handle with care!
+> ```diff
+> - Excessive force can break the HIB switch. Handle with care!
+> ```
 
 
 ## 4.2 Stacking the Boards
