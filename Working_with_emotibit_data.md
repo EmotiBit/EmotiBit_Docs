@@ -53,7 +53,7 @@ Below is a quick reference guide for the available data types. This table is upd
 | **GX, GY, GZ** | **Gyroscope** (X, Y, Z axes) | | |
 | **MX, MY, MZ** | **Magnetometer** (X, Y, Z axes) | | |
 | **SA**<br>**SR**<br>**SF** | **SCR Amplitude** (Skin Conductance Response)<br>**SCR Rise Time**<br>**SCR Frequency** | ![][Good-data-eda-derivatives]| |
-| **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | ![][Good-data-PPG]| |
+| **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | ![][Good-data-HR]| |
 > [!TIP]
 >  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
@@ -202,6 +202,6 @@ To start a record session, follow these steps:
 [EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"
 [EmotiBit-PythonDataViewer]: ./assets/PythonDataViewer.jpg "EmotiBit-PythonDataViewer"
 [Good-data-PPG]: ./assets/Good-data-ppg.png "Good-data-PPG"
-[Good-data-EDA]: ./assets/Good-data-ppg.png "Good-data-EDA"
-[Good-data-HR]: ./assets/Good-data-ppg.png "Good-data-HR"
-[Good-data-eda-derivatives]: ./assets/Good-data-ppg.png "Good-data-eda-derivatives"
+[Good-data-EDA]: ./assets/Good-data-eda.png "Good-data-EDA"
+[Good-data-HR]: ./assets/Good-data-hr.png "Good-data-HR"
+[Good-data-eda-derivatives]: ./assets/Good-data-eda-derivatives.png "Good-data-eda-derivatives"
