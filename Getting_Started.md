@@ -483,7 +483,7 @@ When EmotiBit is booting up, the LEDs are used to indicate the steps in the proc
 If you have an Antivirus program installed, make sure the appropriate settings are enabled to grant the EmotiBit Oscilloscope network access.
   - <img src="./assets/windowsSecurityAlert-allowAccess.png" width="600">
   </details>
-- You can update the Windows Defender Firewall settings at any time. In your Start menu, search for "Allow an app through firewall".
+- You can update the Windows Defender Firewall settings at any time.
   - <details><summary>Update Windows Defender permissions (Windows Defender Firewall)</summary>
     
     - Open the Setting that shows up on the Start menu.
