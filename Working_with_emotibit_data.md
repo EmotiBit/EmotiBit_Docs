@@ -43,17 +43,72 @@ Each data type represents a unique signal captured by EmotiBit and is represente
 
 Below is a quick reference guide for the available data types. This table is updated periodically as the EmotiBit firmware grows. 
 
-| TypeTag | Signal & Description | How a Good Signal Looks | How a Bad Signal Looks |
-| :---: | :--- | :--- | :--- |
-| **EA** | **EDA** - Electrodermal Activity |![][Good-data-EDA] | |
-| **PI**<br>**PR**<br>**PG** | **PPG Infrared**<br>**PPG Red**<br>**PPG Green** |![][Good-data-PPG] | |
-| **T1** | **Temperature** | | |
-| **TH** | **Temperature via Medical-grade Thermopile** *(EmotiBit MD only)* | | |
-| **AX, AY, AZ** | **Accelerometer** (X, Y, Z axes) | | |
-| **GX, GY, GZ** | **Gyroscope** (X, Y, Z axes) | | |
-| **MX, MY, MZ** | **Magnetometer** (X, Y, Z axes) | | |
-| **SA**<br>**SR**<br>**SF** | **SCR Amplitude** (Skin Conductance Response)<br>**SCR Rise Time**<br>**SCR Frequency** | ![][Good-data-eda-derivatives]| |
-| **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | ![][Good-data-HR]| |
+<table>
+  <thead>
+    <tr>
+      <th align="center">TypeTag</th>
+      <th align="left">Signal & Description</th>
+      <th align="left" width="35%">How a Good Signal Looks</th>
+      <th align="left" width="35%">How a Bad Signal Looks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>EA</strong></td>
+      <td align="left"><strong>EDA</strong> - Electrodermal Activity</td>
+      <td align="left"><img src="./assets/Good-data-eda.png" alt="Good-data-EDA" title="Good-data-EDA"></td>
+      <td align="left"><img src="./assets/Good-data-eda.png" alt="Good-data-EDA" title="Good-data-EDA"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>PI</strong><br><strong>PR</strong><br><strong>PG</strong></td>
+      <td align="left"><strong>PPG Infrared</strong><br><strong>PPG Red</strong><br><strong>PPG Green</strong></td>
+      <td align="left"><img src="./assets/Good-data-ppg.png" alt="Good-data-PPG" title="Good-data-PPG"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>T1</strong></td>
+      <td align="left"><strong>Temperature</strong></td>
+      <td align="left"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>TH</strong></td>
+      <td align="left"><strong>Temperature via Medical-grade Thermopile</strong> <em>(EmotiBit MD only)</em></td>
+      <td align="left"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>AX, AY, AZ</strong></td>
+      <td align="left"><strong>Accelerometer</strong> (X, Y, Z axes)</td>
+      <td align="left"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>GX, GY, GZ</strong></td>
+      <td align="left"><strong>Gyroscope</strong> (X, Y, Z axes)</td>
+      <td align="left"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>MX, MY, MZ</strong></td>
+      <td align="left"><strong>Magnetometer</strong> (X, Y, Z axes)</td>
+      <td align="left"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>SA</strong><br><strong>SR</strong><br><strong>SF</strong></td>
+      <td align="left"><strong>SCR Amplitude</strong> (Skin Conductance Response)<br><strong>SCR Rise Time</strong><br><strong>SCR Frequency</strong></td>
+      <td align="left"><img src="./assets/Good-data-eda-derivatives.png" alt="Good-data-eda-derivatives" title="Good-data-eda-derivatives"></td>
+      <td align="left"></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>HR</strong><br><strong>BI</strong></td>
+      <td align="left"><strong>Heart Rate</strong><br><strong>Heart Inter-beat Interval</strong></td>
+      <td align="left"><img src="./assets/Good-data-hr.png" alt="Good-data-HR" title="Good-data-HR"></td>
+      <td align="left"></td>
+    </tr>
+  </tbody>
+</table>
 > [!TIP]
 >  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
