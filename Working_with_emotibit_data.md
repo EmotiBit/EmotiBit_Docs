@@ -156,27 +156,27 @@ Both methods utilize the **EmotiBit Oscilloscope** application as a core tool. T
 
 The EmotiBit Oscilloscope is your central hub for monitoring data quality and device status in real-time.
 
-- <details><summary>Connecting to EmotiBit</summary>
+1. <details><summary>Connecting to EmotiBit</summary>
 
-  - The Oscilloscope displays all available EmotiBits on the network in the `EmotiBit Device List`.  
-  - You can click on any EmotiBit in the list to connect to it. 
-  </details>
+      - The Oscilloscope displays all available EmotiBits on the network in the `EmotiBit Device List`.  
+      - You can click on any EmotiBit in the list to connect to it. 
+   </details>
 
-- <details><summary>Streaming real-time Data</summary>
+2. <details><summary>Streaming real-time Data</summary>
 
-  - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
-  - Once a connection between the Oscilloscope and EmotiBit has been established, the EmotiBit Blue LED turns ON.
-    - The EmotiBit Blue LED stays on as long as the EmotiBit is connected to an Oscilloscope. 
-  </details>
+      - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
+      - Once a connection between the Oscilloscope and EmotiBit has been established, the EmotiBit Blue LED turns ON.
+        - The EmotiBit Blue LED stays on as long as the EmotiBit is connected to an Oscilloscope. 
+   </details>
 
-- <details><summary>Recording Data</summary>
+3. <details><summary>Recording Data</summary>
 
-  - Select an EmotiBit from the list of available EmotiBits.
-  - You can initiate a record session by clicking on the record button. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
-    - The EmotiBit Red LED starts blinking once a recording session has been initiated.
-  - You are free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
-  - We recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope. This helps in generating more time-syncs which improves timestamp accuracy.
-  </details>
+      - Select an EmotiBit from the list of available EmotiBits.
+      - You can initiate a record session by clicking on the record button. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
+        - The EmotiBit Red LED starts blinking once a recording session has been initiated.
+      - You are free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
+      - We recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope. This helps in generating more time-syncs which improves timestamp accuracy.
+   </details>
 
 ### 1. Record data on the SD-Card
 
