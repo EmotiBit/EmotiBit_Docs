@@ -29,9 +29,9 @@ For the best data collection results, make sure the EmotiBit is properly secured
 > [!TIP]
 > The EmotiBit has slots for straps on all 4 sides. This enables you to strap the EmotiBit in both orientations.
 
-### How to Verify a Good Placement
-
-Once the EmotiBit is secured, look at the live stream in the EmotiBit Oscilloscope to verify that the placement is correct and yielding high-quality data.
+### Using the Oscilloscope for Feedback
+Treat the EmotiBit Oscilloscope as your real-time feedback loop. As you adjust the sensor placement, use the live signal stream to guide your adjustments.
+To help you gauge your signal quality, the following sections illustrate what good, clean data looks like for each sensor.
 
 # The Data Ecosystem
 
@@ -42,9 +42,6 @@ Understanding the relationship between the physical sensors, the signals they ge
 Each data type represents a unique signal captured by EmotiBit and is represented by a unique `TypeTag`. The most up-to-date list of TypeTags can always be found in the [EmotiBit Packet Repository](https://github.com/EmotiBit/EmotiBit_XPlat_Utils/blob/master/src/EmotiBitPacket.cpp).
 
 Below is a quick reference guide for the available data types. This table is updated periodically as the EmotiBit firmware grows. 
-
-> [!TIP]
->  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
 | TypeTag | Signal & Description | How a Good Signal Looks | How a Bad Signal Looks |
 | :---: | :--- | :--- | :--- |
@@ -57,6 +54,8 @@ Below is a quick reference guide for the available data types. This table is upd
 | **MX, MY, MZ** | **Magnetometer** (X, Y, Z axes) | | |
 | **SA**<br>**SR**<br>**SF** | **SCR Amplitude** (Skin Conductance Response)<br>**SCR Rise Time**<br>**SCR Frequency** | | |
 | **HR**<br>**BI** | **Heart Rate**<br>**Heart Inter-beat Interval** | | |
+> [!TIP]
+>  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
 ## Data type sampling rates
 The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware. You can also find a link to each sensor datasheet.
