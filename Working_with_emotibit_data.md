@@ -86,7 +86,9 @@ The following table shows the sampling rates at which the sensors operate with t
 
 ## Expected Data Format
 
-### Data Format when saving to the SD Card
+### Local SD Card data format
+> [!IMPORTANT]
+> You need to start a recording session using the EmotiBit Oscilloscope to record data and store it locally on the SD Card.
 ```
 531386,17296,1,RB,1,100,2024-09-18_22-59-45-827135
 531388,17297,4,EM,1,100,RS,RB,2024-09-18_22-59-45-827135.csv,PS,MN
@@ -102,7 +104,8 @@ The following table shows the sampling rates at which the sensors operate with t
 - `VERSION`: packet protocol version
 - `RELIABILITY`: data reliability score out of 100 (for future use)
 - `PAYLOAD`: data points
-- <details><summary><b>Sample raw data file</b></summary>
+
+<details><summary><b>Sample raw data file</b></summary>
     
     ```
     531386,17296,1,RB,1,100,2024-09-18_22-59-45-827135
@@ -124,20 +127,17 @@ The following table shows the sampling rates at which the sensors operate with t
     531473,17312,3,MY,1,100,-56,-57,-56
     531473,17313,3,MZ,1,100,-56,-56,-57
     ```
-  </details>
+</details>
 
 ### Parsed Data File Format
+> [!IMPORTANT]
+> You need to run the EmotiBit Data Parser to convert raw data recordings into parsed files. See the DataParser section to learn more about how to use the EmotiBit Data Parser.
 ```
 LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion,DataReliability,PI
 1781122022.609306,565464.000,24431,3,PI,1,100,169093
 1781122022.609306,565464.000,24431,3,PI,1,100,169120
 1781122022.609306,565464.000,24431,3,PI,1,100,169140
 1781122022.649304,565504.000,24448,3,PI,1,100,169136
-1781122022.689303,565544.000,24448,3,PI,1,100,169175
-1781122022.729301,565584.000,24448,3,PI,1,100,169176
-1781122022.769299,565624.000,24464,2,PI,1,100,169205
-1781122022.809297,565664.000,24464,2,PI,1,100,169207
-1781122022.849295,565704.000,24480,3,PI,1,100,169217
 ```
 * `LocalTimestamp`: Epoch time in seconds
 * `EmotiBitTimestamp`: EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted)
@@ -147,10 +147,6 @@ LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion
 * `ProtocolVersion`: Reserved for future extensibility
 * `DataReliability`: Reserved for future extensibility
 * `Data`: Sinlge data-point
-
-
-> [!IMPORTANT]
-> You need to run the EmotiBit Data Parser to convert raw data recordings into parsed files. See the DataParser section to learn more about how to use the EmotiBit Data Parser.
 
 ## Accessing EmotiBit Data
 EmotiBit offers two distinct methodologies to capture your data.
