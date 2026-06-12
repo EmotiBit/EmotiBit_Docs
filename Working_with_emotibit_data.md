@@ -57,13 +57,13 @@ Below is a quick reference guide for the available data types. This table is upd
       <td align="center"><strong>EA</strong></td>
       <td align="left"><strong>EDA</strong> - Electrodermal Activity</td>
       <td align="left"><img src="./assets/Good-data-eda.png" alt="Good-data-EDA" title="Good-data-EDA"></td>
-      <td align="left"><img src="./assets/Good-data-eda.png" alt="Good-data-EDA" title="Good-data-EDA"></td>
+      <td align="left"><img src="./assets/Bad-data-eda.png" alt="Good-data-EDA" title="Good-data-EDA"></td>
     </tr>
     <tr>
       <td align="center"><strong>PI</strong><br><strong>PR</strong><br><strong>PG</strong></td>
       <td align="left"><strong>PPG Infrared</strong><br><strong>PPG Red</strong><br><strong>PPG Green</strong></td>
       <td align="left"><img src="./assets/Good-data-ppg.png" alt="Good-data-PPG" title="Good-data-PPG"></td>
-      <td align="left"></td>
+      <td align="left"><img src="./assets/Bad-data-ppg.png" alt="Good-data-PPG" title="Good-data-PPG"></td>
     </tr>
     <tr>
       <td align="center"><strong>T1</strong></td>
