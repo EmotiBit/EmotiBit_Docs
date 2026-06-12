@@ -23,10 +23,9 @@ Getting reliable biometric data depends heavily on how the EmotiBit is positione
 
 ### Placement on the Body
 
-For optimal data collection, position the EmotiBit on the body according to these guidelines:
-* Check out this blog post: https://www.emotibit.com/sensing-bio-metrics-from-anywhere-on-the-body/
-* **Securing the Device:** Use the provided strap to secure the device. It should be snug enough to prevent shifting during movement, but not so tight that it restricts blood flow or causes discomfort.
-
+For the best data collection results, make sure the EmotiBit is properly secured to the body:
+- **Securing the Device**: Use the provided strap to attach the device. It should be snug enough to prevent it from shifting while you move, but comfortable enough that it doesn't restrict blood flow.
+- **Placement Options**: For a deeper look at different placement spots and how they affect your data, check out this reference blog post: [Sensing Biometrics from Anywhere on the Body](https://www.emotibit.com/sensing-bio-metrics-from-anywhere-on-the-body/).
 > [!TIP]
 > The EmotiBit has slots for straps on all 4 sides. This enables you to strap the EmotiBit in both orientations.
 
