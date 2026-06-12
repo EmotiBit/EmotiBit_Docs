@@ -36,7 +36,7 @@ If you have not yet successfully streamed data or if you need help with the init
 
 Getting reliable biometric data depends heavily on how the EmotiBit is positioned and secured.
 
-## Placement on the Body
+### Placement on the Body
 
 For optimal data collection, position the EmotiBit on the body according to these guidelines:
 * Check out this blog post: https://www.emotibit.com/sensing-bio-metrics-from-anywhere-on-the-body/
@@ -45,7 +45,7 @@ For optimal data collection, position the EmotiBit on the body according to thes
 > [!TIP]
 > The EmotiBit has slots for straps on all 4 sides. This enables you to strap the EmotiBit in both orientations.
 
-## How to Verify a Good Placement
+### How to Verify a Good Placement
 
 Once the EmotiBit is secured, look at the live stream in the EmotiBit Oscilloscope to verify that the placement is correct and yielding high-quality data.
 
@@ -94,9 +94,7 @@ The following table shows the sampling rates at which the sensors operate with t
 531473,17299,3,PR,1,100,26870,26855,26857
 531473,17300,3,PG,1,100,3720,3704,3717
 ```
-
 `EMOTIBIT_TIMESTAMP`,`PACKET#`,`NUM_DATAPOINTS`,`TYPETAG`,`VERSION`,`RELIABILITY`,`PAYLOAD`
-
 - `EMOTIBIT_TIMESTAMP`: milliseconds since EmotiBit bootup
 - `PACKET#`: sequentially increasing packet count
 - `NUM_DATAPOINTS`: Number of data points in the payload
