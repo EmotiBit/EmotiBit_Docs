@@ -4,24 +4,6 @@ EmotiBit Oscilloscope offers the ability to stream data in real-time from EmotiB
 Start by opening the EmotiBit Oscillosocpe on your computer. If you need more help with opening the Emotibit Oscilloscope, 
 you may refer to the instructions on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
 
-## Using EmotiBit Oscilloscope to Record Data
-Once you have succesfully set up your EmotiBit, you can start recording data using the EmotiBit Oscilloscope. If you have
-not yet set up your EmotiBit, check our guide on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
-
-
-### Active recording session indicator
-You can check if a recording session is currently active by either checking the EmotiBit or the EmotiBit Oscilloscope.
-- **Indication on the EmotiBit**
-  - You will notice that the EmotiBit RED LED starts blinking if a recording session is active.
-  - The EmotiBit RED LED will continue to blink till the active recording session has been stopped using the EmotiBit Oscillosocpe.
-- **Indication on the EmotiBit Oscilloscope**
-  - When you open the Oscilloscope, all available EmotiBits on the network will be listed under the `device list`. Select the EmotiBit you are interested in from the device list.
-  - If a recording session is currently active, the name of the file being recorded appears below the `Record Button`. This name indicates the time when the recording was started.
-    - *Pro-tip: You can check the length of active recording by subtracting the current time from the time displayed in the `Recording section` on the Oscillosocpe.*
-
-[Click here to learn how to use the DataParser](#Parse-raw-data-using-EmotiBit-DataParser) to convert the raw data into parsed data files.
-<br> If you want to learn about all the features offered by the EmotiBit Oscilloscope, check out the section [below](#EmotiBit-Oscilloscope-features).
-
 ## EmotiBit Oscilloscope features
 - The Oscilloscope offers the following features:
 ![][EmotiBit-Oscilloscope]
@@ -82,6 +64,25 @@ You can check if a recording session is currently active by either checking the 
     - The Battery Level indicator displays the charge available in the battery as a percentage. 
     - We recommend not letting the battery fall below 10% as it might begin to interfere with the sensor data acquisition.
     </details>
+
+## Using EmotiBit Oscilloscope to Record Data
+Once you have succesfully set up your EmotiBit, you can start recording data using the EmotiBit Oscilloscope. If you have
+not yet set up your EmotiBit, check our guide on the [Getting Started](./Getting_Started.md/#Running-EmotiBit-software) page.
+
+
+### Active recording session indicator
+You can check if a recording session is currently active by either checking the EmotiBit or the EmotiBit Oscilloscope.
+- **Indication on the EmotiBit**
+  - You will notice that the EmotiBit RED LED starts blinking if a recording session is active.
+  - The EmotiBit RED LED will continue to blink till the active recording session has been stopped using the EmotiBit Oscillosocpe.
+- **Indication on the EmotiBit Oscilloscope**
+  - When you open the Oscilloscope, all available EmotiBits on the network will be listed under the `device list`. Select the EmotiBit you are interested in from the device list.
+  - If a recording session is currently active, the name of the file being recorded appears below the `Record Button`. This name indicates the time when the recording was started.
+    - *Pro-tip: You can check the length of active recording by subtracting the current time from the time displayed in the `Recording section` on the Oscillosocpe.*
+
+[Click here to learn how to use the DataParser](#Parse-raw-data-using-EmotiBit-DataParser) to convert the raw data into parsed data files.
+<br> If you want to learn about all the features offered by the EmotiBit Oscilloscope, check out the section [below](#EmotiBit-Oscilloscope-features).
+
 
 ### Output List
 - The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
