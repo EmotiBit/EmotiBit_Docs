@@ -152,7 +152,7 @@ LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion
 EmotiBit offers two distinct methodologies to capture your data.
 Both methods utilize the **EmotiBit Oscilloscope** application as a core tool. Therefore, this is the perfect spot to briefly introduce how to interact with the Oscilloscope before setting up your first recording session.
 
-## EmotiBit Oscilloscope: The Basics
+### EmotiBit Oscilloscope: The Basics
 
 The EmotiBit Oscilloscope is your central hub for monitoring data quality and device status in real-time.
 
