@@ -26,7 +26,6 @@ You can check if a recording session is currently active by either checking the 
 - The Oscilloscope offers the following features:
 ![][EmotiBit-Oscilloscope]
 
-[ToDo:Update the Gif above to represent the new oscilloscope]
   - <details><summary>Connecting to EmotiBit</summary>
 
     - The Oscilloscope displays all available EmotiBits on the network in a list.  
