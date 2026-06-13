@@ -109,6 +109,7 @@ Below is a quick reference guide for the available data types. This table is upd
     </tr>
   </tbody>
 </table>
+
 > [!TIP]
 >  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
 
