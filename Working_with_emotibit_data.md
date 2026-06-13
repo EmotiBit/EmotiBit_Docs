@@ -250,8 +250,8 @@ To start a record session, follow these steps:
 
 # Next steps
 - To learn more about the EmotiBit software, checkout the following reference manuals
-  - [EmotiBit Oscilloscope]()
-  - [EmotiBit DataParser]()
+  - [EmotiBit Oscilloscope](./EmotiBitOscilloscope_referenece_manual.md)
+  - [EmotiBit DataParser](./EmotiBitDataParser_referenece_manual.md)
 
 [EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
 [EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
