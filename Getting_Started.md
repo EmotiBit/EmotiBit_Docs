@@ -171,7 +171,10 @@ The software utilities required to interface with EmotiBit are distributed as a 
   5. Save the file onto your microSD card. Then safely eject the card from your computer.
 
 > [!NOTE]
-> **EmotiBit only supports the 2.4GHz band for WiFi**. Both the host computer and the EmotiBit need to be on the same 2.4GHz network. Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
+> ```diff
+> - EmotiBit only supports the 2.4GHz band for WiFi
+> ```
+> Both the host computer and the EmotiBit need to be on the same 2.4GHz network. Initial experimental support for enterprise networks (that require a login/password after connecting) is available only for ESP32 Feathers. *The EmotiBit codebase uses several Arduino libraries to unlock different features, for example, establishing and maintaining a WiFi connection. The limitations around the support for enterprise wifi, for example, lack of support for Feather M0, are therefore dictated by these libraries and lie outside the scope of the emotibit ecosystem.*
 
 * <details><summary><b>3.1.2 Multiple WiFi credentials</b></summary>
 
