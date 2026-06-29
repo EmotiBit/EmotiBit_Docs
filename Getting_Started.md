@@ -121,7 +121,7 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
 ## 2. Install Drivers
 
 > [!IMPORTANT]
-> You must install the Virtual COM Port (VCP) drivers included in the software bundle to enable serial communication with the hardware via USB.
+> You will install the firmware on the Feather module in the following sections using the USB cable. For the computer to be able to recognize the Feather when you plug it in, you MUST install the drivers mentioned in this section.
 
 * **2.1 OS-Specific Driver Installation:**
 
