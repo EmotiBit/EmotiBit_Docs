@@ -160,13 +160,6 @@ EmotiBit data is written to the SD card in the following structured format:
 ### Parsed Data File Format
 > [!IMPORTANT]
 > You need to run the EmotiBit Data Parser to convert raw data recordings into parsed files. See the DataParser section to learn more about how to use the EmotiBit Data Parser.
-```
-LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion,DataReliability,PI
-1781122022.609306,565464.000,24431,3,PI,1,100,169093
-1781122022.609306,565464.000,24431,3,PI,1,100,169120
-1781122022.609306,565464.000,24431,3,PI,1,100,169140
-1781122022.649304,565504.000,24448,3,PI,1,100,169136
-```
 * `LocalTimestamp`: Epoch time in seconds
 * `EmotiBitTimestamp`: EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted)
 * `PacketNumber`: Packet number the data point was extracted from (sequentially increases)
@@ -175,6 +168,17 @@ LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion
 * `ProtocolVersion`: Reserved for future extensibility
 * `DataReliability`: Reserved for future extensibility
 * `Data`: Single data-point
+
+<details open><summary><b>Sample parsed data file</b></summary>
+    
+  ```
+  LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion,DataReliability,PI
+  1781122022.609306,565464.000,24431,3,PI,1,100,169093
+  1781122022.609306,565464.000,24431,3,PI,1,100,169120
+  1781122022.609306,565464.000,24431,3,PI,1,100,169140
+  1781122022.649304,565504.000,24448,3,PI,1,100,169136
+  ```
+</details>
 
 # Accessing EmotiBit Data
 EmotiBit offers two distinct methodologies to capture your data.
