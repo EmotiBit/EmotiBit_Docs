@@ -174,7 +174,7 @@ LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion
 * `TypeTag`: TypeTag of the data (see table above)
 * `ProtocolVersion`: Reserved for future extensibility
 * `DataReliability`: Reserved for future extensibility
-* `Data`: Sinlge data-point
+* `Data`: Single data-point
 
 # Accessing EmotiBit Data
 EmotiBit offers two distinct methodologies to capture your data.
@@ -193,7 +193,7 @@ The EmotiBit Oscilloscope is your central hub for monitoring data quality and de
 2. <details><summary>Streaming real-time Data</summary>
 
       - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
-      - Once a connection between the Oscilloscope and EmotiBit has been established, the EmotiBit Blue LED turns ON.
+      - Once a connection between the Oscilloscope and EmotiBit has been established, the <mark>EmotiBit Blue LED turns solid ON</mark>.
         - The EmotiBit Blue LED stays on as long as the EmotiBit is connected to an Oscilloscope. 
    </details>
 
