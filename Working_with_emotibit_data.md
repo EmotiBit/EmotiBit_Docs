@@ -178,67 +178,13 @@ LocalTimestamp,EmotiBitTimestamp,PacketNumber,DataLength,TypeTag,ProtocolVersion
 
 # Accessing EmotiBit Data
 EmotiBit offers two distinct methodologies to capture your data.
-Both methods utilize the **EmotiBit Oscilloscope** application as a core tool. Therefore, this is the perfect spot to briefly introduce how to interact with the Oscilloscope before setting up your first recording session.
+Both methods utilize the **EmotiBit Oscilloscope** application as a core tool. 
+1. Record data on the SD-Card
+2. Stream data to another program (Using Output List)
 
-### EmotiBit Oscilloscope: The Basics
-
-The EmotiBit Oscilloscope is your central hub for monitoring data quality and device status in real-time.
-
-1. <details><summary>Connecting to EmotiBit</summary>
-
-      - The Oscilloscope displays all available EmotiBits on the network in the `EmotiBit Device List`.  
-      - You can click on any EmotiBit in the list to connect to it. 
-   </details>
-
-2. <details><summary>Streaming real-time Data</summary>
-
-      - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
-      - Once a connection between the Oscilloscope and EmotiBit has been established, the <mark>EmotiBit Blue LED turns solid ON</mark>.
-        - The EmotiBit Blue LED stays solid on as long as the EmotiBit is connected to an Oscilloscope. 
-   </details>
-
-3. <details><summary>Recording Data</summary>
-
-      - Select an EmotiBit from the list of available EmotiBits.
-      - You can initiate a record session by clicking on the record button. When a record session is initiated, the EmotiBit will start recording the data on the onboard SD-Card as well as stream it on the Oscilloscope.
-        - The EmotiBit Red LED starts blinking once a recording session has been initiated.
-      - You are free to move in/out of the network, close the Oscilloscope, or connect to a new Oscilloscope.
-      - We recommend using the EmotiBit in-network as much as possible, connected to the Oscilloscope. This helps in generating more time-syncs which improves timestamp accuracy.
-   </details>
-
-### 1. Record data on the SD-Card
-
-To start a record session, follow these steps:
-- Select the EmotiBit from the `EmotiBit Device List`.
-  - If you have multiple EmotiBits on the network, select the EmotiBit you want to record data from.
-- Once an EmotiBit is selected, the Oscilloscope starts streaming data.
-- Click on the `Record Button` on the top console on the Oscillscope.
-- Once a recording session has been started, the `Record Button` section becomes red.
-- To end a recording, toggle the Recording button by clicking on it again.
-
-> [!TIP]
-> **Active recording session indicator:** You can check if a recording session is currently active by either checking the EmotiBit or the EmotiBit Oscilloscope.<br>
-> - **Indication on the EmotiBit**
->   - You will notice that the EmotiBit RED LED starts blinking if a recording session is active.
->   - The EmotiBit RED LED will continue to blink till the active recording session has been stopped using the EmotiBit Oscillosocpe.
-> - **Indication on the EmotiBit Oscilloscope**
->   - When you open the Oscilloscope, all available EmotiBits on the network will be listed under the `device list`. Select the EmotiBit you are interested in from the device list.
->   - If a recording session is currently active, the name of the file being recorded appears below the `Record Button`. This name indicates the time when the recording was started. The Record button and the file name appear with a red background.
-
-
-### 2. Stream data to another location (Using Output List)
-
-- The output list shows the options available to transmit the data out of the EmotiBit Oscilloscope.
-- Each output protocol uses settings specified in the unique file name.
-- The available output options are
-  - OSC
-  - UDP
-  - LSL
-
-
-
+You can learn more about each method in the [EmotiBit Oscilloscope reference manual](./EmotiBitOscilloscope_reference_manual.md).
 # Next steps
-- To learn more about the EmotiBit software, checkout the following reference manuals
+- To learn more about the EmotiBit software, check out the following reference manuals
   - [EmotiBit Oscilloscope](./EmotiBitOscilloscope_reference_manual.md)
   - [EmotiBit DataParser](./EmotiBitDataParser_reference_manual.md)
 
