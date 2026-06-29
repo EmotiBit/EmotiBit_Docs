@@ -204,7 +204,45 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
   ```
   </details>
 
-* <details><summary><b>3.1.3 Adding credentials using Serial</b></summary>
+* <details><summary><b>3.1.3 Adding Enterprise WiFi credentials (Advanced)</b></summary>
+  
+  - Enterprise WiFi network details are added to the config.txt file in the following format.
+    - If no `username` is provided, `userid` will be used as `username`
+  
+  ```
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1",
+      "username": "user1_name", 
+      "password": "prize1"
+    }
+  ```
+  
+  - A sample config.txt file could look like
+  ```
+  {
+  "WifiCredentials": [
+    {
+      "ssid": "personal-1",
+      "password": "pass1"
+    },
+    {
+      "ssid": "enterprise-1",
+      "userid": "user1_id",
+      "username": "user1_name",
+      "password": "prize1"
+    }
+  ]
+  }
+  ```
+  
+  - **Notes**:
+    - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
+    - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
+    - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
+</details>
+
+* <details><summary><b>3.1.4 Adding credentials using Serial (Advanced)</b></summary>
 
   - The EmotiBit firmware also provides a provision to enter WiFi credentials through serial interface. To use this provision, you will need to download and install Arduino IDE. You will also need to upload the EmotiBit firmware to the device. [Stack your EmotiBit](#4-stack-your-emotibit) and check out the section to learn how to use the [EmotiBit Firmware Installer](#5-installing-emotibit-firmware). Once you have installed the firmware and ArduinoIDE, proceed to the next steps.
   - Open Arduino IDE. Under `Tools > Port` notice the ports available, if any.
@@ -244,44 +282,6 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
     - Once you have completed the edits to the credentials, type `@RS~` in the Serial Monitor input. Hit `Send`.
     - The EmotiBit will restart and you will see Setup messages being printed on the Serial Monitor again.
   </details>
-
-* <details><summary><b>3.1.4 Adding Enterprise WiFi credentials</b></summary>
-  
-  - Enterprise WiFi network details are added to the config.txt file in the following format.
-    - If no `username` is provided, `userid` will be used as `username`
-  
-  ```
-    {
-      "ssid": "enterprise-1",
-      "userid": "user1",
-      "username": "user1_name", 
-      "password": "prize1"
-    }
-  ```
-  
-  - A sample config.txt file could look like
-  ```
-  {
-  "WifiCredentials": [
-    {
-      "ssid": "personal-1",
-      "password": "pass1"
-    },
-    {
-      "ssid": "enterprise-1",
-      "userid": "user1_id",
-      "username": "user1_name",
-      "password": "prize1"
-    }
-  ]
-  }
-  ```
-  
-  - **Notes**:
-    - ESP32 takes a substantially long time to connect to an enterprise network (>10 secs as per our limited testing).
-    - Since the ESP core is still under heavy development, there are some unexplained behaviors with enterprise connectivity. Through our testing, we discovered that using a software `restart` command before trying to connect to the enterprise network helps with connectivity. Therefore, if an enterprise network credential is added to the config file, the defined behavior is for the ESP to restart if a network connection is not made within a set timeout.
-    - Unlike personal networks, enterprise networks can allocate devices on different subnets. For example, if your computer is on `192.168.100.150`, your EmotiBit may be allocated an IP `192.168.101.68`. Notice that they are on different subnets (`100` and `101`). For finer control over the subnets the Oscilloscope considers for device discovery, you can use the `includeList` section in the **emotibitCommSettings.json** file. You can find more information on that file in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/). By default, all subnets are a part of the `includeList`.
-</details>
 
 ---
 
