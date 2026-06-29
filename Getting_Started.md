@@ -86,7 +86,7 @@ EmotiBit is designed for real-time wireless data streaming and requires a local 
 
 ## 1. Download and Install the Software Bundle
 
-The software utilities required to interface with EmotiBit are distributed as a unified release bundle.
+The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, and `EmotiBitDataParser`) required to interface with EmotiBit are distributed on our GitHub page.
 
 * **1.1** Navigate to the [EmotiBit GitHub Releases Page](https://github.com/EmotiBit/ofxEmotiBit/releases/latest) and download the asset bundle compatible with your operating system.
 
