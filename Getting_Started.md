@@ -377,7 +377,7 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
 <br>
 <br>
 
-- <details><summary> Installing custom firmware</summary>
+- <details><summary> Installing custom firmware (Advanced)</summary>
 
   - The `EmotiBit FirmwareInstaller` installs the stock firmware provided in the software bundle.
     - Each software release bundles specific firmware version that can be found in the [software release notes](https://github.com/emotibit/ofxemotibit/releases/latest). 
