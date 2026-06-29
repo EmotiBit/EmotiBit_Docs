@@ -194,7 +194,7 @@ The EmotiBit Oscilloscope is your central hub for monitoring data quality and de
 
       - The moment you connect to an EmotiBit, the EmotiBit Ocsilloscope will display the data being transmitted by the EmotiBit.
       - Once a connection between the Oscilloscope and EmotiBit has been established, the <mark>EmotiBit Blue LED turns solid ON</mark>.
-        - The EmotiBit Blue LED stays on as long as the EmotiBit is connected to an Oscilloscope. 
+        - The EmotiBit Blue LED stays solid on as long as the EmotiBit is connected to an Oscilloscope. 
    </details>
 
 3. <details><summary>Recording Data</summary>
