@@ -463,9 +463,23 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
 > [!IMPORTANT]
 > The EmotiBit bootup sequence can only be followed IF the firmware was successfully installed in the previous step.
 
-When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the below table to assess what went wrong and how to fix it.
+When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. <mark>An EmotiBit BLUE LED BLINKING</mark> indicates the EmotiBit was setup succesfully and the EmotiBit is connected to the WiFi. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the table below to assess what went wrong and how to fix it. The following section depicts the sequence of setup operations.
 
-|LED State|**LED Indicator**|**What to do?**|
+```diff
+[ Boot Up ]
+      │
+-     ├──► ( Feather RED LED ON ) ────────────────────────────────────────► [ STUCK HERE ] ──► Post on Forum
+      │
+-     └──► ( Feather RED LED ON for seconds ──► OFF ) ────────────────────► [ STUCK HERE ] ──► Check SD Card Insertion
+                │
+-               └──► ( EmotiBit RED LED ON ) ─────────────────────────────► [ STUCK HERE ] ──► Check Config File Format
+                          │
+-                         └──► ( EmotiBit BLUE LED solid ON ) ────────────► [ STUCK HERE ] ──► Verify WiFi Credentials
+                                    │
++                                   └──► ( EmotiBit BLUE LED BLINKING ) ──► [ SUCCESS: Connected! ]
+```
+
+|Stuck LED State|**LED Indicator**|**What to do?**|
 |--|--------------|---------|
 |Feather RED LED ON|<img src="./assets/EmotiBit-bootup-stage-0.jpg" width="300">|Write a post describing your steps on http://forum.emotibit.com/ |
 |Feather RED LED turns ON for a few seconds and then stays OFF|<img src="./assets/EmotiBit-bootup-stage-1.jpg" width="300">|Check if SD card is correctly inserted|
