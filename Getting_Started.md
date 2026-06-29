@@ -51,7 +51,7 @@ everything else you will need to get started. In the box you will find:<br><br><
 #### Compatible Feather Modules
 
 > [!WARNING]
-> If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**
+> <mark>If you are using your EmotiBit with a Feather **not included** as a part of the All-in-One Bundle or the Essentials Kit, please verify that you are using one of the 2 compatible Feathers. **Using EmotiBit with any other Feather module will not work.**</mark>
 
 - <details><summary><b>Click this drop-down to see the compatible feathers</b></summary>
 
