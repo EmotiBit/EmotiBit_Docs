@@ -394,6 +394,8 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
   </details>
 
 - **Linux and Advanced Users**
+  - EmotiBit software, including the `EmotiBit FirmwareInstaller` is not available as a distributed application for Linux. The following details the use of command-line tools users can use to program their Feathers.
+
     - <details><summary> Installing Emotibit Firmware on Feather M0 WiFi</summary>
       
       - **Note**: on macOS, you will need to give the `EmotiBit FirmwareInatller` application permissions to run the contained executables. To do so, right click on the `EmotiBit FirmwareInstaller` app and click on Open. This will open the application but you may close it to proceed below.
