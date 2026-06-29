@@ -354,7 +354,7 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
 > To start using your EmotiBit, you must first install the latest EmotiBit firmware onto the Feather. Because EmotiBit devices ship completely blank without any pre-installed firmware, the hardware will not function until this installation step is completed.
 
 > [!IMPORTANT]
-> If you did not order an **Essentials Kit** or an **All-In-One bundle**, you will need a [compatible Feather](#Compatible-Feather-Modules) to get starter. You can grab [Feather M0 WiFi](https://www.adafruit.com/product/3044) or the [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3619) from the Adafruit online store.
+> If you did not order an **Essentials Kit** or an **All-In-One bundle**, you will need a [compatible Feather](#Compatible-Feather-Modules) to get starter. You can grab [Feather ESP32 Huzzah!](https://www.adafruit.com/product/3619) or the [Feather M0 WiFi](https://www.adafruit.com/product/3044) from the Adafruit online store.
 
 > [!IMPORTANT]
 > **Prerequisites**
