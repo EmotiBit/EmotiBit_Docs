@@ -463,7 +463,7 @@ Installing incompatible firmware may lead to unexpected behavior, or worse, may 
 > [!IMPORTANT]
 > The EmotiBit bootup sequence can only be followed IF the firmware was successfully installed in the previous step.
 
-When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. <mark>An EmotiBit BLUE LED BLINKING</mark> indicates the EmotiBit was setup succesfully and the EmotiBit is connected to the WiFi. If EmotiBit gets stuck prior to fully connecting to your WiFi, you can use the table below to assess what went wrong and how to fix it. The following section depicts the sequence of setup operations.
+When EmotiBit is booting up, the LEDs are used to indicate the steps in the process. <mark>EmotiBit BLUE LED BLINKING</mark> indicates the EmotiBit was setup succesfully and the EmotiBit is connected to the WiFi. If EmotiBit gets stuck prior to connecting to your WiFi, you can use the table below to assess what went wrong and how to fix it. The following section depicts the sequence of setup operations.
 
 ```diff
 [ Boot Up ]
