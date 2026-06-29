@@ -139,7 +139,7 @@ EmotiBit data is written to the SD card in the following structured format:
 - `RELIABILITY`: data reliability score out of 100 (for future use)
 - `PAYLOAD`: data points
 
-<details><summary><b>Sample raw data file</b></summary>
+<details open><summary><b>Sample raw data file</b></summary>
     
   ```
   531386,17296,1,RB,1,100,2024-09-18_22-59-45-827135
