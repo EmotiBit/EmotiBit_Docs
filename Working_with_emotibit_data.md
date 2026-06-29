@@ -19,7 +19,7 @@ If you have not yet successfully streamed data or if you need help with the init
 
 # How to Use EmotiBit
 
-Getting reliable biometric data depends heavily on how the EmotiBit is positioned and secured.
+Getting reliable biometric data depends heavily on how the EmotiBit is positioned and secured on the body.
 
 ### Placement on the Body
 
@@ -119,7 +119,7 @@ The following table shows the sampling rates at which the sensors operate with t
 | Function |Data Type| Sensor IC | Sampling Rate (samples per second)|
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|[BMI160](https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi160/)+[BMI150](https://www.bosch-sensortec.com/products/motion-sensors/magnetometers/bmm150/)|25|
-|PPG |`PI` `PG` `PR`| [MAX30101](https://www.analog.com/en/products/max30101.html)|25|
+|PPG |`PI` `PG` `PR`| [MAX30101](https://www.analog.com/en/products/max30101.html)|25 (Use EmotiBit FirmwareInstaller)<br>100Hz ([Special firmware](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases))|
 |Temperature |`T0` / `TH`|[MAX30101](https://www.analog.com/en/products/max30101.html) / [MLX90632](https://www.melexis.com/en/product/MLX90632/Miniature-SMD-Infrared-Thermometer-IC) |7.5|
 |EDA|`EA` `EL` `ER`|[ADS1114](https://www.ti.com/product/ADS1114)|15|
 
