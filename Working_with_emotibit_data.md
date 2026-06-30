@@ -68,50 +68,61 @@ Below is a quick reference guide for the available data types. This table is upd
     <tr>
       <td align="center"><strong>T1</strong></td>
       <td align="left"><strong>Temperature</strong></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
+      <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>TH</strong></td>
       <td align="left"><strong>Temperature via Medical-grade Thermopile</strong> <em>(EmotiBit MD only)</em></td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
+      <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>AX, AY, AZ</strong></td>
       <td align="left"><strong>Accelerometer</strong> (X, Y, Z axes)</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
+      <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>GX, GY, GZ</strong></td>
       <td align="left"><strong>Gyroscope</strong> (X, Y, Z axes)</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
+      <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>MX, MY, MZ</strong></td>
       <td align="left"><strong>Magnetometer</strong> (X, Y, Z axes)</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
+      <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>SA</strong><br><strong>SR</strong><br><strong>SF</strong></td>
       <td align="left"><strong>SCR Amplitude</strong> (Skin Conductance Response)<br><strong>SCR Rise Time</strong><br><strong>SCR Frequency</strong></td>
       <td align="left"><img src="./assets/Good-data-eda-derivatives.png" alt="Good-data-eda-derivatives" title="Good-data-eda-derivatives"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>HR</strong><br><strong>BI</strong></td>
       <td align="left"><strong>Heart Rate</strong><br><strong>Heart Inter-beat Interval</strong></td>
       <td align="left"><img src="./assets/Good-data-hr.png" alt="Good-data-HR" title="Good-data-HR"></td>
-      <td align="left"></td>
+      <td align="center">NA</td>
     </tr>
   </tbody>
 </table>
 
+> [!NOTE]
+> Visual representation not applicable for cells marked `NA`.
+
+> [!TIP]
+> Check out the following FAQs for more information on improving the signals captures
+> 1. https://www.reddit.com/r/EmotiBit/comments/tl8w29/why_is_my_eda_signal_flat_and_sometimes_has_jumps/
+> 2. https://www.reddit.com/r/EmotiBit/comments/10x8ubb/why_do_my_heart_rate_numbers_sometimes_seem/
+
+
 > [!TIP]
 >  Additional details about the data stream (*such as units, sampling rate, data format, and averaging*) can be found in the `_info.json` file created automatically with each recording session.
+
+
 
 ## Data type sampling rates
 The following table shows the sampling rates at which the sensors operate with the stock EmotiBit firmware. You can also find a link to each sensor datasheet.
