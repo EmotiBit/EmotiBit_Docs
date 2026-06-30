@@ -9,6 +9,7 @@
         * [Local SD Card data format](#local-sd-card-data-format)
         * [Parsed Data File Format](#parsed-data-file-format)
 * [Accessing EmotiBit Data](#accessing-emotibit-data)
+* [Next steps](#next-steps)
 
 > [!IMPORTANT]
 > If you are reading this page, it means you have already successfully streamed data from your EmotiBit hardware to the EmotiBit Oscilloscope. 
