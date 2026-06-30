@@ -162,6 +162,10 @@ EmotiBit data is written to the SD card in the following structured format:
 ### Parsed Data File Format
 > [!IMPORTANT]
 > You need to run the EmotiBit Data Parser to convert raw data recordings into parsed files. See the DataParser section to learn more about how to use the EmotiBit Data Parser.
+
+The parsed data file has the following format:\
+`LocalTimestamp`, `EmotiBitTimestamp`, `PacketNumber`, `DataLength`, `TypeTag`, `ProtocolVersion`, `DataReliability`, `Data`
+
 * `LocalTimestamp`: Epoch time in seconds
 * `EmotiBitTimestamp`: EmotiBit time in milli-seconds (emotibit time resets everytime emotibit is rebooted)
 * `PacketNumber`: Packet number the data point was extracted from (sequentially increases)
