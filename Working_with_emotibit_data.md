@@ -47,9 +47,9 @@ Below is a quick reference guide for the available data types. This table is upd
   <thead>
     <tr>
       <th align="center">TypeTag</th>
-      <th align="left">Signal & Description</th>
-      <th align="left" width="35%">How a Good Signal Looks</th>
-      <th align="left" width="35%">How a Bad Signal Looks</th>
+      <th align="center">Signal & Description</th>
+      <th align="center" width="35%">Example of Good Signal</th>
+      <th align="center" width="35%">Example of Bad Signal</th>
     </tr>
   </thead>
   <tbody>
@@ -67,13 +67,13 @@ Below is a quick reference guide for the available data types. This table is upd
     </tr>
     <tr>
       <td align="center"><strong>T1</strong></td>
-      <td align="left"><strong>Temperature</strong></td>
+      <td align="left"><strong>Temperature</strong> via the PPG sensor</td>
       <td align="center">NA</td>
       <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>TH</strong></td>
-      <td align="left"><strong>Temperature via Medical-grade Thermopile</strong> <em>(EmotiBit MD only)</em></td>
+      <td align="left"><strong>Temperature</strong> via Medical-grade Thermopile <em>(EmotiBit MD only)</em></td>
       <td align="center">NA</td>
       <td align="center">NA</td>
     </tr>
@@ -131,7 +131,7 @@ The following table shows the sampling rates at which the sensors operate with t
 |----------|---------|-----------|--------------|
 | Motion   |`AX` `AY` `AZ` `GX` `GY` `GZ` `MX` `MY` `MZ`|[BMI160](https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi160/)+[BMI150](https://www.bosch-sensortec.com/products/motion-sensors/magnetometers/bmm150/)|25|
 |PPG |`PI` `PG` `PR`| [MAX30101](https://www.analog.com/en/products/max30101.html)|25 (Use EmotiBit FirmwareInstaller)<br>100Hz ([Special firmware](https://github.com/EmotiBit/EmotiBit_FeatherWing/releases))|
-|Temperature |`T0` / `TH`|[MAX30101](https://www.analog.com/en/products/max30101.html) / [MLX90632](https://www.melexis.com/en/product/MLX90632/Miniature-SMD-Infrared-Thermometer-IC) |7.5|
+|Temperature |`T1` / `TH`|[MAX30101](https://www.analog.com/en/products/max30101.html) / [MLX90632](https://www.melexis.com/en/product/MLX90632/Miniature-SMD-Infrared-Thermometer-IC) |7.5|
 |EDA|`EA` `EL` `ER`|[ADS1114](https://www.ti.com/product/ADS1114)|15|
 
 ## Expected Data Format
