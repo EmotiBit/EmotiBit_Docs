@@ -73,7 +73,7 @@ Below is a quick reference guide for the available data types. This table is upd
       <td align="center"><strong>TH</strong></td>
       <td align="left"><strong>Temperature</strong> via Medical-grade Thermopile <em>(EmotiBit MD only)</em></td>
       <td align="center"><img src="./assets/Good-data-TH.png" alt="Good-data-TH" title="Good-data-TH"></td>
-      <td align="center">TBD</td>
+      <td align="center"><img src="./assets/Bad-data-TH.png" alt="Bad-data-TH" title="Bad-data-TH"></td>
     </tr>
     <tr>
       <td align="center"><strong>AX, AY, AZ</strong></td>
