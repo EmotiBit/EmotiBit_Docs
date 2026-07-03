@@ -66,7 +66,7 @@ Below is a quick reference guide for the available data types. This table is upd
     <tr>
       <td align="center"><strong>T1</strong></td>
       <td align="left"><strong>Temperature</strong> via the PPG sensor</td>
-      <td align="center">NA</td>
+      <td align="center"><img src="./assets/Good-data-T1.png" alt="Good-data-T1" title="Good-data-T1"></td>
       <td align="center">NA</td>
     </tr>
     <tr>
@@ -78,19 +78,19 @@ Below is a quick reference guide for the available data types. This table is upd
     <tr>
       <td align="center"><strong>AX, AY, AZ</strong></td>
       <td align="left"><strong>Accelerometer</strong> (X, Y, Z axes)</td>
-      <td align="center">NA</td>
+      <td align="center"><img src="./assets/Good-data-AX_AY_AZ.png" alt="Good-data-AX_AY_AZ" title="Good-data-AX_AY_AZ"></td>
       <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>GX, GY, GZ</strong></td>
       <td align="left"><strong>Gyroscope</strong> (X, Y, Z axes)</td>
-      <td align="center">NA</td>
+      <td align="center"><img src="./assets/Good-data-GX_GY_GZ.png" alt="Good-data-GX_GY_GZ" title="Good-data-GX_GY_GZ"></td>
       <td align="center">NA</td>
     </tr>
     <tr>
       <td align="center"><strong>MX, MY, MZ</strong></td>
       <td align="left"><strong>Magnetometer</strong> (X, Y, Z axes)</td>
-      <td align="center">NA</td>
+      <td align="center"><img src="./assets/Good-data-MX_MY_MZ.png" alt="Good-data-MX_MY_MZ" title="Good-data-MX_MY_MZ"></td>
       <td align="center">NA</td>
     </tr>
     <tr>
