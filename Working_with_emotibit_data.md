@@ -187,7 +187,7 @@ The parsed data file has the following format:\
 EmotiBit offers two distinct methodologies to capture your data.
 Both methods utilize the **EmotiBit Oscilloscope** application as a core tool. 
 1. Record data on the SD-Card
-2. Stream data to another program (Using Output List)
+2. Stream data to another program (Using `Output List` dropdown in the EmotiBit Oscilloscope)
 
 You can learn more about each method in the [EmotiBit Oscilloscope reference manual](./EmotiBitOscilloscope_reference_manual.md).
 # Next steps
@@ -195,10 +195,6 @@ You can learn more about each method in the [EmotiBit Oscilloscope reference man
   - [EmotiBit Oscilloscope](./EmotiBitOscilloscope_reference_manual.md)
   - [EmotiBit DataParser](./EmotiBitDataParser_reference_manual.md)
 
-[EmotiBit-Oscilloscope]: ./assets/Visualizer_green_800px.gif "EmotiBit-Oscilloscope"
-[EmotiBit-File-Types]: ./assets/EmotiBit_File_Types.png "EmotiBit-File-Types"
-[EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"
-[EmotiBit-PythonDataViewer]: ./assets/PythonDataViewer.jpg "EmotiBit-PythonDataViewer"
 [Good-data-PPG]: ./assets/Good-data-ppg.png "Good-data-PPG"
 [Good-data-EDA]: ./assets/Good-data-eda.png "Good-data-EDA"
 [Good-data-HR]: ./assets/Good-data-hr.png "Good-data-HR"
