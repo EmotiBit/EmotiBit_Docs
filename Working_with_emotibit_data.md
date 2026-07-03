@@ -67,7 +67,7 @@ Below is a quick reference guide for the available data types. This table is upd
       <td align="center"><strong>T1</strong></td>
       <td align="left"><strong>Temperature</strong> via the PPG sensor</td>
       <td align="center"><img src="./assets/Good-data-T1.png" alt="Good-data-T1" title="Good-data-T1"></td>
-      <td align="center">TBD</td>
+      <td align="center"><img src="./assets/Bad-data-T1.png" alt="Bad-data-T1" title="Bad-data-T1"></td>
     </tr>
     <tr>
       <td align="center"><strong>TH</strong></td>
