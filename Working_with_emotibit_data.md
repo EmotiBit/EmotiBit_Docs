@@ -79,13 +79,13 @@ Below is a quick reference guide for the available data types. This table is upd
       <td align="center"><strong>AX, AY, AZ</strong></td>
       <td align="left"><strong>Accelerometer</strong> (X, Y, Z axes)</td>
       <td align="center"><img src="./assets/Good-data-AX_AY_AZ.png" alt="Good-data-AX_AY_AZ" title="Good-data-AX_AY_AZ"></td>
-      <td align="center"><img src="./assets/Bad-data-AX_AY_AZ.png" alt="Bad-data-AX_AY_AZ" title="Bad-data-AX_AY_AZ"></td>
+      <td align="center"><i>Note the data clips when out of bounds</i><br><img src="./assets/Bad-data-AX_AY_AZ.png" alt="Bad-data-AX_AY_AZ" title="Bad-data-AX_AY_AZ"></td>
     </tr>
     <tr>
       <td align="center"><strong>GX, GY, GZ</strong></td>
       <td align="left"><strong>Gyroscope</strong> (X, Y, Z axes)</td>
       <td align="center"><img src="./assets/Good-data-GX_GY_GZ.png" alt="Good-data-GX_GY_GZ" title="Good-data-GX_GY_GZ"></td>
-      <td align="center"><img src="./assets/Bad-data-GX_GY_GZ.png" alt="Bad-data-GX_GY_GZ" title="Bad-data-GX_GY_GZ"></td>
+      <td align="center"><i>Note the data clips when out of bounds</i><img src="./assets/Bad-data-GX_GY_GZ.png" alt="Bad-data-GX_GY_GZ" title="Bad-data-GX_GY_GZ"></td>
     </tr>
     <tr>
       <td align="center"><strong>MX, MY, MZ</strong></td>
