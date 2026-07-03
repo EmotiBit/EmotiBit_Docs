@@ -153,3 +153,6 @@ See below for a sample of the a parsed file of typetag AX (Accelerometer X axis)
   - The data parser needs at least 2 timesync events to interpolate/extrapolate LocalTime. Hence, there will be no time correction to 
   any drift experienced by the emotibit clock.
   </details>
+
+
+[EmotiBit-DataParser]: ./assets/DataParser.png "EmotiBit-Dataparser"
