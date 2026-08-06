@@ -148,7 +148,11 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
       * Double-click `SiLabsUSBDriverDisk.dmg` to mount the disk image in Finder.
       * Double-click `Install CP210x VCP driver` to launch the installer.
       * Follow the on-screen prompts to complete the installation.
-    </details>
+    </details>     
+
+> [!NOTE]
+> **On macOS**, if you experience the installer is stuck, make sure to check the `System Settings` > `Privacy and Security` section _(Scroll to the end)_. There may be a prompt that needs your approval for the installer to proceed.
+
 
 
 ## 3. Prepare the SD Card
