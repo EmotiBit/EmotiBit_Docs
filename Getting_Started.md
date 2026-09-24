@@ -162,6 +162,7 @@ The software applications(`EmotiBitFirmwareInstaller`, `EmotiBitOscilloscope`, a
 > [!IMPORTANT]
 >  EmotiBit requires a local Wi-Fi network to initialize and establish communication with the EmotiBit Oscilloscope application. You must add valid network credentials to the microSD card configuration file before using emotibit. See the following FAQs for more details.
 > - For information on supported network options, see the [Network Options FAQ](https://www.reddit.com/r/EmotiBit/comments/11hjv49/what_are_the_available_network_options_to_use/).
+>   - See the "**Special note for iPhone hotspot users**" in this [FAQ](https://www.reddit.com/r/EmotiBit/comments/urpucl/how_do_i_use_the_emotibitcommsettingsjson_file/) if you are planning to use an iPhone hotspot.
 > - For further contextual architecture details, see the [Oscilloscope Requirement FAQ](https://www.reddit.com/r/EmotiBit/comments/uqz726/do_i_require_emotibit_oscilloscope_to_start_a/).
 
 * **3.1.1 Standard Configuration Procedure:**
