@@ -318,6 +318,117 @@ Refer the [section above](#Settings-files-location) to locate this file on your 
   can cause the Oscilloscope to crash, if the marker stream disconnects un-expectedly. This however, does not affect any data being recorded on the EmotiBit!**
   </details>
 
+### Controlling EmotiBit Oscilloscope from another program (Auxillary control)
+Starting with software release `v1.14.0`, the EmotiBit Oscilloscope can be controlled by other programs, running either on the same computer or on another computer on the network.
+Instead of clicking buttons in the Oscilloscope, a script or application (Python, MATLAB, a stimulus-presentation tool, etc.) can send short JSON messages over UDP to:
+- connect to an EmotiBit
+- start and stop a recording
+- add a user note to the recording
+- disconnect from an EmotiBit
+
+This is useful for automating experiments, for example starting a recording at the same moment a task begins.
+
+- <details><summary><b>Enabling auxillary control</b></summary>
+
+  Auxillary control is **disabled by default**. To enable it:
+  1. Locate the `emotibitCommSettings.json` file. Refer the [section above](#Settings-files-location) to locate this file on your system.
+  2. Set `auxillaryControl` to `true`.
+     ```
+     {
+       "wifi": {
+         ...
+       },
+       "lsl": {
+         ...
+       },
+       "auxillaryControl": true
+     }
+     ```
+  3. Save the file and (re)start the EmotiBit Oscilloscope.
+
+  When the Oscilloscope starts, it prints one of the following messages to the console:
+  | Console message | Meaning |
+  |---|---|
+  | `Auxillary control enabled` | The Oscilloscope is listening for control messages. |
+  | `Auxillary control disabled` | `auxillaryControl` is set to `false`. Control messages are ignored. |
+  | `Auxillary control settings not specified in the settings file` | The `auxillaryControl` key is missing. Control is disabled. |
+  </details>
+
+- <details><summary><b>Message format</b></summary>
+
+  Control messages are sent as UDP packets to port **`3130`** on the computer running the Oscilloscope.
+  - When sending from the same computer, use the address `127.0.0.1`.
+  - When sending from another computer on the same network, use the IP address of the computer running the Oscilloscope.
+
+  Each message is a single line of JSON **terminated by a newline (`\n`)**:
+  ```
+  {"target":"WIFI_HOST","version":0,"action":["RECORD_BEGIN"]}
+  ```
+  | Field | Value |
+  |---|---|
+  | `target` | Must be `"WIFI_HOST"`. |
+  | `version` | Must be `0`. |
+  | `action` | A list. The first element is the action name, followed by any arguments the action needs. |
+
+  **Notes**
+  - Messages without a trailing newline are discarded.
+  - You can send multiple messages in one UDP packet by separating them with newlines. The Oscilloscope executes them in order, one per frame.
+  - Only one action is executed per message. To perform multiple actions, send multiple messages.
+  - Messages that are not valid JSON, or that have a different `target` or `version`, are ignored.
+  </details>
+
+- <details><summary><b>Supported actions</b></summary>
+
+  | Action | Arguments | Example message | What it does |
+  |---|---|---|---|
+  | `EMOTIBIT_CONNECT` | EmotiBit ID | `{"target":"WIFI_HOST","version":0,"action":["EMOTIBIT_CONNECT","MD-V5-0000001"]}` | Connects to the EmotiBit with this ID. The EmotiBit must be on the network and visible in the Oscilloscope's device list. |
+  | `EMOTIBIT_DISCONNECT` | none | `{"target":"WIFI_HOST","version":0,"action":["EMOTIBIT_DISCONNECT"]}` | Disconnects from the connected EmotiBit. |
+  | `RECORD_BEGIN` | none | `{"target":"WIFI_HOST","version":0,"action":["RECORD_BEGIN"]}` | Starts recording to the SD card on the connected EmotiBit. |
+  | `RECORD_END` | none | `{"target":"WIFI_HOST","version":0,"action":["RECORD_END"]}` | Stops the recording. |
+  | `USER_NOTE` | note text | `{"target":"WIFI_HOST","version":0,"action":["USER_NOTE","stimulus_onset"]}` | Adds a user note to the recording, the same as using the notes box in the Oscilloscope. |
+
+  You can find your EmotiBit ID in the Oscilloscope's device list.
+
+  **Note on timing:** messages pass through UDP and are processed in the Oscilloscope's update loop, so expect a small delay between sending a message and the action taking effect. For precise event timing, use [LSL marker streams](#Timesync-with-LSL-using-marker-stream) rather than `USER_NOTE`.
+
+  **Note on special characters:** if you build messages by pasting text directly into a string, for example in a shell script, special characters in the note text can break the message. Quotes (`"`) and backslashes (`\`) make the JSON invalid, so the Oscilloscope ignores the message. In shell scripts that use `sed`, characters like `/` and `&` can also break the command itself. To avoid this, build the message with a JSON library, as the Python example below does with `json.dumps`, or keep note text to letters, numbers, spaces, `_` and `-`.
+  </details>
+
+- <details><summary><b>Example: controlling the Oscilloscope with Python</b></summary>
+
+  The script below connects to an EmotiBit, records for 10 seconds with a note, then disconnects. Replace `MD-V5-0000001` with your EmotiBit ID.
+  ```python
+  import json
+  import socket
+  import time
+
+  OSCILLOSCOPE_ADDRESS = ("127.0.0.1", 3130)  # use the Oscilloscope computer's IP if sending from another computer
+  sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+  def send(*action):
+      message = {"target": "WIFI_HOST", "version": 0, "action": list(action)}
+      sock.sendto((json.dumps(message) + "\n").encode(), OSCILLOSCOPE_ADDRESS)
+
+  send("EMOTIBIT_CONNECT", "MD-V5-0000001")
+  time.sleep(3)    # wait for the connection
+  send("RECORD_BEGIN")
+  time.sleep(2)    # wait for recording to start
+  send("USER_NOTE", "task_start")
+  time.sleep(10)
+  send("RECORD_END")
+  time.sleep(2)
+  send("EMOTIBIT_DISCONNECT")
+  ```
+  </details>
+
+- <details><summary><b>Example: controlling the Oscilloscope from the command line</b></summary>
+
+  On macOS and Linux, you can send a message with `nc` (netcat):
+  ```
+  echo '{"target":"WIFI_HOST","version":0,"action":["RECORD_BEGIN"]}' | nc -u -w1 127.0.0.1 3130
+  ```
+  </details>
+
 ### EmotiBit Oscilloscope display settings
 Users can use the `ofxOscilloscopeSettings.xml` file to change other Oscillocsope settings.
 Refer the [section above](#Settings-files-location) to locate this file on your system.
