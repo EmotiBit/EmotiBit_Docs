@@ -22,7 +22,8 @@ Trying to update EmotiBit Firmware? You are at the right place! **Lets get start
     - [2. Steps to build from source](#2-Steps-to-build-from-source)
       - [2.1 Download required dependencies](#21-Download-required-dependencies)
       - [2.2 Install the correct board versions](#22-Install-the-correct-board-versions)
-      - [2.3 Building the project](#23-Building-the-project)
+      - [2.3 For Linux users](#23-For-Linux-users)
+      - [2.4. Building the project](#24-Building-the-project)
     - [3 Importing an Arduino sketch into platformIO](#3-Importing-an-Arduino-sketch-into-platformIO)
 
 ## (Recommended option) Update firmware using EmotiBit FirmwareInstaller
