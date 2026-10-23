@@ -91,7 +91,7 @@ Follow the steps below to get started!
       - EmotiBit BMI160
       - EmotiBit MAX30101
       - EmotiBit MLX90632
-      - EmotiBit NCP5632
+      - EmotiBit NCP5623
       - EmotiBit SI7013
       - EmotiBit External EEPROM 
       - EmotiBit ADS1X15
@@ -116,39 +116,29 @@ Follow the steps below to get started!
     ```diff
     -- Be sure to install the correct version when specified for any library below --
     ```
-    - (**option 1**) Clone [EmotiBit_FeatherWing](https://github.com/EmotiBit/EmotiBit_FeatherWing) repository. Then run the `download_dependencies.sh` script found inside the EmotiBit_FeatherWing repository. Note: Running `download_dependencies.sh` needs you to have [`jq`](https://github.com/jqlang/jq/releases) installed.
-      - Mac: `brew install jq`
-      - Linux: `sudo apt-get install jq`
-      - Windows git-bash: `mkdir -p ~/bin` and then `curl -L -o ~/bin/jq.exe https://github.com/jqlang/jq/releases/latest/download/jq-windows-amd64.exe` (match your processor architecture)
-    - (**option 2**) The following script may be run from a bash shell within your `Arduino/libraries/` directory to install all dependencies from EmotiBit.
-      - _**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-      - Check out the `ArduinoJson` and `SdFat` libraries to the **required versions** specified in the "Using Arduino IDE" dropdown above.
-
-      ```
-      eval "$(ssh-agent -s)"
-      ssh-add ~/.ssh/id_ed25519
-      git clone git@github.com:EmotiBit/EmotiBit_EmojiLib.git
-      git clone git@github.com:EmotiBit/EmotiBit_NCP5623.git
-      git clone git@github.com:EmotiBit/EmotiBit_FeatherWing.git
-      git clone git@github.com:EmotiBit/EmotiBit_XPlat_Utils.git
-      git clone git@github.com:EmotiBit/EmotiBit_ArduinoFilters.git
-      git clone git@github.com:EmotiBit/EmotiBit_SI7013.git
-      git clone git@github.com:EmotiBit/EmotiBit_MLX90632.git
-      git clone git@github.com:EmotiBit/EmotiBit_BMI160.git
-      git clone git@github.com:EmotiBit/EmotiBit_ADS1X15.git
-      git clone git@github.com:EmotiBit/EmotiBit_MAX30101.git
-      git clone git@github.com:EmotiBit/EmotiBit_External_EEPROM.git
-      git clone git@github.com:EmotiBit/EmotiBit_SimpleFTPServer.git
-      git clone git@github.com:arduino-libraries/WiFi101.git
-      git clone git@github.com:greiman/SdFat.git
-      git clone git@github.com:bblanchon/ArduinoJson.git
-      git clone git@github.com:arduino-libraries/ArduinoLowPower.git
-      git clone git@github.com:arduino-libraries/RTCZero.git
-      git clone git@github.com:adafruit/Adafruit_IS31FL3731.git
-      git clone git@github.com:adafruit/Adafruit-GFX-Library.git
-      git clone git@github.com:adafruit/Adafruit_BusIO.git
-      git clone git@github.com:EmotiBit/EmotiBit_KTD2026.git
-      ```
+    - Clone the following repositories into your `Arduino/libraries/` directory.
+    - Where a tag is listed, check out that tag after cloning (e.g. `git checkout 2.2.0`).
+      - https://github.com/EmotiBit/EmotiBit_FeatherWing
+      - https://github.com/EmotiBit/EmotiBit_BMI160
+      - https://github.com/EmotiBit/EmotiBit_MAX30101
+      - https://github.com/EmotiBit/EmotiBit_MLX90632
+      - https://github.com/EmotiBit/EmotiBit_NCP5623
+      - https://github.com/EmotiBit/EmotiBit_SI7013
+      - https://github.com/EmotiBit/EmotiBit_XPlat_Utils
+      - https://github.com/EmotiBit/EmotiBit_ADS1X15
+      - https://github.com/EmotiBit/EmotiBit_External_EEPROM
+      - https://github.com/EmotiBit/EmotiBit_EmojiLib
+      - https://github.com/EmotiBit/EmotiBit_ArduinoFilters
+      - https://github.com/EmotiBit/EmotiBit_SimpleFTPServer
+      - https://github.com/EmotiBit/EmotiBit_KTD2026
+      - https://github.com/arduino-libraries/WiFi101
+      - https://github.com/greiman/SdFat - tag `2.2.0`
+      - https://github.com/bblanchon/ArduinoJson - tag `v6.21.2`
+      - https://github.com/arduino-libraries/ArduinoLowPower - tag `1.2.2`
+      - https://github.com/arduino-libraries/RTCZero - tag `1.6.0`
+      - https://github.com/adafruit/Adafruit_IS31FL3731 - tag `2.0.2`
+      - https://github.com/adafruit/Adafruit-GFX-Library - tag `1.11.9`
+      - https://github.com/adafruit/Adafruit_BusIO - tag `1.15.0`
     </details>
 
 #### 1.4. Close and re-open Arduino IDE
